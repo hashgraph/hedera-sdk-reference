@@ -21,7 +21,7 @@ Transfer cryptocurrency from some accounts to other accounts.
 ## Support
 
 | Item | Java | JavaScript | Go
-| - | - | - | - |
+| - | :-: | :-: | :-: |
 | [`new()`](#new) | ✅ | ✅ | ✅
 | [`addRecipient()`](#addRecipient) | ✅ | ✅ | ✅
 | [`addSender()`](#addSender) | ✅ | ✅ | ✅
