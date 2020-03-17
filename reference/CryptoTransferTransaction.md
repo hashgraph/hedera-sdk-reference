@@ -18,6 +18,15 @@ Transfer cryptocurrency from some accounts to other accounts.
    sending accounts, and for any receiving accounts that
    have `receiverSignatureRequired` set to `true`.
 
+## Support
+
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`new()`](#new) | ✅ | ✅ | ✅
+| [`addRecipient()`](#addRecipient) | ✅ | ✅ | ✅
+| [`addSender()`](#addSender) | ✅ | ✅ | ✅
+| [`addTransfer()`](#addTransfer) | ✅ | ✅ | ✅
+
 ## Methods
 
 ### `new()`
@@ -37,7 +46,7 @@ to add to the transfer.
 addSender(self, id: AccountId, amount: Hbar): Self
 ```
 
-Alias for
+Alias for:
 
 ```
 addTransfer(id, -amount)
@@ -52,7 +61,7 @@ by this transfer.
 addSender(self, id: AccountId, amount: Hbar): Self
 ```
 
-Alias for
+Alias for:
 
 ```
 addTransfer(id, amount)
