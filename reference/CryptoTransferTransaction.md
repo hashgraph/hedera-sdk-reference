@@ -82,3 +82,35 @@ The Account ID of the sending party.
 ##### `amount`
 
 The amount of `Hbar` that will be withdrawn/deposited from/to this account for the transfer.
+
+## Examples
+
+### Java
+
+```java
+var transactionId = new CryptoTransferTransaction()
+    .addSender(senderId, new Hbar(10))
+    // .addTransfer(senderId, new Hbar(-10))
+    .addRecipient(recipientId, new Hbar(10))
+    .execute(client);
+```
+
+### JavaScript
+
+```javascript
+let transactionId = await new CryptoTransferTransaction()
+    .addSender(senderId, new Hbar(10))
+    // .addTransfer(senderId, new Hbar(-10))
+    .addRecipient(recipientId, new Hbar(10))
+    .execute(client);
+```
+
+### Go
+
+```go
+transactionID, err := NewCryptoTransferTransaction().
+    AddSender(senderID, NewHbar(10)).
+    // AddTransfer(senderId, NewHbar(-10)).
+    AddReceipient(recipientID, NewHbar(10)).
+    Execute(client)
+```
