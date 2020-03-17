@@ -23,7 +23,7 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 
  * [`AccountUpdateTransaction`]
 
- * [`AccountDeleteTransaction`]
+ * [`AccountDeleteTransaction`](reference/AccountDeleteTransaction.md)
 
 #### Contracts
 
