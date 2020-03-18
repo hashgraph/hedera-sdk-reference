@@ -67,39 +67,39 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 
 #### Transactions
 
- * [`TransactionReceiptQuery`]
+ * [`TransactionReceiptQuery`](reference/TransactionReceiptQuery.md)
 
- * [`TransactionRecordQuery`]
+ * [`TransactionRecordQuery`](reference/TransactionRecordQuery.md)
 
 #### Accounts
 
- * [`AccountBalanceQuery`]
+ * [`AccountBalanceQuery`](reference/AccountBalanceQuery.md)
 
- * [`AccountInfoQuery`]
+ * [`AccountInfoQuery`](reference/AccountInfoQuery.md)
 
- * [`AccountRecordsQuery`]
+ * [`AccountRecordsQuery`](reference/AccountRecordsQuery.md)
 
- * [`AccountStakersQuery`]
+ * [`AccountStakersQuery`](reference/AccountStakersQuery.md)
 
 #### Contracts
 
- * [`ContractBytecodeQuery`]
+ * [`ContractBytecodeQuery`](reference/ContractBytecodeQuery.md)
 
- * [`ContractCallQuery`]
+ * [`ContractCallQuery`](reference/ContractCallQuery.md)
 
- * [`ContractInfoQuery`]
+ * [`ContractInfoQuery`](reference/ContractInfoQuery.md)
 
- * [`ContractRecordsQuery`]
+ * [`ContractRecordsQuery`](reference/ContractRecordsQuery.md)
 
 #### Files
 
- * [`FileContentsQuery`]
+ * [`FileContentsQuery`](reference/FileContentsQuery.md)
 
- * [`FileInfoQuery`]
+ * [`FileInfoQuery`](reference/FileInfoQuery.md)
 
 #### Consensus
 
- * [`ConsensusTopicInfoQuery`]
+ * [`ConsensusTopicInfoQuery`](reference/ConsensusTopicInfoQuery.md)
 
 ## Contributing
 
