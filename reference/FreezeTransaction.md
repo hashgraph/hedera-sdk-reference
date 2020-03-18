@@ -5,8 +5,8 @@
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
-| [`setContractId()`](#setContractId) | X | ✅ | ✅
-| [`setFileId()`](#setFileId) | X | ✅ | ✅
+| [`setContractId()`](#setContractId) |✗| ✅ | ✅
+| [`setFileId()`](#setFileId) |✗| ✅ | ✅
 
 ## Methods
 

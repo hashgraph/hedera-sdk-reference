@@ -6,7 +6,7 @@
 | - | - | - | - |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setAccountId()`](#setAccountId) | ✅ | ✅ | ✅
-| [`setContractId()`](#setContractId) | ✅ | X | ✅
+| [`setContractId()`](#setContractId) | ✅ |✗| ✅
 | [`execute()`](#execute) | ✅ | ✅ | ✅
 
 ## Methods
