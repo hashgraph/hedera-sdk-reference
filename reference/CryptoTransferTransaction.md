@@ -22,19 +22,19 @@ Transfer cryptocurrency from some accounts to other accounts.
 
 | Item | Java | JavaScript | Go
 | - | :-: | :-: | :-: |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`addRecipient()`](#addRecipient) | ✅ | ✅ | ✅
 | [`addSender()`](#addSender) | ✅ | ✅ | ✅
 | [`addTransfer()`](#addTransfer) | ✅ | ✅ | ✅
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
 Creates a new `CryptoTransferTransaction` object.
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `addSender()`
@@ -42,8 +42,8 @@ new(): Self
 Add a party to the transfer who will have currency withdrawn from their account
 to add to the transfer.
 
-```python
-addSender(self, id: AccountId, amount: Hbar): Self
+```typescript
+addSender(id: AccountId, amount: Hbar): this
 ```
 
 Alias for:
@@ -57,8 +57,8 @@ addTransfer(id, -amount)
 Add a party to the transfer who will have currency credited to their account
 by this transfer.
 
-```python
-addSender(self, id: AccountId, amount: Hbar): Self
+```typescript
+addSender(id: AccountId, amount: Hbar): this
 ```
 
 Alias for:
@@ -69,8 +69,8 @@ addTransfer(id, amount)
 
 ### `addTransfer()`
 
-```python
-addTransfer(self, id: AccountId, amount: Hbar): Self
+```typescript
+addTransfer(id: AccountId, amount: Hbar): this
 ```
 
 #### Parameters

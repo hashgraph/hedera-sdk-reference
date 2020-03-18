@@ -1,4 +1,4 @@
-# `FileAppendTransaction`
+# `FileInfoQuery`
 
 ## Support
 
@@ -6,7 +6,8 @@
 | - | - | - | - |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setFileId()`](#setFileId) | ✅ | ✅ | ✅
-| [`setContents()`](#setContents) | ✅ | ✅ | ✅
+| [`execute()`](#execute) | ✅ | ✅ | ✅
+| [`getCost()`](#getCost) | ✅ | ✅ | ✅
 
 ## Methods
 
@@ -22,8 +23,14 @@ constructor()
 setFileId(id: FileId): this
 ```
 
-### `setContents()`
+### `execute()`
 
 ```typescript
-setContents(contents: Uint8Array | String): this
+execute(client: Client): FileInfo
+```
+
+### `getCost()`
+
+```typescript
+getCost(client: Client): uint64
 ```

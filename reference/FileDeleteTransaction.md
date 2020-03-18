@@ -4,19 +4,19 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setFileId()`](#setFileId)
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setFileId()`
 
-```python
-setFileId(self, id: FileId): Self
+```typescript
+setFileId(id: FileId): this
 ```

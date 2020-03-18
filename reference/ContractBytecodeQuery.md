@@ -1,12 +1,12 @@
-# `FreezeTransaction`
+# `ContractBytecodeQuery`
 
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
-| [`setContractId()`](#setContractId) | X | ✅ | ✅
-| [`setFileId()`](#setFileId) | X | ✅ | ✅
+| [`setContractId()`](#setContractId)
+| [`execute()`](#execute)
 
 ## Methods
 
@@ -22,9 +22,8 @@ constructor()
 setContractId(id: ContractId): this
 ```
 
-### `setFileId()`
+### `execute()`
 
 ```typescript
-setFileId(id: FileId): this
+execute(client: Client): uint8[]
 ```
-

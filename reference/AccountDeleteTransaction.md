@@ -4,26 +4,26 @@
 
 | Item | Java | JavaScript | Go
 | - | :-: | :-: | :-: |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setDeleteAccountId()`](#addRecipient) | ✅ | ✅ | ✅
 | [`setTransferAccountId()`](#addSender) | ✅ | ✅ | ✅
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setDeleteAccountId()`
 
-```python
-setDeleteAccountId(self, id: AccountId): Self
+```typescript
+setDeleteAccountId(id: AccountId): this
 ```
 
 ### `setTransferAccountId()`
 
-```python
-setTransferAccountId(self, id: AccountId): Self
+```typescript
+setTransferAccountId(id: AccountId): this
 ```

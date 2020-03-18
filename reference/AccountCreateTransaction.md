@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setKey()`](#setKey) | ✅ | ✅ | ✅
 | [`setAutoRenewPeriod()`](#setAutoRenewPeriod) | ✅ | ✅ | ✅
 | [`setInitialBalance()`](#setInitialBalance) | ✅ | ✅ | ✅
@@ -15,51 +15,51 @@
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setKey()`
 
-```python
-setKey(self, key: PublicKey): Self
+```typescript
+setKey(key: PublicKey): this
 ```
 
 ### `setAutoRenewPeriod()`
 
-```python
-setAutoRenewPeriod(self, period: Duration): Self
+```typescript
+setAutoRenewPeriod(period: Duration): this
 ```
 
 ### `setInitialBalance()`
 
-```python
-setInitialBalance(self, balance: Hbar): Self
+```typescript
+setInitialBalance(balance: Hbar): this
 ```
 
 ### `setReceiveRecordThreshold()`
 
-```python
-setReceiveRecordThreshold(self, threshold: Hbar): Self
+```typescript
+setReceiveRecordThreshold(threshold: Hbar): this
 ```
 
 ### `setSendRecordThreshold()`
 
-```python
-setSendRecordThreshold(self, threshold: Hbar): Self
+```typescript
+setSendRecordThreshold(threshold: Hbar): this
 ```
 
 ### `setProxyAccountId()`
 
-```python
-setProxyAccountId(self, id: AccountId): Self
+```typescript
+setProxyAccountId(id: AccountId): this
 ```
 
 ### `setReceiverSignatureRequired()`
 
-```python
-setReceiverSignatureRequired(self, required: bool): Self
+```typescript
+setReceiverSignatureRequired(required: bool): this
 ```
 

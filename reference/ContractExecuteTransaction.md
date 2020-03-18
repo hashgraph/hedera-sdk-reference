@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-[`new()`](#new) | ✅ | ✅ | ✅
+[`constructor()`](#new) | ✅ | ✅ | ✅
 [`setGas()`](#setGas) | ✅ | ✅ | ✅
 [`setPayableAmount()`](#setPayableAmount) | ✅ | ✅ | ✅
 [`setFunction()`](#setFunction) | ✅ | ✅ | ✅
@@ -12,33 +12,33 @@
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setGas()`
 
-```python
-setGas(self, gas: uint64): Self
+```typescript
+setGas(gas: uint64): this
 ```
 
 ### `setPayableAmount()`
 
-```python
-setPayableAmount(self, payable: Hbar): Self
+```typescript
+setPayableAmount(payable: Hbar): this
 ```
 
 ### `setFunction()`
 
-```python
-setFunction(self, name: String, params: ContractFunctionParams): Self
+```typescript
+setFunction(name: String, params: ContractFunctionParams): this
 ```
 
 ### `setContractId()`
 
-```python
-setContractId(self, id: ContractId): Self
+```typescript
+setContractId(id: ContractId): this
 ```
 

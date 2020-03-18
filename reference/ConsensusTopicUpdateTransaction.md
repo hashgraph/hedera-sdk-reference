@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setTopicId()`](#setTopicId) | ✅ | ✅ | ✅
 | [`setTopicMemo()`](#setTopicMemo) | ✅ | ✅ | ✅
 | [`setExpirationTime()`](#setExpirationTime) | ✅ | ✅ | ✅
@@ -19,75 +19,75 @@
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setTopicId()`
 
-```python
-setTopicId(self, id: ConsensusTopicId): Self
+```typescript
+setTopicId(id: ConsensusTopicId): this
 ```
 
 ### `setTopicMemo()`
 
-```python
-setTopicMemo(self, memo: String): Self
+```typescript
+setTopicMemo(memo: String): this
 ```
 
 ### `setExpirationTime()`
 
-```python
-setExpirationTime(self, time: Date): Self
+```typescript
+setExpirationTime(time: Date): this
 ```
 
 ### `setAdminKey()`
 
-```python
-setAdminKey(self, key: PublicKey): Self
+```typescript
+setAdminKey(key: PublicKey): this
 ```
 
 ### `setSubmitKey()`
 
-```python
-setSubmitKey(self, key: PublicKey): Self
+```typescript
+setSubmitKey(key: PublicKey): this
 ```
 
 ### `setAutoRenewPeriod()`
 
-```python
-setAutoRenewPeriod(self, id: Duration): Self
+```typescript
+setAutoRenewPeriod(id: Duration): this
 ```
 
 ### `setAutoRenewAccountId()`
 
-```python
-setAutoRenewAccountId(self, id: AccountId): Self
+```typescript
+setAutoRenewAccountId(id: AccountId): this
 ```
 
 ### `clearTopicMemo()`
 
-```python
-clearTopicMemo(self): Self
+```typescript
+clearTopicMemo(self): this
 ```
 
 ### `clearAdminKey()`
 
-```python
-clearAdminKey(self): Self
+```typescript
+clearAdminKey(self): this
 ```
 
 ### `clearSubmitKey()`
 
-```python
-clearSubmitKey(self): Self
+```typescript
+clearSubmitKey(self): this
 ```
 
 ### `clearAutoRenewAccountId()`
 
-```python
-clearAutoRenewAccountId(self): Self
+```typescript
+clearAutoRenewAccountId(self): this
 ```
 

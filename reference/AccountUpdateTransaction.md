@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setAccountId()`](#setAccountId) | ✅ | ✅ | ✅
 | [`setKey()`](#setKey) | ✅ | ✅ | ✅
 | [`setAutoRenewPeriod()`](#setAutoRenewPeriod) | ✅ | ✅ | ✅
@@ -16,57 +16,57 @@
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setAccountId()`
 
-```python
-setAccountId(self, id: AccountId): Self
+```typescript
+setAccountId(id: AccountId): this
 ```
 
 ### `setKey()`
 
-```python
-setKey(self, key: PublicKey): Self
+```typescript
+setKey(key: PublicKey): this
 ```
 
 ### `setAutoRenewPeriod()`
 
-```python
-setAutoRenewPeriod(self, period: Duration): Self
+```typescript
+setAutoRenewPeriod(period: Duration): this
 ```
 
 ### `setReceiveRecordThreshold()`
 
-```python
-setReceiveRecordThreshold(self, threshold: Hbar): Self
+```typescript
+setReceiveRecordThreshold(threshold: Hbar): this
 ```
 
 ### `setSendRecordThreshold()`
 
-```python
-setSendRecordThreshold(self, threshold: Hbar): Self
+```typescript
+setSendRecordThreshold(threshold: Hbar): this
 ```
 
 ### `setExpirationTime()`
 
-```python
-setExpirationTime(self, date: Time): Self
+```typescript
+setExpirationTime(date: Time): this
 ```
 
 ### `setProxyAccountId()`
 
-```python
-setProxyAccountId(self, id: AccountId): Self
+```typescript
+setProxyAccountId(id: AccountId): this
 ```
 
 ### `setReceiverSignatureRequired()`
 
-```python
-setReceiverSignatureRequired(self, required: bool): Self
+```typescript
+setReceiverSignatureRequired(required: bool): this
 ```
 

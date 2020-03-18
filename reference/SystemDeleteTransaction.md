@@ -4,34 +4,34 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setExpirationTime()`](#setExpirationTime) | ✅ | ✅ | ✅
 | [`setContractId()`](#setContractId) | ✅ | ✅ | ✅
 | [`setFileId()`](#setFileId) | ✅ | ✅ | ✅
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setExpirationTime()`
 
-```python
-setExpirationTime(self, date: Date): Self
+```typescript
+setExpirationTime(date: Date): this
 ```
 
 ### `setContractId()`
 
-```python
-setContractId(self, id: ContractId): Self
+```typescript
+setContractId(id: ContractId): this
 ```
 
 ### `setFileId()`
 
-```python
-setFileId(self, id: FileId): Self
+```typescript
+setFileId(id: FileId): this
 ```
 

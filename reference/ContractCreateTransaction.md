@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-[`new()`](#new) | ✅ | ✅ | ✅
+[`constructor()`](#new) | ✅ | ✅ | ✅
 [`setBytecodeFileId()`](#setBytecodeFileId) | ✅ | ✅ | ✅
 [`setAdminKey()`](#setAdminKey) | ✅ | ✅ | ✅
 [`setGas()`](#setGas) | ✅ | ✅ | ✅
@@ -16,57 +16,57 @@
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setBytecodeFileId()`
 
-```python
-setBytecodeFileId(self, id: FileId): Self
+```typescript
+setBytecodeFileId(id: FileId): this
 ```
 
 ### `setAdminKey()`
 
-```python
-setAdminKey(self, key: PublicKey): Self
+```typescript
+setAdminKey(key: PublicKey): this
 ```
 
 ### `setGas()`
 
-```python
-setGas(self, gas: uint64): Self
+```typescript
+setGas(gas: uint64): this
 ```
 
 ### `setInitialBalance()`
 
-```python
-setInitialBalance(self, balance: Hbar): Self
+```typescript
+setInitialBalance(balance: Hbar): this
 ```
 
 ### `setProxyAccountId()`
 
-```python
-setProxyAccountId(self, id: AccountId): Self
+```typescript
+setProxyAccountId(id: AccountId): this
 ```
 
 ### `setAutoRenewPeriod()`
 
-```python
-setAutoRenewPeriod(self, period: Duration): Self
+```typescript
+setAutoRenewPeriod(period: Duration): this
 ```
 
 ### `setConstructorParams()`
 
-```python
-setConstructorParams(self, params: ContractFunctionParams): Self
+```typescript
+setConstructorParams(params: ContractFunctionParams): this
 ```
 
 ### `setContractMemo()`
 
-```python
-setContractMemo(self, memo: String): Self
+```typescript
+setContractMemo(memo: String): this
 ```
 

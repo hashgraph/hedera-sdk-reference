@@ -1,4 +1,4 @@
-# `ConsensusTopicDeleteTransaction`
+# `ConsensusTopicInfoQuery`
 
 ## Support
 
@@ -6,6 +6,7 @@
 | - | - | - | - |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setTopicId()`](#setTopicId) | ✅ | ✅ | ✅
+| [`execute()`](#execute) | ✅ | ✅ | ✅
 
 ## Methods
 
@@ -19,4 +20,10 @@ constructor()
 
 ```typescript
 setTopicId(id: ConsensusTopicId): this
+```
+
+### `execute()`
+
+```typescript
+execute(client: Client): ConsensusTopicInfo
 ```

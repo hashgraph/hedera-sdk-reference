@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setFileId()`](#setFileId) | ✅ | ✅ | ✅
 | [`setExpirationTime()`](#setExpirationTime) | ✅ | ✅ | ✅
 | [`addKey()`](#addKey) | ✅ | ✅ | ✅
@@ -12,32 +12,32 @@
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setFileId()`
 
-```python
-setFileId(self, id: FileId): Self
+```typescript
+setFileId(id: FileId): this
 ```
 
 ### `setExpirationTime()`
 
-```python
-setExpirationTime(self, date: Time): Self
+```typescript
+setExpirationTime(date: Time): this
 ```
 
 ### `addKey()`
 
-```python
-addKey(self, key: PublicKey): Self
+```typescript
+addKey(key: PublicKey): this
 ```
 
 ### `setContents()`
 
-```python
-setContents(self, contents: uint8[] | String): Self
+```typescript
+setContents(contents: Uint8Array | String): this
 ```

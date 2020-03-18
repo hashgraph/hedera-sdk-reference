@@ -4,34 +4,34 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-[`new()`](#new) | ✅ | ✅ | ✅
+[`constructor()`](#new) | ✅ | ✅ | ✅
 [`setContractId()`](#setContractId) | ✅ | ✅ | ✅
 [`setTransferAccountId()`](#setTransferAccountId) | ✅ | ✅ | ✅
 [`setTransferContractId()`](#setTransferContractId) | ✅ | ✅ | ✅
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setContractId()`
 
-```python
-setContractId(self, id: ContractId): Self
+```typescript
+setContractId(id: ContractId): this
 ```
 
 ### `setTransferAccountId()`
 
-```python
-setTransferAccountId(self, id: AccountId): Self
+```typescript
+setTransferAccountId(id: AccountId): this
 ```
 
 ### `setTransferContractId()`
 
-```python
-setTransferContractId(self, id: ContractId): Self
+```typescript
+setTransferContractId(id: ContractId): this
 ```
 

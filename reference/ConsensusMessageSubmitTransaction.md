@@ -4,25 +4,25 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setTopicId()`](#setTopicId) | ✅ | ✅ | ✅
 | [`setMessage()`](#setMessage) | ✅ | ✅ | ✅
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 ### `setTopicId()`
 
-```python
-setTopicId(self, id: ConsensusTopicId): Self
+```typescript
+setTopicId(id: ConsensusTopicId): this
 ```
 
 ### `setMessage()`
 
-```python
-setMessage(self, message: uint8[] | String): Self
+```typescript
+setMessage(message: uint8[] | String): this
 ```

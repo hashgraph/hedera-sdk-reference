@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-[`new()`](#new) | ✅ | ✅ | ✅
+[`constructor()`](#new) | ✅ | ✅ | ✅
 [`setContractId()`](#setContractId) | ✅ | ✅ | ✅
 [`setAdminKey()`](#setAdminKey) | ✅ | ✅ | ✅
 [`setProxyAccountId()`](#setProxyAccountId) | ✅ | ✅ | ✅
@@ -15,51 +15,51 @@
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setContractId()`
 
-```python
-setContractId(self, id: ContractId): Self
+```typescript
+setContractId(id: ContractId): this
 ```
 
 ### `setAdminKey()`
 
-```python
-setAdminKey(self, key: PublicKey): Self
+```typescript
+setAdminKey(key: PublicKey): this
 ```
 
 ### `setProxyAccountId()`
 
-```python
-setProxyAccountId(self, id: AccountId): Self
+```typescript
+setProxyAccountId(id: AccountId): this
 ```
 
 ### `setBytecodeFileId()`
 
-```python
-setBytecodeFileId(self, id: FileId): Self
+```typescript
+setBytecodeFileId(id: FileId): this
 ```
 
 ### `setAutoRenewPeriod()`
 
-```python
-setAutoRenewPeriod(self, period: Duration): Self
+```typescript
+setAutoRenewPeriod(period: Duration): this
 ```
 
 ### `setExpirationTime()`
 
-```python
-setExpirationTime(self, date: Time): Self
+```typescript
+setExpirationTime(date: Time): this
 ```
 
 ### `setContractMemo()`
 
-```python
-setContractMemo(self, memo: String): Self
+```typescript
+setContractMemo(memo: String): this
 ```
 

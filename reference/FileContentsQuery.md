@@ -1,12 +1,12 @@
-# `SystemUndeleteTransaction`
+# `FileContentsQuery`
 
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
-| [`setContractId()`](#setContractId) | ✅ | ✅ | ✅
 | [`setFileId()`](#setFileId) | ✅ | ✅ | ✅
+| [`execute()`](#execute) | ✅ | ✅ | ✅
 
 ## Methods
 
@@ -15,14 +15,16 @@
 ```typescript
 constructor()
 ```
-### `setContractId()`
-
-```typescript
-setContractId(id: ContractId): this
-```
 
 ### `setFileId()`
 
 ```typescript
 setFileId(id: FileId): this
 ```
+
+### `execute()`
+
+```typescript
+execute(client: Client): uint8[]
+```
+

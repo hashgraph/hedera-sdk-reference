@@ -4,33 +4,33 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setExpirationTime()`](#setExpirationTime) | ✅ | ✅ | ✅
 | [`addKey()`](#addKey) | ✅ | ✅ | ✅
 | [`setContents()`](#setContents) | ✅ | ✅ | ✅
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setExpirationTime()`
 
-```python
-setExpirationTime(self, Time): Self
+```typescript
+setExpirationTime(Time): this
 ```
 
 ### `addKey()`
 
-```python
-addKey(self, PublicKey): Self
+```typescript
+addKey(PublicKey): this
 ```
 
 ### `setContents()`
 
-```python
-setContents(self, contents: uint8[] | String): Self
+```typescript
+setContents(contents: Uint8Array | String): this
 ```

@@ -1,4 +1,4 @@
-# `SystemUndeleteTransaction`
+# `ContractRecordsQuery`
 
 ## Support
 
@@ -6,7 +6,8 @@
 | - | - | - | - |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setContractId()`](#setContractId) | ✅ | ✅ | ✅
-| [`setFileId()`](#setFileId) | ✅ | ✅ | ✅
+| [`execute()`](#execute) | ✅ | ✅ | ✅
+| [`getCost()`](#getCost) | ✅ | ✅ | ✅
 
 ## Methods
 
@@ -15,14 +16,21 @@
 ```typescript
 constructor()
 ```
+
 ### `setContractId()`
 
 ```typescript
 setContractId(id: ContractId): this
 ```
 
-### `setFileId()`
+### `execute()`
 
 ```typescript
-setFileId(id: FileId): this
+execute(client: Client): TransactionRecord[]
+```
+
+### `getCost()`
+
+```typescript
+getCost(client: Client): uint64
 ```

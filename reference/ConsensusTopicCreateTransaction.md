@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`new()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setTopicMemo()`](#setTopicMemo) | ✅ | ✅ | ✅
 | [`setAdminKey()`](#setAdminKey) | ✅ | ✅ | ✅
 | [`setSubmitKey()`](#setSubmitKey) | ✅ | ✅ | ✅
@@ -13,38 +13,38 @@
 
 ## Methods
 
-### `new()`
+### `constructor()`
 
-```python
-new(): Self
+```typescript
+constructor()
 ```
 
 ### `setTopicMemo()`
 
-```python
-setTopicMemo(self, memo: String): Self
+```typescript
+setTopicMemo(memo: String): this
 ```
 
 ### `setAdminKey()`
 
-```python
-setAdminKey(self, key: PublicKey): Self
+```typescript
+setAdminKey(key: PublicKey): this
 ```
 
 ### `setSubmitKey()`
 
-```python
-setSubmitKey(self, key: PublicKey): Self
+```typescript
+setSubmitKey(key: PublicKey): this
 ```
 
 ### `setAutoRenewPeriod()`
 
-```python
-setAutoRenewPeriod(self, period: Duration): Self
+```typescript
+setAutoRenewPeriod(period: Duration): this
 ```
 
 ### `setAutoRenewAccountId()`
 
-```python
-setAutoRenewAccountId(self, id: AccountId): Self
+```typescript
+setAutoRenewAccountId(id: AccountId): this
 ```
