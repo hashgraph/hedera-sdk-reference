@@ -32,6 +32,6 @@ execute(client: Client): ContractInfo
 ### `getCost()`
 
 ```typescript
-getCost(client: Client): uint64
+getCost(client: Client): Uint64
 ```
 

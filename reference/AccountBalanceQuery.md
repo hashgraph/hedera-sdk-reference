@@ -32,5 +32,5 @@ setContractId(id: ContractId): this
 ### `execute()`
 
 ```typescript
-execute(client: Client): uint64
+execute(client: Client): Uint64
 ```

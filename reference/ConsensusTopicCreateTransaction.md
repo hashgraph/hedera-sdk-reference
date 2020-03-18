@@ -22,7 +22,7 @@ constructor()
 ### `setTopicMemo()`
 
 ```typescript
-setTopicMemo(memo: String): this
+setTopicMemo(memo: string): this
 ```
 
 ### `setAdminKey()`

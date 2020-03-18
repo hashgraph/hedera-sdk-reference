@@ -18,47 +18,47 @@
 ### `topicMemo`
 
 ```typescript
-topicMemo : String
+topicMemo: string
 ```
 
 ### `runningHash`
 
 ```typescript
-runningHash : u8[]
+runningHash: Uint8Array
 ```
 
 ### `sequenceNumber`
 
 ```typescript
-sequenceNumber : u64
+sequenceNumber: Uint64
 ```
 
 ### `expirationTime`
 
 ```typescript
-expirationTime : Time
+expirationTime: Time
 ```
 
 ### `adminKey`
 
 ```typescript
-adminKey : Key?
+adminKey: Key?
 ```
 
 ### `submitKey`
 
 ```typescript
-submitKey : Key?
+submitKey: Key?
 ```
 
 ### `autoRenewPeriod`
 
 ```typescript
-autoRenewPeriod : Duration
+autoRenewPeriod: Duration
 ```
 
 ### `autoRenewAccountId`
 
 ```typescript
-autoRenewAccountId : AccountId?
+autoRenewAccountId: AccountId?
 ```

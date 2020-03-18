@@ -25,5 +25,5 @@ setContractId(id: ContractId): this
 ### `execute()`
 
 ```typescript
-execute(client: Client): uint8[]
+execute(client: Client): Uint8Array
 ```

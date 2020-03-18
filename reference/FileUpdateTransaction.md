@@ -39,5 +39,5 @@ addKey(key: PublicKey): this
 ### `setContents()`
 
 ```typescript
-setContents(contents: Uint8Array | String): this
+setContents(contents: Uint8Array | string): this
 ```

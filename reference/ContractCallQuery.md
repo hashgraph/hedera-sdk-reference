@@ -29,19 +29,19 @@ setContractId(id: ContractId): this
 ### `setFunction()`
 
 ```typescript
-setFunction(name: String, params: ContractFunctionParams): this
+setFunction(name: string, params: ContractFunctionParams): this
 ```
 
 ### `setMaxResultSize()`
 
 ```typescript
-setMaxResultSize(size: u64): this
+setMaxResultSize(size: Uint64): this
 ```
 
 ### `setGas()`
 
 ```typescript
-setGas(self. size: uint64): this
+setGas(size: Uint64): this
 ```
 
 ### `execute()`

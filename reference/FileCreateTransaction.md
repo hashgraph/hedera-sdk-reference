@@ -20,17 +20,17 @@ constructor()
 ### `setExpirationTime()`
 
 ```typescript
-setExpirationTime(Time): this
+setExpirationTime(date: Time): this
 ```
 
 ### `addKey()`
 
 ```typescript
-addKey(PublicKey): this
+addKey(key: PublicKey): this
 ```
 
 ### `setContents()`
 
 ```typescript
-setContents(contents: Uint8Array | String): this
+setContents(contents: Uint8Array | string): this
 ```

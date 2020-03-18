@@ -21,7 +21,7 @@ Transfer cryptocurrency from some accounts to other accounts.
 ## Support
 
 | Item | Java | JavaScript | Go
-| - | :-: | :-: | :-: |
+| - |:-: |:-: |:-: |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`addRecipient()`](#addRecipient) | ✅ | ✅ | ✅
 | [`addSender()`](#addSender) | ✅ | ✅ | ✅
@@ -108,7 +108,7 @@ let transactionId = await new CryptoTransferTransaction()
 ### Go
 
 ```go
-transactionID, err := NewCryptoTransferTransaction().
+transactionID, err:= NewCryptoTransferTransaction().
     AddSender(senderID, NewHbar(10)).
     // AddTransfer(senderId, NewHbar(-10)).
     AddReceipient(recipientID, NewHbar(10)).

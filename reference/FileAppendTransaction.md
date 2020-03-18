@@ -25,5 +25,5 @@ setFileId(id: FileId): this
 ### `setContents()`
 
 ```typescript
-setContents(contents: Uint8Array | String): this
+setContents(contents: Uint8Array | string): this
 ```

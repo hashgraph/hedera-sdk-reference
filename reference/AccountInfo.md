@@ -22,67 +22,67 @@
 ### `accountId`
 
 ```typescript
-accountId : AccountId
+accountId: AccountId
 ```
 
 ### `contractAccountId`
 
 ```typescript
-contractAccountId : String
+contractAccountId: string
 ```
 
 ### `isDeleted`
 
 ```typescript
-isDeleted : bool
+isDeleted: bool
 ```
 
 ### `proxyAccountId`
 
 ```typescript
-proxyAccountId : AccountId
+proxyAccountId: AccountId
 ```
 
 ### `proxyReceived`
 
 ```typescript
-proxyReceived : Hbar
+proxyReceived: Hbar
 ```
 
 ### `key`
 
 ```typescript
-key : PublicKey
+key: PublicKey
 ```
 
 ### `balance`
 
 ```typescript
-balance : Hbar
+balance: Hbar
 ```
 
 ### `generateSendRecordThreshold`
 
 ```typescript
-generateSendRecordThreshold : Hbar
+generateSendRecordThreshold: Hbar
 ```
 
 ### `generateReceiveRecordThreshold`
 
 ```typescript
-generateReceiveRecordThreshold : Hbar
+generateReceiveRecordThreshold: Hbar
 ```
 
 ### `isReceiverSignatureRequired`
 
 ```typescript
-isReceiverSignatureRequired : bool
+isReceiverSignatureRequired: bool
 ```
 
 ### `expirationTime`
 
 ```typescript
-expirationTime : Time
+expirationTime: Time
 ```
 
 ### `autoRenewPeriod`

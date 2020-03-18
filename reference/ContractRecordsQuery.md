@@ -32,5 +32,5 @@ execute(client: Client): TransactionRecord[]
 ### `getCost()`
 
 ```typescript
-getCost(client: Client): uint64
+getCost(client: Client): Uint64
 ```

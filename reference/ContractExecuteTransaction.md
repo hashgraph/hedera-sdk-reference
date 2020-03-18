@@ -21,7 +21,7 @@ constructor()
 ### `setGas()`
 
 ```typescript
-setGas(gas: uint64): this
+setGas(gas: Uint64): this
 ```
 
 ### `setPayableAmount()`
@@ -33,7 +33,7 @@ setPayableAmount(payable: Hbar): this
 ### `setFunction()`
 
 ```typescript
-setFunction(name: String, params: ContractFunctionParams): this
+setFunction(name: string, params: ContractFunctionParams): this
 ```
 
 ### `setContractId()`

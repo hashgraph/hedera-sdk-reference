@@ -3,7 +3,7 @@
 ## Support
 
 | Item | Java | JavaScript | Go
-| - | :-: | :-: | :-: |
+| - |:-: |:-: |:-: |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setDeleteAccountId()`](#addRecipient) | ✅ | ✅ | ✅
 | [`setTransferAccountId()`](#addSender) | ✅ | ✅ | ✅

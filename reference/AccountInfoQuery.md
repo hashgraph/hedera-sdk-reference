@@ -32,5 +32,5 @@ execute(client: Client): AccountInfo
 ### `getCost()`
 
 ```typescript
-getCost(client: Client): uint64
+getCost(client: Client): Uint64
 ```

@@ -14,23 +14,23 @@
 ### `contractId`
 
 ```typescript
-contractId : ContractId
+contractId: ContractId
 ```
 
 ### `bloom`
 
 ```typescript
-bloom : uint8[]
+bloom: Uint8Array
 ```
 
 ### `topics`
 
 ```typescript
-topics : uint8[][]
+topics: Uint8Array[]
 ```
 
 ### `data`
 
 ```typescript
-data: uint8[]
+data: Uint8Array
 ```

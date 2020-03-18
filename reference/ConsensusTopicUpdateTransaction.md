@@ -34,7 +34,7 @@ setTopicId(id: ConsensusTopicId): this
 ### `setTopicMemo()`
 
 ```typescript
-setTopicMemo(memo: String): this
+setTopicMemo(memo: string): this
 ```
 
 ### `setExpirationTime()`
@@ -70,24 +70,24 @@ setAutoRenewAccountId(id: AccountId): this
 ### `clearTopicMemo()`
 
 ```typescript
-clearTopicMemo(self): this
+clearTopicMemo(): this
 ```
 
 ### `clearAdminKey()`
 
 ```typescript
-clearAdminKey(self): this
+clearAdminKey(): this
 ```
 
 ### `clearSubmitKey()`
 
 ```typescript
-clearSubmitKey(self): this
+clearSubmitKey(): this
 ```
 
 ### `clearAutoRenewAccountId()`
 
 ```typescript
-clearAutoRenewAccountId(self): this
+clearAutoRenewAccountId(): this
 ```
 

@@ -15,25 +15,25 @@
 ### `fileId`
 
 ```typescript
-fileId : FileId
+fileId: FileId
 ```
 
 ### `size`
 
 ```typescript
-size : u64
+size: Uint64
 ```
 
 ### `expirationTime`
 
 ```typescript
-expirationTime : Time
+expirationTime: Time
 ```
 
 ### `isDeleted`
 
 ```typescript
-isDeleted : bool
+isDeleted: bool
 ```
 
 ### `keys`

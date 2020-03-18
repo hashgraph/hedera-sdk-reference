@@ -24,5 +24,5 @@ setTopicId(id: ConsensusTopicId): this
 ### `setMessage()`
 
 ```typescript
-setMessage(message: uint8[] | String): this
+setMessage(message: Uint8Array | string): this
 ```

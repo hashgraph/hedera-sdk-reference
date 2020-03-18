@@ -37,7 +37,7 @@ setAdminKey(key: PublicKey): this
 ### `setGas()`
 
 ```typescript
-setGas(gas: uint64): this
+setGas(gas: Uint64): this
 ```
 
 ### `setInitialBalance()`
@@ -67,6 +67,6 @@ setConstructorParams(params: ContractFunctionParams): this
 ### `setContractMemo()`
 
 ```typescript
-setContractMemo(memo: String): this
+setContractMemo(memo: string): this
 ```
 

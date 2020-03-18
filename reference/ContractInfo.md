@@ -18,47 +18,47 @@
 ### `contractId`
 
 ```typescript
-contractId : ContractId
+contractId: ContractId
 ```
 
 ### `accountId`
 
 ```typescript
-accountId : AccountId
+accountId: AccountId
 ```
 
 ### `contractAccountId`
 
 ```typescript
-contractAccountId : String
+contractAccountId: string
 ```
 
 ### `adminKey`
 
 ```typescript
-adminKey : PublicKey?
+adminKey: PublicKey?
 ```
 
 ### `expirationTime`
 
 ```typescript
-expirationTime : Time
+expirationTime: Time
 ```
 
 ### `autoRenewPeriod`
 
 ```typescript
-autoRenewPeriod : Duration
+autoRenewPeriod: Duration
 ```
 
 ### `storage`
 
 ```typescript
-storage : uint64
+storage: Uint64
 ```
 
 ### `contractMemo`
 
 ```typescript
-contractMemo: String?
+contractMemo: string?
 ```
