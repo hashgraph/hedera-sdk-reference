@@ -19,49 +19,49 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 
 #### Accounts
 
- * [`AccountCreateTransaction`]
+ * [`AccountCreateTransaction`](reference/AccountCreateTransaction.md)
 
- * [`AccountUpdateTransaction`]
+ * [`AccountUpdateTransaction`](reference/AccountUpdateTransaction.md)
 
  * [`AccountDeleteTransaction`](reference/AccountDeleteTransaction.md)
 
 #### Contracts
 
- * [`ContractCreateTransaction`]
+ * [`ContractCreateTransaction`](reference/ContractCreateTransaction.md)
 
- * [`ContractUpdateTransaction`]
+ * [`ContractUpdateTransaction`](reference/ContractUpdateTransaction.md)
 
- * [`ContractDeleteTransaction`]
+ * [`ContractDeleteTransaction`](reference/ContractDeleteTransaction.md)
 
- * [`ContractExecuteTransaction`]
+ * [`ContractExecuteTransaction`](reference/ContractExecuteTransaction.md)
 
 #### Files
 
- * [`FileCreateTransaction`]
+ * [`FileCreateTransaction`](reference/FileCreateTransaction.md)
 
- * [`FileAppendTransaction`]
+ * [`FileAppendTransaction`](reference/FileAppendTransaction.md)
 
- * [`FileUpdateTransaction`]
+ * [`FileUpdateTransaction`](reference/FileUpdateTransaction.md)
 
- * [`FileDeleteTransaction`]
+ * [`FileDeleteTransaction`](reference/FileDeleteTransaction.md)
 
 #### Consensus
 
- * [`ConsensusTopicCreateTransaction`]
+ * [`ConsensusTopicCreateTransaction`](reference/ConsensusTopicCreateTransaction.md)
 
- * [`ConsensusTopicUpdateTransaction`]
+ * [`ConsensusTopicUpdateTransaction`](reference/ConsensusTopicUpdateTransaction.md)
 
- * [`ConsensusTopicDeleteTransaction`]
+ * [`ConsensusTopicDeleteTransaction`](reference/ConsensusTopicDeleteTransaction.md)
 
- * [`ConsensusMessageSubmitTransaction`]
+ * [`ConsensusMessageSubmitTransaction`](reference/ConsensusMessageSubmitTransaction.md)
 
 #### System
 
- * [`SystemDeleteTransaction`]
+ * [`SystemDeleteTransaction`](reference/SystemDeleteTransaction.md)
 
- * [`SystemUndeleteTransaction`]
+ * [`SystemUndeleteTransaction`](reference/SystemUndeleteTransaction.md)
 
- * [`FreezeTransaction`]
+ * [`FreezeTransaction`](reference/FreezeTransaction.md)
 
 ### Queries
 
