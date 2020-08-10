@@ -1,29 +1,37 @@
 # `FreezeTransaction`
 
+Set the freezing period in which the platform will stop creating events and accepting transactions.
+
+This is used before safely shut down the platform for maintenance.
+
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#new) | ✅ | ✅ | ✅
-| [`setContractId()`](#setContractId) |✗| ✅ | ✅
-| [`setFileId()`](#setFileId) |✗| ✅ | ✅
+| [`constructor`](#constructor) | ✅ | ✅ | ✅
+| [`setStartTime`](#setStartTime) | ✅ | ✅ | ✅
+| [`setEndTime`](#setEndTime) | ✅ | ✅ | ✅
 
 ## Methods
 
-### `constructor()`
+### `constructor`
 
 ```typescript
 constructor()
 ```
 
-### `setContractId()`
+### `setStartTime`
+
+Sets the start time (in UTC).
 
 ```typescript
-setContractId(id: ContractId): this
+setStartTime(hour: Int, minute: Int): this
 ```
 
-### `setFileId()`
+### `setEndTime`
+
+Sets the end time (in UTC).
 
 ```typescript
-setFileId(id: FileId): this
+setEndTime(hour: Int, minute: Int): this
 ```
