@@ -1,0 +1,16 @@
+{
+  "name": "reference",
+  "version": "2.0.0",
+  "description": "Hedera™ Hashgraph SDK Reference",
+  "main": "index.js",
+  "repository": "https://github.com/hashgraph/hedera-sdk.git",
+  "author": "Ryan Leckey <ryan@launchbadge.com>",
+  "license": "Apache-2",
+  "private": true,
+  "scripts": {
+    "lint": "markdownlint README.md reference/"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.23.2"
+  }
+}
