@@ -15,6 +15,7 @@
 ```typescript
 constructor()
 ```
+
 ### `setTopicId()`
 
 ```typescript

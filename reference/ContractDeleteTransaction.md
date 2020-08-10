@@ -34,4 +34,3 @@ setTransferAccountId(id: AccountId): this
 ```typescript
 setTransferContractId(id: ContractId): this
 ```
-

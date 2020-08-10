@@ -62,4 +62,3 @@ setProxyAccountId(id: AccountId): this
 ```typescript
 setReceiverSignatureRequired(required: bool): this
 ```
-

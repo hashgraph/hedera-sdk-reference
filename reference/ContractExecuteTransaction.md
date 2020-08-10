@@ -41,4 +41,3 @@ setFunction(name: string, params: ContractFunctionParams): this
 ```typescript
 setContractId(id: ContractId): this
 ```
-

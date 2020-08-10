@@ -69,4 +69,3 @@ setConstructorParams(params: ContractFunctionParams): this
 ```typescript
 setContractMemo(memo: string): this
 ```
-

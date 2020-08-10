@@ -27,4 +27,3 @@ setContractId(id: ContractId): this
 ```typescript
 setFileId(id: FileId): this
 ```
-

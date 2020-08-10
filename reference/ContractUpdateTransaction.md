@@ -62,4 +62,3 @@ setExpirationTime(date: Time): this
 ```typescript
 setContractMemo(memo: string): this
 ```
-

@@ -34,4 +34,3 @@ execute(client: Client): ContractInfo
 ```typescript
 getCost(client: Client): Uint64
 ```
-

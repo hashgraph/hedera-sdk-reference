@@ -55,4 +55,3 @@ execute(client: Client): ContractFunctionResult
 ```typescript
 getCost(client: Client): Hbar
 ```
-

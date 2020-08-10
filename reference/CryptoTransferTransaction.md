@@ -2,21 +2,22 @@
 
 Transfer cryptocurrency from some accounts to other accounts.
 
- * The accounts list can contain up to 10 accounts.
+* The accounts list can contain up to 10 accounts.
 
- * The amounts list must be the same length as the accounts list.
+* The amounts list must be the same length as the accounts list.
 
- * Each negative amount is withdrawn from the corresponding account (a sender),
-   and each positive one is added to the corresponding account (a receiver).
+* Each negative amount is withdrawn from the corresponding account (a sender),
+    and each positive one is added to the corresponding account (a receiver).
 
- * The amounts list must sum to zero. Each amount is a number of tinyBars.
+* The amounts list must sum to zero. Each amount is a number of tinyBars.
 
- * If any sender account fails to have sufficient hbars to do the withdrawal,
-   then the entire transaction fails, and none of those transfers occur, though the transaction fee is still charged.
+* If any sender account fails to have sufficient hbars to do the withdrawal,
+    then the entire transaction fails, and none of those transfers occur,
+    though the transaction fee is still charged.
 
- * This transaction must be signed by the keys for all the
-   sending accounts, and for any receiving accounts that
-   have `receiverSignatureRequired` set to `true`.
+* This transaction must be signed by the keys for all the
+    sending accounts, and for any receiving accounts that
+    have `receiverSignatureRequired` set to `true`.
 
 ## Support
 
@@ -48,7 +49,7 @@ addSender(id: AccountId, amount: Hbar): this
 
 Alias for:
 
-```
+```typescript
 addTransfer(id, -amount)
 ```
 
@@ -63,7 +64,7 @@ addSender(id: AccountId, amount: Hbar): this
 
 Alias for:
 
-```
+```typescript
 addTransfer(id, amount)
 ```
 
@@ -81,7 +82,8 @@ The Account ID of the sending party.
 
 ##### `amount`
 
-The amount of `Hbar` that will be withdrawn/deposited from/to this account for the transfer.
+The amount of `Hbar` that will be withdrawn/deposited from/to this account
+for the transfer.
 
 ## Examples
 

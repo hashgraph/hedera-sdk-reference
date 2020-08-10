@@ -27,4 +27,3 @@ setFileId(id: FileId): this
 ```typescript
 execute(client: Client): Uint8Array
 ```
-
