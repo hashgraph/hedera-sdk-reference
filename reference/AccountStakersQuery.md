@@ -25,5 +25,5 @@ setAccountId(id: AccountId): this
 ### `execute()`
 
 ```typescript
-execute(client: Client): Transfer[]
+execute(client: Client): ProxyStaker[]
 ```
