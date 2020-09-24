@@ -20,13 +20,13 @@
 | [`setReceiverSignatureRequired()`](#setreceiversignaturerequired) | ✅ | ✅ | ✅
 | [`getReceiverSignatureRequired()`](#getreceiversignaturerequired) | ✅ | ✅ | O
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
-| [`getNodeId()`](#getnodedd) | ✅ | ✅ | O
+| [`getNodeId()`](#getnodeid) | ✅ | ✅ | O
 | [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
 | [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
 | [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
 | [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | O
-| [`setTransactionMemo`](#settransactionmemo) | ✅ | ✅ | O
-| [`getTransactionMemo()`](#getyransactionmemo) | ✅ | ✅ | O
+| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | O
+| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | O
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
 | [`fromBytes()`](#frombytes) | ✅ | ✅ | O
 | [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | O
@@ -35,7 +35,6 @@
 | [`sign()`](#sign) | ✅ | ✅ | O
 | [`signWith()`](#signwith) | ✅ | ✅ | O
 | [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | O
-| [`isFrozen()`](#isfrozen) | ✅ | ✅ | O
 | [`freeze()`](#freeze) | ✅ |  ✅ | O
 | [`freezeWith()`](#freezewith) | ✅ | ✅ | O
 | [`toString()`](#tostring) | ✅ | ✅ | O
