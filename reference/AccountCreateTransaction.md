@@ -4,14 +4,41 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#new) | ✅ | ✅ | ✅
-| [`setKey()`](#setKey) | ✅ | ✅ | ✅
-| [`setAutoRenewPeriod()`](#setAutoRenewPeriod) | ✅ | ✅ | ✅
-| [`setInitialBalance()`](#setInitialBalance) | ✅ | ✅ | ✅
-| [`setReceiveRecordThreshold()`](#setReceiveRecordThreshold) | ✅ | ✅ | ✅
-| [`setSendRecordThreshold()`](#setSendRecordThreshold) | ✅ | ✅ | ✅
-| [`setProxyAccountId()`](#setProxyAccountId) | ✅ | ✅ | ✅
-| [`setReceiverSignatureRequired()`](#setReceiverSignatureRequired) | ✅ | ✅ | ✅
+| [`constructor()`](#constructor) | ✅ | ✅ | ✅
+| [`setKey()`](#setkey) | ✅ | ✅ | ✅
+| [`getKey()`](#getkey) | ✅ | ✅ | ✅
+| [`setAutoRenewPeriod()`](#setautorenewperiod) | ✅ | ✅ | ✅
+| [`getAutoRenewPeriod()`](#getautorenewperiod) | ✅ | ✅ | O
+| [`setInitialBalance()`](#setinitialbalance) | ✅ | ✅ | ✅
+| [`getInitialBalance()`](#getinitialbalance) | ✅ | ✅ | O
+| [`setReceiveRecordThreshold()`](#setreceiverecordthreshold) | ✅ | ✅ | ✅
+| [`getReceiveRecordThreshold()`](#getreceiverecordthreshold) | ✅ | ✅ | O
+| [`setSendRecordThreshold()`](#setsendrecordthreshold) | ✅ | ✅ | ✅
+| [`getSendRecordThreshold()`](#getsendrecordthreshold) | ✅ | ✅ | O
+| [`setProxyAccountId()`](#setproxyaccountid) | ✅ | ✅ | ✅
+| [`getProxyAccountId()`](#getproxyaccountid) | ✅ | ✅ | O
+| [`setReceiverSignatureRequired()`](#setreceiversignaturerequired) | ✅ | ✅ | ✅
+| [`getReceiverSignatureRequired()`](#getreceiversignaturerequired) | ✅ | ✅ | O
+| [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`getNodeId()`](#getnodedd) | ✅ | ✅ | O
+| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
+| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
+| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
+| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | O
+| [`setTransactionMemo`](#settransactionmemo) | ✅ | ✅ | O
+| [`getTransactionMemo()`](#getyransactionmemo) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | O
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
+| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | O
+| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | O
+| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | O
+| [`sign()`](#sign) | ✅ | ✅ | O
+| [`signWith()`](#signwith) | ✅ | ✅ | O
+| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | O
+| [`isFrozen()`](#isfrozen) | ✅ | ✅ | O
+| [`freeze()`](#freeze) | ✅ |  ✅ | O
+| [`freezeWith()`](#freezewith) | ✅ | ✅ | O
+| [`toString()`](#tostring) | ✅ | ✅ | O
 
 ## Methods
 
@@ -24,7 +51,13 @@ constructor()
 ### `setKey()`
 
 ```typescript
-setKey(key: PublicKey): this
+setKey(key: Key): this
+```
+
+### `getKey()`
+
+```typescript
+getKey(): Key
 ```
 
 ### `setAutoRenewPeriod()`
@@ -33,10 +66,22 @@ setKey(key: PublicKey): this
 setAutoRenewPeriod(period: Duration): this
 ```
 
+### `getAutoRenewPeriod()`
+
+```typescript
+getAutoRenewPeriod(): Duration
+```
+
 ### `setInitialBalance()`
 
 ```typescript
 setInitialBalance(balance: Hbar): this
+```
+
+### `getInitialBalance()`
+
+```typescript
+getInitialBalance(): Hbar
 ```
 
 ### `setReceiveRecordThreshold()`
@@ -45,10 +90,22 @@ setInitialBalance(balance: Hbar): this
 setReceiveRecordThreshold(threshold: Hbar): this
 ```
 
+### `getReceiveRecordThreshold()`
+
+```typescript
+getReceiveRecordThreshold(): Hbar
+```
+
 ### `setSendRecordThreshold()`
 
 ```typescript
 setSendRecordThreshold(threshold: Hbar): this
+```
+
+### `getSendRecordThreshold()`
+
+```typescript
+getSendRecordThreshold(): Hbar
 ```
 
 ### `setProxyAccountId()`
@@ -57,8 +114,134 @@ setSendRecordThreshold(threshold: Hbar): this
 setProxyAccountId(id: AccountId): this
 ```
 
+### `getProxyAccountId()`
+
+```typescript
+getProxyAccountId(): AccountId
+```
+
 ### `setReceiverSignatureRequired()`
 
 ```typescript
 setReceiverSignatureRequired(required: bool): this
+```
+
+### `getReceiverSignatureRequired()`
+
+```typescript
+getReceiverSignatureRequired(): boolean
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): byte[]
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(bytes: byte[]): this
+```
+
+### `setNodeId()`
+
+```typescript
+setNodeId(id: AccountId): this
+```
+
+### `getNodeId()`
+
+```typescript
+getNodeId(): AccountId
+```
+
+### `setTransactionValidDuration()`
+
+```typescript
+setTransactionValidDuration(duration: Duration): this
+```
+
+### `getTransactionValidDuration()`
+
+```typescript
+getTransactionValidDuration(): Duration
+```
+
+### `setMaxTransactionFee()`
+
+```typescript
+setMaxTransactionFee(fee: Hbar): this
+```
+
+### `getMaxTransactionFee()`
+
+```typescript
+getMaxTransactionFee(): Hbar
+```
+
+### `setTransactionMemo()`
+
+```typescript
+setTransactionMemo(memo: String): this
+```
+
+### `getTransactionMemo()`
+
+```typescript
+getTransactionMemo(): String
+```
+
+### `getTransactionHash()`
+
+```typescript
+getTransactionHash(): byte[]
+```
+
+### `setTransactionId()`
+
+```typescript
+setTransactionId(): TransactionId
+```
+
+### `getTransactionId()`
+
+```typescript
+getTransactionId(id: TransactionId): this
+```
+
+### `sign()`
+
+```typescript
+sign(key: PrivateKey): this
+```
+
+### `signWith()`
+
+```typescript
+signWith(key: PrivateKey, signer: Function<byte[], byte[]>): this
+```
+
+### `signWithOperator()`
+
+```typescript
+signWithOperator(client: Client): this
+```
+
+### `freeze()`
+
+```typescript
+freeze(): this
+```
+
+### `freezeWith()`
+
+```typescript
+freezeWith(client: Client): this
+```
+
+### `toString()`
+
+```typescript
+toString(): String
 ```
