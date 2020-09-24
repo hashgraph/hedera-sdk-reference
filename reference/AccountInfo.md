@@ -4,18 +4,21 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`accountId`](#accountId) | ✅ | ✅ | ✅
-| [`contractAccountId`](#contractAccountId) | ✅ | ✅ | ✅
-| [`isDeleted`](#isDeleted) | ✅ | ✅ | ✅
-| [`proxyAccountId`](#proxyAccountId) | ✅ | ✅ | ✅
-| [`proxyReceived`](#proxyReceived) | ✅ | ✅ | ✅
+| [`accountId`](#accountid) | ✅ | ✅ | ✅
+| [`contractAccountId`](#contractaccountId) | ✅ | ✅ | ✅
+| [`isDeleted`](#isdeleted) | ✅ | ✅ | ✅
+| [`proxyAccountId`](#proxyaccountId) | ✅ | ✅ | ✅
+| [`proxyReceived`](#proxyreceived) | ✅ | ✅ | ✅
 | [`key`](#key) | ✅ | ✅ | ✅
 | [`balance`](#balance) | ✅ | ✅ | ✅
-| [`generateSendRecordThreshold`](#generateSendRecordThreshold) | ✅ | ✅ | ✅
-| [`generateReceiveRecordThreshold`](#generateReceiveRecordThreshold) | ✅ | ✅ | ✅
-| [`isReceiverSignatureRequired`](#isReceiverSignatureRequired) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationTime) | ✅ | ✅ | ✅
-| [`autoRenewPeriod`](#autoRenewPeriod) | ✅ | ✅ | ✅
+| [`generateSendRecordThreshold`](#generatesendrecordthreshold) | ✅ | ✅ | ✅
+| [`generateReceiveRecordThreshold`](#generatereceiverecordthreshold) | ✅ | ✅ | ✅
+| [`isReceiverSignatureRequired`](#isreceiversignaturerequired) | ✅ | ✅ | ✅
+| [`expirationTime`](#expirationtime) | ✅ | ✅ | ✅
+| [`autoRenewPeriod`](#autorenewperiod) | ✅ | ✅ | ✅
+| [`constructor()`](#constructor) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | O
+| [`fromBytes`](#frombytes) | ✅ | ✅ | O
 
 ## Fields
 
@@ -90,3 +93,43 @@ expirationTime: Time
 ```typescript
 autoRenewPeriod: Duration
 ```
+
+### `liveHashes`
+
+```typescript
+liveHashes: List<LiveHash>
+```
+
+## Methods
+
+### `constructor()`
+
+```typescript
+constructor(
+    id: AccountId,
+    contractAccountId: String, 
+    isDeleted: isDelete,
+    proxyAccountId: AccountId,
+    proxyReceived: proxyReceived,
+    key: Key,
+    balance: long,
+    sendRecordThreshold: long,
+    receiveRecordThreshold: long,
+    receiverSignatureRequired: ;pmg,
+    expirationTime: Instant,
+    autoRenewPeriod: Duration,
+    liveHashes: List<LiveHash>)
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(bytes: byte[]): this
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): byte[]
+```
+
