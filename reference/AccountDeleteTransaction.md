@@ -74,13 +74,13 @@ setNodeId(id: AccountId): this
 ### `setTransactionValidDuration()`
 
 ```typescript
-setTransactionValidDuration(duration: Duration): this
+setTransactionValidDuration(duration: Timestamp): this
 ```
 
 ### `getTransactionValidDuration()`
 
 ```typescript
-getTransactionValidDuration(): Duration
+getTransactionValidDuration(): Timestamp
 ```
 
 ### `setMaxTransactionFee()`
@@ -110,20 +110,20 @@ getTransactionMemo(): String
 ### `toBytes()`
 
 ```typescript
-toBytes(): byte[]
+toBytes(): bytes
 ```
 
 ### `fromBytes()`
 
 ```typescript
-fromBytes(bytes: byte[]): this
+fromBytes(data: bytes): this
 ```
 
 
 ### `getTransactionHash()`
 
 ```typescript
-getTransactionHash(): byte[]
+getTransactionHash(): bytes
 ```
 
 ### `setTransactionId()`
@@ -147,7 +147,7 @@ sign(key: PrivateKey): this
 ### `signWith()`
 
 ```typescript
-signWith(key: PrivateKey, signer: Function<byte[], byte[]>): this
+signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
 ```
 
 ### `signWithOperator()`

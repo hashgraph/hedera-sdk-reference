@@ -40,7 +40,7 @@ setSubmitKey(key: PublicKey): this
 ### `setAutoRenewPeriod()`
 
 ```typescript
-setAutoRenewPeriod(period: Duration): this
+setAutoRenewPeriod(period: Timestamp): this
 ```
 
 ### `setAutoRenewAccountId()`

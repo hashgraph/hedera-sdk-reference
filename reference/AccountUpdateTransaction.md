@@ -5,8 +5,8 @@
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setAccountId()`](#setaccountdd) | ✅ | ✅ | ✅
-| [`getAccountId()`](#getaccountdd) | ✅ | ✅ | ✅
+| [`setAccountId()`](#setaccountid) | ✅ | ✅ | ✅
+| [`getAccountId()`](#getaccountid) | ✅ | ✅ | ✅
 | [`setKey()`](#setkey) | ✅ | ✅ | ✅
 | [`getKey()`](#getkey) | ✅ | ✅ | O
 | [`setAutoRenewPeriod()`](#setautorenewperiod) | ✅ | ✅ | ✅
@@ -17,7 +17,7 @@
 | [`getSendRecordThreshold()`](#getsendrecordthreshold) | ✅ | ✅ | ✅
 | [`setExpirationTime()`](#setexpirationtime) | ✅ | ✅ | ✅
 | [`getExpirationTime()`](#getexpirationtime) | ✅ | ✅ | O
-| [`setProxyAccountId()`](#setproxyaccountId) | ✅ | ✅ | ✅
+| [`setProxyAccountId()`](#setproxyaccountid) | ✅ | ✅ | ✅
 | [`getProxyAccountId()`](#getproxyaccountid) | ✅ | ✅ | O
 | [`setReceiverSignatureRequired()`](#setreceiversignaturerequired) | ✅ | ✅ | ✅
 | [`getReceiverSignatureRequired()`](#getreceiversignaturerequired) | ✅ | ✅ | O
@@ -75,13 +75,13 @@ getKey(): Key
 ### `setAutoRenewPeriod()`
 
 ```typescript
-setAutoRenewPeriod(period: Duration): this
+setAutoRenewPeriod(period: Timestamp): this
 ```
 
 ### `getAutoRenewPeriod()`
 
 ```typescript
-getAutoRenewPeriod(): Duration
+getAutoRenewPeriod(): Timestamp
 ```
 
 ### `setReceiveRecordThreshold()`
@@ -165,13 +165,13 @@ setNodeId(id: AccountId): this
 ### `setTransactionValidDuration()`
 
 ```typescript
-setTransactionValidDuration(duration: Duration): this
+setTransactionValidDuration(duration: Timestamp): this
 ```
 
 ### `getTransactionValidDuration()`
 
 ```typescript
-getTransactionValidDuration(): Duration
+getTransactionValidDuration(): Timestamp
 ```
 
 ### `setMaxTransactionFee()`
@@ -201,7 +201,7 @@ getTransactionMemo(): String
 ### `getTransactionHash()`
 
 ```typescript
-getTransactionHash(): byte[]
+getTransactionHash(): bytes
 ```
 
 ### `setTransactionId()`
@@ -225,7 +225,7 @@ sign(key: PrivateKey): this
 ### `signWith()`
 
 ```typescript
-signWith(key: PrivateKey, signer: Function<byte[], byte[]>): this
+signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
 ```
 
 ### `signWithOperator()`

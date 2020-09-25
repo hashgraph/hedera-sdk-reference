@@ -55,7 +55,7 @@ proxyReceived: Hbar
 ### `key`
 
 ```typescript
-key: PublicKey
+key: Key
 ```
 
 ### `balance`
@@ -67,13 +67,13 @@ balance: Hbar
 ### `generateSendRecordThreshold`
 
 ```typescript
-generateSendRecordThreshold: Hbar
+sendRecordThreshold: Hbar
 ```
 
 ### `generateReceiveRecordThreshold`
 
 ```typescript
-generateReceiveRecordThreshold: Hbar
+receiveRecordThreshold: Hbar
 ```
 
 ### `isReceiverSignatureRequired`
@@ -85,13 +85,13 @@ isReceiverSignatureRequired: bool
 ### `expirationTime`
 
 ```typescript
-expirationTime: Time
+expirationTime: Timestamp
 ```
 
 ### `autoRenewPeriod`
 
 ```typescript
-autoRenewPeriod: Duration
+autoRenewPeriod: Timestamp
 ```
 
 ### `liveHashes`
@@ -117,19 +117,19 @@ constructor(
     receiveRecordThreshold: long,
     receiverSignatureRequired: ;pmg,
     expirationTime: Timestamp,
-    autoRenewPeriod: Duration,
+    autoRenewPeriod: Timestamp,
     liveHashes: List<LiveHash>)
 ```
 
 ### `fromBytes()`
 
 ```typescript
-fromBytes(bytes: byte[]): this
+fromBytes(data: bytes): this
 ```
 
 ### `toBytes()`
 
 ```typescript
-toBytes(): byte[]
+toBytes(): bytes
 ```
 

@@ -49,13 +49,13 @@ setFunction(name: string, parameters: ContractFunctionParameters): this
 ### `setFunctionParameters()`
 
 ```typescript
-setFunctionParameters(parameters: byte[]): this
+setFunctionParameters(parameters: bytes): this
 ```
 
 ### `getFunctionParameters()`
 
 ```typescript
-getFunctionParameters(): byte[]
+getFunctionParameters(): bytes
 ```
 
 ### `setMaxResultSize()`
@@ -109,11 +109,11 @@ async getCost(client: Client): Hbar
 ### `toBytes()`
 
 ```typescript
-toBytes(): byte[]
+toBytes(): bytes
 ```
 
 ### `fromBytes()`
 
 ```typescript
-fromBytes(bytes: byte[]): this
+fromBytes(data: bytes): this
 ```

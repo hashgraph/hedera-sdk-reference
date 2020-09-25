@@ -54,7 +54,7 @@ submitKey: Key?
 ### `autoRenewPeriod`
 
 ```typescript
-autoRenewPeriod: Duration
+autoRenewPeriod: Timestamp
 ```
 
 ### `autoRenewAccountId`

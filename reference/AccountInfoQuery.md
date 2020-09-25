@@ -68,11 +68,11 @@ async getCost(client: Client): Hbar
 ### `toBytes()`
 
 ```typescript
-toBytes(): byte[]
+toBytes(): bytes
 ```
 
 ### `fromBytes()`
 
 ```typescript
-fromBytes(bytes: byte[]): this
+fromBytes(data: bytes): this
 ```

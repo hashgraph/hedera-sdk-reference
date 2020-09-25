@@ -71,13 +71,13 @@ toSolidityAddress(): string
 ### `fromBytes()`
 
 ```typescript
-fromBytes(bytes: byte[]): this
+fromBytes(data: bytes): this
 ```
 
 ### `toBytes()`
 
 ```typescript
-toBytes(): byte[]
+toBytes(): bytes
 ```
 
 ### `equals()`

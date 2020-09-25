@@ -103,7 +103,7 @@ setOperator(id: AccountId, key: PrivateKey): this
 setOperatorWith(
     id: AccountId, 
     key: PublicKey, 
-    signer: Function<byte[], byte[]>): this
+    signer: Function<bytes, bytes>): this
 ```
 
 ### `getOperatorId()`
@@ -139,5 +139,5 @@ close()
 ### `close()`
 
 ```typescript
-close(timeout: Duration)
+close(timeout: Timestamp)
 ```
