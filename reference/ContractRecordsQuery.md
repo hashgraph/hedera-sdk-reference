@@ -4,10 +4,16 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#new) | ✅ | ✅ | ✅
-| [`setContractId()`](#setContractId) | ✅ | ✅ | ✅
+| [`constructor()`](#constructor) | ✅ | ✅ | ✅
+| [`setContractId()`](#setContractid) | ✅ | ✅ | ✅
+| [`getContractId()`](#getContractid) | ✅ | ✅ | O
 | [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`getCost()`](#getCost) | ✅ | ✅ | ✅
+| [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | O  
+| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | O
+| [`getCost()`](#getcost) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | O
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
 
 ## Methods
 
@@ -23,14 +29,50 @@ constructor()
 setContractId(id: ContractId): this
 ```
 
+### `getContractId()`
+
+```typescript
+getContractId(): ContractId
+```
+
 ### `execute()`
 
 ```typescript
-execute(client: Client): TransactionRecord[]
+async execute(client: Client): this
+```
+
+### `setNodeId()`
+
+```typescript
+setNodeId(id: AccountId): this
+```
+
+### `setQueryPayment()`
+
+```typescript
+setQueryPayment(payment: Hbar): this
+```
+
+### `setMaxQueryPayment()`
+
+```typescript
+setMaxQueryPayment(payment: Hbar): this
 ```
 
 ### `getCost()`
 
 ```typescript
-getCost(client: Client): Uint64
+async getCost(client: Client): Hbar
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): bytes
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(data: bytes): this
 ```
