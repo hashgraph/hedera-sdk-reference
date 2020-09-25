@@ -6,11 +6,19 @@
 | - | - | - | - |
 | [`constructor()`](#new) | ✅ | ✅ | ✅
 | [`setContractId()`](#setContractId) | ✅ | ✅ | ✅
-| [`setFunction()`](#setFunction) | ✅ | ✅ | ✅
+| [`setFunction()`](#setfunction) | ✅ | ✅ | ✅
+| [`setFunctionParameters()`](#setfunctionparameters) | ✅ | ✅ | O
+| [`getFunctionParameters()`](#getfunctionparameters) | ✅ | ✅ | O
 | [`setMaxResultSize()`](#setMaxResultSize) | ✅ | ✅ | ✅
-| [`setGas()`](#setGas) | ✅ | ✅ | ✅
+| [`setGas()`](#setgas) | ✅ | ✅ | ✅
+| [`getGas()`](#getgas) | ✅ | ✅ | ✅
 | [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`getCost()`](#getCost) | ✅ | ✅ | ✅
+| [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | O  
+| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | O
+| [`getCost()`](#getcost) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | O
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
 
 ## Methods
 
@@ -29,7 +37,25 @@ setContractId(id: ContractId): this
 ### `setFunction()`
 
 ```typescript
-setFunction(name: string, params: ContractFunctionParams): this
+setFunction(name: string): this
+```
+
+### `setFunction()`
+
+```typescript
+setFunction(name: string, parameters: ContractFunctionParameters): this
+```
+
+### `setFunctionParameters()`
+
+```typescript
+setFunctionParameters(parameters: byte[]): this
+```
+
+### `getFunctionParameters()`
+
+```typescript
+getFunctionParameters(): byte[]
 ```
 
 ### `setMaxResultSize()`
@@ -41,17 +67,53 @@ setMaxResultSize(size: Uint64): this
 ### `setGas()`
 
 ```typescript
-setGas(size: Uint64): this
+setGas(gas: long): this
+```
+
+### `getGas()`
+
+```typescript
+getGas(): long
 ```
 
 ### `execute()`
 
 ```typescript
-execute(client: Client): ContractFunctionResult
+async execute(client: Client): this
+```
+
+### `setNodeId()`
+
+```typescript
+setNodeId(id: AccountId): this
+```
+
+### `setQueryPayment()`
+
+```typescript
+setQueryPayment(payment: Hbar): this
+```
+
+### `setMaxQueryPayment()`
+
+```typescript
+setMaxQueryPayment(payment: Hbar): this
 ```
 
 ### `getCost()`
 
 ```typescript
-getCost(client: Client): Hbar
+async getCost(client: Client): Hbar
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): byte[]
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(bytes: byte[]): this
 ```
