@@ -8,6 +8,9 @@
 | [`bloom`](#bloom) | ✅ | ✅ | ✅
 | [`topics`](#topics) | ✅ | ✅ | ✅
 | [`data`](#data) | ✅ | ✅ | ✅
+| [`constructor()`](#constructor) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | O
+| [`fromBytes`](#frombytes) | ✅ | ✅ | O
 
 ## Fields
 
@@ -20,17 +23,41 @@ contractId: ContractId
 ### `bloom`
 
 ```typescript
-bloom: Uint8Array
+bloom: bytes
 ```
 
 ### `topics`
 
 ```typescript
-topics: Uint8Array[]
+topics: List<bytes>
 ```
 
 ### `data`
 
 ```typescript
-data: Uint8Array
+data: bytes
+```
+
+## Methods
+
+### `constructor()`
+
+```typescript
+constructor(
+    id: ContractId,
+    bloom: bytes,
+    topics: List<bytes>,
+   data: bytes)
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(data: bytes): this
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): bytes
 ```
