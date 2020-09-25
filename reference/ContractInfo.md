@@ -4,14 +4,18 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`contractId`](#contractId) | ✅ | ✅ | ✅
-| [`accountId`](#accountId) | ✅ | ✅ | ✅
-| [`contractAccountId`](#contractAccountId) | ✅ | ✅ | ✅
-| [`adminKey`](#adminKey) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationTime) | ✅ | ✅ | ✅
-| [`autoRenewPeriod`](#autoRenewPeriod) | ✅ | ✅ | ✅
+| [`contractId`](#contractid) | ✅ | ✅ | ✅
+| [`accountId`](#accountid) | ✅ | ✅ | ✅
+| [`contractAccountId`](#contractaccountid) | ✅ | ✅ | ✅
+| [`adminKey`](#adminkey) | ✅ | ✅ | ✅
+| [`expirationTime`](#expirationtime) | ✅ | ✅ | ✅
+| [`autoRenewPeriod`](#autorenewperiod) | ✅ | ✅ | ✅
 | [`storage`](#storage) | ✅ | ✅ | ✅
-| [`contractMemo`](#contractMemo) | ✅ | ✅ | ✅
+| [`contractMemo`](#contractmemo) | ✅ | ✅ | ✅
+| [`balance`](#balance) | ✅ | ✅ | ✅
+| [`constructor()`](#constructor) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | O
+| [`fromBytes`](#frombytes) | ✅ | ✅ | O
 
 ## Fields
 
@@ -36,29 +40,65 @@ contractAccountId: string
 ### `adminKey`
 
 ```typescript
-adminKey: PublicKey?
+adminKey: Key
 ```
 
 ### `expirationTime`
 
 ```typescript
-expirationTime: Time
+expirationTime: Timestamp
 ```
 
 ### `autoRenewPeriod`
 
 ```typescript
-autoRenewPeriod: Duration
+autoRenewPeriod: Timestamp
 ```
 
 ### `storage`
 
 ```typescript
-storage: Uint64
+storage: long
 ```
 
 ### `contractMemo`
 
 ```typescript
-contractMemo: string?
+contractMemo: string
 ```
+
+### `balance`
+
+```typescript
+balance: Hbar
+```
+
+## Methods
+
+### `constructor()`
+
+```typescript
+constructor(
+    contractId: ContractId,
+    accountId: AccountId
+    contractAccountId: String, 
+    adminKey: Key,
+    expirationTime: Timestamp,
+    renewPeriod: Timestamp,
+    storage: long,
+    memo: string,
+    balance: long)
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(data: bytes): this
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): bytes
+```
+
