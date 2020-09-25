@@ -116,7 +116,7 @@ constructor(
     sendRecordThreshold: long,
     receiveRecordThreshold: long,
     receiverSignatureRequired: ;pmg,
-    expirationTime: Instant,
+    expirationTime: Timestamp,
     autoRenewPeriod: Duration,
     liveHashes: List<LiveHash>)
 ```
