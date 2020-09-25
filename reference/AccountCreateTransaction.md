@@ -19,8 +19,8 @@
 | [`getProxyAccountId()`](#getproxyaccountid) | ✅ | ✅ | O
 | [`setReceiverSignatureRequired()`](#setreceiversignaturerequired) | ✅ | ✅ | ✅
 | [`getReceiverSignatureRequired()`](#getreceiversignaturerequired) | ✅ | ✅ | O
+| [`execute()`](#execute) | ✅ | ✅ | O
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | O
 | [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
 | [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
 | [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
@@ -37,7 +37,6 @@
 | [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | O
 | [`freeze()`](#freeze) | ✅ |  ✅ | O
 | [`freezeWith()`](#freezewith) | ✅ | ✅ | O
-| [`toString()`](#tostring) | ✅ | ✅ | O
 
 ## Methods
 
@@ -143,16 +142,16 @@ toBytes(): byte[]
 fromBytes(bytes: byte[]): this
 ```
 
+### `execute()`
+
+```typescript
+async execute(client: Client): this
+```
+
 ### `setNodeId()`
 
 ```typescript
 setNodeId(id: AccountId): this
-```
-
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
 ```
 
 ### `setTransactionValidDuration()`
@@ -237,10 +236,4 @@ freeze(): this
 
 ```typescript
 freezeWith(client: Client): this
-```
-
-### `toString()`
-
-```typescript
-toString(): String
 ```

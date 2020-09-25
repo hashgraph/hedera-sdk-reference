@@ -9,8 +9,8 @@
 | [`getAccountId()`](#getaccountid) | ✅ | ✅ | O
 | [`setTransferAccountId()`](#settransferaccountid) | ✅ | ✅ | ✅
 | [`getTransferAccountId()`](#gettransferaccountid) | ✅ | ✅ | O
+| [`execute()`](#execute) | ✅ | ✅ | O
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | O
 | [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
 | [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
 | [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
@@ -27,7 +27,6 @@
 | [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | O
 | [`freeze()`](#freeze) | ✅ |  ✅ | O
 | [`freezeWith()`](#freezewith) | ✅ | ✅ | O
-| [`toString()`](#tostring) | ✅ | ✅ | O
 
 ## Methods
 
@@ -60,16 +59,16 @@ setTransferAccountId(id: AccountId): this
 ```typescript
 getTransferAccountId(): AccountId
 ```
+### `execute()`
+
+```typescript
+async execute(client: Client): this
+```
+
 ### `setNodeId()`
 
 ```typescript
 setNodeId(id: AccountId): this
-```
-
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
 ```
 
 ### `setTransactionValidDuration()`
@@ -167,10 +166,4 @@ freeze(): this
 
 ```typescript
 freezeWith(client: Client): this
-```
-
-### `toString()`
-
-```typescript
-toString(): String
 ```

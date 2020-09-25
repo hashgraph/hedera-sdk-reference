@@ -14,7 +14,6 @@
 | [`getCost()`](#getcost) | ✅ | ✅ | O
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
 | [`fromBytes()`](#frombytes) | ✅ | ✅ | O
-| [`toString()`](#tostring) | ✅ | ✅ | O
 
 ## Methods
 
@@ -78,10 +77,5 @@ toBytes(): byte[]
 fromBytes(bytes: byte[]): this
 ```
 
-### `toString()`
-
-```typescript
-toString(): String
-```
 
 
