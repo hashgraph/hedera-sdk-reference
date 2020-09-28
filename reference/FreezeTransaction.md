@@ -9,8 +9,28 @@ This is used before safely shut down the platform for maintenance.
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`constructor`](#constructor) | ✅ | ✅ | ✅
-| [`setStartTime`](#setStartTime) | ✅ | ✅ | ✅
-| [`setEndTime`](#setEndTime) | ✅ | ✅ | ✅
+| [`setStartTime`](#setstarttime) | ✅ | ✅ | ✅
+| [`getStartTime`](#getstarttime) | ✅ | ✅ | O
+| [`setEndTime`](#setendtime) | ✅ | ✅ | ✅
+| [`setEndTime`](#setendtime) | ✅ | ✅ | O
+| [`execute()`](#execute) | ✅ | ✅ | O
+| [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
+| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
+| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
+| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | O
+| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | O
+| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | O
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
+| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | O
+| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | O
+| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | O
+| [`sign()`](#sign) | ✅ | ✅ | O
+| [`signWith()`](#signwith) | ✅ | ✅ | O
+| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | O
+| [`freeze()`](#freeze) | ✅ |  ✅ | O
+| [`freezeWith()`](#freezewith) | ✅ | ✅ | O
 
 ## Methods
 
@@ -20,12 +40,26 @@ This is used before safely shut down the platform for maintenance.
 constructor()
 ```
 
+### `constructor`
+
+```typescript
+constructor(body: TransactionBody)
+```
+
 ### `setStartTime`
 
 Sets the start time (in UTC).
 
 ```typescript
-setStartTime(hour: Int, minute: Int): this
+setStartTime(hour: int, minute: int): this
+```
+
+### `setStartTime`
+
+Sets the start time (in UTC).
+
+```typescript
+setStartTime(): Timestamp
 ```
 
 ### `setEndTime`
@@ -33,5 +67,121 @@ setStartTime(hour: Int, minute: Int): this
 Sets the end time (in UTC).
 
 ```typescript
-setEndTime(hour: Int, minute: Int): this
+setEndTime(hour: int, minute: int): this
+```
+
+### `getEndTime`
+
+Sets the end time (in UTC).
+
+```typescript
+getEndTime(): Timestamp
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): bytes
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(data: bytes): this
+```
+
+### `execute()`
+
+```typescript
+async execute(client: Client): this
+```
+
+### `setNodeId()`
+
+```typescript
+setNodeId(id: AccountId): this
+```
+
+### `setTransactionValidDuration()`
+
+```typescript
+setTransactionValidDuration(duration: Timestamp): this
+```
+
+### `getTransactionValidDuration()`
+
+```typescript
+getTransactionValidDuration(): Timestamp
+```
+
+### `setMaxTransactionFee()`
+
+```typescript
+setMaxTransactionFee(fee: Hbar): this
+```
+
+### `getMaxTransactionFee()`
+
+```typescript
+getMaxTransactionFee(): Hbar
+```
+
+### `setTransactionMemo()`
+
+```typescript
+setTransactionMemo(memo: String): this
+```
+
+### `getTransactionMemo()`
+
+```typescript
+getTransactionMemo(): String
+```
+
+### `getTransactionHash()`
+
+```typescript
+getTransactionHash(): bytes
+```
+
+### `setTransactionId()`
+
+```typescript
+setTransactionId(): TransactionId
+```
+
+### `getTransactionId()`
+
+```typescript
+getTransactionId(id: TransactionId): this
+```
+
+### `sign()`
+
+```typescript
+sign(key: PrivateKey): this
+```
+
+### `signWith()`
+
+```typescript
+signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
+```
+
+### `signWithOperator()`
+
+```typescript
+signWithOperator(client: Client): this
+```
+
+### `freeze()`
+
+```typescript
+freeze(): this
+```
+
+### `freezeWith()`
+
+```typescript
+freezeWith(client: Client): this
 ```
