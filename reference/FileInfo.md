@@ -4,15 +4,19 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`fileId`](#fileId)
-| [`size`](#size)
-| [`expirationTime`](#expirationTime)
-| [`isDeleted`](#isDeleted)
-| [`keys`](#keys)
+| [`fileId`](#fileid) | ✅ | ✅ | O
+| [`size`](#size) | ✅ | ✅ | O
+| [`expirationTime`](#expirationtime) | ✅ | ✅ | O
+| [`deleted`](#isdeleted) | ✅ | ✅ | O
+| [`keys`](#keys) | ✅ | ✅ | O
+| [`constructor()`](#constructor) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | O
+| [`fromBytes`](#frombytes) | ✅ | ✅ | O
+
 
 ## Fields
 
-### `fileId`
+### `fileid`
 
 ```typescript
 fileId: FileId
@@ -21,23 +25,47 @@ fileId: FileId
 ### `size`
 
 ```typescript
-size: Uint64
+size: long
 ```
 
 ### `expirationTime`
 
 ```typescript
-expirationTime: Time
+expirationTime: Timestamp
 ```
 
 ### `isDeleted`
 
 ```typescript
-isDeleted: bool
+deleted: bool
 ```
 
 ### `keys`
 
 ```typescript
-keys: PublicKey[]
+keys: List<Key>
+```
+
+## Methods
+
+### `constructor()`
+
+```typescript
+constructor(
+    id: FileId,
+    size: long,
+    expirationTime: Timestamp
+    keys: List<Key>)
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(data: bytes): this
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): bytes
 ```
