@@ -1,0 +1,253 @@
+# `TopicUpdateTransaction`
+
+## Support
+
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`constructor()`](#constructor) | ✅ | ✅ | ✅
+| [`setTopicId()`](#settopicid) | ✅ | ✅ | ✅
+| [`getTopicId()`](#gettopicid) | ✅ | ✅ | O
+| [`setTopicMemo()`](#settopicmemo) | ✅ | ✅ | ✅
+| [`getTopicMemo()`](#gettopicmemo) | ✅ | ✅ | O
+| [`setAdminKey()`](#setadminkey) | ✅ | ✅ | ✅
+| [`getAdminKey()`](#getadminkey) | ✅ | ✅ | O
+| [`setSubmitKey()`](#setsubmitkey) | ✅ | ✅ | ✅
+| [`getSubmitKey()`](#getsubmitkey) | ✅ | ✅ | O
+| [`setAutoRenewPeriod()`](#setautorenewperiod) | ✅ | ✅ | ✅
+| [`getAutoRenewPeriod()`](#getautorenewperiod) | ✅ | ✅ | O
+| [`setAutoRenewAccountId()`](#setautorenewaccountid) | ✅ | ✅ | ✅
+| [`getAutoRenewAccountId()`](#getautorenewaccountid) | ✅ | ✅ | O
+| [`clearTopicMemo()`](#clearyopicmemo) | ✅ | ✅ | ✅
+| [`clearAdminKey()`](#clearadminkey) | ✅ | ✅ | ✅
+| [`clearSubmitKey()`](#cleardubmitkey) | ✅ | ✅ | ✅
+| [`clearAutoRenewAccountId()`](#clearsutotenewsccountid) | ✅ | ✅ | ✅
+| [`execute()`](#execute) | ✅ | ✅ | O
+| [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
+| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
+| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
+| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | O
+| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | O
+| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | O
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
+| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | O
+| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | O
+| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | O
+| [`sign()`](#sign) | ✅ | ✅ | O
+| [`signWith()`](#signwith) | ✅ | ✅ | O
+| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | O
+| [`freeze()`](#freeze) | ✅ |  ✅ | O
+| [`freezeWith()`](#freezewith) | ✅ | ✅ | O
+
+## Methods
+
+### `constructor()`
+
+```typescript
+constructor()
+```
+
+### `setTopicId()`
+
+```typescript
+setTopicId(id: TopicId): this
+```
+
+### `sgtTopicId()`
+
+```typescript
+getTopicId(): TopicId
+```
+
+### `setTopicMemo()`
+
+```typescript
+setTopicMemo(memo: string): this
+```
+
+### `getTopicMemo()`
+
+```typescript
+getTopicMemo(): string
+```
+
+### `setAdminKey()`
+
+```typescript
+setAdminKey(key: Key): this
+```
+
+### `getAdminKey()`
+
+```typescript
+getAdminKey(): Key
+```
+
+### `setSubmitKey()`
+
+```typescript
+setSubmitKey(key: Key): this
+```
+
+### `getSubmitKey()`
+
+```typescript
+getSubmitKey(): Key
+```
+
+### `setAutoRenewPeriod()`
+
+```typescript
+setAutoRenewPeriod(id: Timestamp): this
+```
+
+### `getAutoRenewPeriod()`
+
+```typescript
+getAutoRenewPeriod(): Timestamp
+```
+
+### `setAutoRenewAccountId()`
+
+```typescript
+setAutoRenewAccountId(id: AccountId): this
+```
+
+### `getAutoRenewAccountId()`
+
+```typescript
+getAutoRenewAccountId(): AccountId
+```
+
+### `clearTopicMemo()`
+
+```typescript
+clearTopicMemo(): this
+```
+
+### `clearAdminKey()`
+
+```typescript
+clearAdminKey(): this
+```
+
+### `clearSubmitKey()`
+
+```typescript
+clearSubmitKey(): this
+```
+
+### `clearAutoRenewAccountId()`
+
+```typescript
+clearAutoRenewAccountId(): this
+```
+
+### `execute()`
+
+```typescript
+async execute(client: Client): this
+```
+
+### `setNodeId()`
+
+```typescript
+setNodeId(id: AccountId): this
+```
+
+### `setTransactionValidDuration()`
+
+```typescript
+setTransactionValidDuration(duration: Timestamp): this
+```
+
+### `getTransactionValidDuration()`
+
+```typescript
+getTransactionValidDuration(): Timestamp
+```
+
+### `setMaxTransactionFee()`
+
+```typescript
+setMaxTransactionFee(fee: Hbar): this
+```
+
+### `getMaxTransactionFee()`
+
+```typescript
+getMaxTransactionFee(): Hbar
+```
+
+### `setTransactionMemo()`
+
+```typescript
+setTransactionMemo(memo: String): this
+```
+
+### `getTransactionMemo()`
+
+```typescript
+getTransactionMemo(): String
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): bytes
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(data: bytes): this
+```
+
+### `getTransactionHash()`
+
+```typescript
+getTransactionHash(): bytes
+```
+
+### `setTransactionId()`
+
+```typescript
+setTransactionId(): TransactionId
+```
+
+### `getTransactionId()`
+
+```typescript
+getTransactionId(id: TransactionId): this
+```
+
+### `sign()`
+
+```typescript
+sign(key: PrivateKey): this
+```
+
+### `signWith()`
+
+```typescript
+signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
+```
+
+### `signWithOperator()`
+
+```typescript
+signWithOperator(client: Client): this
+```
+
+### `freeze()`
+
+```typescript
+freeze(): this
+```
+
+### `freezeWith()`
+
+```typescript
+freezeWith(client: Client): this
+```
