@@ -9,7 +9,6 @@
 | [`expirationTime`](#expirationtime) | ✅ | ✅ | O
 | [`deleted`](#isdeleted) | ✅ | ✅ | O
 | [`keys`](#keys) | ✅ | ✅ | O
-| [`constructor()`](#constructor) | ✅ | ✅ | O
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
 | [`fromBytes`](#frombytes) | ✅ | ✅ | O
 
@@ -47,16 +46,6 @@ keys: List<Key>
 ```
 
 ## Methods
-
-### `constructor()`
-
-```typescript
-constructor(
-    id: FileId,
-    size: long,
-    expirationTime: Timestamp
-    keys: List<Key>)
-```
 
 ### `fromBytes()`
 

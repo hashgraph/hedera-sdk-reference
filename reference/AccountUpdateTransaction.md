@@ -23,6 +23,7 @@
 | [`getReceiverSignatureRequired()`](#getreceiversignaturerequired) | ✅ | ✅ | O
 | [`execute()`](#execute) | ✅ | ✅ | O
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`getNodeId()`](#getnodeid) | ✅ | ✅ | O
 | [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
 | [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
 | [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
@@ -162,6 +163,12 @@ async execute(client: Client): this
 setNodeId(id: AccountId): this
 ```
 
+### `getNodeId()`
+
+```typescript
+getNodeId(): AccountId
+```
+
 ### `setTransactionValidDuration()`
 
 ```typescript
@@ -189,13 +196,25 @@ getMaxTransactionFee(): Hbar
 ### `setTransactionMemo()`
 
 ```typescript
-setTransactionMemo(memo: String): this
+setTransactionMemo(memo: string): this
 ```
 
 ### `getTransactionMemo()`
 
 ```typescript
-getTransactionMemo(): String
+getTransactionMemo(): string
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): bytes
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(data: bytes): this
 ```
 
 ### `getTransactionHash()`
@@ -204,16 +223,16 @@ getTransactionMemo(): String
 getTransactionHash(): bytes
 ```
 
-### `setTransactionId()`
-
-```typescript
-setTransactionId(): TransactionId
-```
-
 ### `getTransactionId()`
 
 ```typescript
-getTransactionId(id: TransactionId): this
+getTransactionId(): TransactionId
+```
+
+### `setTransactionId()`
+
+```typescript
+setTransactionId(id: TransactionId): this
 ```
 
 ### `sign()`

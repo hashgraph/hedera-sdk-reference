@@ -6,6 +6,7 @@
 | - | - | - | - |
 | [`constructor()`](#constructor) | ✅ | ✅ | ✅
 | [`setFileId()`](#setfileid) | ✅ | ✅ | ✅
+| [`getFileId()`](#getfileid) | ✅ | ✅ | O
 | [`execute()`](#execute) | ✅ | ✅ | ✅
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
 | [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | O  
@@ -26,6 +27,12 @@ constructor()
 
 ```typescript
 setFileId(id: FileId): this
+```
+
+### `getFileId()`
+
+```typescript
+getFileId(): FileId
 ```
 
 ### `execute()`

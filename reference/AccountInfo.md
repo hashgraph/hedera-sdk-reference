@@ -16,7 +16,6 @@
 | [`isReceiverSignatureRequired`](#isreceiversignaturerequired) | ✅ | ✅ | ✅
 | [`expirationTime`](#expirationtime) | ✅ | ✅ | ✅
 | [`autoRenewPeriod`](#autorenewperiod) | ✅ | ✅ | ✅
-| [`constructor()`](#constructor) | ✅ | ✅ | O
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
 | [`fromBytes`](#frombytes) | ✅ | ✅ | O
 
@@ -102,25 +101,6 @@ liveHashes: List<LiveHash>
 
 ## Methods
 
-### `constructor()`
-
-```typescript
-constructor(
-    id: AccountId,
-    contractAccountId: String, 
-    isDeleted: isDelete,
-    proxyAccountId: AccountId,
-    proxyReceived: proxyReceived,
-    key: Key,
-    balance: long,
-    sendRecordThreshold: long,
-    receiveRecordThreshold: long,
-    receiverSignatureRequired: ;pmg,
-    expirationTime: Timestamp,
-    autoRenewPeriod: Timestamp,
-    liveHashes: List<LiveHash>)
-```
-
 ### `fromBytes()`
 
 ```typescript
@@ -132,4 +112,3 @@ fromBytes(data: bytes): this
 ```typescript
 toBytes(): bytes
 ```
-

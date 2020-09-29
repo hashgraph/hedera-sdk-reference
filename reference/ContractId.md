@@ -53,7 +53,7 @@ constructor(shard: long, realm: long, num: long)
 ### `fromString()`
 
 ```typescript
-fromString(id: String): this
+fromString(id: string): this
 ```
 
 ### `fromSolidityAddress()`

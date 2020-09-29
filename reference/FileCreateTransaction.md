@@ -13,6 +13,7 @@
 | [`getContents()`](#getcontents) | ✅ | ✅ | O
 | [`execute()`](#execute) | ✅ | ✅ | O
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`getNodeId()`](#getnodeid) | ✅ | ✅ | O
 | [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
 | [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
 | [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
@@ -33,12 +34,6 @@
 ## Methods
 
 ### `constructor()`
-
-```typescript
-constructor()
-```
-
-### `constructor(body: TransactionBody)`
 
 ```typescript
 constructor()
@@ -80,18 +75,6 @@ setContents(contents: bytes | string): this
 getContents(): bytes
 ```
 
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
-
 ### `execute()`
 
 ```typescript
@@ -102,6 +85,12 @@ async execute(client: Client): this
 
 ```typescript
 setNodeId(id: AccountId): this
+```
+
+### `getNodeId()`
+
+```typescript
+getNodeId(): AccountId
 ```
 
 ### `setTransactionValidDuration()`
@@ -131,13 +120,25 @@ getMaxTransactionFee(): Hbar
 ### `setTransactionMemo()`
 
 ```typescript
-setTransactionMemo(memo: String): this
+setTransactionMemo(memo: string): this
 ```
 
 ### `getTransactionMemo()`
 
 ```typescript
-getTransactionMemo(): String
+getTransactionMemo(): string
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): bytes
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(data: bytes): this
 ```
 
 ### `getTransactionHash()`
@@ -146,16 +147,16 @@ getTransactionMemo(): String
 getTransactionHash(): bytes
 ```
 
-### `setTransactionId()`
-
-```typescript
-setTransactionId(): TransactionId
-```
-
 ### `getTransactionId()`
 
 ```typescript
-getTransactionId(id: TransactionId): this
+getTransactionId(): TransactionId
+```
+
+### `setTransactionId()`
+
+```typescript
+setTransactionId(id: TransactionId): this
 ```
 
 ### `sign()`

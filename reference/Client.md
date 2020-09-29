@@ -4,7 +4,6 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | O
 | [`setMirrorNetwork()`](#setmirrornetwork) | ✅ | ✅ | O
 | [`forNetwork()`](#fornetwork) | ✅ | ✅ | O
 | [`forMainnet()`](#formainnet) | ✅ | ✅ | O
@@ -12,7 +11,7 @@
 | [`forPreviewnet()`](#forpreviewnet) | ✅ | ✅ | O
 | [`fromJson()`](#fromjson) | ✅ | ✅ | O
 | [`fromJsonFile()`](#fromjsonfile) | ✅ | ✅ | O
-| [`setNetwork`](#setnetwork) | ✅ | ✅ | O
+| [`setNetwork()`](#setnetwork) | ✅ | ✅ | O
 | [`setOperator()`](#setoperator) | ✅ | ✅ | O
 | [`setOperatorWith()`](#setoperatorwith) | ✅ | ✅ | O
 | [`getOperatorId()`](#getoperatorid) | ✅ | ✅ | O
@@ -24,17 +23,11 @@
 
 ## Methods
 
-### `constructor()`
-
-```typescript
-constructor(network: Map<AccountId, String>)
-```
-
 
 ### `setMirrorNetwork()`
 
 ```typescript
-setMirrorNetwork(mirror: List<String>)
+setMirrorNetwork(mirror: List<string>)
 ```
 
 ### `forNetwork()`

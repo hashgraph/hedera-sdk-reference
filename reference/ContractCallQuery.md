@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#new) | ✅ | ✅ | ✅
+| [`constructor()`](#constructor) | ✅ | ✅ | ✅
 | [`setContractId()`](#setContractId) | ✅ | ✅ | ✅
 | [`setFunction()`](#setfunction) | ✅ | ✅ | ✅
 | [`setFunctionParameters()`](#setfunctionparameters) | ✅ | ✅ | O

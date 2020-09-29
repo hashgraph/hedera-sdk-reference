@@ -13,7 +13,6 @@
 | [`storage`](#storage) | ✅ | ✅ | ✅
 | [`contractMemo`](#contractmemo) | ✅ | ✅ | ✅
 | [`balance`](#balance) | ✅ | ✅ | ✅
-| [`constructor()`](#constructor) | ✅ | ✅ | O
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
 | [`fromBytes`](#frombytes) | ✅ | ✅ | O
 
@@ -74,21 +73,6 @@ balance: Hbar
 ```
 
 ## Methods
-
-### `constructor()`
-
-```typescript
-constructor(
-    contractId: ContractId,
-    accountId: AccountId
-    contractAccountId: String, 
-    adminKey: Key,
-    expirationTime: Timestamp,
-    renewPeriod: Timestamp,
-    storage: long,
-    memo: string,
-    balance: long)
-```
 
 ### `fromBytes()`
 

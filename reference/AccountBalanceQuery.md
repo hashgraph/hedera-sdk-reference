@@ -76,6 +76,3 @@ toBytes(): bytes
 ```typescript
 fromBytes(data: bytes): this
 ```
-
-
-

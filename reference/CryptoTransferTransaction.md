@@ -30,6 +30,7 @@ Transfer cryptocurrency from some accounts to other accounts.
 | [`getTransfers()`](#gettransfers) | ✅ | ✅ | O
 | [`execute()`](#execute) | ✅ | ✅ | O
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`getNodeId()`](#getnodeid) | ✅ | ✅ | O
 | [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
 | [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
 | [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
@@ -105,22 +106,16 @@ getTransfers(): List<Transfer>
 async execute(client: Client): this
 ```
 
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
-
 ### `setNodeId()`
 
 ```typescript
 setNodeId(id: AccountId): this
+```
+
+### `getNodeId()`
+
+```typescript
+getNodeId(): AccountId
 ```
 
 ### `setTransactionValidDuration()`
@@ -150,13 +145,25 @@ getMaxTransactionFee(): Hbar
 ### `setTransactionMemo()`
 
 ```typescript
-setTransactionMemo(memo: String): this
+setTransactionMemo(memo: string): this
 ```
 
 ### `getTransactionMemo()`
 
 ```typescript
-getTransactionMemo(): String
+getTransactionMemo(): string
+```
+
+### `toBytes()`
+
+```typescript
+toBytes(): bytes
+```
+
+### `fromBytes()`
+
+```typescript
+fromBytes(data: bytes): this
 ```
 
 ### `getTransactionHash()`
@@ -165,16 +172,16 @@ getTransactionMemo(): String
 getTransactionHash(): bytes
 ```
 
-### `setTransactionId()`
-
-```typescript
-setTransactionId(): TransactionId
-```
-
 ### `getTransactionId()`
 
 ```typescript
-getTransactionId(id: TransactionId): this
+getTransactionId(): TransactionId
+```
+
+### `setTransactionId()`
+
+```typescript
+setTransactionId(id: TransactionId): this
 ```
 
 ### `sign()`
@@ -206,7 +213,6 @@ freeze(): this
 ```typescript
 freezeWith(client: Client): this
 ```
-
 
 ## Examples
 

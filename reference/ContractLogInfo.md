@@ -4,7 +4,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`contractId`](#contractId) | ✅ | ✅ | ✅
+| [`contractId`](#contractid) | ✅ | ✅ | ✅
 | [`bloom`](#bloom) | ✅ | ✅ | ✅
 | [`topics`](#topics) | ✅ | ✅ | ✅
 | [`data`](#data) | ✅ | ✅ | ✅

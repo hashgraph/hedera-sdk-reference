@@ -4,8 +4,8 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#new) | ✅ | ✅ | ✅
-| [`setFileId()`](#setFileId) | ✅ | ✅ | ✅
+| [`constructor()`](#constructor) | ✅ | ✅ | ✅
+| [`setFileId()`](#setfileid) | ✅ | ✅ | ✅
 | [`execute()`](#execute) | ✅ | ✅ | ✅
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
 | [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | O  

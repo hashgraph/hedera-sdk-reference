@@ -13,6 +13,7 @@
 | [`getFileId()`](#getfileid) | ✅ | ✅ | O
 | [`execute()`](#execute) | ✅ | ✅ | O
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`getNodeId()`](#getnodeid) | ✅ | ✅ | O
 | [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
 | [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
 | [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
@@ -36,12 +37,6 @@
 
 ```typescript
 constructor()
-```
-
-### `constructor()`
-
-```typescript
-constructor(body: TransactionBody)
 ```
 
 ### `setExpirationTime()`
@@ -80,6 +75,60 @@ setFileId(id: FileId): this
 getFileId(): FileId
 ```
 
+### `execute()`
+
+```typescript
+async execute(client: Client): this
+```
+
+### `setNodeId()`
+
+```typescript
+setNodeId(id: AccountId): this
+```
+
+### `getNodeId()`
+
+```typescript
+getNodeId(): AccountId
+```
+
+### `setTransactionValidDuration()`
+
+```typescript
+setTransactionValidDuration(duration: Timestamp): this
+```
+
+### `getTransactionValidDuration()`
+
+```typescript
+getTransactionValidDuration(): Timestamp
+```
+
+### `setMaxTransactionFee()`
+
+```typescript
+setMaxTransactionFee(fee: Hbar): this
+```
+
+### `getMaxTransactionFee()`
+
+```typescript
+getMaxTransactionFee(): Hbar
+```
+
+### `setTransactionMemo()`
+
+```typescript
+setTransactionMemo(memo: string): this
+```
+
+### `getTransactionMemo()`
+
+```typescript
+getTransactionMemo(): string
+```
+
 ### `toBytes()`
 
 ```typescript
@@ -98,16 +147,16 @@ fromBytes(data: bytes): this
 getTransactionHash(): bytes
 ```
 
-### `setTransactionId()`
-
-```typescript
-setTransactionId(): TransactionId
-```
-
 ### `getTransactionId()`
 
 ```typescript
-getTransactionId(id: TransactionId): this
+getTransactionId(): TransactionId
+```
+
+### `setTransactionId()`
+
+```typescript
+setTransactionId(id: TransactionId): this
 ```
 
 ### `sign()`

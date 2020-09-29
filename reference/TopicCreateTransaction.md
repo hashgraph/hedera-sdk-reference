@@ -17,6 +17,7 @@
 | [`getAutoRenewAccountId()`](#getautorenewaccountid) | ✅ | ✅ | O
 | [`execute()`](#execute) | ✅ | ✅ | O
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
+| [`getNodeId()`](#getnodeid) | ✅ | ✅ | O
 | [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
 | [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
 | [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
@@ -114,6 +115,12 @@ async execute(client: Client): this
 setNodeId(id: AccountId): this
 ```
 
+### `getNodeId()`
+
+```typescript
+getNodeId(): AccountId
+```
+
 ### `setTransactionValidDuration()`
 
 ```typescript
@@ -141,13 +148,13 @@ getMaxTransactionFee(): Hbar
 ### `setTransactionMemo()`
 
 ```typescript
-setTransactionMemo(memo: String): this
+setTransactionMemo(memo: string): this
 ```
 
 ### `getTransactionMemo()`
 
 ```typescript
-getTransactionMemo(): String
+getTransactionMemo(): string
 ```
 
 ### `toBytes()`
@@ -168,16 +175,16 @@ fromBytes(data: bytes): this
 getTransactionHash(): bytes
 ```
 
-### `setTransactionId()`
-
-```typescript
-setTransactionId(): TransactionId
-```
-
 ### `getTransactionId()`
 
 ```typescript
-getTransactionId(id: TransactionId): this
+getTransactionId(): TransactionId
+```
+
+### `setTransactionId()`
+
+```typescript
+setTransactionId(id: TransactionId): this
 ```
 
 ### `sign()`
@@ -196,6 +203,18 @@ signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
 
 ```typescript
 signWithOperator(client: Client): this
+```
+
+### `freeze()`
+
+```typescript
+freeze(): this
+```
+
+### `freezeWith()`
+
+```typescript
+freezeWith(client: Client): this
 ```
 
 ### `freeze()`
