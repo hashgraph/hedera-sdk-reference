@@ -10,7 +10,7 @@
 | [`deleted`](#isdeleted) | ✅ | ✅ | O
 | [`keys`](#keys) | ✅ | ✅ | O
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes`](#frombytes) | ✅ | ✅ | O
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
 
 
 ## Fields

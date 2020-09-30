@@ -6,25 +6,13 @@
 | - | - | - | - |
 | [`constructor()`](#constructor) | ✅ | ✅ | ✅
 | [`setTransactionId()`](#settransactionid) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | O
+| [`execute()`](#execute) | ✅ | ✅ | ✅
 | [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
-| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
-| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
-| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
-| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | O
-| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | O
-| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | O
+| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | O  
+| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | O
+| [`getCost()`](#getcost) | ✅ | ✅ | O
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
 | [`fromBytes()`](#frombytes) | ✅ | ✅ | O
-| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | O
-| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | O
-| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | O
-| [`sign()`](#sign) | ✅ | ✅ | O
-| [`signWith()`](#signwith) | ✅ | ✅ | O
-| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | O
-| [`freeze()`](#freeze) | ✅ |  ✅ | O
-| [`freezeWith()`](#freezewith) | ✅ | ✅ | O
-
 
 ## Methods
 
@@ -43,12 +31,6 @@ setTransactionId(TransactionId): this
 ### `execute()`
 
 ```typescript
-execute(Client): TransactionRecord
-```
-
-### `execute()`
-
-```typescript
 async execute(client: Client): this
 ```
 
@@ -58,40 +40,22 @@ async execute(client: Client): this
 setNodeId(id: AccountId): this
 ```
 
-### `setTransactionValidDuration()`
+### `setQueryPayment()`
 
 ```typescript
-setTransactionValidDuration(duration: Timestamp): this
+setQueryPayment(payment: Hbar): this
 ```
 
-### `getTransactionValidDuration()`
+### `setMaxQueryPayment()`
 
 ```typescript
-getTransactionValidDuration(): Timestamp
+setMaxQueryPayment(payment: Hbar): this
 ```
 
-### `setMaxTransactionFee()`
+### `getCost()`
 
 ```typescript
-setMaxTransactionFee(fee: Hbar): this
-```
-
-### `getMaxTransactionFee()`
-
-```typescript
-getMaxTransactionFee(): Hbar
-```
-
-### `setTransactionMemo()`
-
-```typescript
-setTransactionMemo(memo: String): this
-```
-
-### `getTransactionMemo()`
-
-```typescript
-getTransactionMemo(): String
+async getCost(client: Client): Hbar
 ```
 
 ### `toBytes()`
@@ -104,52 +68,4 @@ toBytes(): bytes
 
 ```typescript
 fromBytes(data: bytes): this
-```
-
-### `getTransactionHash()`
-
-```typescript
-getTransactionHash(): bytes
-```
-
-### `setTransactionId()`
-
-```typescript
-setTransactionId(): TransactionId
-```
-
-### `getTransactionId()`
-
-```typescript
-getTransactionId(id: TransactionId): this
-```
-
-### `sign()`
-
-```typescript
-sign(key: PrivateKey): this
-```
-
-### `signWith()`
-
-```typescript
-signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
-```
-
-### `signWithOperator()`
-
-```typescript
-signWithOperator(client: Client): this
-```
-
-### `freeze()`
-
-```typescript
-freeze(): this
-```
-
-### `freezeWith()`
-
-```typescript
-freezeWith(client: Client): this
 ```
