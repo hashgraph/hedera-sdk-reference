@@ -17,7 +17,7 @@
 | [`containsAll()`](#containsall) | ✅ | ✅ | O
 | [`addAll()`](#addall) | ✅ | ✅ | O
 | [`removeAll()`](#removeall) | ✅ | ✅ | O
-| [`reatainAll()`](#retainall) | ✅ | ✅ | O
+| [`retainAll()`](#retainall) | ✅ | ✅ | O
 | [`clear()`](#clear) | ✅ | ✅ | O
 
 ## Fields

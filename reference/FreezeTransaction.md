@@ -172,7 +172,7 @@ sign(key: PrivateKey): this
 ### `signWith()`
 
 ```typescript
-signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
+signWith(key: PublicKey, signer: Function<bytes, bytes>): this
 ```
 
 ### `signWithOperator()`

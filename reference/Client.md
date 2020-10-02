@@ -20,9 +20,7 @@
 | [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | O
 | [`close()`](#close) | ✅ | X | O
 
-
 ## Methods
-
 
 ### `setMirrorNetwork()`
 

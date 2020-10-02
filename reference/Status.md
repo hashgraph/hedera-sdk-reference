@@ -258,11 +258,11 @@ Not enough gas was supplied to execute transaction
 
 ### `CONTRACT_SIZE_LIMIT_EXCEEDED`
 
-contract byte code size is over the limit
+Contract byte code size is over the limit
 
 ### `LOCAL_CALL_MODIFICATION_EXCEPTION`
 
-local execution (query) is requested for a function which changes state
+Local execution (query) is requested for a function which changes state
 
 ### `CONTRACT_REVERT_EXECUTED`
 
@@ -295,11 +295,11 @@ null solidity address
 
 ### `CONTRACT_UPDATE_FAILED`
 
-update of the contract failed
+Update of the contract failed
 
 ### `INVALID_QUERY_HEADER`
 
-the query header is invalid
+The query header is invalid
 
 ### `INVALID_FEE_SUBMITTED`
 
@@ -339,50 +339,50 @@ Invalid transaction body provided
 
 ### `INVALID_SIGNATURE_TYPE_MISMATCHING_KEY`
 
-the type of key (base ed25519 key, KeyList, or ThresholdKey) does not match the type of
+The type of key (base ed25519 key, KeyList, or ThresholdKey) does not match the type of
 signature (base ed25519 signature, SignatureList, or ThresholdKeySignature)
 
 ### `INVALID_SIGNATURE_COUNT_MISMATCHING_KEY`
 
-the number of key (KeyList, or ThresholdKey) does not match that of signature (SignatureList,
+The number of key (KeyList, or ThresholdKey) does not match that of signature (SignatureList,
 or ThresholdKeySignature). e.g. if a keyList has 3 base keys, then the corresponding
 signatureList should also have 3 base signatures.
 
 ### `EMPTY_LIVE_HASH_BODY`
 
-the claim body is empty
+The claim body is empty
 
 ### `EMPTY_LIVE_HASH_HASH`
 
-the hash for the claim is empty
+The hash for the claim is empty
 
 ### `EMPTY_LIVE_HASH_KEYS`
 
-the key list is empty
+The key list is empty
 
 ### `INVALID_LIVE_HASH_HASH_SIZE`
 
-the size of the claim hash is not 48 bytes
+The size of the claim hash is not 48 bytes
 
 ### `EMPTY_QUERY_BODY`
 
-the query body is empty
+The query body is empty
 
 ### `EMPTY_LIVE_HASH_QUERY`
 
-the crypto claim query is empty
+The crypto claim query is empty
 
 ### `LIVE_HASH_NOT_FOUND`
 
-the crypto claim doesn't exists in the file system. It expired or was never persisted.
+The crypto claim doesn't exists in the file system. It expired or was never persisted.
 
 ### `ACCOUNT_ID_DOES_NOT_EXIST`
 
-the account id passed has not yet been created.
+The account id passed has not yet been created.
 
 ### `LIVE_HASH_ALREADY_EXISTS`
 
-the claim hash already exists
+The claim hash already exists
 
 ### `INVALID_FILE_WACL`
 
@@ -406,58 +406,58 @@ Contract is marked as deleted
 
 ### `PLATFORM_NOT_ACTIVE`
 
-the platform node is either disconnected or lagging behind.
+The platform node is either disconnected or lagging behind.
 
 ### `KEY_PREFIX_MISMATCH`
 
-one public key matches more than one prefixes on the signature map
+One public key matches more than one prefixes on the signature map
 
 ### `PLATFORM_TRANSACTION_NOT_CREATED`
 
-transaction not created by platform due to either large backlog or message size exceeded
+Transaction not created by platform due to either large backlog or message size exceeded
 transactionMaxBytes
 
 ### `INVALID_RENEWAL_PERIOD`
 
-auto renewal period is not a positive number of seconds
+Auto renewal period is not a positive number of seconds
 
 ### `INVALID_PAYER_ACCOUNT_ID`
 
-the response code when a smart contract id is passed for a crypto API request
+The response code when a smart contract id is passed for a crypto API request
 
 ### `ACCOUNT_DELETED`
 
-the account has been marked as deleted
+The account has been marked as deleted
 
 ### `FILE_DELETED`
 
-the file has been marked as deleted
+The file has been marked as deleted
 
 ### `ACCOUNT_REPEATED_IN_ACCOUNT_AMOUNTS`
 
-same accounts repeated in the transfer account list
+Same accounts repeated in the transfer account list
 
 ### `SETTING_NEGATIVE_ACCOUNT_BALANCE`
 
-attempting to set negative balance value for crypto account
+Attempting to set negative balance value for crypto account
 
 ### `OBTAINER_REQUIRED`
 
-when deleting smart contract that has crypto balance either transfer account or transfer
+When deleting smart contract that has crypto balance either transfer account or transfer
 smart contract is required
 
 ### `OBTAINER_SAME_CONTRACT_ID`
 
-when deleting smart contract that has crypto balance you can not use the same contract id as
+When deleting smart contract that has crypto balance you can not use the same contract id as
 transferContractId as the one being deleted
 
 ### `OBTAINER_DOES_NOT_EXIST`
 
-transferAccountId or transferContractId specified for contract delete does not exist
+TransferAccountId or transferContractId specified for contract delete does not exist
 
 ### `MODIFYING_IMMUTABLE_CONTRACT`
 
-attempting to modify (update or delete a immutable smart contract, i.e. one created without a
+Attempting to modify (update or delete a immutable smart contract, i.e. one created without a
 admin key)
 
 ### `FILE_SYSTEM_EXCEPTION`
@@ -466,7 +466,7 @@ Unexpected exception thrown by file system functions
 
 ### `AUTORENEW_DURATION_NOT_IN_RANGE`
 
-the duration is not a subset of [MINIMUM_AUTORENEW_DURATION,MAXIMUM_AUTORENEW_DURATION]
+The duration is not a subset of [MINIMUM_AUTORENEW_DURATION,MAXIMUM_AUTORENEW_DURATION]
 
 ### `ERROR_DECODING_BYTESTRING`
 
@@ -487,11 +487,11 @@ Attempt to set negative initial balance
 
 ### `INVALID_RECEIVE_RECORD_THRESHOLD`
 
-attempt to set negative receive record threshold
+Attempt to set negative receive record threshold
 
 ### `INVALID_SEND_RECORD_THRESHOLD`
 
-attempt to set negative send record threshold
+Attempt to set negative send record threshold
 
 ### `ACCOUNT_IS_NOT_GENESIS_ACCOUNT`
 

@@ -15,7 +15,6 @@
 | [`getValue()`](#getValue) | ✅ | ✅ | O
 | [`negated()`](#negated) | ✅ | ✅ | O
 | [`equals()`](#equals) | ✅ | ✅ | O
-| [`hashCode()`](#hashcode) | ✅ | ✅ | O
 | [`compareTo()`](#compareto) | ✅ | ✅ | O
 
 ## Constants
@@ -104,12 +103,6 @@ negated(): this
 
 ```typescript
 equals(o: Object): boolean
-```
-
-### `hashCode()`
-
-```typescript
-hashCode(): int
 ```
 
 ### `compareTo()`

@@ -44,13 +44,13 @@ constructor()
 ### `setFileId()`
 
 ```typescript
-setContractId(id: ContractId): this
+setFileId(id: FileId): this
 ```
 
 ### `getFileId()`
 
 ```typescript
-getContractId(): FileId
+getFileId(): FileId
 ```
 
 ### `setKeys()`
@@ -182,7 +182,7 @@ sign(key: PrivateKey): this
 ### `signWith()`
 
 ```typescript
-signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
+signWith(key: PublicKey, signer: Function<bytes, bytes>): this
 ```
 
 ### `signWithOperator()`

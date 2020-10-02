@@ -9,7 +9,7 @@
 | [`keys`](#keys) | ✅ | ✅ | ✅
 | [`duration`](#duration) | ✅ | ✅ | ✅
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes`](#frombytes) | ✅ | ✅ | O
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
 
 ## Fields
 

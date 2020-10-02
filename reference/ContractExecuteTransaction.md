@@ -70,13 +70,10 @@ getPayableAmount(): Hbar
 ### `setFunction()`
 
 ```typescript
-setFunction(name: string): this
-```
-
-### `setFunction()`
-
-```typescript
-setFunction(name: string, parameters: ContractFunctionParameters): this
+setFunction(
+    name: string
+    | name: string, 
+    parameters: ContractFunctionParameters): this
 ```
 
 ### `setFunctionParameters()`
@@ -196,7 +193,7 @@ sign(key: PrivateKey): this
 ### `signWith()`
 
 ```typescript
-signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
+signWith(key: PublicKey, signer: Function<bytes, bytes>): this
 ```
 
 ### `signWithOperator()`

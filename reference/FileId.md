@@ -12,7 +12,6 @@
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
 | [`fromBytes()`](#frombytes) | ✅ | ✅ | O
 | [`equals()`](#equals) | ✅ | ✅ | O
-| [`hashCode()`](#hashcode) | ✅ | ✅ | O
 
 ## Fields
 
@@ -70,10 +69,4 @@ toBytes(): bytes
 
 ```typescript
 equals(object: Object): boolean
-```
-
-### `hashCode()`
-
-```typescript
-hachCode(): int
 ```

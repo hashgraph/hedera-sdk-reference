@@ -64,7 +64,7 @@ getBytecodeFileId(): FileId
 ### `setAdminKey()`
 
 ```typescript
-setAdminKey(key: PublicKey): this
+setAdminKey(adminKey: Key): this
 ```
 
 ### `getAdminKey()`
@@ -125,7 +125,9 @@ getAutoRenewPeriod(): Timestamp
 ### `setConstructorParams()`
 
 ```typescript
-setConstructorParameters(params: ContractFunctionParams): this
+setConstructorParameters(
+    params: ContractFunctionParams 
+    | params: bytes): this
 ```
 
 ### `getConstructorParams()`
@@ -239,7 +241,7 @@ sign(key: PrivateKey): this
 ### `signWith()`
 
 ```typescript
-signWith(key: PrivateKey, signer: Function<bytes, bytes>): this
+signWith(key: PublicKey, signer: Function<bytes, bytes>): this
 ```
 
 ### `signWithOperator()`

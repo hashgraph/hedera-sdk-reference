@@ -4,12 +4,11 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`fromBytes`](#frombytes) | ✅ | ✅ | O
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
 | [`toBytes()`](#tobytes) | ✅ | ✅ | O
 | [`fromString()`](#fromstring) | ✅ | ✅ | O
 | [`verify()`](#verify) | ✅ | ✅ | O
 | [`equals()`](#equals) | ✅ | ✅ | O
-| [`hashCode()`](#hashcode) | ✅ | ✅ | O
 
 ## Methods
 
@@ -47,10 +46,4 @@ verify(message: bytes, signature: bytes): boolean
 
 ```typescript
 equals(object: Object): boolean
-```
-
-### `hashCode()`
-
-```typescript
-hashCode(): int
 ```
