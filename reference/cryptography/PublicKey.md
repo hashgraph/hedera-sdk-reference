@@ -10,6 +10,10 @@ Parse a public key from a string of hexadecimal digits.
 
 The public key may optionally be prefixed with the DER header.
 
+### `fromBytes(data: bytes): PublicKey`
+
+Parses a public key from bytes.
+
 ## Methods
 
 ### `verify(message: bytes, signature: bytes): bool`
@@ -20,6 +24,10 @@ Verify the signature on the message with this public key.
 
 Returns `true` if this public key is the same as the
 public key at `other`.
+
+### `toBytes(): bytes`
+
+Converts this key into bytes.
 
 ### `toString(): string`
 
@@ -36,11 +44,15 @@ publicKey.toString();
 
 ```typescript
 class PublicKey implements Key {
+    static fromBytes(data: bytes): PublicKey;
+
     static fromString(text: string): PublicKey;
 
     verify(message: bytes, signature: bytes): bool;
 
     equals(other: PublicKey): bool;
+
+    toBytes(): bytes;
 
     toString(): string;
 }

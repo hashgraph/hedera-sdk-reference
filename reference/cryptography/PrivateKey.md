@@ -4,6 +4,10 @@
 
 ### `generate(): PrivateKey`
 
+### `fromBytes(data: bytes): PrivateKey`
+
+Parses a private key from bytes.
+
 ### `fromString(text: string): PrivateKey`
 
 ### `fromMnemonic(mnemonic: string, passphrase: string): PrivateKey`
@@ -43,6 +47,10 @@ key, _ := PrivateKeyFromMnemonic("word1,word2,word3", "");
 
 ### `sign(message: bytes): bytes`
 
+### `toBytes(): bytes`
+
+Converts this key into bytes.
+
 ### `toString(): string`
 
 ### `toKeystore(passphrase: string): bytes`
@@ -56,6 +64,8 @@ key, _ := PrivateKeyFromMnemonic("word1,word2,word3", "");
 ```typescript
 class PrivateKey implements Key {
     static generate(): PrivateKey;
+
+    static fromBytes(data: bytes): PrivateKey;
 
     static fromString(text: string): PrivateKey;
 
@@ -72,6 +82,8 @@ class PrivateKey implements Key {
     getPublicKey(): PublicKey;
 
     sign(message: bytes): bytes;
+
+    toBytes(): bytes;
 
     toString(): string;
 
