@@ -26,6 +26,6 @@ replaced with another from the standard word list (as this is only returned if a
 enum BadMnemonicReason {
     BadLength,
     UnknownWords,
-    ChecksumMismatch
+    ChecksumMismatch,
 }
 ```
