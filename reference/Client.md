@@ -18,6 +18,7 @@
 | [`getOperatorKey()`](#getoperatorkey) | ✅ | ✅ | O
 | [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
 | [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | O
+| [`ping()`](#ping) | ✅ | ✅ | O
 | [`close()`](#close) | ✅ | X | O
 
 ## Methods
@@ -119,6 +120,12 @@ setMaxTransactionFee(fee: Hbar): this
 
 ```typescript
 setMaxQueryPayment(payment: Hbar): this
+```
+
+### `ping()`
+
+```typescript
+ping(id: AccountId): this
 ```
 
 ### `close()`
