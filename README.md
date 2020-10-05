@@ -68,13 +68,13 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 
 #### Topic Transactions
 
-* [`ConsensusTopicCreateTransaction`](reference/ConsensusTopicCreateTransaction.md)
+* [`TopicCreateTransaction`](reference/TopicCreateTransaction.md)
 
-* [`ConsensusTopicUpdateTransaction`](reference/ConsensusTopicUpdateTransaction.md)
+* [`TopicUpdateTransaction`](reference/TopicUpdateTransaction.md)
 
-* [`ConsensusTopicDeleteTransaction`](reference/ConsensusTopicDeleteTransaction.md)
+* [`TopicDeleteTransaction`](reference/TopicDeleteTransaction.md)
 
-* [`ConsensusMessageSubmitTransaction`](reference/ConsensusMessageSubmitTransaction.md)
+* [`TopicMessageSubmitTransaction`](reference/TopicMessageSubmitTransaction.md)
 
 #### System Transactions
 
