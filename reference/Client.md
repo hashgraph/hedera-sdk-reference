@@ -97,6 +97,62 @@ Construct a Hedera client pre-configured for Previewnet access.
 function fromConfig(data: string): Client;
 ```
 
+### `fromJson`
+
+Configure a client based off the given JSON string.
+
+```typescript
+function fromJson(json: string | json: Reader ): Client;
+```
+
+```typescript
+function fromJsonFile(fileName: string | file: File ): Client;
+```
+
+<details>
+
+<summary>JSON File Specification</summary>
+
+`network` can be `mainnet`, `testnet`, `previewnet`, or a dictionary of Account ID to IP:PORT
+
+```json
+{
+  "network": "mainnet",
+}
+```
+or
+```json
+{
+  "network": { "0.0.1": "0.testnet.hedera.com:50211" }
+}
+```
+
+`operator` is an _optional_ object
+
+```json
+{
+  "operator": {
+    "accountId": "0.0.21",
+    "privateKey": "302....",
+  }
+}
+```
+
+`mirrorNetwork` can be a network name (mainnet, previewnet, etc) or a list of addresses. `mirrorNetwork` defaults to the name of `network` _if_ that is a network name.
+
+```json
+{
+  "mirrorNetwork": "mainnet",
+}
+```
+or
+```json
+{
+  "mirrorNetwork": [ "kabuto.sh:50211", "hedera.com:50211" ]
+}
+```
+</details>
+
 ### `fromConfigFile`
 
 ```typescript
