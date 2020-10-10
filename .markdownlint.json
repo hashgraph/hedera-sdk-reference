@@ -1,5 +1,6 @@
 {
     "code-block-style": {
         "style": "fenced"
-    }
+    },
+    "no-inline-html": false
 }
