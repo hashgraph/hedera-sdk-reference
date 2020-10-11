@@ -8,13 +8,13 @@
     * [`Query`](reference/core/Query.md)
     * [`TransactionReceiptQuery`](reference/core/TransactionReceiptQuery.md)
     * [`TransactionRecordQuery`](reference/core/TransactionRecordQuery.md)
-    * Cryptography
+    * **Cryptography** &nbsp; <i class="fas fa-key"></i>
         * [`Key`](reference/cryptography/Key.md)
         * [`PublicKey`](reference/cryptography/PublicKey.md)
         * [`PrivateKey`](reference/cryptography/PrivateKey.md)
         * [`Mnemonic`](reference/cryptography/Mnemonic.md)
         * [`KeyList`](reference/cryptography/KeyList.md)
-    * Cryptocurrency
+    * **Cryptocurrency** &nbsp; <i class="fas fa-coins"></i>
         * [`AccountId`](reference/cryptocurrency/AccountId.md)
         * [`AccountInfo`](reference/cryptocurrency/AccountInfo.md)
         * [`AccountBalanceQuery`](reference/cryptocurrency/AccountBalanceQuery.md)

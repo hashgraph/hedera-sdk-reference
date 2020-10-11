@@ -8,6 +8,7 @@
   "license": "Apache-2",
   "private": true,
   "scripts": {
+    "serve": "docsify serve",
     "lint": "markdownlint README.md reference/"
   },
   "devDependencies": {
