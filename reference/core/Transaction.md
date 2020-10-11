@@ -51,9 +51,10 @@ Base class for all transactions that may be submitted to Hedera.
 
 ##### `execute` ( `client`: [`Client`](reference/Client.md) ): [`TransactionResponse`](reference/TransactionResponse.md)
 
-Execute this transaction on the Hedera network, immediately returning metadata about the transaction
-that was executed. The `TransactionResponse` may be used to fetch the `TransactionReceipt` or
-`TransactionRecord` for more information.
+Execute this transaction on the Hedera network, immediately returning
+metadata about the transaction that was executed. The `TransactionResponse`
+may be used to fetch the `TransactionReceipt` or `TransactionRecord`
+for more information.
 
 ---
 
@@ -72,7 +73,7 @@ the same `Transaction`.
 
 ---
 
-##### `signWith` ( `publicKey`: `PublicKey`, `transactionSigner`: `(bytes) => bytes` ): `this`
+##### `signWith` ( `publicKey`: [`PublicKey`](reference/cryptography/PublicKey.md), `transactionSigner`: `(bytes) => bytes` ): `this`
 
 ---
 
@@ -94,17 +95,17 @@ the same `Transaction`.
 
 The account ID of the node that this transaction will be submitted to.
 
-Providing an explicit node account ID interferes with client-side load balancing of the
-network. By default, the SDK will pre-generate a transaction for 1/3 of the nodes on the
-network. If a node is down, busy, or otherwise reports a fatal error, the SDK will try again
-with a different node.
+Providing an explicit node account ID interferes with client-side load
+balancing of the network. By default, the SDK will pre-generate a transaction
+for 1/3 of the nodes on the network. If a node is down, busy, or otherwise
+reports a fatal error, the SDK will try again with a different node.
 
 ---
 
 ##### `transactionValidDuration`: `Duration`
 
-Duration from the valid start (within the transaction ID) that this transaction is
-valid for.
+Duration from the valid start (within the transaction ID) that this
+transaction is valid for.
 
 Defaults to 120 seconds.
 

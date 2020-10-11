@@ -61,7 +61,9 @@ mnemonics use a legacy word list from the original Hedera mobile wallets.
 
 ###### Errors
 
- * [`BadMnemonic`](reference/error/BadMnemonic.md) — when the mnemonic contains words not found in the word list; there is a checksum mismatch; or, an unexpected number of words.
+- [`BadMnemonic`](reference/error/BadMnemonic.md) — when the mnemonic contains
+  words not found in the word list; there is a checksum mismatch; or, an
+  unexpected number of words.
 
 ###### Examples
 

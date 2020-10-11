@@ -17,11 +17,11 @@ class BadMnemonicError extends Error {
 
 </details>
 
--   Each language has differing conventions for errors:
-    -   Java, Dart — `BadMnemonicException`
-    -   Rust, JavaScript, Python — `BadMnemonicError`
-    -   Go — `ErrBadMnemonic`
-    -   C — `HEDERA_BAD_MNEMONIC_UNKNOWN_WORDS`, etc.
+- Each language has differing conventions for errors:
+  - Java, Dart — `BadMnemonicException`
+  - Rust, JavaScript, Python — `BadMnemonicError`
+  - Go — `ErrBadMnemonic`
+  - C — `HEDERA_BAD_MNEMONIC_UNKNOWN_WORDS`, etc.
 
 ### Fields
 

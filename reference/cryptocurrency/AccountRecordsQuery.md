@@ -1,7 +1,8 @@
 # `AccountRecordsQuery`
 
 > class `AccountRecordsQuery`
-> extends [`Query`](reference/core/Query.md) < [`TransactionRecord[]`](reference/core/TransactionRecord.md) >
+> extends [`Query`](reference/core/Query.md) <
+> [`TransactionRecord[]`](reference/core/TransactionRecord.md) >
 
 <details>
 <summary><b>Declaration</b></summary>

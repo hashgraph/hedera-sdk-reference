@@ -34,7 +34,6 @@ class Client {
     /* property */ maxTransactionFee: Hbar;
     /* property */ maxQueryPayment: Hbar;
 }
-
 ```
 
 </details>
@@ -139,14 +138,17 @@ Configure a client from the JSON configuration string.
 <details>
 <summary><b>File Specification</b></summary>
 
-`network` can be `mainnet`, `testnet`, `previewnet`, or a dictionary of Account ID to IP:PORT
+`network` can be `mainnet`, `testnet`, `previewnet`, or a dictionary of Account
+ID to IP:PORT
 
 ```json
 {
   "network": "mainnet",
 }
 ```
+
 or
+
 ```json
 {
   "network": { "0.0.1": "0.testnet.hedera.com:50211" }
@@ -164,19 +166,24 @@ or
 }
 ```
 
-`mirrorNetwork` can be a network name (mainnet, previewnet, etc) or a list of addresses. `mirrorNetwork` defaults to the name of `network` _if_ that is a network name.
+`mirrorNetwork` can be a network name (mainnet, previewnet, etc) or a list
+of addresses. `mirrorNetwork` defaults to the name of `network` _if_ that is
+a network name.
 
 ```json
 {
   "mirrorNetwork": "mainnet",
 }
 ```
+
 or
+
 ```json
 {
   "mirrorNetwork": [ "kabuto.sh:50211", "hedera.com:50211" ]
 }
 ```
+
 </details>
 
 ---
@@ -189,13 +196,15 @@ or
 
 ##### `setOperator` ( `accountId`: [`AccountId`](reference/AccountId.md), `privateKey`: [`PrivateKey`](reference/cryptography/PrivateKey.md) ): `this`
 
-Sets the account that will, by default, pay for transactions and queries built with this client.
+Sets the account that will, by default, pay for transactions and queries built
+with this client.
 
 ---
 
 ##### `setOperatorWith` ( `accountId`: [`AccountId`](reference/AccountId.md), `publicKey`: [`PublicKey`](reference/cryptography/PublicKey.md), `transactionSigner`: `(bytes) => bytes` ): `this`
 
-Sets the account that will, by default, pay for transactions and queries built with this client.
+Sets the account that will, by default, pay for transactions and queries built
+with this client.
 
 It is expected that the signing method utilize the private key associated
 with the given public key.

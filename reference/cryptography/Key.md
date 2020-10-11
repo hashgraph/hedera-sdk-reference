@@ -15,6 +15,6 @@ interface Key {
 
 ### Implementors
 
- * [`PublicKey`](reference/cryptography/PublicKey.md)
- * [`PrivateKey`](reference/cryptography/PrivateKey.md)
- * [`KeyList`](reference/cryptography/KeyList.md)
+- [`PublicKey`](reference/cryptography/PublicKey.md)
+- [`PrivateKey`](reference/cryptography/PrivateKey.md)
+- [`KeyList`](reference/cryptography/KeyList.md)

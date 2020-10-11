@@ -1,7 +1,8 @@
 # `AccountStakersQuery`
 
 > class `AccountStakersQuery`
-> extends [`Query`](reference/core/Query.md) < [`ProxyStaker[]`](reference/cryptocurrency/ProxyStaker.md) >
+> extends [`Query`](reference/core/Query.md) <
+> [`ProxyStaker[]`](reference/cryptocurrency/ProxyStaker.md) >
 
 <details>
 <summary><b>Declaration</b></summary>
