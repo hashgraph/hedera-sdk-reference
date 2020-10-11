@@ -1,20 +1,20 @@
-# error `ReceiptStatus`
+# `ReceiptStatus`
+
+> error `ReceiptStatus` extends [`Status`](reference/error/Status.md)
 
 <details>
-<summary>Declaration</summary>
+<summary><b>Declaration</b></summary>
 
 ```typescript
 class ReceiptStatusError extends StatusError {
-    transactionReceipt: TransactionReceipt;
+    readonly transactionReceipt: TransactionReceipt;
 }
 ```
 
 </details>
 
-## Fields
+### Fields
 
-### `receipt`
+##### `receipt`: [`TransactionReceipt`](reference/core/TransactionReceipt.md)
 
-```typescript
-receipt: TransactionReceipt;
-```
+---

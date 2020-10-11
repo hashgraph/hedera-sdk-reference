@@ -1,28 +1,36 @@
-# error `Status`
+# `Status`
+
+> error `Status`
 
 <details>
-<summary>Declaration</summary>
+<summary><b>Declaration</b></summary>
 
 ```typescript
 class StatusError extends Error {
-    status: Status;
-
-    transactionId: ?TransactionId;
+    readonly status: Status;
+    readonly transactionId: ?TransactionId;
 }
 ```
 
 </details>
 
-## Fields
+-   Each language has differing naming conventions for errors:
+    -   Java, Dart — `StatusException`
+    -   Rust, JavaScript, Python — `StatusError`
+    -   Go — `ErrStatus`
+    -   C — `HEDERA_ERR_STATUS`, etc.
 
-### `status`
+### Derived
 
-```typescript
-status: Status;
-```
+-   [`PrecheckStatus`](reference/error/PrecheckStatus.md)
+-   [`ReceiptStatus`](reference/error/ReceiptStatus.md)
 
-### `transactionId`
+### Fields
 
-```typescript
-transactionId: ?TransactionId;
-```
+##### `status`: [`Status`](reference/Status.md)
+
+---
+
+##### `transactionId`: [`?TransactionId`](reference/core/TransactionId.md)
+
+---

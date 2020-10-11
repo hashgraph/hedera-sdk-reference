@@ -1,7 +1,9 @@
-# error `BadKey`
+# `BadKey`
+
+> error `BadKey`
 
 <details>
-<summary>Declaration</summary>
+<summary><b>Declaration</b></summary>
 
 ```typescript
 class BadKeyError extends Error {}
@@ -11,9 +13,9 @@ class BadKeyError extends Error {}
 
 Signals that a private or public key could not be realized from the input.
 
--   `PrivateKey.fromString`
--   `PrivateKey.fromPem`
--   `PrivateKey.fromBytes`
--   `PrivateKey.fromKeystore`
--   `PublicKey.fromString`
--   `PublicKey.fromBytes`
+- `PrivateKey.fromString`
+- `PrivateKey.fromPem`
+- `PrivateKey.fromBytes`
+- `PrivateKey.fromKeystore`
+- `PublicKey.fromString`
+- `PublicKey.fromBytes`

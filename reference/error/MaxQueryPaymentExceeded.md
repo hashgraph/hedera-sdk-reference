@@ -1,28 +1,25 @@
-# error `MaxQueryPaymentExceeded`
+# `MaxQueryPaymentExceeded`
+
+> error `MaxQueryPaymentExceeded`
 
 <details>
-<summary>Declaration</summary>
+<summary><b>Declaration</b></summary>
 
 ```typescript
 class MaxQueryPaymentExceededError extends Error {
-    queryCost: Hbar;
-
-    maxQueryPayment: Hbar;
+    readonly queryCost: Hbar;
+    readonly maxQueryPayment: Hbar;
 }
 ```
 
 </details>
 
-## Fields
+### Fields
 
-### `queryCost`
+##### `queryCost`: `Hbar`
 
-```typescript
-queryCost: Hbar;
-```
+---
 
-### `maxQueryPayment`
+##### `maxQueryPayment`: `Hbar`
 
-```typescript
-maxQueryPayment: Hbar;
-```
+---

@@ -1,66 +1,107 @@
-# class `KeyList`
+# `KeyList`
+
+> class `KeyList` extends `Collection<Key>` implements [`Key`](reference/cryptography/Key.md)
+
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class KeyList extends Collection<Key> implements Key {
+    /* property */ threshold: Uint;
+}
+```
+
+</details>
 
 A list of Keys (`Key`) with an optional threshold.
 
 This class implements the collection interface of the
 implementation language and thus can look very different between each SDK.
 
-## Fields
+A `KeyList` can be used anywhere that a `Key` is expected in the SDK. This
+includes `setKey` in `AccountCreateTransaction` and `setSubmitKey` in
+`TopicCreateTransaction`.
 
-### `threshold: int`
+<!-- tabs:start -->
 
-A threshold indicating that a valid signature set must have at least
-this many signatures.
-
-## Static Methods
-
-### `constructor()`
-
-Create a new, empty list of keys with no threshold.
-
-### `withThreshold(threshold: int): KeyList`
-
-Create a new, empty list of keys with the given threshold.
-
-## Declaration
-
-```typescript
-class KeyList extends Array<Key> {
-    constructor();
-
-    static withThreshold(threshold: int): KeyList;
-
-    threshold: int;
-}
-```
-
-## Examples
-
-#### Java
+### ** Java **
 
 ```java
-var keyList = new KeyList();
-keyList.threshold = 1;
+// imperative
+var keyList = KeyList.withThreshold(1);
 keyList.add(keyA);
 keyList.add(keyB);
 
-myAccountCreateTransaction.setKey(keyList);
+// fluid
+var keyList = KeyList.of(keyA, keyB).setThreshold(1);
 ```
 
-#### JavaScript
+### ** JavaScript **
 
 ```javascript
-const keyList = KeyList.of(keyA, keyB);
-keyList.threshold = 1;
+// imperative
+const keyList = KeyList.withThreshold(1);
+keyList.push(keyA);
+keyList.push(keyB);
 
-myAccountCreateTransaction.setKey(keyList);
+// fluid
+const keyList = KeyList.of(keyA, keyB).setThreshold(1);
+
+// constructor (from array)
+const keyList = new KeyList([
+    keyA,
+    keyB,
+], /* (optional) threshold= */ 1);
 ```
 
-#### Go
+### ** Go **
 
 ```go
-keyList := NewKeyListWith(keyA, keyB)
-keyList.Threshold = 1
+// imperative
+keyList := NewKeyList()
+keyList = keyList.SetThreshold(1)
+keyList = keyList.Append(keyA)
+keyList = keyList.Append(keyB)
 
-myAccountCreateTransaction.SetKey(keyList)
+// from array
+keyList := NewKeyListFromSlice([]{
+    keyA,
+    keyB,
+}).SetThreshold(1)
+
+// fluid
+keyList := NewKeyListWith(keyA, keyB).SetThreshold(1)
 ```
+
+### ** Python **
+
+```python
+# imperative
+key_list = KeyList(threshold=1)
+key_list.append(key_a)
+key_list.append(key_b)
+
+# from array
+key_list = KeyList([key_a, key_b], threshold=1)
+```
+
+<!-- tabs:end -->
+
+### Constructor
+
+##### `constructor` ()
+
+Create a new, empty list of keys with no threshold.
+
+### Static Methods
+
+##### `withThreshold` ( `threshold`: `Uint` ): `KeyList`
+
+Create a new, empty list of keys with the given threshold.
+
+### Properties
+
+### `threshold`: `Uint`
+
+A threshold indicating that a valid signature set must have at least
+this many signatures.

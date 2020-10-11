@@ -1,15 +1,17 @@
-# error `BadMnemonic`
+# `BadMnemonic`
+
+> error `BadKey`
 
 <details>
-<summary>Declaration</summary>
+<summary><b>Declaration</b></summary>
 
 ```typescript
 class BadMnemonicError extends Error {
-    mnemonic: Mnemonic;
+    readonly mnemonic: Mnemonic;
 
-    reason: BadMnemonicReason;
+    readonly reason: BadMnemonicReason;
 
-    unknownWordIndicies: int[];
+    readonly unknownWordIndicies: int[];
 }
 ```
 
@@ -21,29 +23,23 @@ class BadMnemonicError extends Error {
     -   Go — `ErrBadMnemonic`
     -   C — `HEDERA_BAD_MNEMONIC_UNKNOWN_WORDS`, etc.
 
-## Fields
+### Fields
 
-### `mnemonic`
-
-```typescript
-mnemonic: Mnemonic;
-```
+##### `mnemonic`: `Mnemonic`
 
 The mnemonic that failed validation.
 
-### `reason`
+---
 
-```typescript
-reason: BadMnemonicReason;
-```
+##### `reason`: [`BadMnemonicReason`](reference/error/BadMnemonicReason.md)
 
-The reason (out of [`BadMnemonicReason`](./BadMnemonicReason.md)) for which the mnemonic failed validation.
+The reason for which the mnemonic failed validation.
 
-### `unknownWordIndicies`
+---
 
-```typescript
-unknownWordIndicies: int[];
-```
+##### `unknownWordIndicies`: `Uint[]`
 
 The indices in the mnemonic that were not found in the BIP-39
 standard English word list; if, the reason for validation failure was unknown words.
+
+---
