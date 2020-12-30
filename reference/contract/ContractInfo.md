@@ -13,8 +13,8 @@
 | [`storage`](#storage) | ✅ | ✅ | ✅
 | [`contractMemo`](#contractmemo) | ✅ | ✅ | ✅
 | [`balance`](#balance) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes`](#frombytes) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes`](#frombytes) | ✅ | ✅ | ✅
 
 ## Fields
 

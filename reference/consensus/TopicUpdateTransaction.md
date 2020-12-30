@@ -6,40 +6,45 @@
 | - | - | - | - |
 | [`constructor()`](#constructor) | ✅ | ✅ | ✅
 | [`setTopicId()`](#settopicid) | ✅ | ✅ | ✅
-| [`getTopicId()`](#gettopicid) | ✅ | ✅ | O
+| [`getTopicId()`](#gettopicid) | ✅ | ✅ | ✅
 | [`setTopicMemo()`](#settopicmemo) | ✅ | ✅ | ✅
-| [`getTopicMemo()`](#gettopicmemo) | ✅ | ✅ | O
+| [`getTopicMemo()`](#gettopicmemo) | ✅ | ✅ | ✅
 | [`setAdminKey()`](#setadminkey) | ✅ | ✅ | ✅
-| [`getAdminKey()`](#getadminkey) | ✅ | ✅ | O
+| [`getAdminKey()`](#getadminkey) | ✅ | ✅ | ✅
 | [`setSubmitKey()`](#setsubmitkey) | ✅ | ✅ | ✅
-| [`getSubmitKey()`](#getsubmitkey) | ✅ | ✅ | O
+| [`getSubmitKey()`](#getsubmitkey) | ✅ | ✅ | ✅
 | [`setAutoRenewPeriod()`](#setautorenewperiod) | ✅ | ✅ | ✅
-| [`getAutoRenewPeriod()`](#getautorenewperiod) | ✅ | ✅ | O
+| [`getAutoRenewPeriod()`](#getautorenewperiod) | ✅ | ✅ | ✅
 | [`setAutoRenewAccountId()`](#setautorenewaccountid) | ✅ | ✅ | ✅
-| [`getAutoRenewAccountId()`](#getautorenewaccountid) | ✅ | ✅ | O
+| [`getAutoRenewAccountId()`](#getautorenewaccountid) | ✅ | ✅ | ✅
 | [`clearTopicMemo()`](#clearyopicmemo) | ✅ | ✅ | ✅
 | [`clearAdminKey()`](#clearadminkey) | ✅ | ✅ | ✅
 | [`clearSubmitKey()`](#cleardubmitkey) | ✅ | ✅ | ✅
 | [`clearAutoRenewAccountId()`](#clearsutotenewsccountid) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | O
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | O
-| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | O
-| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | O
-| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | O
-| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | O
-| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | O
-| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | O
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
-| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | O
-| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | O
-| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | O
-| [`sign()`](#sign) | ✅ | ✅ | O
-| [`signWith()`](#signwith) | ✅ | ✅ | O
-| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | O
-| [`freeze()`](#freeze) | ✅ |  ✅ | O
-| [`freezeWith()`](#freezewith) | ✅ | ✅ | O
+| [`execute()`](#execute) | ✅ | ✅ | ✅
+| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
+| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
+| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | ✅
+| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | ✅
+| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | ✅
+| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | ✅
+| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | ✅
+| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | ✅
+| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | ✅
+| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | ✅
+| [`sign()`](#sign) | ✅ | ✅ | ✅
+| [`signWith()`](#signwith) | ✅ | ✅ | ✅
+| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | ✅
+| [`freeze()`](#freeze) | ✅ |  ✅ | ✅
+| [`freezeWith()`](#freezewith) | ✅ | ✅ | ✅
+| [`getSignatures()`](#getsignatures) | ✅ | ✅ | ✅
+| [`addSignature()`](#addsignature) | ✅ | ✅ | ✅
+| [`getTransactionHashPerNode`](#gettransactionhashpernode) | ✅ | ✅ | ✅
+| [`setMaxRetry`](#setmaxretry) | ✅ | ✅ | ✅
+| [`getMaxRetry`](#getmaxretry) | ✅ | ✅ | ✅
 
 ## Methods
 
@@ -257,4 +262,34 @@ freeze(): this
 
 ```typescript
 freezeWith(client: Client): this
+```
+
+### `getSignatures()`
+
+```typescript
+getSignatures(): Map<AccoundID, Map<PublicKey, byte[]>>
+```
+
+### `addSignature()`
+
+```typescript
+getSignatures(key: PublicKey, signature: byte[]): this
+```
+
+### `getTransactionHashPerNode()`
+
+```typescript
+getTransactionHashPerNode(): Map<AccoundID, byte[]>
+```
+
+### `setMaxRetry()`
+
+```typescript
+setMaxRetry(count: int): this
+```
+
+### `getMaxRetry()`
+
+```typescript
+getMaxRetry(): int
 ```

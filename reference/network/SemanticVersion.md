@@ -4,11 +4,11 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`major`](#major) | ✅ | ✅ | O
-| [`minor`](#minor) | ✅ | ✅ | O
-| [`patch`](#patch) | ✅ | ✅ | O
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes`](#frombytes) | ✅ | ✅ | O
+| [`major`](#major) | ✅ | ✅ | ✅
+| [`minor`](#minor) | ✅ | ✅ | ✅
+| [`patch`](#patch) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes`](#frombytes) | ✅ | ✅ | ✅
 
 
 ## Fields

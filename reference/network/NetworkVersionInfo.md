@@ -4,10 +4,10 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`protobufVersion`](#protobufversion) | ✅ | ✅ | O
-| [`serviceVersion`](#serviceversion) | ✅ | ✅ | O
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
+| [`protobufVersion`](#protobufversion) | ✅ | ✅ | ✅
+| [`serviceVersion`](#serviceversion) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
 
 ## Fields
 

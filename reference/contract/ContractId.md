@@ -4,16 +4,16 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`shard`](#shard) | ✅ | ✅ | O
-| [`realm`](#realm) | ✅ | ✅ | O
-| [`num`](#num) | ✅ | ✅ | O
-| [`constructor()`](#constructor) | ✅ | ✅ | O
-| [`fromString()`](#fromstring) | ✅ | ✅ | O
-| [`fromSolidityAddress()`](#fromsolidityaddress) | ✅ | ✅ | O
-| [`toSolidityAddress`](#tosolidityaddress) | ✅ | ✅ | O
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
-| [`equals()`](#equals) | ✅ | ✅ | O
+| [`shard`](#shard) | ✅ | ✅ | ✅
+| [`realm`](#realm) | ✅ | ✅ | ✅
+| [`num`](#num) | ✅ | ✅ | ✅
+| [`constructor()`](#constructor) | ✅ | ✅ | ✅
+| [`fromString()`](#fromstring) | ✅ | ✅ | ✅
+| [`fromSolidityAddress()`](#fromsolidityaddress) | ✅ | ✅ | ✅
+| [`toSolidityAddress`](#tosolidityaddress) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+| [`equals()`](#equals) | ✅ | ✅ | ✅
 
 ## Fields
 

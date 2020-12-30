@@ -4,13 +4,13 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`fileId`](#fileid) | ✅ | ✅ | O
-| [`size`](#size) | ✅ | ✅ | O
-| [`expirationTime`](#expirationtime) | ✅ | ✅ | O
-| [`deleted`](#isdeleted) | ✅ | ✅ | O
-| [`keys`](#keys) | ✅ | ✅ | O
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
+| [`fileId`](#fileid) | ✅ | ✅ | ✅
+| [`size`](#size) | ✅ | ✅ | ✅
+| [`expirationTime`](#expirationtime) | ✅ | ✅ | ✅
+| [`deleted`](#isdeleted) | ✅ | ✅ | ✅
+| [`keys`](#keys) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
 
 
 ## Fields

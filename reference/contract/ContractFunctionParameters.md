@@ -4,36 +4,36 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`ADDRESS_LEN`](#address_len) | ✅ | ✅ | O
-| [`ADDRESS_LEN_HEX`](#address_len_hex) | ✅ | ✅ | O
-| [`SELECTOR_LEN`](#selector_len) | ✅ | ✅ | O
-| [`SELECTOR_LEN_HEX`](#selector_len_hex) | ✅ | ✅ | O
-| [`addString()`](#addstring) | ✅ | ✅ | O
-| [`addStringArray()`](#addstringarray) | ✅ | ✅ | O
-| [`addBytes()`](#addbytes) | ✅ | ✅ | O
-| [`addBytesArray()`](#addbytesarray) | ✅ | ✅ | O
-| [`addBytes32()`](#addbytes32) | ✅ | ✅ | O
-| [`addBytes32Array()`](#addbytes32array) | ✅ | ✅ | O
-| [`addBool()`](#addbool) | ✅ | ✅ | O
-| [`addInt8()`](#addint8) | ✅ | ✅ | O
-| [`addInt32()`](#addint32) | ✅ | ✅ | O
-| [`addInt64()`](#addint64) | ✅ | ✅ | O
-| [`addInt256()`](#addint256) | ✅ | ✅ | O
-| [`addInt8Array()`](#addint8array) | ✅ | ✅ | O
-| [`addInt32Array()`](#addint32array) | ✅ | ✅ | O
-| [`addInt64Array()`](#addint64array) | ✅ | ✅ | O
-| [`addInt256Array()`](#addint256array) | ✅ | ✅ | O
-| [`addUint8()`](#adduint8) | ✅ | ✅ | O
-| [`addUint32()`](#adduint32) | ✅ | ✅ | O
-| [`addUint64()`](#adduint64) | ✅ | ✅ | O
-| [`addUint256()`](#adduint256) | ✅ | ✅ | O
-| [`addUint8Array()`](#adduint8array) | ✅ | ✅ | O
-| [`addUint32Array()`](#adduint32array) | ✅ | ✅ | O
-| [`addUint64Array()`](#adduint64array) | ✅ | ✅ | O
-| [`addUint256Array()`](#adduint256array) | ✅ | ✅ | O
-| [`addAddress()`](#addaddress) | ✅ | ✅ | O
-| [`addAddressArray()`](#addaddressarray) | ✅ | ✅ | O
-| [`addFunction()`](#addfunction) | ✅ | ✅ | O
+| [`ADDRESS_LEN`](#address_len) | ✅ | ✅ | ✅
+| [`ADDRESS_LEN_HEX`](#address_len_hex) | ✅ | ✅ | ✅
+| [`SELECTOR_LEN`](#selector_len) | ✅ | ✅ | ✅
+| [`SELECTOR_LEN_HEX`](#selector_len_hex) | ✅ | ✅ | ✅
+| [`addString()`](#addstring) | ✅ | ✅ | ✅
+| [`addStringArray()`](#addstringarray) | ✅ | ✅ | ✅
+| [`addBytes()`](#addbytes) | ✅ | ✅ | ✅
+| [`addBytesArray()`](#addbytesarray) | ✅ | ✅ | ✅
+| [`addBytes32()`](#addbytes32) | ✅ | ✅ | ✅
+| [`addBytes32Array()`](#addbytes32array) | ✅ | ✅ | ✅
+| [`addBool()`](#addbool) | ✅ | ✅ | ✅
+| [`addInt8()`](#addint8) | ✅ | ✅ | ✅
+| [`addInt32()`](#addint32) | ✅ | ✅ | ✅
+| [`addInt64()`](#addint64) | ✅ | ✅ | ✅
+| [`addInt256()`](#addint256) | ✅ | ✅ | ✅
+| [`addInt8Array()`](#addint8array) | ✅ | ✅ | ✅
+| [`addInt32Array()`](#addint32array) | ✅ | ✅ | ✅
+| [`addInt64Array()`](#addint64array) | ✅ | ✅ | ✅
+| [`addInt256Array()`](#addint256array) | ✅ | ✅ | ✅
+| [`addUint8()`](#adduint8) | ✅ | ✅ | ✅
+| [`addUint32()`](#adduint32) | ✅ | ✅ | ✅
+| [`addUint64()`](#adduint64) | ✅ | ✅ | ✅
+| [`addUint256()`](#adduint256) | ✅ | ✅ | ✅
+| [`addUint8Array()`](#adduint8array) | ✅ | ✅ | ✅
+| [`addUint32Array()`](#adduint32array) | ✅ | ✅ | ✅
+| [`addUint64Array()`](#adduint64array) | ✅ | ✅ | ✅
+| [`addUint256Array()`](#adduint256array) | ✅ | ✅ | ✅
+| [`addAddress()`](#addaddress) | ✅ | ✅ | ✅
+| [`addAddressArray()`](#addaddressarray) | ✅ | ✅ | ✅
+| [`addFunction()`](#addfunction) | ✅ | ✅ | ✅
 
 ## Constants
 

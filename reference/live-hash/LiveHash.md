@@ -8,8 +8,8 @@
 | [`hash`](#hash) | ✅ | ✅ | ✅
 | [`keys`](#keys) | ✅ | ✅ | ✅
 | [`duration`](#duration) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
 
 ## Fields
 

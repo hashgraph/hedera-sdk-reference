@@ -4,27 +4,27 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`contractId`](#contractid) | ✅ | ✅ | O
-| [`errorMessage`](#errormessage) | ✅ | ✅ | O
-| [`bloom`](#bloom) | ✅ | ✅ | O
-| [`gasUsed`](#gasused) | ✅ | ✅ | O
-| [`logs`](#logs) | ✅ | ✅ | O
-| [`asBytes()`](#asbytes) | ✅ | ✅ | O
-| [`getString()`](#getstring) | ✅ | ✅ | O
-| [`getStringArray()`](#getstringarray) | ✅ | ✅ | O
-| [`getBytes()`](#getbytes) | ✅ | ✅ | O
-| [`getBytes32()`](#getbytes32) | ✅ | ✅ | O
-| [`getDynamicBytes()`](#getdynamicbytes) | ✅ | ✅ | O
-| [`getBool()`](#getbool) | ✅ | ✅ | O
-| [`getInt8()`](#getint8) | ✅ | ✅ | O
-| [`getInt32()`](#getint32) | ✅ | ✅ | O
-| [`getInt64()`](#getint64) | ✅ | ✅ | O
-| [`getInt256()`](#getint256) | ✅ | ✅ | O
-| [`getUint8()`](#getuint8) | ✅ | ✅ | O
-| [`getUint32()`](#getuint32) | ✅ | ✅ | O
-| [`getUint64()`](#getuint64) | ✅ | ✅ | O
-| [`getUint256()`](#getuint256) | ✅ | ✅ | O
-| [`getAddress()`](#getaddress) | ✅ | ✅ | O
+| [`contractId`](#contractid) | ✅ | ✅ | ✅
+| [`errorMessage`](#errormessage) | ✅ | ✅ | ✅
+| [`bloom`](#bloom) | ✅ | ✅ | ✅
+| [`gasUsed`](#gasused) | ✅ | ✅ | ✅
+| [`logs`](#logs) | ✅ | ✅ | ✅
+| [`asBytes()`](#asbytes) | ✅ | ✅ | ✅
+| [`getString()`](#getstring) | ✅ | ✅ | ✅
+| [`getStringArray()`](#getstringarray) | ✅ | ✅ | ✅
+| [`getBytes()`](#getbytes) | ✅ | ✅ | ✅
+| [`getBytes32()`](#getbytes32) | ✅ | ✅ | ✅
+| [`getDynamicBytes()`](#getdynamicbytes) | ✅ | ✅ | ✅
+| [`getBool()`](#getbool) | ✅ | ✅ | ✅
+| [`getInt8()`](#getint8) | ✅ | ✅ | ✅
+| [`getInt32()`](#getint32) | ✅ | ✅ | ✅
+| [`getInt64()`](#getint64) | ✅ | ✅ | ✅
+| [`getInt256()`](#getint256) | ✅ | ✅ | ✅
+| [`getUint8()`](#getuint8) | ✅ | ✅ | ✅
+| [`getUint32()`](#getuint32) | ✅ | ✅ | ✅
+| [`getUint64()`](#getuint64) | ✅ | ✅ | ✅
+| [`getUint256()`](#getuint256) | ✅ | ✅ | ✅
+| [`getAddress()`](#getaddress) | ✅ | ✅ | ✅
 
 ## Fields
 

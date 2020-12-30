@@ -4,17 +4,17 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`TINYBAR`](#tinybar) | ✅ | ✅ | O
-| [`MICROBAR`](#microbar) | ✅ | ✅ | O
-| [`MILLIBAR`](#millibar) | ✅ | ✅ | O
-| [`HBAR`](#hbar) | ✅ | ✅ | O
-| [`KILOBAR`](#kilobar) | ✅ | ✅ | O
-| [`MEGABAR`](#megabar) | ✅ | ✅ | O
-| [`GIGABAR`](#gigabar) | ✅ | ✅ | O
-| [`toString()`](#tostring) | ✅ | ✅ | O
+| [`TINYBAR`](#tinybar) | ✅ | ✅ | ✅
+| [`MICROBAR`](#microbar) | ✅ | ✅ | ✅
+| [`MILLIBAR`](#millibar) | ✅ | ✅ | ✅
+| [`HBAR`](#hbar) | ✅ | ✅ | ✅
+| [`KILOBAR`](#kilobar) | ✅ | ✅ | ✅
+| [`MEGABAR`](#megabar) | ✅ | ✅ | ✅
+| [`GIGABAR`](#gigabar) | ✅ | ✅ | ✅
+| [`toString()`](#tostring) | ✅ | ✅ | ✅
 
 ## Variants
-     
+
 ### `TINYBAR`
 
 The atomic (smallest) unit of hbar, used natively by the Hedera network.

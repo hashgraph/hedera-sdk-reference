@@ -4,21 +4,21 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`ZERO`](#zero) | ✅ | ✅ | O
-| [`MAX`](#max) | ✅ | ✅ | O
-| [`MIN`](#min) | ✅ | ✅ | O
-| [`fromString()`](#fromstring) | ✅ | ✅ | O
-| [`from()`](#from) | ✅ | ✅ | O
-| [`fromTinybars()`](#fromtinybars) | ✅ | ✅ | O
-| [`toTinybars()`](#totinybars) | ✅ | ✅ | O
-| [`to()`](#to) | ✅ | ✅ | O
-| [`getValue()`](#getValue) | ✅ | ✅ | O
-| [`negated()`](#negated) | ✅ | ✅ | O
-| [`equals()`](#equals) | ✅ | ✅ | O
-| [`compareTo()`](#compareto) | ✅ | ✅ | O
+| [`ZERO`](#zero) | ✅ | ✅ | ✅
+| [`MAX`](#max) | ✅ | ✅ | ✅
+| [`MIN`](#min) | ✅ | ✅ | ✅
+| [`fromString()`](#fromstring) | ✅ | ✅ | ✅
+| [`from()`](#from) | ✅ | ✅ | ✅
+| [`fromTinybars()`](#fromtinybars) | ✅ | ✅ | ✅
+| [`toTinybars()`](#totinybars) | ✅ | ✅ | ✅
+| [`to()`](#to) | ✅ | ✅ | ✅
+| [`getValue()`](#getValue) | ✅ | ✅ | ✅
+| [`negated()`](#negated) | ✅ | ✅ | ✅
+| [`equals()`](#equals) | ✅ | ✅ | ✅
+| [`compareTo()`](#compareto) | ✅ | ✅ | ✅
 
 ## Constants
-     
+
 ### `ZERO`
 
 A constant value of zero hbars.

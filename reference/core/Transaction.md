@@ -89,6 +89,26 @@ the same `Transaction`.
 
 ---
 
+##### `getSignatures()`: `Map<AccoundID, Map<PublicKey, byte[]>`
+
+---
+
+##### `addSignature`(`key`: `PublicKey`, `signature`: `byte[]`): `this`
+
+---
+
+##### `getTransactionHashPerNode()`: `Map<AccoundID, byte[]>`
+
+---
+
+##### `setMaxRetry`(`count`: `int`)`: `this`
+
+---
+
+##### `getMaxRetry()`: `int`
+
+---
+
 ### Properties
 
 ##### `nodeAccountId`: [`AccountId`](reference/AccountId.md)

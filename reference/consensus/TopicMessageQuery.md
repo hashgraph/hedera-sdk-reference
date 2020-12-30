@@ -9,12 +9,13 @@
 | [`setLimit()`](#setlimit) | ✅ | ✅ | ✅
 | [`subscribe()`](#subscribe) | ✅ | ✅ | ✅
 | [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
-| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | O  
-| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | O
-| [`getCost()`](#getcost) | ✅ | ✅ | O
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
+| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
+| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
+| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | ✅
+| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | ✅
+| [`getCost()`](#getcost) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
 
 ## Methods
 
@@ -52,7 +53,7 @@ setLimit(limit: long): this
 
 ```typescript
 subscribe(
-    client: Client, 
+    client: Client,
     onNext: Consumer<TopicMessage>): SubscriptionHandle
 ```
 
@@ -66,6 +67,12 @@ async execute(client: Client): this
 
 ```typescript
 setNodeId(id: AccountId): this
+```
+
+### `getNodeId()`
+
+```typescript
+getNodeId(): AccountId
 ```
 
 ### `setQueryPayment()`

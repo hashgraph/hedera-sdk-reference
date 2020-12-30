@@ -4,16 +4,17 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | O
-| [`setAccountId()`](#setaccountid) | ✅ | ✅ | O
-| [`setHash()`](#sethash) | ✅ | ✅ | O
-| [`execute()`](#execute) | ✅ | ✅ | O
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | O
-| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | O  
-| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | O
-| [`getCost()`](#getcost) | ✅ | ✅ | O
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | O
+| [`constructor()`](#constructor) | ✅ | ✅ | ✅
+| [`setAccountId()`](#setaccountid) | ✅ | ✅ | ✅
+| [`setHash()`](#sethash) | ✅ | ✅ | ✅
+| [`execute()`](#execute) | ✅ | ✅ | ✅
+| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
+| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
+| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | ✅
+| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | ✅
+| [`getCost()`](#getcost) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
 
 ## Methods
 
@@ -45,6 +46,12 @@ async execute(client: Client): this
 
 ```typescript
 setNodeId(id: AccountId): this
+```
+
+### `getNodeId()`
+
+```typescript
+getNodeId(): AccountId
 ```
 
 ### `setQueryPayment()`

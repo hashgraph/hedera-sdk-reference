@@ -4,11 +4,11 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`consensusTimestamp`](#consensustimestamp) | ✅ | ✅ | O
-| [`contents`](#contents) | ✅ | ✅ | O
-| [`runningHash`](#runninghash) | ✅ | ✅ | O
-| [`sequenceNumber`](#sequencenumber) | ✅ | ✅ | O
-| [`chunks`](#chunks) | ✅ | ✅ | O
+| [`consensusTimestamp`](#consensustimestamp) | ✅ | ✅ | ✅
+| [`contents`](#contents) | ✅ | ✅ | ✅
+| [`runningHash`](#runninghash) | ✅ | ✅ | ✅
+| [`sequenceNumber`](#sequencenumber) | ✅ | ✅ | ✅
+| [`chunks`](#chunks) | ✅ | ✅ | ✅
 
 ## Fields
 

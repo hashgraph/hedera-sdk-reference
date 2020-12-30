@@ -4,16 +4,16 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`topicId`](#topicid) | ✅ | ✅ | O
-| [`topicMemo`](#topicid) | ✅ | ✅ | O
-| [`runningHash`](#topicid) | ✅ | ✅ | O
-| [`sequenceNumber`](#topicid) | ✅ | ✅ | O
-| [`expirationTime`](#topicid) | ✅ | ✅ | O
-| [`adminKey`](#topicid) | ✅ | ✅ | O
-| [`submitKey`](#topicid) | ✅ | ✅ | O
-| [`autoRenewPeriod`](#topicid) | ✅ | ✅ | O
-| [`autoRenewAccountId`](#topicid) | ✅ | ✅ | O
-| [`fromBytes`](#frombytes) | ✅ | ✅ | O
+| [`topicId`](#topicid) | ✅ | ✅ | ✅
+| [`topicMemo`](#topicid) | ✅ | ✅ | ✅
+| [`runningHash`](#topicid) | ✅ | ✅ | ✅
+| [`sequenceNumber`](#topicid) | ✅ | ✅ | ✅
+| [`expirationTime`](#topicid) | ✅ | ✅ | ✅
+| [`adminKey`](#topicid) | ✅ | ✅ | ✅
+| [`submitKey`](#topicid) | ✅ | ✅ | ✅
+| [`autoRenewPeriod`](#topicid) | ✅ | ✅ | ✅
+| [`autoRenewAccountId`](#topicid) | ✅ | ✅ | ✅
+| [`fromBytes`](#frombytes) | ✅ | ✅ | ✅
 
 
 ## Fields

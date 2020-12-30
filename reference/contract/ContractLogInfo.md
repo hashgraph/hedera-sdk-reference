@@ -8,9 +8,9 @@
 | [`bloom`](#bloom) | ✅ | ✅ | ✅
 | [`topics`](#topics) | ✅ | ✅ | ✅
 | [`data`](#data) | ✅ | ✅ | ✅
-| [`constructor()`](#constructor) | ✅ | ✅ | O
-| [`toBytes()`](#tobytes) | ✅ | ✅ | O
-| [`fromBytes`](#frombytes) | ✅ | ✅ | O
+| [`constructor()`](#constructor) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
+| [`fromBytes`](#frombytes) | ✅ | ✅ | ✅
 
 ## Fields
 

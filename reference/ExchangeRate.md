@@ -4,9 +4,9 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`hbars`](#hbars) | ✅ | ✅ | O
-| [`cents`](#cents) | ✅ | ✅ | O
-| [`expirationTime`](#expirationtime) | ✅ | ✅ | O
+| [`hbars`](#hbars) | ✅ | ✅ | ✅
+| [`cents`](#cents) | ✅ | ✅ | ✅
+| [`expirationTime`](#expirationtime) | ✅ | ✅ | ✅
 | [`toString()`](#tostring) | ✅ | ✅ | O
 
 ## Fields
