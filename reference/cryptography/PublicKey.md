@@ -13,6 +13,8 @@ class PublicKey implements Key, Eq<PublicKey> {
 
     verify(message: bytes, signature: bytes): bool;
 
+    verifyTransaction(transaction: Transaction<?>): bool;
+
     equals(other: PublicKey): bool;
 
     toBytes(): bytes;
@@ -42,6 +44,10 @@ Parses a public key from bytes.
 ##### `verify` ( `message`: `bytes`, `signature`: `bytes` ): `bool`
 
 Verify the signature on the message with this public key.
+
+##### `verifyTransaction` ( `transaction`: `Transaction<?>`): `bool`
+
+Verify the signatures on all the messages in the Transaction.
 
 ##### `equals` ( `other`: `PublicKey` ): `bool`
 

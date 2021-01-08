@@ -80,7 +80,15 @@ var key = PrivateKey.fromMnemonic("word,word2,word3", "");
 
 ```go
 // use "" for an empty passphrase
-key, _ := hedera.PrivateKeyFromMnemonic("word1,word2,word3", "");
+mnemonic, err := hedera.MnemonicFromString("word1,word2,word3");
+if err != nil {
+    println(err.Error())
+}
+
+key, err := mnemonicFromString.ToPrivateKey(passphrase)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

@@ -76,12 +76,20 @@ const newAccountId = receipt.accountId;
 ```go
 newKey := hedera.GeneratePrivateKey()
 
-newAccountID := NewAccountCreateTransaction().
+response, err := NewAccountCreateTransaction().
     SetKey(newKey).
     SetInitialBalance(10 * hedera.Hbar) // 10 Hbars
-    Execute(client). // TransactionResponse
-    GetReceipt(client). // TransactionReceipt
-    AccountID() // AccountID
+    Execute(client) // TransactionResponse
+if err != nil {
+    println(err.Error())
+}
+
+receipt, err := resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
+
+accountID := *receipt.AccountID
 ```
 
 <!-- tabs:end -->

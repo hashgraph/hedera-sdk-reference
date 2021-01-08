@@ -46,11 +46,18 @@ await new CryptoTransferTransaction({ transfers: [
 ### ** Go **
 
 ```go
-// transfer 10 ħ from sender to recipient
-_, err := NewCryptoTransferTransaction().
-    AddSender(senderID, NewHbar(10)).
-    AddReceipient(recipientID, NewHbar(10)).
+resp, err := NewTransferTransaction().
+    AddHbarTransfer(client.GetOperatorAccountID(), NewHbar(-1)).
+    AddHbarTransfer(AccountID{Account: 3}, NewHbar(1)).
     Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

@@ -33,6 +33,18 @@ const receipt = await new TransactionReceiptQuery({
 }).execute(client);
 ```
 
+### ** Go **
+
+```go
+receipt, err := NewTransactionReceiptQuery().
+    SetTransactionID(response.TransactionID).
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+```
+
 <!-- tabs:end -->
 
 ### Constructor

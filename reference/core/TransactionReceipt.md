@@ -26,6 +26,8 @@ class TransactionReceipt {
     topicSequenceNumber: ?Uint64;
 
     topicRunningHash: ?bytes;
+
+    topicSupply: ?Uint64;
 }
 ```
 
@@ -74,5 +76,9 @@ class TransactionReceipt {
 ---
 
 ##### `topicRunningHash`: `bytes`
+
+---
+
+##### `totalSypply`: `Uint64`
 
 ---

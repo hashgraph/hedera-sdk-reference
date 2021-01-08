@@ -33,6 +33,18 @@ const record = await new TransactionRecordQuery({
 }).execute(client);
 ```
 
+### ** Go **
+
+```go
+record, err := NewTransactionRecordQuery().
+    SetTransactionID(response.TransactionID).
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+```
+
 <!-- tabs:end -->
 
 ### Constructor
