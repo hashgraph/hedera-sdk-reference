@@ -32,7 +32,14 @@ newTokenId = new TokenUpdateTransaction()
 #### ** JavaScript **
 
 ```js
-// TODO
+await (
+    await new TokenUpdateTransaction()
+        .setNodeAccountIds([response.nodeId])
+        .setTokenId(token)
+        .setTokenName("aaaa")
+        .setTokenSymbol("A")
+        .execute(client)
+).getReceipt(client);
 ```
 
 - `Duration` is `number` and is the number of seconds
@@ -40,14 +47,19 @@ newTokenId = new TokenUpdateTransaction()
 #### ** Go **
 
 ```go
-newKey := hedera.GeneratePrivateKey()
+resp, err = NewTokenUpdateTransaction().
+    SetTokenID(tokenID).
+    SetTokenSymbol("A").
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
 
-newTokenID := NewTokenUpdateTransaction().
-    SetKey(newKey).
-    SetInitialBalance(10 * hedera.Hbar) // 10 Hbars
-    Execute(client). // TransactionResponse
-    GetReceipt(client). // TransactionReceipt
-    TokenID() // TokenID
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

@@ -14,7 +14,7 @@ one must provide amount of 10055.
 #### ** Java **
 
 ```java
-newTokenId = new TokenBurnTransaction()
+newTokenID = new TokenBurnTransaction()
     .setTokenId(new TokenId(4))
     .setAmount(10)
     .execute(client)
@@ -24,13 +24,30 @@ newTokenId = new TokenBurnTransaction()
 #### ** JavaScript **
 
 ```js
-// TODO
+response = await new TokenBurnTransaction()
+    .setAmount(10)
+    .setTokenId(tokenId)
+    .execute(client)
+
+newTokenID = (await response.getReceipt(client)).tokenId;
 ```
 
 #### ** Go **
 
 ```go
-// TODO
+resp, err = NewTokenBurnTransaction().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetAmount(10).
+    SetTokenID(tokenID).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

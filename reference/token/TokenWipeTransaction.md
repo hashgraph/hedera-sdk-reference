@@ -47,13 +47,32 @@ newTokenId = new TokenWipeTransaction()
 #### ** JavaScript **
 
 ```js
-// TODO
+await (
+    await new TokenWipeTransaction()
+        .setTokenId(token)
+        .setAccountId(account)
+        .setAmount(10)
+        .execute(client)
+).getReceipt(client);
 ```
 
 #### ** Go **
 
 ```go
-// TODO
+resp, err = NewTokenWipeTransaction().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetTokenID(tokenID).
+    SetAccountID(accountID).
+    SetAmount(100).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

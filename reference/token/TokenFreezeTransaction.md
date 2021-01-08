@@ -40,13 +40,33 @@ newTokenId = new TokenFreezeTransaction()
 #### ** JavaScript **
 
 ```js
-// TODO
+await (
+    await (
+        await new TokenAssociateTransaction()
+            .setTokenIds([token])
+            .setAccountId(account)
+            .freezeWith(client)
+            .sign(key)
+    ).execute(client)
+).getReceipt(client);
 ```
 
 #### ** Go **
 
 ```go
-// TODO
+resp, err = NewTokenFreezeTransaction().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetAccountID(accountID).
+    SetTokenID(tokenID).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

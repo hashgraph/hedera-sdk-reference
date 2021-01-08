@@ -23,13 +23,28 @@ newTokenId = new TokenDeleteTransaction()
 #### ** JavaScript **
 
 ```js
-// TODO
+await (
+    await new TokenDeleteTransaction()
+        .setTokenId(tokenId)
+        .execute(client)
+).getReceipt(client);
 ```
 
 #### ** Go **
 
 ```go
-// TODO
+resp, err = NewTokenDeleteTransaction().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetTokenID(tokenID).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

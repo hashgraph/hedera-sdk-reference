@@ -46,7 +46,21 @@ newTokenId = new TokenCreateTransaction()
 #### ** JavaScript **
 
 ```js
-// TODO
+response = await new TokenCreateTransaction()
+    .setTokenName("ffff")
+    .setTokenSymbol("F")
+    .setDecimals(3)
+    .setInitialSupply(1000000)
+    .setTreasuryAccountId(operatorId)
+    .setAdminKey(operatorKey)
+    .setKycKey(operatorKey)
+    .setFreezeKey(operatorKey)
+    .setWipeKey(operatorKey)
+    .setSupplyKey(operatorKey)
+    .setFreezeDefault(false)
+    .execute(client);
+
+tokenId = (await response.getReceipt(client)).tokenId;
 ```
 
 - `Duration` is `number` and is the number of seconds
@@ -54,14 +68,29 @@ newTokenId = new TokenCreateTransaction()
 #### ** Go **
 
 ```go
-newKey := hedera.GeneratePrivateKey()
+resp, err := NewTokenCreateTransaction().
+    SetTokenName("ffff").
+    SetTokenSymbol("F").
+    SetDecimals(3).
+    SetInitialSupply(1000000).
+    SetTreasuryAccountID(client.GetOperatorAccountID()).
+    SetAdminKey(client.GetOperatorPublicKey()).
+    SetFreezeKey(client.GetOperatorPublicKey()).
+    SetWipeKey(client.GetOperatorPublicKey()).
+    SetKycKey(client.GetOperatorPublicKey()).
+    SetSupplyKey(client.GetOperatorPublicKey()).
+    SetFreezeDefault(false).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
 
-newTokenID := NewTokenCreateTransaction().
-    SetKey(newKey).
-    SetInitialBalance(10 * hedera.Hbar) // 10 Hbars
-    Execute(client). // TransactionResponse
-    GetReceipt(client). // TransactionReceipt
-    TokenID() // TokenID
+receipt, err := resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
+
+tokenID := *receipt.TokenID
 ```
 
 <!-- tabs:end -->

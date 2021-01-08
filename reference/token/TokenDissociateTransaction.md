@@ -39,13 +39,40 @@ newTokenId = new TokenDissociateTransaction()
 #### ** JavaScript **
 
 ```js
-// TODO
+await (
+    await (
+        await new TokenDissociateTransaction()
+            .setTokenIds([token])
+            .setAccountId(account)
+            .freezeWith(client)
+            .sign(key)
+    ).execute(client)
+).getReceipt(client);
 ```
 
 #### ** Go **
 
 ```go
-// TODO
+dissociateTx, err := NewTokenDissociateTransaction().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetAccountID(accountID).
+    SetTokenIDs(tokenID).
+    FreezeWith(client)
+if err != nil {
+    println(err.Error())
+}
+
+resp, err = dissociateTx.
+    Sign(newKey).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

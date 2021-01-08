@@ -24,13 +24,30 @@ newTokenId = new TokenMintTransaction()
 #### ** JavaScript **
 
 ```js
-// TODO
+await (
+    await new TokenMintTransaction()
+        .setAmount(10)
+        .setTokenId(tokenId)
+        .execute(client)
+).getReceipt(client);
 ```
 
 #### ** Go **
 
 ```go
-// TODO
+resp, err = NewTokenMintTransaction().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetAmount(10).
+    SetTokenID(tokenID).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

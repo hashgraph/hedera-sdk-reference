@@ -26,13 +26,30 @@ newTokenId = new TokenTransferTransaction()
 #### ** JavaScript **
 
 ```js
-// TODO
+await (
+    await new TransferTransaction()
+        .addTokenTransfer(token, account, 10)
+        .addTokenTransfer(token, client.operatorAccountId, -10)
+        .execute(client)
+).getReceipt(client);
 ```
 
 #### ** Go **
 
 ```go
-// TODO
+resp, err = NewTransferTransaction().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    AddTokenTransfer(tokenID, client.GetOperatorAccountID(), -10).
+    AddTokenTransfer(tokenID, accountID, 10).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->
