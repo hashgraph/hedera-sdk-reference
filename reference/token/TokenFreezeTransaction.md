@@ -54,8 +54,8 @@ await (
 #### ** Go **
 
 ```go
-resp, err = NewTokenFreezeTransaction().
-    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+response, err = NewTokenFreezeTransaction().
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAccountID(accountID).
     SetTokenID(tokenID).
     Execute(client)
@@ -63,7 +63,7 @@ if err != nil {
     println(err.Error())
 }
 
-_, err = resp.GetReceipt(client)
+_, err = response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

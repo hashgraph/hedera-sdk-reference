@@ -53,8 +53,8 @@ await (
 #### ** Go **
 
 ```go
-resp, err = NewTokenRevokeKycTransaction().
-    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+response, err = NewTokenRevokeKycTransaction().
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAccountID(accountID).
     SetTokenID(tokenID).
     Execute(client)
@@ -62,7 +62,7 @@ if err != nil {
     println(err.Error())
 }
 
-_, err = resp.GetReceipt(client)
+_, err = response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

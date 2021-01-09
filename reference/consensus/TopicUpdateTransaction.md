@@ -1,130 +1,78 @@
 # `TopicUpdateTransaction`
 
-## Support
+<details>
+<summary><b>Support</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setTopicId()`](#settopicid) | ✅ | ✅ | ✅
-| [`getTopicId()`](#gettopicid) | ✅ | ✅ | ✅
-| [`setTopicMemo()`](#settopicmemo) | ✅ | ✅ | ✅
-| [`getTopicMemo()`](#gettopicmemo) | ✅ | ✅ | ✅
-| [`setAdminKey()`](#setadminkey) | ✅ | ✅ | ✅
-| [`getAdminKey()`](#getadminkey) | ✅ | ✅ | ✅
-| [`setSubmitKey()`](#setsubmitkey) | ✅ | ✅ | ✅
-| [`getSubmitKey()`](#getsubmitkey) | ✅ | ✅ | ✅
-| [`setAutoRenewPeriod()`](#setautorenewperiod) | ✅ | ✅ | ✅
-| [`getAutoRenewPeriod()`](#getautorenewperiod) | ✅ | ✅ | ✅
-| [`setAutoRenewAccountId()`](#setautorenewaccountid) | ✅ | ✅ | ✅
-| [`getAutoRenewAccountId()`](#getautorenewaccountid) | ✅ | ✅ | ✅
-| [`clearTopicMemo()`](#clearyopicmemo) | ✅ | ✅ | ✅
-| [`clearAdminKey()`](#clearadminkey) | ✅ | ✅ | ✅
-| [`clearSubmitKey()`](#cleardubmitkey) | ✅ | ✅ | ✅
-| [`clearAutoRenewAccountId()`](#clearsutotenewsccountid) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | ✅
-| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | ✅
-| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | ✅
-| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | ✅
-| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | ✅
-| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | ✅
-| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | ✅
-| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | ✅
-| [`sign()`](#sign) | ✅ | ✅ | ✅
-| [`signWith()`](#signwith) | ✅ | ✅ | ✅
-| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | ✅
-| [`freeze()`](#freeze) | ✅ |  ✅ | ✅
-| [`freezeWith()`](#freezewith) | ✅ | ✅ | ✅
-| [`getSignatures()`](#getsignatures) | ✅ | ✅ | ✅
-| [`addSignature()`](#addsignature) | ✅ | ✅ | ✅
-| [`getTransactionHashPerNode`](#gettransactionhashpernode) | ✅ | ✅ | ✅
-| [`setMaxRetry`](#setmaxretry) | ✅ | ✅ | ✅
-| [`getMaxRetry`](#getmaxretry) | ✅ | ✅ | ✅
+| [`TopicId`](#topicid-topicid) | ✅ | ✅ | ✅
+| [`TopicMemo`](#topicmemo-string) | ✅ | ✅ | ✅
+| [`AdminKey`](#adminkey-key) | ✅ | ✅ | ✅
+| [`SubmitKey`](#submitkey-key) | ✅ | ✅ | ✅
+| [`AutoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
+| [`AutoRenewAccountId`](#autorenewaccountid-accountid) | ✅ | ✅ | ✅
+</details>
 
-## Methods
+> class `TopicUpdateTransaction` extends [`Transaction`](reference/Transaction.md)
 
-### `constructor()`
+<!-- tabs:start -->
 
-```typescript
-constructor()
+#### ** Java **
+
+```java
+new TopicUpdateTransaction()
+    .setNodeAccountIds(Collections.singletonList(response.nodeId))
+    .setTransactionId(new TransactionId(AccountId.fromString("0.0.5006"), validStart))
+    .setTopicId(TopicId.fromString("0.0.5007"))
+    .setAdminKey(unusedPrivateKey)
+    .setAutoRenewAccountId(AccountId.fromString("0.0.5009"))
+    .setAutoRenewPeriod(Duration.ofHours(24))
+    .setSubmitKey(unusedPrivateKey)
+    .freeze()
+    .sign(unusedPrivateKey)
+    .execute(client)
+    .getReceipt(client)
 ```
 
-### `setTopicId()`
+#### ** JavaScript **
 
-```typescript
-setTopicId(id: TopicId): this
+```js
+const newKey = PrivateKey.generate();
+
+const accountCreateTransaction = new AccountCreateTransaction({
+    key: newKey,
+    initialBalance: new Hbar(10),
+});
+
+const response = await accountCreateTransaction.execute(client);
+const receipt = await response.getReceipt(client);
+
+const newAccountId = receipt.accountId;
 ```
 
-### `sgtTopicId()`
+#### ** Go **
 
-```typescript
-getTopicId(): TopicId
+```go
+newKey := hedera.GeneratePrivateKey()
+
+response, err := NewTopicUpdateTransaction().
+    SetTopicID(topicID).
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetTopicMemo(newTopicMemo).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+receipt, err := response.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
-### `setTopicMemo()`
+<!-- tabs:end -->
 
-```typescript
-setTopicMemo(memo: string): this
-```
-
-### `getTopicMemo()`
-
-```typescript
-getTopicMemo(): string
-```
-
-### `setAdminKey()`
-
-```typescript
-setAdminKey(key: Key): this
-```
-
-### `getAdminKey()`
-
-```typescript
-getAdminKey(): Key
-```
-
-### `setSubmitKey()`
-
-```typescript
-setSubmitKey(key: Key): this
-```
-
-### `getSubmitKey()`
-
-```typescript
-getSubmitKey(): Key
-```
-
-### `setAutoRenewPeriod()`
-
-```typescript
-setAutoRenewPeriod(id: Timestamp): this
-```
-
-### `getAutoRenewPeriod()`
-
-```typescript
-getAutoRenewPeriod(): Timestamp
-```
-
-### `setAutoRenewAccountId()`
-
-```typescript
-setAutoRenewAccountId(id: AccountId): this
-```
-
-### `getAutoRenewAccountId()`
-
-```typescript
-getAutoRenewAccountId(): AccountId
-```
+### Methods
 
 ### `clearTopicMemo()`
 
@@ -150,146 +98,28 @@ clearSubmitKey(): this
 clearAutoRenewAccountId(): this
 ```
 
-### `execute()`
+### Properties
 
-```typescript
-async execute(client: Client): this
-```
+##### `TopicId`: [`TopicId`](reference/consensus/TopicId.md)
 
-### `setNodeId()`
+---
 
-```typescript
-setNodeId(id: AccountId): this
-```
+##### `AdminKey`: [`Key`](reference/cryptography/Key.md)
 
-### `getNodeId()`
+---
 
-```typescript
-getNodeId(): AccountId
-```
+##### `SubmitKey`: [`Key`](reference/cryptography/Key.md)
 
-### `setTransactionValidDuration()`
+---
 
-```typescript
-setTransactionValidDuration(duration: Timestamp): this
-```
+##### `AutoRenewPeriod`: `Duration`
 
-### `getTransactionValidDuration()`
+---
 
-```typescript
-getTransactionValidDuration(): Timestamp
-```
+##### `AutoRenewAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
-### `setMaxTransactionFee()`
+---
 
-```typescript
-setMaxTransactionFee(fee: Hbar): this
-```
+##### `TopicMemo`: `String`
 
-### `getMaxTransactionFee()`
-
-```typescript
-getMaxTransactionFee(): Hbar
-```
-
-### `setTransactionMemo()`
-
-```typescript
-setTransactionMemo(memo: string): this
-```
-
-### `getTransactionMemo()`
-
-```typescript
-getTransactionMemo(): string
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
-
-### `getTransactionHash()`
-
-```typescript
-getTransactionHash(): bytes
-```
-
-### `getTransactionId()`
-
-```typescript
-getTransactionId(): TransactionId
-```
-
-### `setTransactionId()`
-
-```typescript
-setTransactionId(id: TransactionId): this
-```
-
-### `sign()`
-
-```typescript
-sign(key: PrivateKey): this
-```
-
-### `signWith()`
-
-```typescript
-signWith(key: PublicKey, signer: Function<bytes, bytes>): this
-```
-
-### `signWithOperator()`
-
-```typescript
-signWithOperator(client: Client): this
-```
-
-### `freeze()`
-
-```typescript
-freeze(): this
-```
-
-### `freezeWith()`
-
-```typescript
-freezeWith(client: Client): this
-```
-
-### `getSignatures()`
-
-```typescript
-getSignatures(): Map<AccoundID, Map<PublicKey, byte[]>>
-```
-
-### `addSignature()`
-
-```typescript
-getSignatures(key: PublicKey, signature: byte[]): this
-```
-
-### `getTransactionHashPerNode()`
-
-```typescript
-getTransactionHashPerNode(): Map<AccoundID, byte[]>
-```
-
-### `setMaxRetry()`
-
-```typescript
-setMaxRetry(count: int): this
-```
-
-### `getMaxRetry()`
-
-```typescript
-getMaxRetry(): int
-```
+---

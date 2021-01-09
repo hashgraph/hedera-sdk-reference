@@ -35,8 +35,8 @@ await (
 #### ** Go **
 
 ```go
-resp, err = NewTokenMintTransaction().
-    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+response, err = NewTokenMintTransaction().
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAmount(10).
     SetTokenID(tokenID).
     Execute(client)
@@ -44,7 +44,7 @@ if err != nil {
     println(err.Error())
 }
 
-_, err = resp.GetReceipt(client)
+_, err = response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

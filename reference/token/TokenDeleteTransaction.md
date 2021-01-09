@@ -33,15 +33,15 @@ await (
 #### ** Go **
 
 ```go
-resp, err = NewTokenDeleteTransaction().
-    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+response, err = NewTokenDeleteTransaction().
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetTokenID(tokenID).
     Execute(client)
 if err != nil {
     println(err.Error())
 }
 
-_, err = resp.GetReceipt(client)
+_, err = response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

@@ -68,7 +68,7 @@ tokenId = (await response.getReceipt(client)).tokenId;
 #### ** Go **
 
 ```go
-resp, err := NewTokenCreateTransaction().
+response, err := NewTokenCreateTransaction().
     SetTokenName("ffff").
     SetTokenSymbol("F").
     SetDecimals(3).
@@ -85,7 +85,7 @@ if err != nil {
     println(err.Error())
 }
 
-receipt, err := resp.GetReceipt(client)
+receipt, err := response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

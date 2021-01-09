@@ -1,86 +1,55 @@
 # `ContractId`
 
-## Support
+> class `ContractId`
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`shard`](#shard) | ✅ | ✅ | ✅
-| [`realm`](#realm) | ✅ | ✅ | ✅
-| [`num`](#num) | ✅ | ✅ | ✅
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`fromString()`](#fromstring) | ✅ | ✅ | ✅
-| [`fromSolidityAddress()`](#fromsolidityaddress) | ✅ | ✅ | ✅
-| [`toSolidityAddress`](#tosolidityaddress) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-| [`equals()`](#equals) | ✅ | ✅ | ✅
+### Constructor
 
-## Fields
+##### `constructor` ( `num`: `Uint64` )
 
-### `shard`
+---
 
-```typescript
-shard: long
-```
+##### `constructor` ( `shard`: `Uint64`, `realm`: `Uint64`, `num`: `Uint64` )
 
-### `realm`
+---
 
-```typescript
-realm: long
-```
+### Static Methods
 
-### `num`
+##### `fromString` ( `text` : `string` ): `ContractId`
 
-```typescript
-num: long
-```
+---
 
-## Methods
+##### `fromBytes` ( `byte`: `byte[]` ): `ContractId`
 
-### `constructor()`
+---
 
-```typescript
-constructor(num: long)
-```
+### Methods
 
-### `constructor()`
+##### `toString` (): `string`
 
-```typescript
-constructor(shard: long, realm: long, num: long)
-````
+---
 
-### `fromString()`
+##### `equals` ( `other`: `ContractId` ): `bool`
 
-```typescript
-fromString(id: string): this
-```
+---
 
-### `fromSolidityAddress()`
+##### `hashCode` (): `int`
 
-```typescript
-fromSolidityAddress(address: string): this
-```
+---
 
-### `toSolidityAddress()`
+##### `toBytes` (): `byte[]`
 
-```typescript
-toSolidityAddress(): string
-```
+---
 
-### `fromBytes()`
+### Fields
 
-```typescript
-fromBytes(data: bytes): this
-```
+##### `shard`: `Uint64`
 
-### `toBytes()`
+---
 
-```typescript
-toBytes(): bytes
-```
+##### `realm`: `Uint64`
 
-### `equals()`
+---
 
-```typescript
-equals(object: Object): boolean
-```
+##### `num`: `Uint64`
+
+---

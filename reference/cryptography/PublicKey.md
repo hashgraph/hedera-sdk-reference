@@ -66,6 +66,10 @@ Converts this key into bytes.
 Returns the public key as a string with the DER prefix
 that identifies the algorithim.
 
+##### `hashCode` (): `int`
+
+---
+
 ```js
 publicKey.toString();
 // 302a300506032b6570032100a1e0fa8780be3ef75f348cc280be11e5d2f19b72ef41ffdb745cd50d5eea9a99

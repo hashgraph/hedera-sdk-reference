@@ -1,88 +1,65 @@
 # `ContractInfo`
 
-## Support
+> class `ContractInfo`
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`contractId`](#contractid) | ✅ | ✅ | ✅
-| [`accountId`](#accountid) | ✅ | ✅ | ✅
-| [`contractAccountId`](#contractaccountid) | ✅ | ✅ | ✅
-| [`adminKey`](#adminkey) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationtime) | ✅ | ✅ | ✅
-| [`autoRenewPeriod`](#autorenewperiod) | ✅ | ✅ | ✅
-| [`storage`](#storage) | ✅ | ✅ | ✅
-| [`contractMemo`](#contractmemo) | ✅ | ✅ | ✅
-| [`balance`](#balance) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes`](#frombytes) | ✅ | ✅ | ✅
+### Static Methods
 
-## Fields
+##### `fromBytes` ( `data`: `bytes` ): `ContractInfo`
 
-### `contractId`
+---
 
-```typescript
-contractId: ContractId
-```
+### Methods
 
-### `accountId`
+##### `toBytes` (): `bytes`
 
-```typescript
-accountId: AccountId
-```
+---
 
-### `contractAccountId`
+##### `toString` (): `string`
 
-```typescript
-contractAccountId: string
-```
+---
 
-### `adminKey`
+### Fields
 
-```typescript
-adminKey: Key
-```
+##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
-### `expirationTime`
+---
 
-```typescript
-expirationTime: Timestamp
-```
+##### `contractMemo`: `String`
 
-### `autoRenewPeriod`
+---
 
-```typescript
-autoRenewPeriod: Timestamp
-```
+##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
-### `storage`
+---
 
-```typescript
-storage: long
-```
+##### `contractAccointId`: `String`
 
-### `contractMemo`
+---
 
-```typescript
-contractMemo: string
-```
+##### `adminKey`: [`Key`](reference/cryptography/Key.md)
 
-### `balance`
+---
 
-```typescript
-balance: Hbar
-```
+##### `expirationTime`: `Instant`
 
-## Methods
+---
 
-### `fromBytes()`
+##### `autoRenewPeriod`: `Duration`
 
-```typescript
-fromBytes(data: bytes): this
-```
+---
 
-### `toBytes()`
+##### `storage`: `Uint64`
 
-```typescript
-toBytes(): bytes
-```
+---
 
+##### `balance`: [`Hbar`](reference/Hbar.md)
+
+---
+
+##### `isDeleted`: `bool`
+
+---
+
+##### `tokenRelationships`: `Map<TokenId, TokenRelationship>`
+
+---

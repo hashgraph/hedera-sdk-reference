@@ -1,6 +1,7 @@
 # `ContractFunctionSelector`
 
-## Support
+<details>
+<summary><b>Support</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -31,6 +32,8 @@
 | [`addAddress()`](#addaddress) | ✅ | ✅ | ✅
 | [`addAddressArray()`](#addaddressarray) | ✅ | ✅ | ✅
 | [`addFunction()`](#addfunction) | ✅ | ✅ | ✅
+
+</details>
 
 ## Methods
 

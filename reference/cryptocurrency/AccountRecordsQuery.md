@@ -25,6 +25,6 @@ class AccountRecordsQuery extends Query<TransactionRecord[]> {
 
 ### Properties
 
-##### `accountId`: `AccountId`
+##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 ---

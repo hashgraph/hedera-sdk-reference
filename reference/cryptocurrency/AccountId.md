@@ -22,6 +22,10 @@
 
 ---
 
+##### `fromBytes` ( `byte`: `byte[]` ): `AccountId`
+
+---
+
 ### Methods
 
 ##### `toString` (): `string`
@@ -33,6 +37,14 @@
 ---
 
 ##### `equals` ( `other`: `AccountId` ): `bool`
+
+---
+
+##### `hashCode` (): `int`
+
+---
+
+##### `toBytes` (): `byte[]`
 
 ---
 

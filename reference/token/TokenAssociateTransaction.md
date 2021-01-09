@@ -56,7 +56,7 @@ await (
 
 ```go
 transaction, err := NewTokenAssociateTransaction().
-    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAccountID(accountID).
     SetTokenIDs(tokenID).
     FreezeWith(client)
@@ -64,14 +64,14 @@ if err != nil {
     println(err.Error())
 }
 
-resp, err = transaction.
+response, err = transaction.
     Sign(newKey).
     Execute(client)
 if err != nil {
     println(err.Error())
 }
 
-_, err = resp.GetReceipt(client)
+_, err = response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

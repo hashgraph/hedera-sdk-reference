@@ -1,126 +1,47 @@
-# `ContractCallQuery`
+# class `ContractCallQuery`
 
-## Support
+Retrieve the latest state of a contract call.
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setContractId()`](#setContractId) | ✅ | ✅ | ✅
-| [`setFunction()`](#setfunction) | ✅ | ✅ | ✅
-| [`setFunctionParameters()`](#setfunctionparameters) | ✅ | ✅ | ✅
-| [`getFunctionParameters()`](#getfunctionparameters) | ✅ | ✅ | ✅
-| [`setMaxResultSize()`](#setMaxResultSize) | ✅ | ✅ | ✅
-| [`setGas()`](#setgas) | ✅ | ✅ | ✅
-| [`getGas()`](#getgas) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | ✅
-| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | ✅
-| [`getCost()`](#getcost) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
 
-## Methods
+Returns [`ContractCall`](./ContractCall.md) from [`execute`](../Query.md).
+
+## Static Methods
 
 ### `constructor()`
 
-```typescript
-constructor()
-```
+Creates an empty transaction, ready for configuration.
 
-### `setContractId()`
+## Properties
 
-```typescript
-setContractId(id: ContractId): this
-```
+##### `ContractId`: [`ContractId`](reference/contract/ContractId.md)
 
-### `setFunction()`
+The Contract for which information is being requested.
 
-```typescript
-setFunction(name: string): this
-```
+---
 
-### `setFunction()`
+##### `Gas`: `Uint64`
 
-```typescript
-setFunction(name: string, parameters: ContractFunctionParameters): this
-```
+---
 
-### `setFunctionParameters()`
+##### `FunctionParameters`: `bytes`
 
-```typescript
-setFunctionParameters(parameters: bytes): this
-```
+---
 
-### `getFunctionParameters()`
+##### **Write-only** `Function`: `ContractCallQuery`
+
+---
+
+##### **Write-only** `MaxResultSize`: `ContractCallQuery`
+
+---
+
+## Declaration
 
 ```typescript
-getFunctionParameters(): bytes
-```
+class ContractCallQuery extends Query<ContractCall> {
+    constructor();
 
-### `setMaxResultSize()`
-
-```typescript
-setMaxResultSize(size: Uint64): this
-```
-
-### `setGas()`
-
-```typescript
-setGas(gas: long): this
-```
-
-### `getGas()`
-
-```typescript
-getGas(): long
-```
-
-### `execute()`
-
-```typescript
-async execute(client: Client): this
-```
-
-### `setNodeId()`
-
-```typescript
-setNodeId(id: AccountId): this
-```
-
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
-```
-
-### `setQueryPayment()`
-
-```typescript
-setQueryPayment(payment: Hbar): this
-```
-
-### `setMaxQueryPayment()`
-
-```typescript
-setMaxQueryPayment(payment: Hbar): this
-```
-
-### `getCost()`
-
-```typescript
-async getCost(client: Client): Hbar
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
+    getContractId(): ContractId;
+    setContractId(ContractId: ContractId): this;
+}
 ```

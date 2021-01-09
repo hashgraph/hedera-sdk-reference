@@ -59,8 +59,8 @@ await (
 #### ** Go **
 
 ```go
-resp, err = NewTokenWipeTransaction().
-    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+response, err = NewTokenWipeTransaction().
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetTokenID(tokenID).
     SetAccountID(accountID).
     SetAmount(100).
@@ -69,7 +69,7 @@ if err != nil {
     println(err.Error())
 }
 
-_, err = resp.GetReceipt(client)
+_, err = response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

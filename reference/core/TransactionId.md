@@ -39,9 +39,25 @@ class TransactionId {
 
 ---
 
+##### `fromBytes` ( `data`: `byte[]` ): `TransactionId`
+
+---
+
 ### Methods
 
 ##### `toString` (): `string`
+
+---
+
+##### `toBytes` (): `byte[]`
+
+---
+
+##### `equals` (`id` : `TransactionId`): `bool`
+
+---
+
+##### `hashCode` (): `int`
 
 ---
 

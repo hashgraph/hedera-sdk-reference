@@ -1,238 +1,68 @@
-# `TopicSubmitMessageTransaction`
+# `TopicSubmitTransaction`
 
-## Support
+<details>
+<summary><b>Support</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setTopicId()`](#settopicid) | ✅ | ✅ | ✅
-| [`getTopicId()`](#gettopicid) | ✅ | ✅ | ✅
-| [`setMessage()`](#setmessage) | ✅ | ✅ | ✅
-| [`getMessage()`](#getmessage) | ✅ | ✅ | ✅
-| [`setMaxChunks()`](#setmaxchunks) | ✅ | ✅ | ✅
-| [`getAllTransactionHash()`](#getalltransactionhash) | ✅ | ✅ | ✅
-| [`executeAll()`](#executeall) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | ✅
-| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | ✅
-| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | ✅
-| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | ✅
-| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | ✅
-| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | ✅
-| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | ✅
-| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | ✅
-| [`sign()`](#sign) | ✅ | ✅ | ✅
-| [`signWith()`](#signwith) | ✅ | ✅ | ✅
-| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | ✅
-| [`freeze()`](#freeze) | ✅ |  ✅ | ✅
-| [`freezeWith()`](#freezewith) | ✅ | ✅ | ✅
-| [`getSignatures()`](#getsignatures) | ✅ | ✅ | ✅
-| [`addSignature()`](#addsignature) | ✅ | ✅ | ✅
-| [`getTransactionHashPerNode`](#gettransactionhashpernode) | ✅ | ✅ | ✅
-| [`setMaxRetry`](#setmaxretry) | ✅ | ✅ | ✅
-| [`getMaxRetry`](#getmaxretry) | ✅ | ✅ | ✅
+| [`TopicId`](#topicid-topicidreferenceconsensustopicidmd) | ✅ | ✅ | ✅
+| [`Message`](#message-bytestring) | ✅ | ✅ | ✅
+</details>
 
-## Methods
+> class `TopicSubmitTransaction` extends [`Transaction`](reference/Transaction.md)
 
-### `constructor()`
+<!-- tabs:start -->
 
-```typescript
-constructor()
+#### ** Java **
+
+```java
+new TopicMessageSubmitTransaction()
+    .setNodeAccountIds(Collections.singletonList(response.nodeId))
+    .setTopicId(topicId)
+    .setMessage("Hello, from HCS!")
+    .execute(client)
+    .getReceipt(client);
 ```
 
-### `setTopicId()`
+#### ** JavaScript **
 
-```typescript
-setTopicId(id: TopicId): this
+```js
+await (
+    await new TopicMessageSubmitTransaction()
+        .setTopicId(topic)
+        .setMessage(contents)
+        .execute(client)
+).getReceipt(client);
 ```
 
-### `getTopicId()`
+#### ** Go **
 
-```typescript
-getTopicId(): TopicId
+```go
+newKey := hedera.GeneratePrivateKey()
+
+response, err := NewTopicMessageSubmitTransaction().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetMessage([]byte(Contents)).
+    SetTopicID(topicID).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+receipt, err := response.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
-### `setMessage()`
+<!-- tabs:end -->
 
-```typescript
-setMessage(message: bytes | string): this
-```
+### Properties
 
-### `getMessage()`
+##### `TopicId`: [`TopicId`](reference/consensus/TopicId.md)
 
-```typescript
-getMessage(): bytes
-```
+---
 
-### `toBytes()`
+##### `Message: `bytes`
 
-```typescript
-toBytes(): bytes
-```
-
-### `setMaxChunks()`
-
-```typescript
-setMaxChunks(maxChunks: int): this
-```
-
-### `getAllTransactionHash()`
-
-```typescript
-getAllTransactionHash(): List<bytes>
-```
-
-### `executeAll()`
-
-```typescript
-async executeAll(client: Client): this
-```
-
-### `execute()`
-
-```typescript
-async execute(client: Client): this
-```
-
-### `setNodeId()`
-
-```typescript
-setNodeId(id: AccountId): this
-```
-
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
-```
-
-### `setTransactionValidDuration()`
-
-```typescript
-setTransactionValidDuration(duration: Timestamp): this
-```
-
-### `getTransactionValidDuration()`
-
-```typescript
-getTransactionValidDuration(): Timestamp
-```
-
-### `setMaxTransactionFee()`
-
-```typescript
-setMaxTransactionFee(fee: Hbar): this
-```
-
-### `getMaxTransactionFee()`
-
-```typescript
-getMaxTransactionFee(): Hbar
-```
-
-### `setTransactionMemo()`
-
-```typescript
-setTransactionMemo(memo: string): this
-```
-
-### `getTransactionMemo()`
-
-```typescript
-getTransactionMemo(): string
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
-
-### `getTransactionHash()`
-
-```typescript
-getTransactionHash(): bytes
-```
-
-### `getTransactionId()`
-
-```typescript
-getTransactionId(): TransactionId
-```
-
-### `setTransactionId()`
-
-```typescript
-setTransactionId(id: TransactionId): this
-```
-
-### `sign()`
-
-```typescript
-sign(key: PrivateKey): this
-```
-
-### `signWith()`
-
-```typescript
-signWith(key: PublicKey, signer: Function<bytes, bytes>): this
-```
-
-### `signWithOperator()`
-
-```typescript
-signWithOperator(client: Client): this
-```
-
-### `freeze()`
-
-```typescript
-freeze(): this
-```
-
-### `freezeWith()`
-
-```typescript
-freezeWith(client: Client): this
-```
-
-### `getSignatures()`
-
-```typescript
-getSignatures(): Map<AccoundID, Map<PublicKey, byte[]>>
-```
-
-### `addSignature()`
-
-```typescript
-getSignatures(key: PublicKey, signature: byte[]): this
-```
-
-### `getTransactionHashPerNode()`
-
-```typescript
-getTransactionHashPerNode(): Map<AccoundID, byte[]>
-```
-
-### `setMaxRetry()`
-
-```typescript
-setMaxRetry(count: int): this
-```
-
-### `getMaxRetry()`
-
-```typescript
-getMaxRetry(): int
-```
+---

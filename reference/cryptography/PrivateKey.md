@@ -53,6 +53,22 @@ Parses a private key from bytes.
 
 ---
 
+##### `readPem` ( `pem`: `Reader` ): `PrivateKey`
+
+---
+
+##### `fromPem` ( `pem`: `String` ): `PrivateKey`
+
+---
+
+##### `fromKeystore` ( `data`: `bytes`, `passphrase`: `string` ): `PrivateKey`
+
+---
+
+##### `fromLegacyMnemonic` ( `data`: `bytes`): `PrivateKey`
+
+---
+
 ##### `fromMnemonic` ( `mnemonic`: `string`, `passphrase`: `string` ): `PrivateKey`
 
 Recovers an ed25519 private key from a 24, 22, or 12 word mnemonic. 24 and
@@ -73,6 +89,10 @@ mnemonics use a legacy word list from the original Hedera mobile wallets.
 
 ```java
 // use "" for an empty passphrase
+var key = PrivateKey.generate();
+var key = PrivateKey.fromBytes(bytes);
+var key = PrivateKey.fromString("key");
+
 var key = PrivateKey.fromMnemonic("word,word2,word3", "");
 ```
 
@@ -93,16 +113,6 @@ if err != nil {
 
 <!-- tabs:end -->
 
----
-
-##### `fromPem` ( `data`: `string`, `passphrase`: `string` ): `PrivateKey`
-
----
-
-##### `fromKeystore` ( `data`: `bytes`, `passphrase`: `string` ): `PrivateKey`
-
----
-
 ### Methods
 
 ##### `isDerivable` (): `boolean`
@@ -114,6 +124,10 @@ if err != nil {
 ---
 
 ##### `sign` ( `message`: `bytes` ): `bytes`
+
+---
+
+##### `signTransaction` ( `transaction`: `Transaction<?>` ): `bytes`
 
 ---
 

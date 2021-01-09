@@ -2,13 +2,78 @@
 
 > class `AccountUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
-### Constructor
+<!-- tabs:start -->
 
-##### `constructor` ()
+#### ** Java **
 
----
+```java
+new AccountUpdateTransaction()
+    .setAccountId(accountId)
+    .setNodeAccountIds(Collections.singletonList(response.nodeId))
+    .setKey(key2.getPublicKey())
+    .freezeWith(client)
+    .sign(key1)
+    .sign(key2)
+    .execute(client)
+    .getReceipt(client);
+```
+
+#### ** JavaScript **
+
+```js
+const newKey = PrivateKey.generate();
+
+response = await (
+    await (
+        await new AccountUpdateTransaction()
+            .setAccountId(account)
+            .setKey(key2.publicKey)
+            .setNodeAccountIds([response.nodeId])
+            .setMaxTransactionFee(new Hbar(1))
+            .freezeWith(client)
+            .sign(key1)
+    ).sign(key2)
+).execute(client);
+const receipt = await response.getReceipt(client);
+
+const newAccountId = receipt.accountId;
+```
+
+#### ** Go **
+
+```go
+transaction, err := NewAccountUpdateTransaction().
+    SetAccountID(accountID).
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetKey(newKey2.PublicKey()).
+    FreezeWith(client)
+if err != nil {
+    println(err.Error())
+}
+
+transaction.Sign(previousKey)
+transaction.Sign(newKey2)
+
+response, err = tx.Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+receipt, err := response.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
+
+newAccountId := *receipt.accountId;
+```
+
+<!-- tabs:end -->
 
 ### Properties
+
+##### `AccountId`: [`AccountId`](reference/cryptography/AccountId.md)
+
+---
 
 ##### `key`: [`Key`](reference/cryptography/Key.md)
 

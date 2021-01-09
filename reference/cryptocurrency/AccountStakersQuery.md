@@ -25,6 +25,6 @@ class AccountStakersQuery extends Query<ProxyStaker[]> {
 
 ### Properties
 
-##### `accountId`: `AccountId`
+##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 ---

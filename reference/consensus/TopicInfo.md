@@ -1,87 +1,53 @@
 # `TopicInfo`
 
-## Support
+> class `TopicInfo`
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`topicId`](#topicid) | ✅ | ✅ | ✅
-| [`topicMemo`](#topicid) | ✅ | ✅ | ✅
-| [`runningHash`](#topicid) | ✅ | ✅ | ✅
-| [`sequenceNumber`](#topicid) | ✅ | ✅ | ✅
-| [`expirationTime`](#topicid) | ✅ | ✅ | ✅
-| [`adminKey`](#topicid) | ✅ | ✅ | ✅
-| [`submitKey`](#topicid) | ✅ | ✅ | ✅
-| [`autoRenewPeriod`](#topicid) | ✅ | ✅ | ✅
-| [`autoRenewAccountId`](#topicid) | ✅ | ✅ | ✅
-| [`fromBytes`](#frombytes) | ✅ | ✅ | ✅
+### Static Methods
 
+##### `fromBytes` ( `data`: `bytes` ): `TopicInfo`
 
-## Fields
+---
 
-### `topicId`
+### Methods
 
-```typescript
-topicId: TopicId
-```
+##### `toBytes` (): `bytes`
 
-### `topicMemo`
+---
 
-```typescript
-topicMemo: string
-```
+### Fields
 
-### `runningHash`
+##### `topicId`: [`TopicId`](reference/consensus/TopicId.md)
 
-```typescript
-runningHash: bytes
-```
+---
 
-### `sequenceNumber`
+##### `topicMemo`: `String`
 
-```typescript
-sequenceNumber: long
-```
+---
 
-### `expirationTime`
+##### `runningHash`: `bytes`
 
-```typescript
-expirationTime: Timestamp
-```
+---
 
-### `adminKey`
+##### `sequenceNumber`: `Uint64`
 
-```typescript
-admingKey: Key
-```
+---
 
-### `submitKey`
+##### `expirationTime`: `Instant`
 
-```typescript
-submitKey: Key
-```
+---
 
-### `autoRenewPeriod`
+##### `adminKey`: [`Key`](reference/cryptography/Key.md)
 
-```typescript
-autoRenewPeriod: Timestamp
-```
+---
 
-### `autoRenewAccountId`
+##### `submitKey`: [`Key`](reference/cryptography/Key.md)
 
-```typescript
-autoRenewAccountId: AccountId
-```
+---
 
-## Methods
+##### `autoRenewPeriod`: `Duration`
 
-### `fromBytes()`
+---
 
-```typescript
-fromBytes(data: bytes): this
-```
+##### `autoRenewAccountId`: `AccountId`
 
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
+---

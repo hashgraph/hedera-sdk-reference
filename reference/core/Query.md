@@ -63,7 +63,7 @@ The account ID of the node that this query will be submitted to.
 
 ---
 
-##### `maxQueryPayment`: [`?Hbar`](reference/Hbar.md)
+##### **Write-only** `maxQueryPayment`: [`?Hbar`](reference/Hbar.md)
 
 The maximum query payment the client is willing to pay.
 
@@ -71,7 +71,7 @@ Defaults to `maxQueryPayment` from the `client`.
 
 ---
 
-##### `queryPayment`: [`?Hbar`](reference/Hbar.md)
+##### **Write-only** `queryPayment`: [`?Hbar`](reference/Hbar.md)
 
 The exact query payment the client will pay for this query.
 

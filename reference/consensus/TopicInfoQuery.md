@@ -16,7 +16,7 @@ Creates an empty transaction, ready for configuration.
 
 ## Properties
 
-### `topicId: TopicId`
+### `topicId` : [`TopicId`](reference/consensus/TopicId.md)
 
 The Topic for which information is being requested.
 

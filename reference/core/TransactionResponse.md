@@ -12,9 +12,14 @@
 
 ---
 
+##### `toString` (): `String`
+
+---
+
+
 ### Fields
 
-##### `nodeAccountId`: `AccountId`
+##### `nodeAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 ---
 
@@ -22,6 +27,6 @@
 
 ---
 
-##### `transactionId`: `TransactionId`
+##### `transactionId`: [`TransactionId`](reference/core/TransactionId.md)
 
 ---

@@ -37,8 +37,8 @@ await (
 #### ** Go **
 
 ```go
-resp, err = NewTransferTransaction().
-    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+response, err = NewTransferTransaction().
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
     AddTokenTransfer(tokenID, client.GetOperatorAccountID(), -10).
     AddTokenTransfer(tokenID, accountID, 10).
     Execute(client)
@@ -46,7 +46,7 @@ if err != nil {
     println(err.Error())
 }
 
-_, err = resp.GetReceipt(client)
+_, err = response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

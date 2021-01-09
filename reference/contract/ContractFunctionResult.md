@@ -1,6 +1,7 @@
 # `ContractFunctionResult`
 
-## Support
+<details>
+<summary><b>Support</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -25,6 +26,8 @@
 | [`getUint64()`](#getuint64) | ✅ | ✅ | ✅
 | [`getUint256()`](#getuint256) | ✅ | ✅ | ✅
 | [`getAddress()`](#getaddress) | ✅ | ✅ | ✅
+
+</details>
 
 ## Fields
 

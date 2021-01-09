@@ -14,6 +14,10 @@
 
 ---
 
+##### `toString` (): `String`
+
+---
+
 ### Fields
 
 ### `receipt`: [`TransactionReceipt`](reference/core/TransactionRecord.md)
@@ -45,5 +49,9 @@
 ---
 
 ### `transfers`: [`Transfer[]`](reference/Transfer.md)
+
+---
+
+### `tokenTransfers`: `Map<TokenId, Map<AccountId, Uint64>>`
 
 ---

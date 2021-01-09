@@ -25,6 +25,6 @@ class AccountInfoQuery extends Query<AccountInfo> {
 
 ### Properties
 
-##### `accountId`: `AccountId`
+##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 ---

@@ -45,29 +45,37 @@ class TransactionReceipt {
 
 ---
 
+##### `toString` (): `String`
+
+---
+
 ### Fields
 
-##### `status`: `Status`
+##### `status`: [`Status`](reference/Status.md)
 
 ---
 
-##### `exchangeRate`: `ExchangeRate`
+##### `exchangeRate`: [`ExchangeRate`](reference/ExchangeRate.md)
 
 ---
 
-##### `accountId`: `?AccountId`
+##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 ---
 
-##### `fileId`: `?FileId`
+##### `fileId`: [`FileID`](reference/file/FileId.md)
 
 ---
 
-##### `contractId`: `?ContractId`
+##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
 ---
 
-##### `topicId`: `?TopicId`
+##### `topicId`: [`TopicId`](reference/consensus/TopicId.md)
+
+---
+
+##### `TokenId`: [`TokenId`](reference/token/TokenId.md)
 
 ---
 

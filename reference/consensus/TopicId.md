@@ -1,72 +1,55 @@
 # `TopicId`
 
-## Support
+> class `TopicId`
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`shard`](#shard) | ✅ | ✅ | ✅
-| [`realm`](#realm) | ✅ | ✅ | ✅
-| [`num`](#num) | ✅ | ✅ | ✅
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`fromString()`](#fromstring) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-| [`equals()`](#equals) | ✅ | ✅ | ✅
+### Constructor
 
-## Fields
+##### `constructor` ( `num`: `Uint64` )
 
-### `shard`
+---
 
-```typescript
-shard: long
-```
+##### `constructor` ( `shard`: `Uint64`, `realm`: `Uint64`, `num`: `Uint64` )
 
-### `realm`
+---
 
-```typescript
-realm: long
-```
+### Static Methods
 
-### `num`
+##### `fromString` ( `text` : `string` ): `TopicId`
 
-```typescript
-num: long
-```
+---
 
-## Methods
+##### `fromBytes` ( `byte`: `byte[]` ): `TopicId`
 
-### `constructor()`
+---
 
-```typescript
-constructor(num: long)
-```
+### Methods
 
-### `constructor()`
+##### `toString` (): `string`
 
-```typescript
-constructor(shard: long, realm: long, num: long)
-````
+---
 
-### `fromString()`
+##### `equals` ( `other`: `TopicId` ): `bool`
 
-```typescript
-fromString(id: String): this
-```
+---
 
-### `fromBytes()`
+##### `hashCode` (): `int`
 
-```typescript
-fromBytes(data: bytes): this
-```
+---
 
-### `toBytes()`
+##### `toBytes` (): `byte[]`
 
-```typescript
-toBytes(): bytes
-```
+---
 
-### `equals()`
+### Fields
 
-```typescript
-equals(object: Object): boolean
-```
+##### `shard`: `Uint64`
+
+---
+
+##### `realm`: `Uint64`
+
+---
+
+##### `num`: `Uint64`
+
+---

@@ -16,7 +16,7 @@
 
 ### Fields
 
-##### `accountId`: `AccountId`
+##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 ---
 
@@ -28,19 +28,19 @@
 
 ---
 
-##### `proxyAccountId`: `?AccountId`
+##### `proxyAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 ---
 
-##### `proxyReceived`: `Hbar`
+##### `proxyReceived`: [`Hbar`](reference/Hbar.md)
 
 ---
 
-##### `key`: `Key`
+##### `key`: [`Key`](reference/cryptography/Key.md)
 
 ---
 
-##### `balance`: `Hbar`
+##### `balance`: [`Hbar`](reference/Hbar.md)
 
 ---
 
@@ -57,5 +57,9 @@
 ---
 
 ##### `liveHashes`: `LiveHash[]`
+
+---
+
+##### `tokenRelationships`: `Map<TokenId, TokenRelationship>`
 
 ---

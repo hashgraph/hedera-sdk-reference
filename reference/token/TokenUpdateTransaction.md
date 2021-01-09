@@ -47,16 +47,16 @@ await (
 #### ** Go **
 
 ```go
-resp, err = NewTokenUpdateTransaction().
+response, err = NewTokenUpdateTransaction().
     SetTokenID(tokenID).
     SetTokenSymbol("A").
-    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
     Execute(client)
 if err != nil {
     println(err.Error())
 }
 
-_, err = resp.GetReceipt(client)
+_, err = response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

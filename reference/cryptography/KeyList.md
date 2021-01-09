@@ -41,17 +41,11 @@ var keyList = KeyList.of(keyA, keyB).setThreshold(1);
 ```javascript
 // imperative
 const keyList = KeyList.withThreshold(1);
-keyList.push(keyA);
-keyList.push(keyB);
+keyList.add(key1);
+keyList.addAll(List.of(key2, key3));
 
 // fluid
 const keyList = KeyList.of(keyA, keyB).setThreshold(1);
-
-// constructor (from array)
-const keyList = new KeyList([
-    keyA,
-    keyB,
-], /* (optional) threshold= */ 1);
 ```
 
 ### ** Go **
@@ -98,6 +92,51 @@ Create a new, empty list of keys with no threshold.
 ##### `withThreshold` ( `threshold`: `Uint` ): `KeyList`
 
 Create a new, empty list of keys with the given threshold.
+
+---
+
+##### `of` (`keyArray` : `Key[]`): `KeyList`
+
+---
+
+### Methods
+
+
+##### `isEmpty` (): `bool`
+
+---
+
+##### `contains` (`keys` : `KeyList`): `bool`
+
+---
+
+##### `iterator` (): `Iterator<Key>`
+
+---
+
+##### `add` (`key` : `Key`): `bool`
+
+---
+
+##### `remove` (`keyList` : `KeyList`): `bool`
+
+---
+
+##### `clear` ()
+
+---
+
+##### `equals` (`keyList` : `KeyList`): `bool`
+
+---
+
+##### `hashCode` (): `int`
+
+---
+
+##### `toString` (): `String`
+
+---
 
 ### Properties
 

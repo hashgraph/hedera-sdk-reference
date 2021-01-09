@@ -84,7 +84,7 @@ if err != nil {
     println(err.Error())
 }
 
-receipt, err := resp.GetReceipt(client)
+receipt, err := response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

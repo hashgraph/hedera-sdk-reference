@@ -35,8 +35,8 @@ newTokenID = (await response.getReceipt(client)).tokenId;
 #### ** Go **
 
 ```go
-resp, err = NewTokenBurnTransaction().
-    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+response, err = NewTokenBurnTransaction().
+    SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAmount(10).
     SetTokenID(tokenID).
     Execute(client)
@@ -44,7 +44,7 @@ if err != nil {
     println(err.Error())
 }
 
-_, err = resp.GetReceipt(client)
+_, err = response.GetReceipt(client)
 if err != nil {
     println(err.Error())
 }

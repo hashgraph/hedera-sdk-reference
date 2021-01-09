@@ -7,7 +7,7 @@
 
 ```typescript
 class Client {
-    static forNetwork(network: Map<string, AccountId>): Client;
+    static forNetwork(network: Map<String, AccountId>): Client;
 
     static forMainnet(): Client;
     static forTestnet(): Client;
@@ -31,8 +31,9 @@ class Client {
 
     close();
 
-    /* property */ maxTransactionFee: Hbar;
-    /* property */ maxQueryPayment: Hbar;
+    /* write-only property */ maxTransactionFee: Hbar;
+    /* write-only property */ maxQueryPayment: Hbar;
+    /* write-only property */ requestTimeout: Duration;
 }
 ```
 
@@ -186,13 +187,13 @@ or
 
 </details>
 
+### Methods
+
 ---
 
 ##### `fromConfigFile` ( `filename`: `string` ): `Client`
 
 ---
-
-### Methods
 
 ##### `setOperator` ( `accountId`: [`AccountId`](reference/AccountId.md), `privateKey`: [`PrivateKey`](reference/cryptography/PrivateKey.md) ): `this`
 
@@ -221,11 +222,23 @@ associated resources.
 
 ---
 
+##### `ping` ()
+
+---
+
+##### `forName` (`name` : `String`) : `Client`
+
+---
+
+##### `getNetwork` () : `Map<String, AccountId>`
+
+---
+
 ### Properties
 
 ##### `maxTransactionFee`: [`Hbar`](reference/Hbar.md)
 
-The maximum fee to be paid for transactions executed by this client.
+**Write-only** The maximum fee to be paid for transactions executed by this client.
 
 Defaults to 2 hbar.
 
@@ -233,7 +246,7 @@ Defaults to 2 hbar.
 
 ##### `maxQueryPayment`: [`Hbar`](reference/Hbar.md)
 
-The maximum payment allowable for queries.
+**Write-only** The maximum payment allowable for queries.
 
 Defaults to 1 hbar.
 
@@ -250,3 +263,8 @@ Defaults to 1 hbar.
 **Read-only**. Use `setOperator` or `setOperatorWith` to set.
 
 ---
+
+##### **Write-only** `requestTimeout`: `Duration`
+
+---
+

@@ -1,225 +1,69 @@
 # `ContractDeleteTransaction`
 
-## Support
+<details>
+<summary><b>Support</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setContractId()`](#setcontractid) | ✅ | ✅ | ✅
-| [`getContractId()`](#getcontractid) | ✅ | ✅ | ✅
-| [`setTransferAccountId()`](#settransferaccountid) | ✅ | ✅ | ✅
-| [`getTransferAccountId()`](#gettransferaccountid) | ✅ | ✅ | ✅
-| [`setTransferContractId()`](#settransfercontractid) | ✅ | ✅ | ✅
-| [`getTransferContractId()`](#gettransfercontractid) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | ✅
-| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | ✅
-| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | ✅
-| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | ✅
-| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | ✅
-| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | ✅
-| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | ✅
-| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | ✅
-| [`sign()`](#sign) | ✅ | ✅ | ✅
-| [`signWith()`](#signwith) | ✅ | ✅ | ✅
-| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | ✅
-| [`freeze()`](#freeze) | ✅ |  ✅ | ✅
-| [`freezeWith()`](#freezewith) | ✅ | ✅ | ✅
-| [`getSignatures()`](#getsignatures) | ✅ | ✅ | ✅
-| [`addSignature()`](#addsignature) | ✅ | ✅ | ✅
-| [`getTransactionHashPerNode`](#gettransactionhashpernode) | ✅ | ✅ | ✅
-| [`setMaxRetry`](#setmaxretry) | ✅ | ✅ | ✅
-| [`getMaxRetry`](#getmaxretry) | ✅ | ✅ | ✅
+| [`ContractId`](#contractid-contractidreferencecontractcontractidmd) | ✅ | ✅ | ✅
+| [`TransferAccountId`](#transferaccountid-accointidreferencecryptocurrencyaccountidmd) | ✅ | ✅ | ✅
+| [`TransferContractId`](#transfercontractid-contractidreferencecontractcontractidmd) | ✅ | ✅ | ✅
+</details>
 
-## Methods
+> class `ContractDeleteTransaction` extends [`Transaction`](reference/Transaction.md)
 
-### `constructor()`
+<!-- tabs:start -->
 
-```typescript
-constructor()
+#### ** Java **
+
+```java
+new ContractDeleteTransaction()
+    .setContractId(contractId)
+    .setNodeAccountIds(Collections.singletonList(response.nodeId))
+    .execute(client)
+    .getReceipt(client);
 ```
 
-### `setContractId()`
+#### ** JavaScript **
 
-```typescript
-setContractId(id: ContractId): this
+```js
+await (
+    await new ContractDeleteTransaction()
+        .setContractId(contract)
+        .setNodeAccountIds([response.nodeId])
+        .execute(client)
+).getReceipt(client);
 ```
 
-### `getContractId()`
+#### ** Go **
 
-```typescript
-getContractId(): ContractId
+```go
+response, err := NewContractDeleteTransaction().
+    SetContractID(contractID).
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+
+receipt, err := response.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
-### `setTransferAccountId()`
+<!-- tabs:end -->
 
-```typescript
-setTransferAccountId(id: AccountId): this
-```
+### Properties
 
-### `getTransferAccountId()`
+##### `ContractId`: [`ContractId`](reference/contract/ContractId.md)
 
-```typescript
-getTransferAccountId(): AccountId
-```
+---
 
-### `setTransferContractId()`
+##### `TransferAccountId`: [`AccointId`](reference/cryptocurrency/AccountId.md)
 
-```typescript
-setTransferContractId(id: ContractId): this
-```
+---
 
-### `getTransferContractId()`
+##### `TransferContractId`: [`ContractId`](reference/contract/ContractId.md)
 
-```typescript
-getTransferContractId(): ContractId
-```
-
-### `execute()`
-
-```typescript
-async execute(client: Client): this
-```
-
-### `setNodeId()`
-
-```typescript
-setNodeId(id: AccountId): this
-```
-
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
-```
-
-### `setTransactionValidDuration()`
-
-```typescript
-setTransactionValidDuration(duration: Timestamp): this
-```
-
-### `getTransactionValidDuration()`
-
-```typescript
-getTransactionValidDuration(): Timestamp
-```
-
-### `setMaxTransactionFee()`
-
-```typescript
-setMaxTransactionFee(fee: Hbar): this
-```
-
-### `getMaxTransactionFee()`
-
-```typescript
-getMaxTransactionFee(): Hbar
-```
-
-### `setTransactionMemo()`
-
-```typescript
-setTransactionMemo(memo: string): this
-```
-
-### `getTransactionMemo()`
-
-```typescript
-getTransactionMemo(): string
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
-
-### `getTransactionHash()`
-
-```typescript
-getTransactionHash(): bytes
-```
-
-### `getTransactionId()`
-
-```typescript
-getTransactionId(): TransactionId
-```
-
-### `setTransactionId()`
-
-```typescript
-setTransactionId(id: TransactionId): this
-```
-
-### `sign()`
-
-```typescript
-sign(key: PrivateKey): this
-```
-
-### `signWith()`
-
-```typescript
-signWith(key: PublicKey, signer: Function<bytes, bytes>): this
-```
-
-### `signWithOperator()`
-
-```typescript
-signWithOperator(client: Client): this
-```
-
-### `freeze()`
-
-```typescript
-freeze(): this
-```
-
-### `freezeWith()`
-
-```typescript
-freezeWith(client: Client): this
-```
-
-### `getSignatures()`
-
-```typescript
-getSignatures(): Map<AccoundID, Map<PublicKey, byte[]>>
-```
-
-### `addSignature()`
-
-```typescript
-getSignatures(key: PublicKey, signature: byte[]): this
-```
-
-### `getTransactionHashPerNode()`
-
-```typescript
-getTransactionHashPerNode(): Map<AccoundID, byte[]>
-```
-
-### `setMaxRetry()`
-
-```typescript
-setMaxRetry(count: int): this
-```
-
-### `getMaxRetry()`
-
-```typescript
-getMaxRetry(): int
-```
+---
