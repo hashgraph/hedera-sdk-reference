@@ -1,60 +1,93 @@
 # `FileInfo`
 
+> class `FileInfo`
+
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+abstract class FileInfo {
+    static fromBytes(data: bytes): FileInfo;
+
+    /* property */ fileId: FileId;
+
+    /* property */ size: Uint64;
+
+    /* property */ expirationTime: Timestamp;
+
+    /* property */ isDeleted: boolean;
+
+    /* property */ keys: KeyList;
+
+    toBytes(): bytes;
+}
+```
+
+</details>
+
+<details>
+<summary><b>Table of Contents</b></summary>
+
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`fileId`](#fileid) | ✅ | ✅ | ✅
-| [`size`](#size) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationtime) | ✅ | ✅ | ✅
-| [`deleted`](#isdeleted) | ✅ | ✅ | ✅
-| [`keys`](#keys) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+| [`fromBytes`](#frombytes-data-bytes-fileinfo) | ✅ | ✅ | ✅
+| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
+| [`size`](#size-uint64) | ✅ | ✅ | ✅
+| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
+| [`deleted`](#isdeleted-boolean) | ✅ | ✅ | ✅
+| [`keys`](#keys-keylist) | ✅ | ✅ | ✅
+| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
+
+</details>
 
 
-## Fields
+### Properties
 
-### `fileid`
+### `fileId` : [`FileId`](reference/file/FileId.md)
 
-```typescript
-fileId: FileId
-```
+The ID for which this info belongs to.
 
-### `size`
+---
 
-```typescript
-size: long
-```
+### `size` : `Uint64`
 
-### `expirationTime`
+The length of this file's contents.
 
-```typescript
-expirationTime: Timestamp
-```
+---
 
-### `isDeleted`
+### `expirationTime` : `Timestamp`
 
-```typescript
-deleted: bool
-```
+The expiration time of this file. When current time surpasses the expiration time the
+file is deleted from the network. To update the expiration time use [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md).
 
-### `keys`
+---
 
-```typescript
-keys: List<Key>
-```
+### `isDeleted` : `boolean`
 
-## Methods
+Identifies if this file has been deleted.
 
-### `fromBytes()`
+---
 
-```typescript
-fromBytes(data: bytes): this
-```
+### `keys` : [`KeyList`](reference/cryptography/KeyList.md)
 
-### `toBytes()`
+The keys that are required to sign transactions that mutate this file.
 
-```typescript
-toBytes(): bytes
-```
+---
+
+### Static Methods
+
+##### `fromBytes` ( `data`: `bytes` ): [`FileInfo`](#)
+
+Deserialize a [`FileInfo`](#) from its protobuf representation.
+
+---
+
+### Methods
+
+##### `toBytes` ( ): `bytes`
+
+Serialize the [`FileInfo`](#) into its protobuf representation.
+
+---

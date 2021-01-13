@@ -61,3 +61,12 @@
         * [`TransactionRecord`](reference/core/TransactionRecord.md)
         * [`TransactionRecordQuery`](reference/core/TransactionRecordQuery.md)
         * [`TransactionResponse`](reference/core/TransactionResponse.md)
+    * **File** &nbsp; <i class="fas fa-coins"></i>
+        * [`FileAppendTransaction`](reference/file/FileAppendTransaction.md)
+        * [`FileContentsQuery`](reference/file/FileContentsQuery.md)
+        * [`FileCreateTransaction`](reference/file/FileCreateTransaction.md)
+        * [`FileDeleteTransaction`](reference/file/FileDeleteTransaction.md)
+        * [`FileId`](reference/file/FileId.md)
+        * [`FileInfo`](reference/file/FileInfo.md)
+        * [`FileInfoQuery`](reference/file/FileInfoQuery.md)
+        * [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md)

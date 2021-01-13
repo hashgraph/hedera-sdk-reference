@@ -1,197 +1,72 @@
 # `FileDeleteTransaction`
 
+> class `FileDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
+
+Delete a file that exists on the Hedera Hashgraph network.
+
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class FileDeleteTransaction extends Transaction {
+    /* property */ fileId?: FileId;
+}
+```
+
+</details>
+
+<details>
+<summary><b>Table of Contents</b></summary>
+
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setFileId()`](#setfileid)
-| [`getFileId()`](#getfileid)
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | ✅
-| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | ✅
-| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | ✅
-| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | ✅
-| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | ✅
-| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | ✅
-| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | ✅
-| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | ✅
-| [`sign()`](#sign) | ✅ | ✅ | ✅
-| [`signWith()`](#signwith) | ✅ | ✅ | ✅
-| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | ✅
-| [`freeze()`](#freeze) | ✅ |  ✅ | ✅
-| [`freezeWith()`](#freezewith) | ✅ | ✅ | ✅
-| [`getSignatures()`](#getsignatures) | ✅ | ✅ | ✅
-| [`addSignature()`](#addsignature) | ✅ | ✅ | ✅
-| [`getTransactionHashPerNode`](#gettransactionhashpernode) | ✅ | ✅ | ✅
-| [`setMaxRetry`](#setmaxretry) | ✅ | ✅ | ✅
-| [`getMaxRetry`](#getmaxretry) | ✅ | ✅ | ✅
+| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
 
-## Methods
+</details>
 
-### `constructor()`
+<!-- tabs:start -->
 
-```typescript
-constructor()
+#### ** Java **
+
+```java
+var receipt = new FileDeleteTransaction()
+    .setFileId(fileId)
+    .execute(client) // TransactionResponse
+    .getReceipt(client); // TransactionReceipt
 ```
 
-### `setFileId()`
+#### ** JavaScript **
 
-```typescript
-setFileId(id: FileId): this
+```javascript
+const receipt = await (
+    await new FileDeleteTransaction({ fileId }).execute(client)
+).getReceipt(client);
 ```
 
-### `getFileId()`
+#### ** Go **
 
-```typescript
-setFileId(): FileId
+```go
+response, err := NewFileDeleteTransaction().
+    SetFileID(fileID).
+    Execute(client) // TransactionResponse
+if err != nil {
+    println(err.Error())
+}
+
+receipt, err := response.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
-### `execute()`
+<!-- tabs:end -->
 
-```typescript
-async execute(client: Client): this
-```
+### Properties
 
-### `setNodeId()`
+##### `fileId`: [`FileId`](reference/file/FileId.md)
 
-```typescript
-setNodeId(id: AccountId): this
-```
+This is the ID of the file to delete.
 
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
-```
-
-### `setTransactionValidDuration()`
-
-```typescript
-setTransactionValidDuration(duration: Timestamp): this
-```
-
-### `getTransactionValidDuration()`
-
-```typescript
-getTransactionValidDuration(): Timestamp
-```
-
-### `setMaxTransactionFee()`
-
-```typescript
-setMaxTransactionFee(fee: Hbar): this
-```
-
-### `getMaxTransactionFee()`
-
-```typescript
-getMaxTransactionFee(): Hbar
-```
-
-### `setTransactionMemo()`
-
-```typescript
-setTransactionMemo(memo: string): this
-```
-
-### `getTransactionMemo()`
-
-```typescript
-getTransactionMemo(): string
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
-
-### `getTransactionHash()`
-
-```typescript
-getTransactionHash(): bytes
-```
-
-### `getTransactionId()`
-
-```typescript
-getTransactionId(): TransactionId
-```
-
-### `setTransactionId()`
-
-```typescript
-setTransactionId(id: TransactionId): this
-```
-
-### `sign()`
-
-```typescript
-sign(key: PrivateKey): this
-```
-
-### `signWith()`
-
-```typescript
-signWith(key: PublicKey, signer: Function<bytes, bytes>): this
-```
-
-### `signWithOperator()`
-
-```typescript
-signWithOperator(client: Client): this
-```
-
-### `freeze()`
-
-```typescript
-freeze(): this
-```
-
-### `freezeWith()`
-
-```typescript
-freezeWith(client: Client): this
-```
-
-### `getSignatures()`
-
-```typescript
-getSignatures(): Map<AccoundID, Map<PublicKey, byte[]>>
-```
-
-### `addSignature()`
-
-```typescript
-getSignatures(key: PublicKey, signature: byte[]): this
-```
-
-### `getTransactionHashPerNode()`
-
-```typescript
-getTransactionHashPerNode(): Map<AccoundID, byte[]>
-```
-
-### `setMaxRetry()`
-
-```typescript
-setMaxRetry(count: int): this
-```
-
-### `getMaxRetry()`
-
-```typescript
-getMaxRetry(): int
-```
+---

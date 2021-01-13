@@ -9,7 +9,7 @@
 abstract class Transaction {
     static fromBytes(data: bytes): Transaction;
 
-    /* property */ nodeAccountId: AccountId;
+    /* property */ nodeAccountIds: AccountId[];
 
     /* property */ transactionValidDuration: Duration;
 
@@ -21,6 +21,8 @@ abstract class Transaction {
 
     getTransactionHash(): bytes;
 
+    getTransactionHashPerNode(): Map<AccountId, bytes>;
+
     toBytes(): bytes;
 
     sign(key: PrivateKey): this;
@@ -28,6 +30,10 @@ abstract class Transaction {
     signWith(key: PublicKey, transactionSigner: (bytes) => bytes): this;
 
     signWithOperator(client: Client);
+
+    getSignatures(): Map<AccountId, Map<PublicKey, bytes>>;
+
+    addSignature(key: PublicKey, signature: bytes): this;
 
     freeze(): this;
 
@@ -39,21 +45,51 @@ abstract class Transaction {
 
 </details>
 
+<details>
+<summary><b>Table of Contents</b></summary>
+
+## Support
+
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`fromBytes`](#frombytes-data-bytes-transaction) | ✅ | ✅ | ✅
+| [`nodeAccountIds`](#nodeaccountids-accountid) | ✅ | ✅ | ✅
+| [`transactionValidDuration`](#transactionvalidduration-duration) | ✅ | ✅ | ✅
+| [`transactionMemo`](#transactionmemo-string) | ✅ | ✅ | ✅
+| [`transactionId`](#transactionid-transactionid) | ✅ | ✅ | ✅
+| [`maxTransactionFee`](#maxtransactionfee-hbar) | ✅ | ✅ | ✅
+| [`maxRetry`](#maxretry-uint64) | ✅ | ✅ | ✅
+| [`getTransactionHash`](#gettransactionhash-bytes) | ✅ | ✅ | ✅
+| [`getTransactionHashPerNode`](#gettransactionhashpernode-map-lt-accoundid-byte-gt) | ✅ | ✅ | ✅
+| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
+| [`sign`](#sign-key-privatekey-this) | ✅ | ✅ | ✅
+| [`signWith`](#signwith-publickey-publickey-transactionsigner-bytes-gt-bytes-this) | ✅ | ✅ | ✅
+| [`signWithOperator`](#signwithoperator-client-client-this) | ✅ | ✅ | ✅
+| [`getSignatures`](#getsignatures-map-lt-accoundid-map-lt-publickey-bytes-gt) | ✅ | ✅ | ✅
+| [`addSignature`](#addsignaturekey-publickey-signature-byte-this) | ✅ | ✅ | ✅
+| [`freeze`](#freeze-this) | ✅ | ✅ | ✅
+| [`freezeWith`](#freezewith-client-client-this) | ✅ | ✅ | ✅
+| [`execute`](#execute-client-client-transactionresponse) | ✅ | ✅ | ✅
+
+</details>
+
 Base class for all transactions that may be submitted to Hedera.
 
 ### Static Methods
 
-##### `fromBytes` ( `data` : `bytes` ): `Transaction`
+##### `fromBytes` ( `data` : `bytes` ): [`Transaction`](#transaction)
 
 ---
 
 ### Methods
 
-##### `execute` ( `client`: [`Client`](reference/Client.md) ): [`TransactionResponse`](reference/TransactionResponse.md)
+##### `execute` ( `client`: [`Client`](reference/core/Client.md) ): [`TransactionResponse`](reference/core/TransactionResponse.md)
 
 Execute this transaction on the Hedera network, immediately returning
-metadata about the transaction that was executed. The `TransactionResponse`
-may be used to fetch the `TransactionReceipt` or `TransactionRecord`
+metadata about the transaction that was executed. 
+The [`TransactionResponse`](reference/core/TransactionResponse.md) may be used to fetch 
+the [`TransactionReceipt`](reference/core/TransactionReceipt.md) or 
+[`TransactionRecord`](reference/core/TransactionRecord.md)
 for more information.
 
 ---
@@ -61,7 +97,7 @@ for more information.
 ##### `toBytes` (): `bytes`
 
 Encodes this transaction to a byte array that can be later decoded into
-the same `Transaction`.
+the same [`Transaction`](#transaction).
 
 ---
 
@@ -69,7 +105,11 @@ the same `Transaction`.
 
 ---
 
-##### `sign` ( `key`: `PrivateKey` ): `this`
+##### `getTransactionHashPerNode()`: `Map` < [`AccoundId`](reference/cryptocurrency/AccountId.md), `bytes` >
+
+---
+
+##### `sign` ( `key`: [`PrivateKey`](reference/cryptography/PrivateKey.md) ): `this`
 
 ---
 
@@ -77,7 +117,7 @@ the same `Transaction`.
 
 ---
 
-##### `signWithOperator` ( `client`: `Client` ): `this`
+##### `signWithOperator` ( `client`: [`Client`](reference/core/Client.md) ): `this`
 
 ---
 
@@ -85,37 +125,25 @@ the same `Transaction`.
 
 ---
 
-##### `freezeWith` ( `client`: `Client` ): `this`
+##### `freezeWith` ( `client`: [`Client`](reference/core/Client.md) ): `this`
 
 ---
 
-##### `getSignatures()`: `Map<AccoundID, Map<PublicKey, byte[]>`
+##### `getSignatures()`: `Map` < [`AccoundId`](reference/cryptocurrency/AccountId.md), `Map` < [`PublicKey`](reference/cryptography/PublicKey.md), `bytes` >
 
 ---
 
-##### `addSignature`(`key`: `PublicKey`, `signature`: `byte[]`): `this`
-
----
-
-##### `getTransactionHashPerNode()`: `Map<AccoundID, byte[]>`
-
----
-
-##### `setMaxRetry`(`count`: `int`)`: `this`
-
----
-
-##### `getMaxRetry()`: `int`
+##### `addSignature`(`key`: [`PublicKey`](reference/cryptography/PublicKey.md), `signature`: `byte[]`): `this`
 
 ---
 
 ### Properties
 
-##### `nodeAccountId`: [`AccountId`](reference/AccountId.md)
+##### `nodeAccountIds`: [`AccountId`](reference/AccountId.md)\[\]
 
-The account ID of the node that this transaction will be submitted to.
+The list of node account IDs that this transaction will be submitted to.
 
-Providing an explicit node account ID interferes with client-side load
+Providing an explicit set of node account IDs interferes with client-side load
 balancing of the network. By default, the SDK will pre-generate a transaction
 for 1/3 of the nodes on the network. If a node is down, busy, or otherwise
 reports a fatal error, the SDK will try again with a different node.
@@ -139,7 +167,7 @@ Defaults to `maxTransactionFee` from the `client`.
 
 ---
 
-##### `transactionId`: [`TransactionId`](reference/TransactionId.md)
+##### `transactionId`: [`TransactionId`](reference/core/TransactionId.md)
 
 The ID for this transaction, which includes the payer's
 account (the account paying the transaction fee).
@@ -151,5 +179,13 @@ If two transactions have the same transactionID, they won't both have an effect
 ##### `transactionMemo`: `string`
 
 Any notes or descriptions that should be put into the record (max length 100).
+
+---
+
+##### `maxRetry`: `Uint64`
+
+The number of times to return this transaction. Transactions are retried when
+Hedera Hashgraph returns a status code that implies the transaction should be
+resubmitted, or when a node doesn't responde.
 
 ---

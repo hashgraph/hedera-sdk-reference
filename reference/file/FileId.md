@@ -1,72 +1,100 @@
 # `FileId`
 
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class FileId {
+    constructor(num: Uint64);
+    
+    constructor(shard: Uint64, realm: Uint64, num: Uint64);
+
+    fromString(str: string): FileId;
+
+    fromBytes(data: bytes): FileId;
+
+    /* property */ shard: Uint64;
+
+    /* property */ realm: Uint64;
+
+    /* property */ num: Uint64;
+
+    toBytes(): bytes;
+
+    toString(): string;
+}
+```
+
+</details>
+
+<details>
+<summary><b>Table of Contents</b></summary>
+
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`shard`](#shard) | ✅ | ✅ | ✅
-| [`realm`](#realm) | ✅ | ✅ | ✅
-| [`num`](#num) | ✅ | ✅ | ✅
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`fromString()`](#fromstring) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-| [`equals()`](#equals) | ✅ | ✅ | ✅
+| [`constructor`](#constructor-num-uint64-) | ✅ | ✅ | ✅
+| [`fromString`](#fromstring-str-string-fileid) | ✅ | ✅ | ✅
+| [`fromBytes`](#frombytes-data-bytes-fileid) | ✅ | ✅ | ✅
+| [`shard`](#shard-uint64) | ✅ | ✅ | ✅
+| [`realm`](#realm-uint64) | ✅ | ✅ | ✅
+| [`num`](#num-uint64) | ✅ | ✅ | ✅
+| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
 
-## Fields
+</details>
 
-### `shard`
+An ID type that represents a file on a Hedera Hashgraph network.
 
-```typescript
-shard: long
-```
+### Constructors
 
-### `realm`
+##### `constructor` ( `num` : `Uint64` )
 
-```typescript
-realm: long
-```
+Construct a [`FileId`](#) with [`shard`](#shard-uint64) and [`realm`](#realm-uint64) being zero.
 
-### `num`
+---
 
-```typescript
-num: long
-```
+##### `constructor` ( `shard` : `Uint64`, `realm` : `Uint64`, `num` : `Uint64` )
 
-## Methods
+Construct a [`FileId`](#) with all fields explicitly set.
 
-### `constructor()`
+---
 
-```typescript
-constructor(num: long)
-```
+### Static Methods
 
-### `constructor()`
+##### `fromString` ( `str` : `string` ): [`FileId`](#fileid)
 
-```typescript
-constructor(shard: long, realm: long, num: long)
-````
+Construct a [`FileId`](#) from a string. The format of the string could be either just 
+a number "4" or dot separated numbers "0.0.4".
 
-### `fromString()`
+##### `fromBytes` ( `data` : `bytes` ): [`FileId`](#fileid)
 
-```typescript
-fromString(id: string): this
-```
+Deserialize a [`FileId`](#) from its the protobuf representation.
 
-### `fromBytes()`
+### Methods
 
-```typescript
-fromBytes(data: bytes): this
-```
+##### `toBytes` ( ): `bytes`
 
-### `toBytes()`
+Serialize the [`FileId`](#) into its protobuf representation.
 
-```typescript
-toBytes(): bytes
-```
+---
 
-### `equals()`
+### Properties
 
-```typescript
-equals(object: Object): boolean
-```
+##### `shard`: `Uint64`
+
+The shard of this ID.
+
+---
+
+##### `realm`: `Uint64`
+
+The realm of this ID.
+
+---
+
+##### `num`: `Uint64`
+
+The num of this ID.
+
+---

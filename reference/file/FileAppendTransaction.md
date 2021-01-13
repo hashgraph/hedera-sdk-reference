@@ -1,211 +1,98 @@
 # `FileAppendTransaction`
 
+> class `FileAppendTransaction` extends [`Transaction`](reference/core/Transaction.md)
+
+Append contents to a new file that exists on the Hedera Hashgraph network.
+
+When contents that will be appended are larger than 4096 bytes the transaction
+will be chunked into several `FileAppendTransaction`'s implicitly. Whenever the
+transaction is executed all the chunked transactions will also be executed awaiting
+receipt before each successive transaction. This is done to maintain correctness, but
+will increase the time needed to execute this transaction. This transaction also
+has the `executeAll()` method because it is chunked; this method is not accessible
+by all `Transaction` types.
+
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class FileAppendTransaction extends Transaction {
+    /* property */ fileId?: FileId;
+
+    /* property */ contents?: bytes;
+
+    executeAll(client: Client): TransactionResponse[];
+}
+```
+
+</details>
+
+<details>
+<summary><b>Table of Contents</b></summary>
+
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setFileId()`](#setfileid) | ✅ | ✅ | ✅
-| [`getFileId()`](#getfileid) | ✅ | ✅ | ✅
-| [`setContents()`](#setcontents) | ✅ | ✅ | ✅
-| [`setContents()`](#getcontents) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | ✅
-| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | ✅
-| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | ✅
-| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | ✅
-| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | ✅
-| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | ✅
-| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | ✅
-| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | ✅
-| [`sign()`](#sign) | ✅ | ✅ | ✅
-| [`signWith()`](#signwith) | ✅ | ✅ | ✅
-| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | ✅
-| [`freeze()`](#freeze) | ✅ |  ✅ | ✅
-| [`freezeWith()`](#freezewith) | ✅ | ✅ | ✅
-| [`getSignatures()`](#getsignatures) | ✅ | ✅ | ✅
-| [`addSignature()`](#addsignature) | ✅ | ✅ | ✅
-| [`getTransactionHashPerNode`](#gettransactionhashpernode) | ✅ | ✅ | ✅
-| [`setMaxRetry`](#setmaxretry) | ✅ | ✅ | ✅
-| [`getMaxRetry`](#getmaxretry) | ✅ | ✅ | ✅
+| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
+| [`contents`](#contents-bytes) | ✅ | ✅ | ✅
 
-## Methods
+</details>
 
-### `constructor()`
+<!-- tabs:start -->
 
-```typescript
-constructor()
+#### ** Java **
+
+```java
+var receipt = new FileAppendTransaction()
+    .setFileId(fileId)
+    .setContents("Append these contents")
+    .execute(client) // TransactionResponse
+    .getReceipt(client); // TransactionReceipt
 ```
 
-### `setFileId()`
+#### ** JavaScript **
 
-```typescript
-setFileId(id: FileId): this
+```javascript
+const receipt = await (
+    await new FileAppendTransaction({
+        fileId: fileId,
+        contents: "Append these contents",
+    }).execute(client)
+).getReceipt(client);
 ```
 
-### `getFileId()`
+#### ** Go **
 
-```typescript
-getFileId(): this
+```go
+response, err := NewFileAppendTransaction().
+    SetFileID(fileID).
+    SetContents([]bytes(transaction))
+    Execute(client) // TransactionResponse
+if err != nil {
+    println(err.Error())
+}
+
+receipt, err := response.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
-### `setContents()`
+<!-- tabs:end -->
 
-```typescript
-setContents(contents: bytes | string): this
-```
+### Properties
 
-### `getContents()`
+##### `fileId`: [`FileId`](reference/file/FileId.md)
 
-```typescript
-getContents(): bytes
-```
+This is the fileID which contents will be appended to.
 
-### `execute()`
+---
 
-```typescript
-async execute(client: Client): this
-```
+##### `contents`: `bytes`
 
-### `setNodeId()`
+These are the contents which will be appended to the file.
 
-```typescript
-setNodeId(id: AccountId): this
-```
+**Note**. The setter `.setContents()` supports types `bytes` **and** UTF-8 `string`.
 
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
-```
-
-### `setTransactionValidDuration()`
-
-```typescript
-setTransactionValidDuration(duration: Timestamp): this
-```
-
-### `getTransactionValidDuration()`
-
-```typescript
-getTransactionValidDuration(): Timestamp
-```
-
-### `setMaxTransactionFee()`
-
-```typescript
-setMaxTransactionFee(fee: Hbar): this
-```
-
-### `getMaxTransactionFee()`
-
-```typescript
-getMaxTransactionFee(): Hbar
-```
-
-### `setTransactionMemo()`
-
-```typescript
-setTransactionMemo(memo: string): this
-```
-
-### `getTransactionMemo()`
-
-```typescript
-getTransactionMemo(): string
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
-
-### `getTransactionHash()`
-
-```typescript
-getTransactionHash(): bytes
-```
-
-### `getTransactionId()`
-
-```typescript
-getTransactionId(): TransactionId
-```
-
-### `setTransactionId()`
-
-```typescript
-setTransactionId(id: TransactionId): this
-```
-
-### `sign()`
-
-```typescript
-sign(key: PrivateKey): this
-```
-
-### `signWith()`
-
-```typescript
-signWith(key: PublicKey, signer: Function<bytes, bytes>): this
-```
-
-### `signWithOperator()`
-
-```typescript
-signWithOperator(client: Client): this
-```
-
-### `freeze()`
-
-```typescript
-freeze(): this
-```
-
-### `freezeWith()`
-
-```typescript
-freezeWith(client: Client): this
-```
-
-### `getSignatures()`
-
-```typescript
-getSignatures(): Map<AccoundID, Map<PublicKey, byte[]>>
-```
-
-### `addSignature()`
-
-```typescript
-getSignatures(key: PublicKey, signature: byte[]): this
-```
-
-### `getTransactionHashPerNode()`
-
-```typescript
-getTransactionHashPerNode(): Map<AccoundID, byte[]>
-```
-
-### `setMaxRetry()`
-
-```typescript
-setMaxRetry(count: int): this
-```
-
-### `getMaxRetry()`
-
-```typescript
-getMaxRetry(): int
-```
+---

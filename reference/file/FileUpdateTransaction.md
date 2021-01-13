@@ -1,239 +1,124 @@
 # `FileUpdateTransaction`
 
+> class `FileUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
+
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class FileUpdateTransaction extends Transaction {
+    /* property */ fileId?: FileId;
+
+    /* property */ keys?: Key[];
+
+    /* property */ contents?: bytes;
+
+    /* property */ expirationTime?: Timestamp;
+}
+```
+
+</details>
+
+<details>
+<summary><b>Table of Contents</b></summary>
+
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setFileId()`](#setfileid) | ✅ | ✅ | ✅
-| [`getFileId()`](#getfiletid) | ✅ | ✅ | ✅
-| [`setKeys()`](#setkeys) | ✅ | ✅ | ✅
-| [`getKeys()`](#getkeys) | ✅ | ✅ | ✅
-| [`setExpirationTime()`](#setexpirationtime) | ✅ | ✅ | ✅
-| [`getExpirationTime()`](#getexpirationtime) | ✅ | ✅ | ✅
-| [`setContents()`](#setcontents) | ✅ | ✅ | ✅
-| [`getContents()`](#getcontents) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setTransactionValidDuration()`](#settransactionvalidduration) | ✅ | ✅ | ✅
-| [`getTransactionValidDuration()`](#gettransactionvalidduration) | ✅ | ✅ | ✅
-| [`setMaxTransactionFee()`](#setmaxtransactionfee) | ✅ | ✅ | ✅
-| [`getMaxTransactionFee()`](#getmaxtransactionfee) | ✅ | ✅ | ✅
-| [`setTransactionMemo()`](#settransactionmemo) | ✅ | ✅ | ✅
-| [`getTransactionMemo()`](#gettransactionmemo) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-| [`getTransactionHash()`](#gettransactionhash) | ✅ | ✅ | ✅
-| [`setTransactionId()`](#settransactionid) | ✅ | ✅ | ✅
-| [`getTransactionId()`](#gettransactionid) | ✅ | ✅ | ✅
-| [`sign()`](#sign) | ✅ | ✅ | ✅
-| [`signWith()`](#signwith) | ✅ | ✅ | ✅
-| [`signWithOperator()`](#signwithoperator) | ✅ | ✅ | ✅
-| [`freeze()`](#freeze) | ✅ |  ✅ | ✅
-| [`freezeWith()`](#freezewith) | ✅ | ✅ | ✅
-| [`getSignatures()`](#getsignatures) | ✅ | ✅ | ✅
-| [`addSignature()`](#addsignature) | ✅ | ✅ | ✅
-| [`getTransactionHashPerNode`](#gettransactionhashpernode) | ✅ | ✅ | ✅
-| [`setMaxRetry`](#setmaxretry) | ✅ | ✅ | ✅
-| [`getMaxRetry`](#getmaxretry) | ✅ | ✅ | ✅
+| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
+| [`keys`](#keys-key) | ✅ | ✅ | ✅
+| [`contents`](#contents-bytes) | ✅ | ✅ | ✅
+| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
 
-## Methods
+</details>
 
-### `constructor()`
+<!-- tabs:start -->
 
-```typescript
-constructor()
+#### ** Java **
+
+```java
+var newKey = PrivateKey.generate();
+
+var receipt = new FileUpdateTransaction()
+    .setFileId(fileId)
+    .setKeys(newKey)
+    .setContents("New contents of the file")
+    .execute(client) // TransactionResponse
+    .sign(newKey)
+    .getReceipt(client); // TransactionReceipt
 ```
 
-### `setFileId()`
+#### ** JavaScript **
 
-```typescript
-setFileId(id: FileId): this
+```javascript
+const newKey = PrivateKey.generate();
+
+const transaction = new FileAppendTransaction({ 
+    fileId: fileId,
+    keys: [ newKey ],
+    contents: "Hello, world",
+});
+
+await transaction.sign(newKey) // Sign the transaction with the new key;
+
+const response = await transaction.execute(client) // TransactionResponse;
+const receipt = await response.getReceipt(client) // TransactionReceipt;
 ```
 
-### `getFileId()`
+#### ** Go **
 
-```typescript
-getFileId(): FileId
+```go
+response, err := NewFileUpdateTransaction().
+    SetFileID(fileId).
+    SetKeys(client.GetOperatorPublicKey())
+    Execute(client) // TransactionResponse
+if err != nil {
+    println(err.Error())
+}
+
+receipt, err := response.GetReceipt(client) // TransactionReceipt
+if err != nil {
+    println(err.Error())
+}
 ```
 
-### `setKeys()`
+<!-- tabs:end -->
 
-```typescript
-setKeys(keys: Key): this
-```
+### Properties
 
-### `getKeys()`
+##### `fileId`: [`FileId`](reference/file/FileId.md)
 
-```typescript
-getKeys(): Key
-```
+This is the fileID that will be updated.
 
-### `setExpirationTime()`
+---
 
-```typescript
-setExpirationTime(date: Timestamp): this
-```
+##### `keys`: [`Key`](reference/cryptography/Key.md)[]
 
-### `getExpirationTime()`
+These are the new keys of the file. These new keys will be required to sign the
+the transactions when mutating the file via [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) 
+or [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) transactions. 
+If no key is provided the file is immutable any the aforementioned transactions will 
+err with status code [`UNAUTHORIZED`](reference/Status.md#UNAUTHORIZED).
 
-```typescript
-getExpirationTime(): Timestamp
-```
+---
 
-### `setContents()`
+##### `contents`: `bytes`
 
-```typescript
-setContents(byte: bytes): this
-```
+These are the new contents of the file after execution. The contents cannot
+exceed ~4096 bytes. Use [`FileAppendTransaction`](refernce/file/FileAppendTransaction.md)
+to set larger contents.
 
-### `getContents()`
+**Note**. The setter `.setContents()` supports types `bytes` **and** UTF-8 `string`.
+**Note**. The contents will completely override the existing contents of the file.
 
-```typescript
-getContents(): bytes
-```
+---
 
-### `execute()`
+##### `expirationTime`: `Timestamp`
 
-```typescript
-async execute(client: Client): this
-```
+The new expiration time of this file. After this time the file will be deleted. To 
+prevent file from being deleted another [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) must be executed with a new expiration time.
 
-### `setNodeId()`
+- `Timestmap` is the EPOCH seconds and nanoseconds of a future instant.
 
-```typescript
-setNodeId(id: AccountId): this
-```
-
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
-```
-
-### `setTransactionValidDuration()`
-
-```typescript
-setTransactionValidDuration(duration: Timestamp): this
-```
-
-### `getTransactionValidDuration()`
-
-```typescript
-getTransactionValidDuration(): Timestamp
-```
-
-### `setMaxTransactionFee()`
-
-```typescript
-setMaxTransactionFee(fee: Hbar): this
-```
-
-### `getMaxTransactionFee()`
-
-```typescript
-getMaxTransactionFee(): Hbar
-```
-
-### `setTransactionMemo()`
-
-```typescript
-setTransactionMemo(memo: string): this
-```
-
-### `getTransactionMemo()`
-
-```typescript
-getTransactionMemo(): string
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
-
-### `getTransactionHash()`
-
-```typescript
-getTransactionHash(): bytes
-```
-
-### `getTransactionId()`
-
-```typescript
-getTransactionId(): TransactionId
-```
-
-### `setTransactionId()`
-
-```typescript
-setTransactionId(id: TransactionId): this
-```
-
-### `sign()`
-
-```typescript
-sign(key: PrivateKey): this
-```
-
-### `signWith()`
-
-```typescript
-signWith(key: PublicKey, signer: Function<bytes, bytes>): this
-```
-
-### `signWithOperator()`
-
-```typescript
-signWithOperator(client: Client): this
-```
-
-### `freeze()`
-
-```typescript
-freeze(): this
-```
-
-### `freezeWith()`
-
-```typescript
-freezeWith(client: Client): this
-```
-
-### `getSignatures()`
-
-```typescript
-getSignatures(): Map<AccoundID, Map<PublicKey, byte[]>>
-```
-
-### `addSignature()`
-
-```typescript
-getSignatures(key: PublicKey, signature: byte[]): this
-```
-
-### `getTransactionHashPerNode()`
-
-```typescript
-getTransactionHashPerNode(): Map<AccoundID, byte[]>
-```
-
-### `setMaxRetry()`
-
-```typescript
-setMaxRetry(count: int): this
-```
-
-### `getMaxRetry()`
-
-```typescript
-getMaxRetry(): int
-```
+---

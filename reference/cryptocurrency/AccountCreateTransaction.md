@@ -1,6 +1,6 @@
 # `AccountCreateTransaction`
 
-> class `AccountCreateTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `AccountCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Create a new Hedera™ crypto-currency account.
 
@@ -42,31 +42,29 @@ Future versions of the API will support multiple realms and multiple shards.
 #### ** Java **
 
 ```java
-var newKey = PrivateKey.generate();
+var key = PrivateKey.generate();
 
-var newAccountId = new AccountCreateTransaction()
-    .setKey(newKey)
+var fileId = new AccountCreateTransaction()
+    .setKey(key)
     .setInitialBalance(new Hbar(10)) // 10 hbars
     .execute(client) // TransactionResponse
     .getReceipt(client) // TransactionReceipt
-    .accountId // Optional<AccountId>
-    .orElseThrow(); // AccountId
+    .accountId // Nullable<AccountId>
 ```
 
 #### ** JavaScript **
 
-```js
-const newKey = PrivateKey.generate();
+```javascript
+const key = PrivateKey.generate();
 
-const accountCreateTransaction = new AccountCreateTransaction({
+const transaction = new AccountCreateTransaction({
     key: newKey,
     initialBalance: new Hbar(10),
 });
 
-const response = await accountCreateTransaction.execute(client);
-const receipt = await response.getReceipt(client);
-
-const newAccountId = receipt.accountId;
+const response = await accountCreateTransaction.execute(client) // TransactionResponse;
+const receipt = await response.getReceipt(client) // TransactionReceipt;
+const accountId = receipt.accountId // Nullable<AccountId>;
 ```
 
 - `Duration` is `number` and is the number of seconds

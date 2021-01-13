@@ -1,78 +1,62 @@
 # `FileContentsQuery`
 
+> class `FileContentsQuery` extends [`Query`](reference/core/Query.md) < `bytes` >
+
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class FileContentsQuery extends Query<bytes> {
+    /* property */ fileId?: FileId;
+}
+```
+
+</details>
+
+<details>
+<summary><b>Table of Contents</b></summary>
+
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setFileId()`](#setfileid) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | ✅
-| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | ✅
-| [`getCost()`](#getcost) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
 
-## Methods
+</details>
 
-### `constructor()`
+<!-- tabs:start -->
 
-```typescript
-constructor()
+#### ** Java **
+
+```java
+var contents = new FileContentsQuery()
+    .setFileId(fileId)
+    .execute(client) // ByteString
 ```
 
-### `setFileId()`
+#### ** JavaScript **
 
-```typescript
-setFileId(id: FileId): this
+```javascript
+const contents = await new FileContentsQuery({ fileId }).execute(client); // Uint8Array
 ```
 
-### `execute()`
+#### ** Go **
 
-```typescript
-async execute(client: Client): this
+```go
+contents, err := NewFileContentsQuery().
+    SetFileID(fileID).
+    Execute(client) // []byte
+if err != nil {
+    println(err.Error())
+}
 ```
 
-### `setNodeId()`
+<!-- tabs:end -->
 
-```typescript
-setNodeId(id: AccountId): this
-```
+### Properties
 
-### `getNodeId()`
+##### `fileId`: [`FileId`](reference/file/FileId.md)
 
-```typescript
-getNodeId(): AccountId
-```
+This is the fileID which contents queried for.
 
-### `setQueryPayment()`
-
-```typescript
-setQueryPayment(payment: Hbar): this
-```
-
-### `setMaxQueryPayment()`
-
-```typescript
-setMaxQueryPayment(payment: Hbar): this
-```
-
-### `getCost()`
-
-```typescript
-async getCost(client: Client): Hbar
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
+---

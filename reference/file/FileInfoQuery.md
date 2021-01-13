@@ -1,85 +1,62 @@
 # `FileInfoQuery`
 
+> class `FileInfoQuery` extends [`Query`](reference/core/Query.md) < [`FileInfo`](reference/file/FileInfo.md) >
+
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class FileInfoQuery extends Query<FileInfo> {
+    /* property */ fileId?: FileId;
+}
+```
+
+</details>
+
+<details>
+<summary><b>Table of Info</b></summary>
+
 ## Support
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setFileId()`](#setfileid) | ✅ | ✅ | ✅
-| [`getFileId()`](#getfileid) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | ✅
-| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | ✅
-| [`getCost()`](#getcost) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
 
-## Methods
+</details>
 
-### `constructor()`
+<!-- tabs:start -->
 
-```typescript
-constructor()
+#### ** Java **
+
+```java
+var info = new FileInfoQuery()
+    .setFileId(fileId)
+    .execute(client) // ByteString
 ```
 
-### `setFileId()`
+#### ** JavaScript **
 
-```typescript
-setFileId(id: FileId): this
+```javascript
+const info = await new FileInfoQuery({ fileId }).execute(client); // Uint8Array
 ```
 
-### `getFileId()`
+#### ** Go **
 
-```typescript
-getFileId(): FileId
+```go
+info, err := NewFileInfoQuery().
+    SetFileID(fileID).
+    Execute(client) // []byte
+if err != nil {
+    println(err.Error())
+}
 ```
 
-### `execute()`
+<!-- tabs:end -->
 
-```typescript
-async execute(client: Client): this
-```
+### Properties
 
-### `setNodeId()`
+##### `fileId`: [`FileId`](reference/file/FileId.md)
 
-```typescript
-setNodeId(id: AccountId): this
-```
+This is the fileID which info queried for.
 
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
-```
-
-### `setQueryPayment()`
-
-```typescript
-setQueryPayment(payment: Hbar): this
-```
-
-### `setMaxQueryPayment()`
-
-```typescript
-setMaxQueryPayment(payment: Hbar): this
-```
-
-### `getCost()`
-
-```typescript
-async getCost(client: Client): Hbar
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
-```
+---

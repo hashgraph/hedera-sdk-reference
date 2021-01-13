@@ -7,35 +7,40 @@
 
 ```typescript
 abstract class Query<O> {
-    static fromBytes(data: bytes): Query<*>;
-
-    /* property */ nodeAccountId: AccountId;
-
-    /* property */ queryPayment: ?Hbar;
+    /* property */ nodeAccountIds: AccountId[];
 
     /* property */ maxQueryPayment: ?Hbar;
 
-    toBytes(): bytes;
-
-    getCost(client: Client): Hbar;
+    /* property */ queryPayment: ?Hbar;
 
     execute(client: Client): O;
+
+    getCost(client: Client): Hbar;
 }
 ```
 
 </details>
 
+<details>
+<summary><b>Table of Contents</b></summary>
+
+## Support
+
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`execute`](#execute-client-client-o) | ✅ | ✅ | ✅
+| [`getCost`](#getcost-client-client-hbar) | ✅ | ✅ | ✅
+| [`nodeAccountIds`](#nodeaccountids-accountId) | ✅ | ✅ | ✅
+| [`maxQueryPayment`](#write-only-maxquerypayment-hbar) | ✅ | ✅ | ✅
+| [`queryPayment`](#write-only-querypayment-hbar) | ✅ | ✅ | ✅
+
+</details>
+
 Base class for all queries that may be submitted to Hedera.
-
-### Static Methods
-
-##### `fromBytes` ( `data` : `bytes` ): `Query<*>`
-
----
 
 ### Methods
 
-##### `execute` ( `client`: `Client` ): `O`
+##### `execute` ( `client`: [`Client`](reference/core/Client.md) ): `O`
 
 Execute this query on the chosen Hedera network node and return its response.
 
@@ -43,23 +48,17 @@ The return type of this method is dictated by the derived class.
 
 ---
 
-##### `getCost` ( `client`: `Client` ): `Hbar`
+##### `getCost` ( `client`: [`Client`](reference/core/Client.md) ): [`Hbar`](reference/Hbar.md)
 
 Return the cost to execute this query on the chosen Hedera network node.
 
 ---
 
-##### `toBytes` (): `bytes`
-
-Encodes this query to a byte array that can be later decoded into the same `Query`.
-
----
-
 ### Properties
 
-##### `nodeAccountId`: [`AccountId`](reference/AccountId.md)
+##### `nodeAccountIds`: [`AccountId[]`](reference/cryptocurrency/AccountId.md)
 
-The account ID of the node that this query will be submitted to.
+The nodeaccount IDs that will be queried.
 
 ---
 
