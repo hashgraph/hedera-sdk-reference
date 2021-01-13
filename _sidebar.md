@@ -8,13 +8,21 @@
     * [`Query`](reference/core/Query.md)
     * [`TransactionReceiptQuery`](reference/core/TransactionReceiptQuery.md)
     * [`TransactionRecordQuery`](reference/core/TransactionRecordQuery.md)
-    * **Cryptography** &nbsp; <i class="fas fa-key"></i>
+
+    <details>
+    <summary>Cryptography &nbsp; <i class="fas fa-key"></i></summary>
+
         * [`Key`](reference/cryptography/Key.md)
         * [`PublicKey`](reference/cryptography/PublicKey.md)
         * [`PrivateKey`](reference/cryptography/PrivateKey.md)
         * [`Mnemonic`](reference/cryptography/Mnemonic.md)
         * [`KeyList`](reference/cryptography/KeyList.md)
-    * **Cryptocurrency** &nbsp; <i class="fas fa-coins"></i>
+
+    </details>
+
+    <details>
+    <summary>Cryptocurrency &nbsp; <i class="fas fa-coins"></i></summary>
+
         * [`AccountId`](reference/cryptocurrency/AccountId.md)
         * [`AccountInfo`](reference/cryptocurrency/AccountInfo.md)
         * [`AccountBalanceQuery`](reference/cryptocurrency/AccountBalanceQuery.md)
@@ -25,7 +33,12 @@
         * [`AccountUpdateTransaction`](reference/cryptocurrency/AccountUpdateTransaction.md)
         * [`AccountDeleteTransaction`](reference/cryptocurrency/AccountDeleteTransaction.md)
         * [`CryptoTransferTransaction`](reference/cryptocurrency/CryptoTransferTransaction.md)
-    * **Consensus** &nbsp; <i class="fas fa-coins"></i>
+
+    </details>
+
+    <details>
+    <summary>Consensus &nbsp; <i class="fas fa-coins"></i></summary>
+
         * [`TopicId`](reference/consensus/TopicId.md)
         * [`TopicInfo`](reference/consensus/TopicInfo.md)
         * [`TopicInfoQuery`](reference/consensus/TopicInfoQuery.md)
@@ -36,7 +49,12 @@
         * [`TopicDeleteTransaction`](reference/consensus/TopicDeleteTransaction.md)
         * [`TopicMessageSubmitTransaction`](reference/consensus/TopicMessageSubmitTransaction.md)
         * [`TopicUpdateTransaction`](reference/consensus/TopicUpdateTransaction.md)
-    * **Contract** &nbsp; <i class="fas fa-coins"></i>
+
+    </details>
+
+    <details>
+    <summary>Contract &nbsp; <i class="fas fa-coins"></i></summary>
+
         * [`ContractId`](reference/contract/ContractId.md)
         * [`ContractInfo`](reference/contract/ContractInfo.md)
         * [`ContractInfoQuery`](reference/contract/ContractInfoQuery.md)
@@ -51,17 +69,12 @@
         * [`ContractCreateTransaction`](reference/contract/ContractCreateTransaction.md)
         * [`ContractDeleteTransaction`](reference/contract/ContractDeleteTransaction.md)
         * [`ContractUpdateTransaction`](reference/contract/ContractUpdateTransaction.md)
-    * **Core** &nbsp; <i class="fas fa-coins"></i>
-        * [`Client`](reference/core/Client.md)
-        * [`Query`](reference/core/Query.md)
-        * [`TransactionId`](reference/core/TransactionId.md)
-        * [`Transaction`](reference/core/Transaction.md)
-        * [`TransactionReceipt`](reference/core/TransactionReceipt.md)
-        * [`TransactionReceiptQuery`](reference/core/TransactionReceiptQuery.md)
-        * [`TransactionRecord`](reference/core/TransactionRecord.md)
-        * [`TransactionRecordQuery`](reference/core/TransactionRecordQuery.md)
-        * [`TransactionResponse`](reference/core/TransactionResponse.md)
-    * **File** &nbsp; <i class="fas fa-coins"></i>
+
+    </details>
+
+    <details>
+    <summary>File &nbsp; <i class="fas fa-coins"></i></summary>
+
         * [`FileAppendTransaction`](reference/file/FileAppendTransaction.md)
         * [`FileContentsQuery`](reference/file/FileContentsQuery.md)
         * [`FileCreateTransaction`](reference/file/FileCreateTransaction.md)
@@ -70,3 +83,69 @@
         * [`FileInfo`](reference/file/FileInfo.md)
         * [`FileInfoQuery`](reference/file/FileInfoQuery.md)
         * [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md)
+
+    </details>
+
+    <details>
+    <summary>Token &nbsp; <i class="fas fa-coins"></i></summary>
+
+        * [`TokenAssociateTransaction`](reference/token/TokenAssociateTransaction.md)
+        * [`TokenBurnTransaction`](reference/token/TokenBurnTransaction.md)
+        * [`TokenCreateTransaction`](reference/token/TokenCreateTransaction.md)
+        * [`TokenDeleteTransaction`](reference/token/TokenDeleteTransaction.md)
+        * [`TokenDissociateTransaction`](reference/token/TokenDissociateTransaction.md)
+        * [`TokenFreezeTransaction`](reference/token/TokenFreezeTransaction.md)
+        * [`TokenGrantKycTransaction`](reference/token/TokenGrantKycTransaction.md)
+        * [`TokenId`](reference/token/TokenId.md)
+        * [`TokenInfo`](reference/token/TokenInfo.md)
+        * [`TokenInfoQuery`](reference/token/TokenInfoQuery.md)
+        * [`TokenMintTransaction`](reference/token/TokenMintTransaction.md)
+        * [`TokenRelationship`](reference/token/TokenRelationship.md)
+        * [`TokenRevokeKycTransaction`](reference/token/TokenRevokeKycTransaction.md)
+        * [`TokenTransfer`](reference/token/TokenTransfer.md)
+        * [`TokenTransferTransaction`](reference/token/TokenTransferTransaction.md)
+        * [`TokenUnfreezeTransaction`](reference/token/TokenUnfreezeTransaction.md)
+        * [`TokenUpdateTransaction`](reference/token/TokenUpdateTransaction.md)
+        * [`TokenWipeTransaction`](reference/token/okenWipeTransaction.md)
+
+    </details>
+
+    <details>
+    <summary>Error &nbsp; <i class="fas fa-coins"></i></summary>
+
+        * [`BadKey`](reference/error/BadKey.md)
+        * [`BadMnemonic`](reference/error/BadMnemonic.md)
+        * [`MaxQueryPaymentExceeded`](reference/error/MaxQueryPaymentExceeded.md)
+        * [`PrecheckStatus`](reference/error/PrecheckStatus.md)
+        * [`ReceiptStatus`](reference/error/ReceiptStatus.md)
+        * [`Status`](reference/error/Status.md)
+
+     </details>
+
+    <details>
+    <summary>LiveHash &nbsp; <i class="fas fa-coins"></i></summary>
+
+        * [`LiveHash`](reference/live-hash/LiveHash.md)
+        * [`LiveHashAddTransaction`](reference/live-hash/LiveHashAddTransaction.md)
+        * [`LiveHashDeleteTransaction`](reference/live-hash/LiveHashDeleteTransaction.md)
+        * [`LiveHashQuery`](reference/live-hash/LiveHashQuery.md)
+
+    </details>
+
+    <details>
+    <summary>Network &nbsp; <i class="fas fa-coins"></i></summary>
+
+        * [`NetworkVersionInfo`](reference/network/NetworkVersionInfo.md)
+        * [`NetworkVersionQuery`](reference/network/NetworkVersionQuery.md)
+        * [`SemanticVersion`](reference/network/SemanticVersion.md)
+
+    </details>
+
+    <details>
+    <summary>System &nbsp; <i class="fas fa-coins"></i></summary>
+
+        * [`FreezeTransaction`](reference/system/FreezeTransaction.md)
+        * [`SystemDeleteTransaction`](reference/system/SystemDeleteTransaction.md)
+        * [`SystemUndeleteTransaction`](reference/system/SystemUndeleteTransaction.md)
+
+    </details>

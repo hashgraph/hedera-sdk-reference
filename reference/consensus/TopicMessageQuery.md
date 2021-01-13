@@ -1,7 +1,10 @@
 # `TopicMessageQuery`
 
-## Support
+<details>
+<summary><b>Table of Contents</b></summary>
 
+| Item | Java | JavaScript | Go
+| - | - | - | - |
 | [`constructor()`](#constructor) | ✅ | ✅ | ✅
 | [`setTopicId()`](#settopicid) | ✅ | ✅ | ✅
 | [`setStartTime()`](#setstarttime) | ✅ | ✅ | ✅
@@ -16,6 +19,8 @@
 | [`getCost()`](#getcost) | ✅ | ✅ | ✅
 | [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
 | [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+
+</details>
 
 ## Methods
 

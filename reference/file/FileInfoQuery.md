@@ -16,7 +16,7 @@ class FileInfoQuery extends Query<FileInfo> {
 <details>
 <summary><b>Table of Info</b></summary>
 
-## Support
+
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |

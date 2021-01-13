@@ -22,7 +22,7 @@ class FileUpdateTransaction extends Transaction {
 <details>
 <summary><b>Table of Contents</b></summary>
 
-## Support
+
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -54,7 +54,7 @@ var receipt = new FileUpdateTransaction()
 ```javascript
 const newKey = PrivateKey.generate();
 
-const transaction = new FileAppendTransaction({ 
+const transaction = new FileAppendTransaction({
     fileId: fileId,
     keys: [ newKey ],
     contents: "Hello, world",
@@ -96,9 +96,9 @@ This is the fileID that will be updated.
 ##### `keys`: [`Key`](reference/cryptography/Key.md)[]
 
 These are the new keys of the file. These new keys will be required to sign the
-the transactions when mutating the file via [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) 
-or [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) transactions. 
-If no key is provided the file is immutable any the aforementioned transactions will 
+the transactions when mutating the file via [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md)
+or [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) transactions.
+If no key is provided the file is immutable any the aforementioned transactions will
 err with status code [`UNAUTHORIZED`](reference/Status.md#UNAUTHORIZED).
 
 ---
@@ -116,7 +116,7 @@ to set larger contents.
 
 ##### `expirationTime`: `Timestamp`
 
-The new expiration time of this file. After this time the file will be deleted. To 
+The new expiration time of this file. After this time the file will be deleted. To
 prevent file from being deleted another [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) must be executed with a new expiration time.
 
 - `Timestmap` is the EPOCH seconds and nanoseconds of a future instant.

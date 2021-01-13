@@ -20,8 +20,6 @@ class FileCreateTransaction extends Transaction {
 <details>
 <summary><b>Table of Contents</b></summary>
 
-## Support
-
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`keys`](#keys-key) | ✅ | ✅ | ✅
@@ -46,7 +44,7 @@ var fileId = new FileCreateTransaction()
 #### ** JavaScript **
 
 ```javascript
-const transaction = new FileAppendTransaction({ 
+const transaction = new FileAppendTransaction({
     keys: [ client.operatorPublicKey ],
     contents: "Hello, world",
 });
@@ -80,9 +78,9 @@ fileId := receipt.FileId // Nullable<FileID>
 
 ##### `keys`: [`Key`](reference/cryptography/Key.md)[]
 
-This is the key that must sign when mutating the file via [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) 
-or [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) transactions. 
-If no key is provided the file is immutable any the aforementioned transactions will 
+This is the key that must sign when mutating the file via [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md)
+or [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) transactions.
+If no key is provided the file is immutable any the aforementioned transactions will
 err with status code [`UNAUTHORIZED`](reference/Status.md#UNAUTHORIZED).
 
 ---
@@ -99,7 +97,7 @@ to set larger contents.
 
 ##### `expirationTime`: `Timestamp`
 
-The expiration time of this file. After this time the file will be deleted. To 
+The expiration time of this file. After this time the file will be deleted. To
 prevent file from being deleted a [`FileUpdateTransaction`](reference/file/FileUpdateTransaction.md) must be executed with a new expiration time.
 
 - `Timestmap` is the EPOCH seconds and nanoseconds of a future instant.

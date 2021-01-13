@@ -1,6 +1,7 @@
 # `ExchangeRate`
 
-## Support
+<details>
+<summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -8,6 +9,8 @@
 | [`cents`](#cents) | ✅ | ✅ | ✅
 | [`expirationTime`](#expirationtime) | ✅ | ✅ | ✅
 | [`toString()`](#tostring) | ✅ | ✅ | O
+
+</details>
 
 ## Fields
 

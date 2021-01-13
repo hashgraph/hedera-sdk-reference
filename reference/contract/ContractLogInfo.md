@@ -1,6 +1,7 @@
 # `ContractLogInfo`
 
-## Support
+<details>
+<summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -11,6 +12,8 @@
 | [`constructor()`](#constructor) | ✅ | ✅ | ✅
 | [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
 | [`fromBytes`](#frombytes) | ✅ | ✅ | ✅
+
+</details>
 
 ## Fields
 

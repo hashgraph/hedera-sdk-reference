@@ -1,6 +1,9 @@
 # `ContractRecordsQuery`
 
-## Support
+
+
+<details>
+<summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -15,6 +18,8 @@
 | [`getCost()`](#getcost) | ✅ | ✅ | ✅
 | [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
 | [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+
+</details>
 
 ## Methods
 

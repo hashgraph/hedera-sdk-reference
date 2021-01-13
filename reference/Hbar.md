@@ -1,6 +1,7 @@
 # `Hbar`
 
-## Support
+<details>
+<summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -16,6 +17,8 @@
 | [`negated()`](#negated) | ✅ | ✅ | ✅
 | [`equals()`](#equals) | ✅ | ✅ | ✅
 | [`compareTo()`](#compareto) | ✅ | ✅ | ✅
+
+</details>
 
 ## Constants
 

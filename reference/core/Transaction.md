@@ -48,7 +48,7 @@ abstract class Transaction {
 <details>
 <summary><b>Table of Contents</b></summary>
 
-## Support
+
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -86,9 +86,9 @@ Base class for all transactions that may be submitted to Hedera.
 ##### `execute` ( `client`: [`Client`](reference/core/Client.md) ): [`TransactionResponse`](reference/core/TransactionResponse.md)
 
 Execute this transaction on the Hedera network, immediately returning
-metadata about the transaction that was executed. 
-The [`TransactionResponse`](reference/core/TransactionResponse.md) may be used to fetch 
-the [`TransactionReceipt`](reference/core/TransactionReceipt.md) or 
+metadata about the transaction that was executed.
+The [`TransactionResponse`](reference/core/TransactionResponse.md) may be used to fetch
+the [`TransactionReceipt`](reference/core/TransactionReceipt.md) or
 [`TransactionRecord`](reference/core/TransactionRecord.md)
 for more information.
 

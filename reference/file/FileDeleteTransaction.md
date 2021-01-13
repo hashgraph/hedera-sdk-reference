@@ -18,8 +18,6 @@ class FileDeleteTransaction extends Transaction {
 <details>
 <summary><b>Table of Contents</b></summary>
 
-## Support
-
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅

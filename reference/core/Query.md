@@ -24,7 +24,7 @@ abstract class Query<O> {
 <details>
 <summary><b>Table of Contents</b></summary>
 
-## Support
+
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |

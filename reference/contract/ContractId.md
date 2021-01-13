@@ -6,7 +6,7 @@
 ```typescript
 class ContractId {
     constructor(num: Uint64);
-    
+
     constructor(shard: Uint64, realm: Uint64, num: Uint64);
 
     fromString(str: string): ContractId;
@@ -32,7 +32,7 @@ class ContractId {
 <details>
 <summary><b>Table of Contents</b></summary>
 
-## Support
+
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -67,7 +67,7 @@ Construct a [`ContractId`](#) with all fields explicitly set.
 
 ##### `fromString` ( `str` : `string` ): [`ContractId`](#contractid)
 
-Construct a [`ContractId`](#) from a string. The format of the string could be either just 
+Construct a [`ContractId`](#) from a string. The format of the string could be either just
 a number "4" or dot separated numbers "0.0.4".
 
 ##### `fromBytes` ( `data` : `bytes` ): [`ContractId`](#contractid)

@@ -1,6 +1,6 @@
 # `FileInfo`
 
-## Support
+
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |

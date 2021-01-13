@@ -1,6 +1,7 @@
 # `LiveHash`
 
-## Support
+<details>
+<summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -11,7 +12,9 @@
 | [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
 | [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
 
-## Fields
+</details>
+
+## Properties
 
 ### `accountId`
 

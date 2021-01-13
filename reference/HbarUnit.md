@@ -1,6 +1,7 @@
 # `enum HbarUnit`
 
-## Support
+<details>
+<summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -12,6 +13,8 @@
 | [`MEGABAR`](#megabar) | ✅ | ✅ | ✅
 | [`GIGABAR`](#gigabar) | ✅ | ✅ | ✅
 | [`toString()`](#tostring) | ✅ | ✅ | ✅
+
+</details>
 
 ## Variants
 

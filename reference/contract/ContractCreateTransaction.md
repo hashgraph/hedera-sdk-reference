@@ -1,7 +1,7 @@
 # `ContractCreateTransaction`
 
 <details>
-<summary><b>Support</b></summary>
+<summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |

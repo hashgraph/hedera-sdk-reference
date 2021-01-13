@@ -1,85 +1,37 @@
-# `LiveHashQuery`
+# class `LiveHashQuery`
 
-## Support
+Retrieve the latest state of a topic.
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setAccountId()`](#setaccountid) | ✅ | ✅ | ✅
-| [`setHash()`](#sethash) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | ✅
-| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | ✅
-| [`getCost()`](#getcost) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+This method is unrestricted and allowed on any topic by any payer account.
 
-## Methods
+Deleted accounts will not be returned.
+
+Returns [`LiveHash`](./LiveHash.md) from [`execute`](../Query.md).
+
+## Static Methods
 
 ### `constructor()`
 
-```typescript
-constructor()
-```
+Creates an empty transaction, ready for configuration.
 
-### `setAccountId()`
+## Properties
 
-```typescript
-setAccountId(id: AccountId): this
-```
+### `AccountId` : [`AccountId`](reference/cryptocurrency/AccountId.md)
 
-### `setHash()`
+The Account for which information is being requested.
 
-```typescript
-setHash(hash: bytes): this
-```
+---
 
-### `execute()`
+### `Hash` : `bytes`
+
+---
+## Declaration
 
 ```typescript
-async execute(client: Client): this
-```
+class LiveHashQuery extends Query<LiveHash> {
+    constructor();
 
-### `setNodeId()`
-
-```typescript
-setNodeId(id: AccountId): this
-```
-
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
-```
-
-### `setQueryPayment()`
-
-```typescript
-setQueryPayment(payment: Hbar): this
-```
-
-### `setMaxQueryPayment()`
-
-```typescript
-setMaxQueryPayment(payment: Hbar): this
-```
-
-### `getCost()`
-
-```typescript
-async getCost(client: Client): Hbar
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
+    getTopicId(): TopicId;
+    setTopicId(topicId: TopicId): this;
+}
 ```
