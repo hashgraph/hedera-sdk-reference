@@ -17,6 +17,40 @@ class AccountStakersQuery extends Query<ProxyStaker[]> {
 
 </details>
 
+<!-- tabs:start -->
+
+### ** Java **
+
+```java
+new AccountStakersQuery()
+    .setAccountId(operatorId)
+    .setMaxQueryPayment(new Hbar(1))
+    .execute(client);
+```
+
+### ** JavaScript **
+
+```javascript
+await new AccountStakersQuery()
+    .setAccountId(operatorId)
+    .setMaxQueryPayment(new Hbar(1))
+    .execute(client);
+```
+
+### ** Go **
+
+```go
+_, err := NewAccountStakersQuery().
+    SetAccountID(client.GetOperatorAccountID()).
+    SetMaxQueryPayment(NewHbar(1)).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+```
+
+<!-- tabs:end -->
+
 ### Constructor
 
 ##### `constructor`()

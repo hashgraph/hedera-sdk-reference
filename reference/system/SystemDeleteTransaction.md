@@ -45,7 +45,7 @@ await new SystemDeleteTransaction()
 #### ** Go **
 
 ```go
-response, err = NewSystemDeleteTransaction().
+response, err = hedera.NewSystemDeleteTransaction().
     SetFileID(FileIDFromString("0.0.3").
     SetExpirationTime(time.Now().Local().Add(time.Second * 5)).
     Execute(client)
@@ -58,7 +58,7 @@ if err != nil {
     println(err.Error())
 }
 
-response, err = NewSystemDeleteTransaction().
+response, err = hedera.NewSystemDeleteTransaction().
     SetContractID(ContractIDFromString("0.0.3").
     SetExpirationTime(time.Now().Local().Add(time.Second * 5)).
     Execute(client)

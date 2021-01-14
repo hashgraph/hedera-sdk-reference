@@ -53,7 +53,7 @@ await (
 #### ** Go **
 
 ```go
-dissociateTx, err := NewTokenDissociateTransaction().
+dissociateTx, err := hedera.NewTokenDissociateTransaction().
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAccountID(accountID).
     SetTokenIDs(tokenID).

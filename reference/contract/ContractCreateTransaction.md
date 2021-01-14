@@ -58,7 +58,7 @@ const receipt = await response.getReceipt(client);
 #### ** Go **
 
 ```go
-response, err := NewContractCreateTransaction().
+response, err := hedera.NewContractCreateTransaction().
     SetAdminKey(client.GetOperatorPublicKey()).
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
     SetGas(2000).

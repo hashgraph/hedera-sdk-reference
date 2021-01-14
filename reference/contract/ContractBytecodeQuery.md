@@ -5,11 +5,41 @@ Retrieve the latest state of a bytecode.
 
 Returns [`ContractByteCode`](./ContractByteCode.md) from [`execute`](../Query.md).
 
-## Static Methods
+<!-- tabs:start -->
 
-### `constructor()`
+#### ** Java **
 
-Creates an empty transaction, ready for configuration.
+```java
+var bytecode = new ContractByteCodeQuery()
+    .setNodeAccountIds(Collections.singletonList(response.nodeId))
+    .setContractId(contractId)
+    .execute(client);
+```
+
+#### ** JavaScript **
+
+```javascript
+const bytecode = await new ContractByteCodeQuery()
+    .setNodeAccountIds([response.nodeId])
+    .setContractId(contract)
+    .setQueryPayment(new Hbar(2))
+    .execute(client);
+```
+
+#### ** Go **
+
+```go
+bytecode, err := hedera.NewContractBytecodeQuery().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetContractID(contractID).
+    SetQueryPayment(NewHbar(2)).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+```
+
+<!-- tabs:end -->
 
 ## Properties
 

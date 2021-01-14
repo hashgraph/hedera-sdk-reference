@@ -23,17 +23,17 @@ new AccountDeleteTransaction()
 #### ** JavaScript **
 
 ```js
-const newKey = PrivateKey.generate();
-
-const accountCreateTransaction = new AccountCreateTransaction({
-    key: newKey,
-    initialBalance: new Hbar(10),
-});
-
-const response = await accountCreateTransaction.execute(client);
-const receipt = await response.getReceipt(client);
-
-const newAccountId = receipt.accountId;
+await (
+    await (
+        await new AccountDeleteTransaction()
+            .setAccountId(account)
+            .setNodeAccountIds([response.nodeId])
+            .setTransferAccountId(operatorId)
+            .setTransactionId(TransactionId.generate(account))
+            .freezeWith(client)
+            .sign(key)
+    ).execute(client)
+).getReceipt(client);
 ```
 
 - `Duration` is `number` and is the number of seconds
@@ -43,20 +43,27 @@ const newAccountId = receipt.accountId;
 ```go
 newKey := hedera.GeneratePrivateKey()
 
-response, err := NewAccountCreateTransaction().
-    SetKey(newKey).
-    SetInitialBalance(10 * hedera.Hbar) // 10 Hbars
-    Execute(client) // TransactionResponse
+transaction, err := hedera.NewAccountDeleteTransaction().
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    SetAccountID(accountID).
+    SetTransferAccountID(client.GetOperatorAccountID()).
+    SetTransactionID(TransactionIDGenerate(accountID)).
+    FreezeWith(client)
 if err != nil {
     println(err.Error())
 }
 
-receipt, err := response.GetReceipt(client)
+resp, err = transaction.
+    Sign(newKey).
+    Execute(client)
 if err != nil {
     println(err.Error())
 }
 
-accountID := *receipt.AccountID
+_, err = resp.GetReceipt(client)
+if err != nil {
+    println(err.Error())
+}
 ```
 
 <!-- tabs:end -->

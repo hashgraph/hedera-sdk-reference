@@ -8,7 +8,7 @@
 | [`hbars`](#hbars) | ✅ | ✅ | ✅
 | [`cents`](#cents) | ✅ | ✅ | ✅
 | [`expirationTime`](#expirationtime) | ✅ | ✅ | ✅
-| [`toString()`](#tostring) | ✅ | ✅ | O
+| [`toString()`](#tostring) | ✅ | ✅ | ✅
 
 </details>
 

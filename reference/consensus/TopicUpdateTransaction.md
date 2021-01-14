@@ -53,9 +53,7 @@ const newAccountId = receipt.accountId;
 #### ** Go **
 
 ```go
-newKey := hedera.GeneratePrivateKey()
-
-response, err := NewTopicUpdateTransaction().
+response, err := hedera.NewTopicUpdateTransaction().
     SetTopicID(topicID).
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
     SetTopicMemo(newTopicMemo).

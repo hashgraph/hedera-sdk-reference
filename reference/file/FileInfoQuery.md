@@ -43,7 +43,7 @@ const info = await new FileInfoQuery({ fileId }).execute(client); // Uint8Array
 #### ** Go **
 
 ```go
-info, err := NewFileInfoQuery().
+info, err := hedera.NewFileInfoQuery().
     SetFileID(fileID).
     Execute(client) // []byte
 if err != nil {

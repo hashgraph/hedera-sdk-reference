@@ -20,7 +20,7 @@
 
 ### Fields
 
-### `receipt`: [`TransactionReceipt`](reference/core/TransactionRecord.md)
+### `receipt`: [`TransactionReceipt`](reference/core/TransactionReceipt.md)
 
 ---
 
@@ -40,7 +40,7 @@
 
 ---
 
-### `transactionFee`: `Hbar`
+### `transactionFee`: [`Hbar`](reference/Hbar.md)
 
 ---
 

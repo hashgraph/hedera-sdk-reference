@@ -53,7 +53,7 @@ await (
 #### ** Go **
 
 ```go
-response, err = NewTokenGrantKycTransaction().
+response, err = hedera.NewTokenGrantKycTransaction().
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAccountID(accountID).
     SetTokenID(tokenID).

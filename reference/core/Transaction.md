@@ -48,8 +48,6 @@ abstract class Transaction {
 <details>
 <summary><b>Table of Contents</b></summary>
 
-
-
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`fromBytes`](#frombytes-data-bytes-transaction) | ✅ | ✅ | ✅

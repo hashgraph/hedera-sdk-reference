@@ -69,7 +69,7 @@ const receipt = await response.getReceipt(client) // TransactionReceipt;
 #### ** Go **
 
 ```go
-response, err := NewFileUpdateTransaction().
+response, err := hedera.NewFileUpdateTransaction().
     SetFileID(fileId).
     SetKeys(client.GetOperatorPublicKey())
     Execute(client) // TransactionResponse

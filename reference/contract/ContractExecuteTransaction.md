@@ -48,7 +48,7 @@ await (
 #### ** Go **
 
 ```go
-response, err := NewContractExecuteTransaction().
+response, err := hedera.NewContractExecuteTransaction().
     SetContractID(contractID).
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
     SetGas(10000).

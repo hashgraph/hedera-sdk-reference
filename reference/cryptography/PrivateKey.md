@@ -37,6 +37,82 @@ class PrivateKey implements Key {
 
 </details>
 
+<details>
+<summary><b>Table of Contents</b></summary>
+
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`generate()`](#generate-privatekey) | ✅ | ✅ | ✅
+| [`fromMnemonic()`](#frommnemonic-mnemonic-string-passphrase-string-privatekey) | ✅ | ✅ | ✅
+| [`fromString()`](#fromstring-text-string-privatekey) | ✅ | ✅ | ✅
+| [`fromBytes()`](#frombytes-data-bytes-privatekey) | ✅ | ✅ | ✅
+| [`readPem()`](#readpem-pem-reader-privatekey) | ✅ | ✅ | ✅
+| [`fromPem()`](#frompem-pem-string-privatekey) | ✅ | ✅ | ✅
+| [`isDerivable()`](#isderivable-boolean) | ✅ | ✅ | ✅
+| [`derive()`](#derive-index-uint-privatekey) | ✅ | ✅ | ✅
+| [`publicKey`](#publickey-publickey) | ✅ | ✅ | ✅
+| [`sign()`](#sign-message-bytes--bytes) | ✅ | ✅ | ✅
+| [`signTransaction()`](#signtransaction-transaction-transaction-bytes) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes-bytes) | ✅ | ✅ | ✅
+| [`toString()`](#tostring-string) | ✅ | ✅ | ✅
+| [`fromLegacyMnemonic()`](#fromlegacymnemonic-data-bytes-privatekey) | ✅ | ✅ | ✅
+</details>
+
+> [!TIP]
+>  Use "" for an empty passphrase
+
+<!-- tabs:start -->
+
+###### ** Java **
+
+```java
+var key = PrivateKey.generate();
+var key = PrivateKey.fromBytes(bytes);
+var key = PrivateKey.fromString("key");
+var key = PrivateKey.fromPem(pemString, passphrase);
+
+var key = PrivateKey.fromMnemonic("word word2 word3", passphrase);
+```
+
+### ** JavaScript **
+
+```javascript
+const key = PrivateKey.generate()
+const key = PrivateKey.fromBytes(bytes);
+const key = PrivateKey.fromString("key")
+const key = await PrivateKey.fromPem(pemString, passphrase)
+const key = await PrivateKey.fromKeystore(keystoreBytes, passphrase)
+
+const mnemonic = await Mnemonic.fromString("word1 word2 word3...");
+const key = PrivateKey.fromMnemonic(mnemonic, passphrase)
+```
+
+###### ** Go **
+
+```go
+newKey, err := GeneratePrivateKey()
+newKey, err := PrivateKeyFromBytes(bytes)
+newKey, err := PrivateKeyFromString("key")
+newKey, err := PrivateKeyFromKeystore(bytes, passphrase)
+newKey, err := PrivateKeyFromPem(bytes, passphrase)
+if err != nil {
+    println(err.Error())
+}
+
+// use "" for an empty passphrase
+mnemonic, err := hedera.MnemonicFromString("word1 word2 word3...");
+if err != nil {
+    println(err.Error())
+}
+
+key, err := mnemonic.ToPrivateKey(passphrase)
+if err != nil {
+    println(err.Error())
+}
+```
+
+<!-- tabs:end -->
+
 ### Static Methods
 
 ##### `generate` (): `PrivateKey`
@@ -80,38 +156,6 @@ mnemonics use a legacy word list from the original Hedera mobile wallets.
 - [`BadMnemonic`](reference/error/BadMnemonic.md) — when the mnemonic contains
   words not found in the word list; there is a checksum mismatch; or, an
   unexpected number of words.
-
-###### Examples
-
-<!-- tabs:start -->
-
-###### ** Java **
-
-```java
-// use "" for an empty passphrase
-var key = PrivateKey.generate();
-var key = PrivateKey.fromBytes(bytes);
-var key = PrivateKey.fromString("key");
-
-var key = PrivateKey.fromMnemonic("word,word2,word3", "");
-```
-
-###### ** Go **
-
-```go
-// use "" for an empty passphrase
-mnemonic, err := hedera.MnemonicFromString("word1,word2,word3");
-if err != nil {
-    println(err.Error())
-}
-
-key, err := mnemonicFromString.ToPrivateKey(passphrase)
-if err != nil {
-    println(err.Error())
-}
-```
-
-<!-- tabs:end -->
 
 ### Methods
 

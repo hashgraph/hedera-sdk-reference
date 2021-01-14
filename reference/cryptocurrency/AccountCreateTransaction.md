@@ -74,7 +74,7 @@ const accountId = receipt.accountId // Nullable<AccountId>;
 ```go
 newKey := hedera.GeneratePrivateKey()
 
-response, err := NewAccountCreateTransaction().
+response, err := hedera.NewAccountCreateTransaction().
     SetKey(newKey).
     SetInitialBalance(10 * hedera.Hbar) // 10 Hbars
     Execute(client) // TransactionResponse

@@ -24,8 +24,6 @@ abstract class Query<O> {
 <details>
 <summary><b>Table of Contents</b></summary>
 
-
-
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`execute`](#execute-client-client-o) | ✅ | ✅ | ✅

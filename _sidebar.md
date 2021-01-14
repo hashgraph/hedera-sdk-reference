@@ -5,9 +5,15 @@
     * [`TransactionReceipt`](reference/core/TransactionReceipt.md)
     * [`TransactionRecord`](reference/core/TransactionRecord.md)
     * [`TransactionResponse`](reference/core/TransactionResponse.md)
-    * [`Query`](reference/core/Query.md)
     * [`TransactionReceiptQuery`](reference/core/TransactionReceiptQuery.md)
     * [`TransactionRecordQuery`](reference/core/TransactionRecordQuery.md)
+    * [`Query`](reference/core/Query.md)
+    * [`Transfer`](reference/Transfer.md)
+    * [`TransferTransaction`](reference/TransferTransaction.md)
+    * [`Hbar`](reference/Hbar.md)
+    * [`HbarUnit`](reference/HbarUnit.md)
+    * [`ExchangeRate`](reference/ExchangeRate.md)
+    * [`Status`](reference/Status.md)
 
     <details>
     <summary>Cryptography &nbsp; <i class="fas fa-key"></i></summary>
@@ -103,7 +109,6 @@
         * [`TokenRelationship`](reference/token/TokenRelationship.md)
         * [`TokenRevokeKycTransaction`](reference/token/TokenRevokeKycTransaction.md)
         * [`TokenTransfer`](reference/token/TokenTransfer.md)
-        * [`TokenTransferTransaction`](reference/token/TokenTransferTransaction.md)
         * [`TokenUnfreezeTransaction`](reference/token/TokenUnfreezeTransaction.md)
         * [`TokenUpdateTransaction`](reference/token/TokenUpdateTransaction.md)
         * [`TokenWipeTransaction`](reference/token/okenWipeTransaction.md)

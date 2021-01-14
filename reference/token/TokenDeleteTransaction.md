@@ -33,7 +33,7 @@ await (
 #### ** Go **
 
 ```go
-response, err = NewTokenDeleteTransaction().
+response, err = hedera.NewTokenDeleteTransaction().
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetTokenID(tokenID).
     Execute(client)

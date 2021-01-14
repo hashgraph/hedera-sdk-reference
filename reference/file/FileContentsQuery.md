@@ -29,21 +29,28 @@ class FileContentsQuery extends Query<bytes> {
 ```java
 var contents = new FileContentsQuery()
     .setFileId(fileId)
-    .execute(client) // ByteString
+    .setNodeAccountIds(Collections.singletonList(response.nodeId))
+    .execute(client);
 ```
 
 #### ** JavaScript **
 
 ```javascript
-const contents = await new FileContentsQuery({ fileId }).execute(client); // Uint8Array
+const contents = await new FileContentsQuery()
+    .setFileId(file)
+    .setNodeAccountIds([response.nodeId])
+    .setMaxQueryPayment(new Hbar(1))
+    .execute(client);
 ```
 
 #### ** Go **
 
 ```go
 contents, err := NewFileContentsQuery().
-    SetFileID(fileID).
-    Execute(client) // []byte
+    SetFileID(*fileID).
+    SetMaxQueryPayment(NewHbar(1)).
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+    Execute(client) //[]byte
 if err != nil {
     println(err.Error())
 }

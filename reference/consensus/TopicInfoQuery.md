@@ -8,11 +8,34 @@ Deleted accounts will not be returned.
 
 Returns [`TopicInfo`](./TopicInfo.md) from [`execute`](../Query.md).
 
-## Static Methods
+<!-- tabs:start -->
 
-### `constructor()`
+#### ** Java **
 
-Creates an empty transaction, ready for configuration.
+```java
+var info = new TopicInfoQuery()
+    .setTopicId(topicId)
+    .execute(client)
+```
+
+#### ** JavaScript **
+
+```javascript
+const info = await new TopicInfoQuery({ topicId }).execute(client); // Uint8Array
+```
+
+#### ** Go **
+
+```go
+info, err := hedera.NewTopicInfoQuery().
+    SetTopicID(topicID).
+    Execute(client)
+if err != nil {
+    println(err.Error())
+}
+```
+
+<!-- tabs:end -->
 
 ## Properties
 

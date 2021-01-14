@@ -40,7 +40,7 @@ await new SystemUndeleteTransaction()
 #### ** Go **
 
 ```go
-response, err = NewSystemDeleteTransaction().
+response, err = hedera.NewSystemDeleteTransaction().
     SetFileID(FileIDFromString("0.0.3").
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     Execute(client)
@@ -53,7 +53,7 @@ if err != nil {
     println(err.Error())
 }
 
-response, err = NewSystemDeleteTransaction().
+response, err = hedera.NewSystemDeleteTransaction().
     SetContractID(ContractIDFromString("0.0.3").
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     Execute(client)

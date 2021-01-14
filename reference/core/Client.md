@@ -49,8 +49,9 @@ It serves as the base API layer that communicates with our servers.
 ```java
 // create from..
 var client = Client.forTestnet(); // pre-defined
-var client = Client.forNetwork(Network.MAINNET); // constant
-var client = Client.forNetwork(Network.fromName("mainnet")); // named
+var client = Client.fromConfigFile("./client-config.json");
+var client = Client.forNetwork("mainnet", new AccountId(3)); // named
+var client = Client.forName("previewnet"); // named
 
 // set operator (to use to pay transaction fees)
 client.setOperator(operatorAccountId, operatorPrivateKey);
@@ -61,8 +62,10 @@ client.setOperator(operatorAccountId, operatorPrivateKey);
 ```javascript
 // create from..
 const client = Client.forTestnet(); // pre-defined
+
+const client = Client.forName("mainnet")
 const client = Client.forNetwork(Network.MAINNET); // constant
-const client = Client.forNetwork(Network.fromName("mainnet")); // named
+const client = Client.forNetwork(Network.fromName("testnet")); // named
 
 // set operator (to use to pay transaction fees)
 client.setOperator(operatorAccountId, operatorPrivateKey);

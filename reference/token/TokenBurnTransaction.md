@@ -35,7 +35,7 @@ newTokenID = (await response.getReceipt(client)).tokenId;
 #### ** Go **
 
 ```go
-response, err = NewTokenBurnTransaction().
+response, err = hedera.NewTokenBurnTransaction().
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAmount(10).
     SetTokenID(tokenID).

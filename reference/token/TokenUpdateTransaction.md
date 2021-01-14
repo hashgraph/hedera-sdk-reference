@@ -47,7 +47,7 @@ await (
 #### ** Go **
 
 ```go
-response, err = NewTokenUpdateTransaction().
+response, err = hedera.NewTokenUpdateTransaction().
     SetTokenID(tokenID).
     SetTokenSymbol("A").
     SetNodeAccountIDs([]AccountID{response.NodeID}).

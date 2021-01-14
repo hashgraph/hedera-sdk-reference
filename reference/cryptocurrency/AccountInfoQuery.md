@@ -17,6 +17,40 @@ class AccountInfoQuery extends Query<AccountInfo> {
 
 </details>
 
+<!-- tabs:start -->
+
+### ** Java **
+
+```java
+var info = new AccountInfoQuery()
+    .setAccountId(accountId)
+    .setNodeAccountIds(Collections.singletonList(response.nodeId))
+    .execute(client);
+```
+
+### ** JavaScript **
+
+```javascript
+const info = await new AccountInfoQuery()
+    .setNodeAccountIds([response.nodeId])
+    .setAccountId(account)
+    .execute(client);
+```
+
+### ** Go **
+
+```go
+info, err := NewAccountInfoQuery().
+    SetAccountID(accountID).
+    SetNodeAccountIDs([]AccountID{resp.NodeID}).
+	Execute(client)
+if err != nil {
+    println(err.Error())
+}
+```
+
+<!-- tabs:end -->
+
 ### Constructor
 
 ##### `constructor`()

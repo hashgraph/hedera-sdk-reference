@@ -1,111 +1,68 @@
-# `TopicMessageQuery`
+# class `TopicInfoQuery`
 
-<details>
-<summary><b>Table of Contents</b></summary>
+Retrieve the latest topic messages.
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`setTopicId()`](#settopicid) | ✅ | ✅ | ✅
-| [`setStartTime()`](#setstarttime) | ✅ | ✅ | ✅
-| [`setEndTime()`](#setendtime) | ✅ | ✅ | ✅
-| [`setLimit()`](#setlimit) | ✅ | ✅ | ✅
-| [`subscribe()`](#subscribe) | ✅ | ✅ | ✅
-| [`execute()`](#execute) | ✅ | ✅ | ✅
-| [`setNodeId()`](#setnodeid) | ✅ | ✅ | ✅
-| [`getNodeId()`](#getnodeid) | ✅ | ✅ | ✅
-| [`setQueryPayment()`](#setquerypayment) | ✅ | ✅ | ✅
-| [`setMaxQueryPayment()`](#setmaxquerypayment) | ✅ | ✅ | ✅
-| [`getCost()`](#getcost) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+This method is unrestricted and allowed on any topic by any payer account.
 
-</details>
+Deleted accounts will not be returned.
 
-## Methods
+Returns [`TopicInfo`](./TopicInfo.md) from [`execute`](../Query.md).
 
-### `constructor()`
+<!-- tabs:start -->
 
-```typescript
-constructor()
+#### ** Java **
+
+```java
+var handle = new TopicMessageQuery()
+    .setTopicId(topicId)
+    .setStartTime(Instant.EPOCH)
+    .subscribe(client, (message) -> {
+        receivedMessage[0] = new String(message.contents, StandardCharsets.UTF_8).equals("Hello, from HCS!");
+    });
 ```
 
-### `setTopicId()`
+#### ** JavaScript **
 
-```typescript
-setTopicId(id: TopicId): this
+```javascript
+const handle = new TopicMessageQuery()
+    .setTopicId(topic)
+    .setStartTime(0)
+    .subscribe(client, (message) => {
+        received = utf8.decode(message.contents) === contents;
+    });
 ```
 
-### `setStartTime()`
+#### ** Go **
 
-```typescript
-setStartTime(time: Timestamp): this
+```go
+handle, err = hedera.NewTopicMessageQuery().
+    SetTopicID(topicID).
+    SetStartTime(time.Unix(0, 0)).
+    Subscribe(client, func(message TopicMessage) {
+        if string(message.Contents) == bigContents {
+            wait = false
+        }
+	})
+if err != nil {
+    println(err.Error())
+}
 ```
 
-### `setEndTime()`
+<!-- tabs:end -->
+
+## Properties
+
+### `topicId` : [`TopicId`](reference/consensus/TopicId.md)
+
+A required topic ID to retrieve messages for.
+
+## Declaration
 
 ```typescript
-setEndTime(time: Timestamp): this
-```
+class TopicInfoQuery extends Query<TopicInfo> {
+    constructor();
 
-### `setLimit()`
-
-```typescript
-setLimit(limit: long): this
-```
-
-### `subscribe()`
-
-```typescript
-subscribe(
-    client: Client,
-    onNext: Consumer<TopicMessage>): SubscriptionHandle
-```
-
-### `execute()`
-
-```typescript
-async execute(client: Client): this
-```
-
-### `setNodeId()`
-
-```typescript
-setNodeId(id: AccountId): this
-```
-
-### `getNodeId()`
-
-```typescript
-getNodeId(): AccountId
-```
-
-### `setQueryPayment()`
-
-```typescript
-setQueryPayment(payment: Hbar): this
-```
-
-### `setMaxQueryPayment()`
-
-```typescript
-setMaxQueryPayment(payment: Hbar): this
-```
-
-### `getCost()`
-
-```typescript
-async getCost(client: Client): Hbar
-```
-
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
-
-### `fromBytes()`
-
-```typescript
-fromBytes(data: bytes): this
+    getTopicId(): TopicId;
+    setTopicId(topicId: TopicId): this;
+}
 ```

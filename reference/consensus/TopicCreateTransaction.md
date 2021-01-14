@@ -48,7 +48,7 @@ const newTopicId = receipt.topicId;
 
 ```go
 
-response, err := NewTopicCreateTransaction().
+response, err := hedera.NewTopicCreateTransaction().
     SetAdminKey(client.GetOperatorPublicKey()).
     SetSubmitKey(client.GetOperatorPublicKey()).
     SetTopicMemo(topicMemo).

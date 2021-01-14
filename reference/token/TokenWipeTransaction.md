@@ -59,7 +59,7 @@ await (
 #### ** Go **
 
 ```go
-response, err = NewTokenWipeTransaction().
+response, err = hedera.NewTokenWipeTransaction().
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetTokenID(tokenID).
     SetAccountID(accountID).

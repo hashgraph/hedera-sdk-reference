@@ -42,7 +42,7 @@ const newAccountId = receipt.accountId;
 #### ** Go **
 
 ```go
-transaction, err := NewAccountUpdateTransaction().
+transaction, err := hedera.NewAccountUpdateTransaction().
     SetAccountID(accountID).
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
     SetKey(newKey2.PublicKey()).

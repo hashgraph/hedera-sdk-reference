@@ -54,7 +54,7 @@ await (
 #### ** Go **
 
 ```go
-response, err = NewTokenFreezeTransaction().
+response, err = hedera.NewTokenFreezeTransaction().
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAccountID(accountID).
     SetTokenID(tokenID).

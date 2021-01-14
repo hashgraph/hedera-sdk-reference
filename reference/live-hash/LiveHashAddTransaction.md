@@ -36,7 +36,7 @@ await (
 #### ** Go **
 
 ```go
-response, err = NewLiveHashAddTransaction().
+response, err = hedera.NewLiveHashAddTransaction().
     SetTopicID(topicID).
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     Execute(client)

@@ -68,7 +68,7 @@ tokenId = (await response.getReceipt(client)).tokenId;
 #### ** Go **
 
 ```go
-response, err := NewTokenCreateTransaction().
+response, err := hedera.NewTokenCreateTransaction().
     SetTokenName("ffff").
     SetTokenSymbol("F").
     SetDecimals(3).

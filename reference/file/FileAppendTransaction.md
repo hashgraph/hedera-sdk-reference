@@ -65,7 +65,7 @@ const receipt = await (
 #### ** Go **
 
 ```go
-response, err := NewFileAppendTransaction().
+response, err := hedera.NewFileAppendTransaction().
     SetFileID(fileID).
     SetContents([]bytes(transaction))
     Execute(client) // TransactionResponse

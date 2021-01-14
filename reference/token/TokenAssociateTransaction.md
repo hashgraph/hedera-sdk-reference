@@ -55,7 +55,7 @@ await (
 #### ** Go **
 
 ```go
-transaction, err := NewTokenAssociateTransaction().
+transaction, err := hedera.NewTokenAssociateTransaction().
     SetNodeAccountIDs([]AccountID{response.NodeID}).
     SetAccountID(accountID).
     SetTokenIDs(tokenID).

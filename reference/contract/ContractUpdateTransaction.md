@@ -45,7 +45,7 @@ await (
 #### ** Go **
 
 ```go
-response, err := NewContractUpdateTransaction().
+response, err := hedera.NewContractUpdateTransaction().
     SetContractID(contractID).
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
     SetContractMemo("[e2e::ContractUpdateTransaction]").

@@ -38,9 +38,7 @@ await (
 #### ** Go **
 
 ```go
-newKey := hedera.GeneratePrivateKey()
-
-response, err := NewTopicMessageSubmitTransaction().
+response, err := hedera.NewTopicMessageSubmitTransaction().
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
     SetMessage([]byte(Contents)).
     SetTopicID(topicID).
