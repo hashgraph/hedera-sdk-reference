@@ -2,8 +2,21 @@
 
 Retrieve the latest state of a bytecode.
 
-
 Returns [`ContractByteCode`](./ContractByteCode.md) from [`execute`](../Query.md).
+
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class ContractByteCodeQuery extends Query<ContractByteCode> {
+    constructor();
+
+    getContractId(): ContractId;
+    setContractId(ContractId: ContractId): this;
+}
+```
+
+</details>
 
 <!-- tabs:start -->
 
@@ -41,19 +54,14 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ## Properties
 
-### `ContractId` : [`ContractId`](reference/contract/ContractId.md)
+### `contractId` : [`ContractId`](reference/contract/ContractId.md)
 
 The Contract for which information is being requested.
-
-## Declaration
-
-```typescript
-class ContractByteCodeQuery extends Query<ContractByteCode> {
-    constructor();
-
-    getContractId(): ContractId;
-    setContractId(ContractId: ContractId): this;
-}
-```

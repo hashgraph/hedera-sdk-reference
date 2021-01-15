@@ -81,6 +81,12 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `tokenTransfers`: `Map<TokenId, Map<AccountId, Long>>`

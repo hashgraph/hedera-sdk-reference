@@ -49,6 +49,12 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `tokenId`: `TokenId`

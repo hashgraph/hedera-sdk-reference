@@ -19,6 +19,7 @@
     <summary>Cryptography &nbsp; <i class="fas fa-key"></i></summary>
 
         * [`Key`](reference/cryptography/Key.md)
+        * [`Keystore`](reference/cryptography/Keystore.md)
         * [`PublicKey`](reference/cryptography/PublicKey.md)
         * [`PrivateKey`](reference/cryptography/PrivateKey.md)
         * [`Mnemonic`](reference/cryptography/Mnemonic.md)
@@ -31,6 +32,7 @@
 
         * [`AccountId`](reference/cryptocurrency/AccountId.md)
         * [`AccountInfo`](reference/cryptocurrency/AccountInfo.md)
+        * [`AccountBalance`](reference/cryptocurrency/AccountBalance.md)
         * [`AccountBalanceQuery`](reference/cryptocurrency/AccountBalanceQuery.md)
         * [`AccountInfoQuery`](reference/cryptocurrency/AccountInfoQuery.md)
         * [`AccountRecordsQuery`](reference/cryptocurrency/AccountRecordsQuery.md)

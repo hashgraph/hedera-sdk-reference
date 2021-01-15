@@ -69,6 +69,12 @@ newAccountId := *receipt.accountId;
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `AccountId`: [`AccountId`](reference/cryptography/AccountId.md)

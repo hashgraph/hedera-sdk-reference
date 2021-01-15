@@ -55,6 +55,12 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `TopicId`: [`TopicId`](reference/consensus/TopicId.md)

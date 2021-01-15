@@ -22,14 +22,7 @@
 ```java
 new TopicUpdateTransaction()
     .setNodeAccountIds(Collections.singletonList(response.nodeId))
-    .setTransactionId(new TransactionId(AccountId.fromString("0.0.5006"), validStart))
     .setTopicId(TopicId.fromString("0.0.5007"))
-    .setAdminKey(unusedPrivateKey)
-    .setAutoRenewAccountId(AccountId.fromString("0.0.5009"))
-    .setAutoRenewPeriod(Duration.ofHours(24))
-    .setSubmitKey(unusedPrivateKey)
-    .freeze()
-    .sign(unusedPrivateKey)
     .execute(client)
     .getReceipt(client)
 ```
@@ -37,17 +30,12 @@ new TopicUpdateTransaction()
 #### ** JavaScript **
 
 ```js
-const newKey = PrivateKey.generate();
-
-const accountCreateTransaction = new AccountCreateTransaction({
-    key: newKey,
-    initialBalance: new Hbar(10),
-});
-
-const response = await accountCreateTransaction.execute(client);
-const receipt = await response.getReceipt(client);
-
-const newAccountId = receipt.accountId;
+await(
+    await new TopicUpdateTransaction()
+        .setNodeAccountIds(Collections.singletonList(response.nodeId))
+        .setTopicId(TopicId.fromString("0.0.5007"))
+        .execute(client)
+).getReceipt(client)
 ```
 
 #### ** Go **
@@ -69,6 +57,12 @@ if err != nil {
 ```
 
 <!-- tabs:end -->
+
+### Constructor
+
+##### `constructor`()
+
+---
 
 ### Methods
 

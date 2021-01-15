@@ -95,6 +95,12 @@ tokenID := *receipt.TokenID
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `name`: `string`

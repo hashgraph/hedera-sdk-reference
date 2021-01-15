@@ -77,6 +77,12 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `tokenId`: [`TokenId`](reference/token/TokenId.md)

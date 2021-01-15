@@ -12,6 +12,12 @@
 
 </details>
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `StartTime`: `Instant`

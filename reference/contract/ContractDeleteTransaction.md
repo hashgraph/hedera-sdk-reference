@@ -54,16 +54,22 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
-##### `ContractId`: [`ContractId`](reference/contract/ContractId.md)
+##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
 ---
 
-##### `TransferAccountId`: [`AccointId`](reference/cryptocurrency/AccountId.md)
+##### `transferAccountId`: [`AccointId`](reference/cryptocurrency/AccountId.md)
 
 ---
 
-##### `TransferContractId`: [`ContractId`](reference/contract/ContractId.md)
+##### `transferContractId`: [`ContractId`](reference/contract/ContractId.md)
 
 ---

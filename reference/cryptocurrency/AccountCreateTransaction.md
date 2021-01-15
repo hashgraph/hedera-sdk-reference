@@ -92,6 +92,12 @@ accountID := *receipt.AccountID
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `key`: [`Key`](reference/cryptography/Key.md)

@@ -62,6 +62,12 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `ContractId`: [`ContractId`](reference/contract/ContractId.md)

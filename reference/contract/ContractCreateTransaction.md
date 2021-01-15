@@ -80,6 +80,12 @@ topicId := *receipt.TopicID
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `BytecodeFileID`: [`FileId`](reference/file/FileId.md)

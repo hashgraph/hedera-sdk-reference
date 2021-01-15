@@ -68,6 +68,12 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `AccountId`: [`AccountId`](reference/cryptography/AccountId.md)

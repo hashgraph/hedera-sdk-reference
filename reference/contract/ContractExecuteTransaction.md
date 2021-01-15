@@ -66,21 +66,27 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
-##### `ContractId`: [`ContractId`](reference/contract/ContractId.md)
+##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
 ---
 
-##### `Gas`: `Uint64`
+##### `gas`: `Uint64`
 
 ---
 
-##### `PayableAmount`: [`Hbar`](reference/Hbar.md)
+##### `payableAmount`: [`Hbar`](reference/Hbar.md)
 
 ---
 
-##### `FunctionParameters`: `bytes`
+##### `functionParameters`: `bytes`
 
 ---
 

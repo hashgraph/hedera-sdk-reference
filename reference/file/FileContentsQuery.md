@@ -58,6 +58,12 @@ if err != nil {
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `fileId`: [`FileId`](reference/file/FileId.md)

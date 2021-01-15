@@ -67,6 +67,12 @@ topicID := *receipt.TopicID
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `TopicId`: [`TopicId`](reference/consensus/TopicId.md)

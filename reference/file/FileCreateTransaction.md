@@ -74,6 +74,12 @@ fileId := receipt.FileId // Nullable<FileID>
 
 <!-- tabs:end -->
 
+### Constructor
+
+##### `constructor`()
+
+---
+
 ### Properties
 
 ##### `keys`: [`Key`](reference/cryptography/Key.md)[]
