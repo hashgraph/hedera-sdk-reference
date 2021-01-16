@@ -72,24 +72,38 @@ if err != nil {
 
 ---
 
+### Methods
+
+##### `setFunction` ( `name`: `String` ): `ContractExecuteTransaction`
+
+---
+
+##### `setFunction` ( `name`: `String`, `params`: `ContractFunctionParameters` ): `ContractExecuteTransaction`
+
+---
+
 ### Properties
 
 ##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
+
+The `ContractId` if the instance to execute.
 
 ---
 
 ##### `gas`: `Uint64`
 
+The maximum amount of gas to use for the execution.
+
 ---
 
 ##### `payableAmount`: [`Hbar`](reference/Hbar.md)
+
+Number of tinybars sent.
 
 ---
 
 ##### `functionParameters`: `bytes`
 
----
-
-##### **Write-only** `Function`: `this`
+Which function to execute, and the parameters to pass to the function.
 
 ---

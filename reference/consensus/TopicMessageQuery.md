@@ -1,4 +1,4 @@
-# class `TopicInfoQuery`
+# class `TopicMessageQuery`
 
 Retrieve the latest topic messages.
 
@@ -6,7 +6,21 @@ This method is unrestricted and allowed on any topic by any payer account.
 
 Deleted accounts will not be returned.
 
-Returns [`TopicInfo`](./TopicInfo.md) from [`execute`](../Query.md).
+Returns [`TopicMessage`](./TopicMessage.md) from [`execute`](../Query.md).
+
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class TopicMessageQuery extends Query<TopicInfo> {
+    constructor();
+
+    getTopicId(): TopicId;
+    setTopicId(topicId: TopicId): this;
+}
+```
+
+</details>
 
 <!-- tabs:start -->
 
@@ -62,13 +76,4 @@ if err != nil {
 
 A required topic ID to retrieve messages for.
 
-## Declaration
-
-```typescript
-class TopicInfoQuery extends Query<TopicInfo> {
-    constructor();
-
-    getTopicId(): TopicId;
-    setTopicId(topicId: TopicId): this;
-}
-```
+---

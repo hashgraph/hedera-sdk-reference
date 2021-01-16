@@ -63,8 +63,12 @@ if err != nil {
 
 ##### `accountId`: `AccountId`
 
+The account ID for which information is requested
+
 ---
 
 ##### `contractId`: `ContractId`
+
+The contract ID for which information is requested
 
 ---

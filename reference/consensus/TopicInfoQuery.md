@@ -8,6 +8,20 @@ Deleted accounts will not be returned.
 
 Returns [`TopicInfo`](./TopicInfo.md) from [`execute`](../Query.md).
 
+<details>
+<summary><b>Declaration</b></summary>
+
+```typescript
+class TopicInfoQuery extends Query<TopicInfo> {
+    constructor();
+
+    getTopicId(): TopicId;
+    setTopicId(topicId: TopicId): this;
+}
+```
+
+</details>
+
 <!-- tabs:start -->
 
 #### ** Java **
@@ -48,14 +62,3 @@ if err != nil {
 ### `topicId` : [`TopicId`](reference/consensus/TopicId.md)
 
 The Topic for which information is being requested.
-
-## Declaration
-
-```typescript
-class TopicInfoQuery extends Query<TopicInfo> {
-    constructor();
-
-    getTopicId(): TopicId;
-    setTopicId(topicId: TopicId): this;
-}
-```

@@ -62,4 +62,6 @@ if err != nil {
 
 ##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
+The `AccountId` for which the records should be retrieved.
+
 ---

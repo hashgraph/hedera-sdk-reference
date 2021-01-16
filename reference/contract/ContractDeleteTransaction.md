@@ -64,12 +64,18 @@ if err != nil {
 
 ##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
+The `ContractId` of the contract to be deleted.
+
 ---
 
 ##### `transferAccountId`: [`AccointId`](reference/cryptocurrency/AccountId.md)
 
+The `AccountId` of an account to receive any remaining `Hbar` from the deleted contract.
+
 ---
 
 ##### `transferContractId`: [`ContractId`](reference/contract/ContractId.md)
+
+The `ContractId` of a contract to receive any remaining `Hbar` from the deleted contract
 
 ---

@@ -80,26 +80,41 @@ if err != nil {
 
 ---
 
+### Methods
+
+##### `setFunction` ( `name`: `String` ): `ContractCallQuery`
+
+---
+
+##### `setFunction` ( `name`: `String`, `params`: `ContractFunctionParameters` ): `ContractCallQuery`
+
+---
+
+`Function`: `ContractCallQuery`
+
 ## Properties
 
 ##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
-The Contract for which information is being requested.
+The `ContractId` for which information is being requested.
 
 ---
 
-##### `Gas`: `Uint64`
+##### `gas`: `Uint64`
+
+The amount of gas to use for the call.
+All of the gas offered will be used and charged a corresponding fee.
 
 ---
 
-##### `FunctionParameters`: `bytes`
+##### `functionParameters`: `bytes`
 
----
-
-##### **Write-only** `Function`: `ContractCallQuery`
+Which function to call, and the parameters to pass to the function
 
 ---
 
 ##### **Write-only** `MaxResultSize`: `ContractCallQuery`
+
+Maximum number of bytes that the result might include. The run will fail if it is returning more than this number of bytes.
 
 ---

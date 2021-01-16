@@ -64,4 +64,6 @@ if err != nil {
 
 ### `contractId` : [`ContractId`](reference/contract/ContractId.md)
 
-The Contract for which information is being requested.
+The `ContractId` for which information is being requested.
+
+---

@@ -92,26 +92,45 @@ clearAutoRenewAccountId(): this
 
 ### Properties
 
-##### `TopicId`: [`TopicId`](reference/consensus/TopicId.md)
+##### `topicId`: [`TopicId`](reference/consensus/TopicId.md)
+
+`TopicId` to be updated.
 
 ---
 
-##### `AdminKey`: [`Key`](reference/cryptography/Key.md)
+##### `adminKey`: [`Key`](reference/cryptography/Key.md)
+
+Access control for update/delete of the topic.
+If unspecified, no change.
+If empty `keyList` - the `adminKey` is cleared.
 
 ---
 
-##### `SubmitKey`: [`Key`](reference/cryptography/Key.md)
+##### `submitKey`: [`Key`](reference/cryptography/Key.md)
+
+Access control for `submitMessage`.
+If unspecified, no change.
+If empty `keyList` - the `submitKey` is cleared.
 
 ---
 
-##### `AutoRenewPeriod`: `Duration`
+##### `autoRenewPeriod`: `Duration`
+
+The amount of time to extend the topic's lifetime automatically at `expirationTime` if the `autoRenewAccountId` is
+configured and has funds.
 
 ---
 
-##### `AutoRenewAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `autoRenewAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+
+Optional account to be used at the topic's `expirationTime` to extend the life of the topic.
+If specified as the default value (0.0.0), the `autoRenewAccountId` will be removed.
+If unspecified, no change.
 
 ---
 
-##### `TopicMemo`: `String`
+##### `topicMemo`: `String`
+
+Short publicly visible memo about the topic. No guarantee of uniqueness. Null for "do not update".
 
 ---

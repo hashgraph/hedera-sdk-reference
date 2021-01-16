@@ -75,26 +75,38 @@ topicID := *receipt.TopicID
 
 ### Properties
 
-##### `TopicId`: [`TopicId`](reference/consensus/TopicId.md)
+##### `adminKey`: [`Key`](reference/cryptography/Key.md)
+
+Access control for updating/deleting.
+If no adminKey is specified, updateTopic may only be used to extend the topic's `expirationTime`, and deletion
+is disallowed.
 
 ---
 
-##### `AdminKey`: [`Key`](reference/cryptography/Key.md)
+##### `submitKey`: [`Key`](reference/cryptography/Key.md)
+
+Access control for submitMessage. If unspecified, no access control is performed (all submissions are allowed).
 
 ---
 
-##### `SubmitKey`: [`Key`](reference/cryptography/Key.md)
+##### `autoRenewPeriod`: `Duration`
+
+The initial lifetime of the topic and the amount of time to attempt to extend the topic's lifetime by
+automatically at the topic's `expirationTime`, if the `autoRenewAccountId` is configured
 
 ---
 
-##### `AutoRenewPeriod`: `Duration`
+##### `autoRenewAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+
+Optional account to be used at the topic's `expirationTime` to extend the life of the topic.
+The topic lifetime will be extended up to a maximum of the `autoRenewPeriod` or however long the topic
+can be extended using all funds on the account.
+If specified, there must be an `adminKey` and the `autoRenewAccount` must sign this transaction.
 
 ---
 
-##### `AutoRenewAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `topicMemo`: `String`
 
----
-
-##### `TopicMemo`: `String`
+Short publicly visible memo about the topic. No guarantee of uniqueness.
 
 ---

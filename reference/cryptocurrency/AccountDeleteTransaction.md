@@ -76,10 +76,14 @@ if err != nil {
 
 ### Properties
 
-##### `AccountId`: [`AccountId`](reference/cryptography/AccountId.md)
+##### `accountId`: [`AccountId`](reference/cryptography/AccountId.md)
+
+The AccountId which should be deleted
 
 ---
-##### `TransferAccountId`: [`AccountId`](reference/cryptography/AccountId.md)
+##### `transferAccountId`: [`AccountId`](reference/cryptography/AccountId.md)
+
+The `AccountId` which will receive all remaining hbars
 
 ---
 

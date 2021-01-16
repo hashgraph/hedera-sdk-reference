@@ -57,6 +57,8 @@ if err != nil {
 
 ### Properties
 
-##### `TopicId`: [`TopicId`](reference/consensus/TopicId.md)
+##### `topicId`: [`TopicId`](reference/consensus/TopicId.md)
+
+The `TopicId` which should be deleted
 
 ---

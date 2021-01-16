@@ -117,6 +117,8 @@ if err != nil {
 
 ##### `generate` (): `PrivateKey`
 
+Generates a new Ed25519 private key.
+
 ---
 
 ##### `fromBytes` ( `data`: `bytes` ): `PrivateKey`
@@ -127,21 +129,32 @@ Parses a private key from bytes.
 
 ##### `fromString` ( `text`: `string` ): `PrivateKey`
 
+Recovers an PrivateKey from its text-encoded representation.
+
 ---
 
 ##### `readPem` ( `pem`: `Reader` ): `PrivateKey`
+
+Parse a private key from a PEM encoded reader.
+This will read the first "PRIVATE KEY" section in the stream as an Ed25519 private key.
 
 ---
 
 ##### `fromPem` ( `pem`: `String` ): `PrivateKey`
 
+Parse a private key from a PEM encoded string.
+
 ---
 
 ##### `fromKeystore` ( `data`: `bytes`, `passphrase`: `string` ): `PrivateKey`
 
+Recovers an PrivateKey from an encrypted keystore encoded as a byte slice.
+
 ---
 
 ##### `fromLegacyMnemonic` ( `data`: `bytes`): `PrivateKey`
+
+Recovers an ed25519 private key from a  22 word mnemonic, using legacy word list.
 
 ---
 
@@ -161,17 +174,25 @@ mnemonics use a legacy word list from the original Hedera mobile wallets.
 
 ##### `isDerivable` (): `boolean`
 
+Check if this private key supports derivation.
+
 ---
 
 ##### `derive` ( `index`: `Uint` ): `PrivateKey`
+
+Given a wallet/account index, derive a child key compatible with the iOS and Android wallets.
 
 ---
 
 ##### `sign` ( `message`: `bytes` ): `bytes`
 
+Sign a message with this private key.
+
 ---
 
 ##### `signTransaction` ( `transaction`: `Transaction<?>` ): `bytes`
+
+Sign a transaction with this private key.
 
 ---
 
@@ -192,5 +213,7 @@ Converts this key into bytes.
 ### Properties
 
 ##### `publicKey`: `PublicKey`
+
+Derive a public key from this private key.
 
 ---

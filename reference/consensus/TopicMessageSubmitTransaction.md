@@ -65,8 +65,12 @@ if err != nil {
 
 ##### `TopicId`: [`TopicId`](reference/consensus/TopicId.md)
 
+Topic to submit message to.
+
 ---
 
 ##### `Message: `bytes`
+
+Message to be submitted. Max size of the Transaction (including signatures) is 6KiB.
 
 ---

@@ -61,4 +61,6 @@ if err != nil {
 
 ##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
+The `AccountId` for which information is requested
+
 ---
