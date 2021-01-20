@@ -1,6 +1,6 @@
 # `AccountDeleteTransaction`
 
-> class `AccountDeletedTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `AccountDeletedTransaction` extends [`Transaction`](reference/core/Transaction.md)
 > [!WARNING]
 > When you delete an account, you need to sign it with the key set at account creation.
 

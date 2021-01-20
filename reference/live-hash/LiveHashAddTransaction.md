@@ -11,7 +11,7 @@
 | [`Duration`](#duration-duration) | ✅ | ✅ | ✅
 </details>
 
-> class `LiveHashAddTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `LiveHashAddTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

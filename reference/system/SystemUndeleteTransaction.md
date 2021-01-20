@@ -9,7 +9,7 @@
 | [`ContractId`](#contractid-contractidreferencecontractcontractidmd) | ✅ | ✅ | ✅
 </details>
 
-> class `SystemUndeleteTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `SystemUndeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

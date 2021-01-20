@@ -15,7 +15,7 @@
 | [`ConstructorParameters`](#constructorparameters-bytestring) | ✅ | ✅ | ✅
 </details>
 
-> class `ContractCreateTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `ContractCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

@@ -10,7 +10,7 @@
 | [`ExpirationTime`](#expirationtime-instant) | ✅ | ✅ | ✅
 </details>
 
-> class `SystemDeleteTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `SystemDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

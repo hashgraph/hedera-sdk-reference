@@ -8,7 +8,7 @@
 | [`topicId`](#topicid-topicid) | ✅ | ✅ | ✅
 </details>
 
-> class `TopicDeleteTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TopicDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

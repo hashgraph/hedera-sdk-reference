@@ -1,6 +1,6 @@
 # `TokenCreateTransaction`
 
-> class `TokenCreateTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TokenCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Create a new token. After the token is created, the Token ID for it is in the receipt.
 The specified Treasury Account is receiving the initial supply of tokens as-well as the tokens from the Token Mint

@@ -12,7 +12,7 @@
 | [`Function`](#write-only-function-this) | ✅ | ✅ | ✅
 </details>
 
-> class `ContractExecuteTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `ContractExecuteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

@@ -13,7 +13,7 @@
 | [`AutoRenewAccountId`](#autorenewaccountid-accountid) | ✅ | ✅ | ✅
 </details>
 
-> class `TopicUpdateTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TopicUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

@@ -1,6 +1,6 @@
 # `TokenMintTransaction`
 
-> class `TokenMintTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TokenMintTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Mints tokens to the Token's treasury Account. If no Supply Key is defined, the transaction will resolve to
 [`Status.TOKEN_HAS_NO_SUPPLY_KEY`](reference/Status.md#TOKEN_HAS_NO_SUPPLY_KEY).

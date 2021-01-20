@@ -10,7 +10,7 @@
 | [`TransferContractId`](#transfercontractid-contractidreferencecontractcontractidmd) | ✅ | ✅ | ✅
 </details>
 
-> class `ContractDeleteTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `ContractDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

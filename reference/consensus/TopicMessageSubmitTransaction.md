@@ -9,7 +9,7 @@
 | [`Message`](#message-bytestring) | ✅ | ✅ | ✅
 </details>
 
-> class `TopicSubmitTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TopicSubmitTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

@@ -1,6 +1,6 @@
 # `TokenDissociateTransaction`
 
-> class `TokenDissociateTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TokenDissociateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Dissociates the provided account with the provided tokens. Must be signed by the provided Account's key.
 

@@ -14,7 +14,7 @@
 | [`BytecodeFileId`](#bytecodefileid-fileidreferencefilefileidmd) | ✅ | ✅ | ✅
 </details>
 
-> class `ContractUpdateTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `ContractUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

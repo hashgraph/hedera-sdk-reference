@@ -1,6 +1,6 @@
 # `TokenDeleteTransaction`
 
-> class `TokenDeleteTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TokenDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Marks a token as deleted, though it will remain in the ledger.
 The operation must be signed by the specified Admin Key of the Token. If admin key is not set, Transaction will result

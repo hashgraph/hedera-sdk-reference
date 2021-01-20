@@ -10,7 +10,7 @@
 
 </details>
 
-> class `TransferTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TransferTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 

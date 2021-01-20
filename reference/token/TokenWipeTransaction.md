@@ -1,6 +1,6 @@
 # `TokenWipeTransaction`
 
-> class `TokenWipeTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TokenWipeTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Wipes the provided amount of tokens from the specified Account. Must be signed by the Token's Wipe key.
 
