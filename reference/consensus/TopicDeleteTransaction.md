@@ -5,7 +5,7 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`TopicId`](#topicid) | ✅ | ✅ | ✅
+| [`topicId`](#topicid-topicid) | ✅ | ✅ | ✅
 </details>
 
 > class `TopicDeleteTransaction` extends [`Transaction`](reference/Transaction.md)
@@ -59,6 +59,6 @@ if err != nil {
 
 ##### `topicId`: [`TopicId`](reference/consensus/TopicId.md)
 
-The `TopicId` which should be deleted
+The `topicId` which should be deleted
 
 ---

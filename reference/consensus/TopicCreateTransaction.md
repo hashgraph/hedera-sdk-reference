@@ -5,15 +5,14 @@
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`TopicId`](#topicid-topicidreferenceconsensustopicidmd) | ✅ | ✅ | ✅
-| [`TopicMemo`](#topicmemo-string) | ✅ | ✅ | ✅
-| [`AdminKey`](#adminkey-keyreferencecryptographykeymd) | ✅ | ✅ | ✅
-| [`SubmitKey`](#submitkey-keyreferencecryptographykeymd) | ✅ | ✅ | ✅
-| [`AutoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
-| [`AutoRenewAccountId`](#autorenewaccountid-accountidreferencecryptocurrencyaccountidmd) | ✅ | ✅ | ✅
+| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
+| [`submitKey`](#submitkey-key) | ✅ | ✅ | ✅
+| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
+| [`autoRenewAccountId`](#autorenewaccountid-accountid) | ✅ | ✅ | ✅
+| [`topicMemo`](#topicmemo-string) | ✅ | ✅ | ✅
 </details>
 
-> class `TopicCreateTransaction` extends [`Transaction`](reference/Transaction.md)
+> class `TopicCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 
