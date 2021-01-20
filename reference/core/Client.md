@@ -135,7 +135,7 @@ Construct a Hedera client pre-configured for Previewnet access.
 
 ---
 
-##### `fromConfig` ( `data`: `string` ): `Client`
+##### `fromConfig` ( `data`: `String` ): `Client`
 
 Configure a client from the JSON configuration string.
 
@@ -194,7 +194,7 @@ or
 
 ---
 
-##### `fromConfigFile` ( `filename`: `string` ): `Client`
+##### `fromConfigFile` ( `filename`: `String` ): `Client`
 
 ---
 

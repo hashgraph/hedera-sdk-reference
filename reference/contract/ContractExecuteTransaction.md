@@ -1,18 +1,15 @@
-# `ContractExecuteTransaction`
+> class `ContractExecuteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`ContractId`](#contractid-contractidreferencecontractcontractidmd) | ✅ | ✅ | ✅
-| [`Gas`](#gas-uint64) | ✅ | ✅ | ✅
-| [`PayableAmount`](#payableamount-hbarreferencehbarmd) | ✅ | ✅ | ✅
-| [`FunctionParameters`](#functionparameters-bytestring) | ✅ | ✅ | ✅
-| [`Function`](#write-only-function-this) | ✅ | ✅ | ✅
+| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
+| [`gas`](#gas-uint64) | ✅ | ✅ | ✅
+| [`payableAmount`](#payableamount-hbar) | ✅ | ✅ | ✅
+| [`functionParameters`](#read-only-functionparameters-bytes) | ✅ | ✅ | ✅
 </details>
-
-> class `ContractExecuteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 
@@ -102,8 +99,12 @@ Number of tinybars sent.
 
 ---
 
-##### `functionParameters`: `bytes`
+##### **Read-only** `functionParameters`: `bytes`
 
-Which function to execute, and the parameters to pass to the function.
+Which function to execute, and the parameters to pass to the function. Use 
+[`setFunction(name)`](#setfunction-name-string-contractcallquery) and
+[`setFunction(name, params)`](#setfunction-name-string-params-contractfunctionparameters-contractcallquery) 
+to set this field.
+
 
 ---

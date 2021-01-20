@@ -90,7 +90,7 @@ if err != nil {
 
 ---
 
-##### `ExpirationTime`: `Instant`
+##### `ExpirationTime`: `Timestamp`
 
 ---
 

@@ -99,6 +99,6 @@ This is the fileID which contents will be appended to.
 
 These are the contents which will be appended to the file.
 
-**Note**. The setter `.setContents()` supports types `bytes` **and** UTF-8 `string`.
+**Note**. The setter `.setContents()` supports types `bytes` **and** UTF-8 `String`.
 
 ---

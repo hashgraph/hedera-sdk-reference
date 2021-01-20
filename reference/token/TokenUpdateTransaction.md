@@ -78,13 +78,13 @@ The Token to be updated
 
 ---
 
-##### `name`: `string`
+##### `name`: `String`
 
 The new Name of the Token. Must be a string of ASCII characters.
 
 ---
 
-##### `symbol`: `string`
+##### `symbol`: `String`
 
 The new Symbol of the Token. Must be UTF-8 capitalized alphabetical string identifying the token.
 

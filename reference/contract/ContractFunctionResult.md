@@ -1,160 +1,118 @@
-# `ContractFunctionResult`
+> class `ContractFunctionResult`
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`contractId`](#contractid) | ✅ | ✅ | ✅
-| [`errorMessage`](#errormessage) | ✅ | ✅ | ✅
-| [`bloom`](#bloom) | ✅ | ✅ | ✅
-| [`gasUsed`](#gasused) | ✅ | ✅ | ✅
-| [`logs`](#logs) | ✅ | ✅ | ✅
-| [`asBytes()`](#asbytes) | ✅ | ✅ | ✅
-| [`getString()`](#getstring) | ✅ | ✅ | ✅
-| [`getStringArray()`](#getstringarray) | ✅ | ✅ | ✅
-| [`getBytes()`](#getbytes) | ✅ | ✅ | ✅
-| [`getBytes32()`](#getbytes32) | ✅ | ✅ | ✅
-| [`getDynamicBytes()`](#getdynamicbytes) | ✅ | ✅ | ✅
-| [`getBool()`](#getbool) | ✅ | ✅ | ✅
-| [`getInt8()`](#getint8) | ✅ | ✅ | ✅
-| [`getInt32()`](#getint32) | ✅ | ✅ | ✅
-| [`getInt64()`](#getint64) | ✅ | ✅ | ✅
-| [`getInt256()`](#getint256) | ✅ | ✅ | ✅
-| [`getUint8()`](#getuint8) | ✅ | ✅ | ✅
-| [`getUint32()`](#getuint32) | ✅ | ✅ | ✅
-| [`getUint64()`](#getuint64) | ✅ | ✅ | ✅
-| [`getUint256()`](#getuint256) | ✅ | ✅ | ✅
-| [`getAddress()`](#getaddress) | ✅ | ✅ | ✅
+| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
+| [`errorMessage`](#errormessage-string) | ✅ | ✅ | ✅
+| [`bloom`](#bloom-bytes) | ✅ | ✅ | ✅
+| [`gasUsed`](#gasused-uint64) | ✅ | ✅ | ✅
+| [`logs`](#logs-contractloginfo) | ✅ | ✅ | ✅
+| [`asBytes`](#asbytes-bytes) | ✅ | ✅ | ✅
+| [`getString`](#getstring-index-uint64-string) | ✅ | ✅ | ✅
+| [`getStringArray`](#getstringarray-index-uint64-string) | ✅ | ✅ | ✅
+| [`getBytes`](#getbytes-index-uint64-bytes) | ✅ | ✅ | ✅
+| [`getBytes32`](#getbytes32-index-uint64-bytes) | ✅ | ✅ | ✅
+| [`getDynamicBytes`](#getdynamicbytes-index-uint64-bytes) | ✅ | ✅ | ✅
+| [`getBool`](#getbool-index-uint64-bool) | ✅ | ✅ | ✅
+| [`getInt8`](#getint8-index-uint64-int8) | ✅ | ✅ | ✅
+| [`getInt32`](#getint32-index-uint64-int32) | ✅ | ✅ | ✅
+| [`getInt64`](#getint64-index-uint64-int64) | ✅ | ✅ | ✅
+| [`getInt256`](#getint256-index-uint64-biginteger) | ✅ | ✅ | ✅
+| [`getUint8`](#getuint8-index-uint64-uint8) | ✅ | ✅ | ✅
+| [`getUint32`](#getuint32-index-uint64-uint32) | ✅ | ✅ | ✅
+| [`getUint64`](#getuint64-index-uint64-uint64) | ✅ | ✅ | ✅
+| [`getUint256`](#getuint256-index-uint64-biginteger) | ✅ | ✅ | ✅
+| [`getAddress`](#getaddress-index-uint64-string) | ✅ | ✅ | ✅
 
 </details>
 
-## Fields
+### Properties
 
-### `contractId`
+##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
-```typescript
-contractId: ContractId
-```
+---
 
-### `errorMessage`
+##### `errorMessage`: `String`
 
-```typescript
-errorMessage: string
-```
+---
 
-### `bloom`
+##### `bloom`: `bytes`
 
-```typescript
-bloom: bytes
-```
+---
 
-### `gasUsed`
+##### `gasUsed`: `Uint64`
 
-```typescript
-gasUsed: long
-```
+---
 
-### `logs`
+##### `logs`: [`ContractLogInfo[]`](reference/contract/ContractLogInfo.md)
 
-```typescript
-logs: List<ContractLogInfo>
-```
+---
 
-## Methods
+### Methods
 
-### `asBytes()`
+##### `asBytes` ( ): `bytes`
 
-```typescript
-asBytes(): bytes
-```
+---
 
-### `getString()`
+##### `getString` ( `index`: `Uint64` ): `String`
 
-```typescript
-getString(index: int): string
-```
+---
 
-### `getStringArray()`
+##### `getStringArray` ( `index`: `Uint64` ): `String[]`
 
-```typescript
-getStringArray(index: int): List<string>
-```
+---
 
-### `getBytes()`
+##### `getBytes` ( `index`: `Uint64` ): `bytes`
 
-```typescript
-getBytes(index: int): bytes
-```
+---
 
-### `getBytes32()`
+##### `getBytes32` ( `index`: `Uint64` ): `bytes`
 
-```typescript
-getBytes32(index: int): bytes
-```
+---
 
-### `getDynamicBytes()`
+##### `getDynamicBytes` ( `index`: `Uint64` ): `bytes`
 
-```typescript
-getDynamicBytes(index: int): bytes
-```
+---
 
-### `getBool()`
+##### `getBool` ( `index`: `Uint64` ): `bool`
 
-```typescript
-getBool(index: int): boolean
-```
+---
 
-### `getInt8()`
+##### `getInt8` ( `index`: `Uint64` ): `Int8`
 
-```typescript
-getInt8(index: int): byte
-```
+---
 
-### `getInt32()`
+##### `getInt32` ( `index`: `Uint64` ): `Int32`
 
-```typescript
-getInt32(index: int): int
-```
+---
 
-### `getInt64()`
+##### `getInt64` ( `index`: `Uint64` ): `Int64`
 
-```typescript
-getInt64(index: int): long
-```
+---
 
-### `getInt256()`
+##### `getInt256` ( `index`: `Uint64` ): `BigInteger`
 
-```typescript
-getInt256(index: int): BigInteger
-```
+---
 
-### `getUint8()`
+##### `getUint8` ( `index`: `Uint64` ): `Uint8`
 
-```typescript
-getUint8(index: int): byte
-```
+---
 
-### `getUint32()`
+##### `getUint32` ( `index`: `Uint64` ): `Uint32`
 
-```typescript
-getUint32(index: int): int
-```
+---
 
-### `getUint64()`
+##### `getUint64` ( `index`: `Uint64` ): `Uint64`
 
-```typescript
-getUint64(index: int): long
-```
+---
 
-### `getUint256()`
+##### `getUint256` ( `index`: `Uint64` ): `BigInteger`
 
-```typescript
-getUint256(index: int): BigInteger
-```
+---
 
-### `getAddress()`
+##### `getAddress` ( `index`: `Uint64` ): `string`
 
-```typescript
-getAddress(index: int): string
-```
+---

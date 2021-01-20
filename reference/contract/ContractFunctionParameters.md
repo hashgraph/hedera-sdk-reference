@@ -1,233 +1,145 @@
-# `ContractFunctionParameters`
+> class `ContractFunctionParameters`
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`ADDRESS_LEN`](#address_len) | ✅ | ✅ | ✅
-| [`ADDRESS_LEN_HEX`](#address_len_hex) | ✅ | ✅ | ✅
-| [`SELECTOR_LEN`](#selector_len) | ✅ | ✅ | ✅
-| [`SELECTOR_LEN_HEX`](#selector_len_hex) | ✅ | ✅ | ✅
-| [`addString()`](#addstring) | ✅ | ✅ | ✅
-| [`addStringArray()`](#addstringarray) | ✅ | ✅ | ✅
-| [`addBytes()`](#addbytes) | ✅ | ✅ | ✅
-| [`addBytesArray()`](#addbytesarray) | ✅ | ✅ | ✅
-| [`addBytes32()`](#addbytes32) | ✅ | ✅ | ✅
-| [`addBytes32Array()`](#addbytes32array) | ✅ | ✅ | ✅
-| [`addBool()`](#addbool) | ✅ | ✅ | ✅
-| [`addInt8()`](#addint8) | ✅ | ✅ | ✅
-| [`addInt32()`](#addint32) | ✅ | ✅ | ✅
-| [`addInt64()`](#addint64) | ✅ | ✅ | ✅
-| [`addInt256()`](#addint256) | ✅ | ✅ | ✅
-| [`addInt8Array()`](#addint8array) | ✅ | ✅ | ✅
-| [`addInt32Array()`](#addint32array) | ✅ | ✅ | ✅
-| [`addInt64Array()`](#addint64array) | ✅ | ✅ | ✅
-| [`addInt256Array()`](#addint256array) | ✅ | ✅ | ✅
-| [`addUint8()`](#adduint8) | ✅ | ✅ | ✅
-| [`addUint32()`](#adduint32) | ✅ | ✅ | ✅
-| [`addUint64()`](#adduint64) | ✅ | ✅ | ✅
-| [`addUint256()`](#adduint256) | ✅ | ✅ | ✅
-| [`addUint8Array()`](#adduint8array) | ✅ | ✅ | ✅
-| [`addUint32Array()`](#adduint32array) | ✅ | ✅ | ✅
-| [`addUint64Array()`](#adduint64array) | ✅ | ✅ | ✅
-| [`addUint256Array()`](#adduint256array) | ✅ | ✅ | ✅
-| [`addAddress()`](#addaddress) | ✅ | ✅ | ✅
-| [`addAddressArray()`](#addaddressarray) | ✅ | ✅ | ✅
-| [`addFunction()`](#addfunction) | ✅ | ✅ | ✅
+| [`addString`](#addstring-param-string-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addStringArray`](#addstringarray-strings-string-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addBytes`](#addbytes-param-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addBytesArray`](#addbytesarray-param-byte-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addBytes32`](#addbytes32-param-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addBytes32Array`](#addbytes32array-param-byte-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addBool`](#addbool-bool-boolean-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addInt8`](#addint8-value-byte-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addInt32`](#addint32-value-int-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addInt64`](#addint64-value-long-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addInt256`](#addint256-value-BigInteger-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addInt8Array`](#addint8array-intArray-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addInt32Array`](#addint32array-intArray-int-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addInt64Array`](#addint64array-intArray-long-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addInt256Array`](#addint256array-intArray-BigInteger-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addUint8`](#adduint8-value-byte-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addUint32`](#adduint32-value-int-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addUint64`](#adduint64-value-long-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addUint256`](#adduint256-value-BigInteger-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addUint8Array`](#adduint8array-intArray-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addUint32Array`](#adduint32array-intArray-int-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addUint64Array`](#adduint64array-intArray-long-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addUint256Array`](#adduint256array-intArray-BigInteger-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addAddress`](#addaddress-address-string-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addAddressArray`](#addaddressarray-addresses-string-contractfunctionparameters) | ✅ | ✅ | ✅
+| [`addFunction`](#addfunction-address-string-selector-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
 
 </details>
 
-## Constants
+### Methods
 
-### `ADDRESS_LEN`
+##### `addString` ( `param`: `string` ): [`ContractFunctionParameters`](#)
 
-The length of a Solidity address in bytes.
+---
 
-```typescript
-ADDRESS_LEN: int
-```
+##### `addStringArray` ( `strings`: `string[]` ): [`ContractFunctionParameters`](#)
 
-### `ADDRESS_LEN_HEX`
+---
 
-The length of a hexadecimal-encoded Solidity address, in ASCII characters (bytes).
+##### `addBytes` ( `param`: `bytes` ): [`ContractFunctionParameters`](#)
 
-```typescript
-ADDRESS_LEN_HEX: int
-```
+---
 
-### `SELECTOR_LEN`
+##### `addBytesArray` ( `param`: `byte[][]` ): [`ContractFunctionParameters`](#)
 
-Function selector length in bytes.
+---
 
-```typescript
-SELECTOR_LEN: int
-```
+##### `addBytes32` ( `param`: `bytes` ): [`ContractFunctionParameters`](#)
 
-### `SELECTOR_LEN_HEX`
+---
 
-Function selector length in hex characters.
+##### `addBytes32Array` ( `param`: `byte[][]` ): [`ContractFunctionParameters`](#)
 
-```typescript
-SELECTOR_LEN_HEX: int
-```
+---
 
-## Methods
+##### `addBool` ( `bool`: `boolean` ): [`ContractFunctionParameters`](#)
 
-### `addString()`
+---
 
-```typescript
-addString(param: string): this
-```
+##### `addInt8` ( `value`: `byte` ): [`ContractFunctionParameters`](#)
 
-### `addStringArray()`
+---
 
-```typescript
-addStringArray(strings: string[]): this
-```
+##### `addInt32` ( `value`: `int` ): [`ContractFunctionParameters`](#)
 
-### `addBytes()`
+---
 
-```typescript
-addBytes(param: bytes): this
-```
+##### `addInt64` ( `value`: `long` ): [`ContractFunctionParameters`](#)
 
-### `addBytesArray()`
+---
 
-```typescript
-addBytesArray(param: byte[][]): this
-```
+##### `addInt256` ( `value`: `BigInteger` ): [`ContractFunctionParameters`](#)
 
-### `addBytes32()`
+---
 
-```typescript
-addBytes32(param: bytes): this
-```
+##### `addInt8Array` ( `intArray`: `bytes` ): [`ContractFunctionParameters`](#)
 
-### `addBytes32Array()`
+---
 
-```typescript
-addBytes32Array(param: byte[][]): this
-```
+##### `addInt32Array` ( `intArray`: `int[]` ): [`ContractFunctionParameters`](#)
 
-### `addBool()`
+---
 
-```typescript
-addBool(bool: boolean): this
-```
+##### `addInt64Array` ( `intArray`: `long[]` ): [`ContractFunctionParameters`](#)
 
-### `addInt8()`
+---
 
-```typescript
-addInt8(value: byte): this
-```
+##### `addInt256Array` ( `intArray`: `BigInteger` ): [`ContractFunctionParameters`](#)
 
-### `addInt32()`
+---
 
-```typescript
-addInt32(value: int): this
-```
+##### `addUint8` ( `value`: `byte` ): [`ContractFunctionParameters`](#)
 
-### `addInt64()`
+---
 
-```typescript
-addInt64(value: long): this
-```
+##### `addUint32` ( `value`: `int` ): [`ContractFunctionParameters`](#)
 
-### `addInt256()`
+---
 
-```typescript
-addInt256(value: BigInteger): this
-```
+##### `addUint64` ( `value`: `long` ): [`ContractFunctionParameters`](#)
 
-### `addInt8Array()`
+---
 
-```typescript
-addInt8Array(intArray: bytes): this
-```
+##### `addUint256` ( `value`: `BigInteger` ): [`ContractFunctionParameters`](#)
 
-### `addInt32Array()`
+---
 
-```typescript
-addInt32Array(intArray: int[]): this
-```
+##### `addUint8Array` ( `intArray`: `bytes` ): [`ContractFunctionParameters`](#)
 
-### `addInt64Array()`
+---
 
-```typescript
-addInt64Array(intArray: long[]): this
-```
+##### `addUint32Array` ( `intArray`: `int[]` ): [`ContractFunctionParameters`](#)
 
-### `addInt256Array()`
+---
 
-```typescript
-addInt256Array(intArray: BigInteger): this
-```
+##### `addUint64Array` ( `intArray`: `long[]` ): [`ContractFunctionParameters`](#)
 
-### `addUint8()`
+---
 
-```typescript
-addUint8(value: byte): this
-```
+##### `addUint256Array` ( `intArray`: `BigInteger[]` ): [`ContractFunctionParameters`](#)
 
-### `addUint32()`
+---
 
-```typescript
-addUint32(value: int): this
-```
+##### `addAddress` ( `address`: `string` ): [`ContractFunctionParameters`](#)
 
-### `addUint64()`
+---
 
-```typescript
-addUint64(value: long): this
-```
+##### `addAddressArray` ( `addresses`: `string[]` ): [`ContractFunctionParameters`](#)
 
-### `addUint256()`
+---
 
-```typescript
-addUint256(value: BigInteger): this
-```
+##### `addFunction` ( `address`: `String`, `selector`: `bytes` ): [`ContractFunctionParameters`](#)
 
-### `addUint8Array()`
+---
 
-```typescript
-addUint8Array(intArray: bytes): this
-```
+##### `addFunction` ( `address`: `String`, `selector`: [`ContractFunctionSelector`](reference/contract/ContractFunctionSelector.md) ): [`ContractFunctionParameters`](#)
 
-### `addUint32Array()`
-
-```typescript
-addUint32Array(intArray: int[]): this
-```
-
-### `addUint64Array()`
-
-```typescript
-addUint64Array(intArray: long[]): this
-```
-
-### `addUint256Array()`
-
-```typescript
-addUint256Array(intArray: BigInteger[]): this
-```
-
-### `addAddress()`
-
-```typescript
-addAddress(address: string): this
-```
-
-### `addAddressArray()`
-
-```typescript
-addAddressArray(addresses: string[]): this
-```
-
-### `addFunction()`
-
-```typescript
-addFunction(
-    address: string, selector: bytes
-    | address:string, selector: ContractFunctionSelector): this
-```
+---

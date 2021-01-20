@@ -20,10 +20,10 @@
 
 ### Properties
 
-##### `StartTime`: `Instant`
+##### `StartTime`: `Timestamp`
 
 ---
 
-##### `EndTime`: `Instant`
+##### `EndTime`: `Timestamp`
 
 ---

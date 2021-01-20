@@ -66,7 +66,6 @@
         * [`ContractId`](reference/contract/ContractId.md)
         * [`ContractInfo`](reference/contract/ContractInfo.md)
         * [`ContractInfoQuery`](reference/contract/ContractInfoQuery.md)
-        * [`ContractRecordsQuery`](reference/contract/ContractRecordsQuery.md)
         * [`ContractLogInfo`](reference/contract/ContractLogInfo.md)
         * [`ContractBytecodeQuery`](reference/contract/ContractBytecodeQuery.md)
         * [`ContractCallQuery`](reference/contract/ContractCallQuery.md)

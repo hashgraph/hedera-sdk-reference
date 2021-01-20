@@ -20,11 +20,11 @@
 
 ---
 
-##### `name`: `string`
+##### `name`: `String`
 
 ---
 
-##### `symbol`: `string`
+##### `symbol`: `String`
 
 ---
 

@@ -1,21 +1,19 @@
-# `ContractCreateTransaction`
+> class `ContractCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`BytecodeFileId`](#bytecodefileid-fileidreferencefilefileidmd) | ✅ | ✅ | ✅
-| [`ContractMemo`](#contractmemo-string) | ✅ | ✅ | ✅
-| [`AdminKey`](#adminkey-keyreferencecryptographykeymd) | ✅ | ✅ | ✅
-| [`Gas`](#gas-uint64) | ✅ | ✅ | ✅
-| [`AutoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
-| [`ProxyAccountId`](#proxyaccountid-accountidreferencecryptocurrencyaccountidmd) | ✅ | ✅ | ✅
-| [`InitialBalance`](#initialbalance-hbarreferencehbarmd) | ✅ | ✅ | ✅
-| [`ConstructorParameters`](#constructorparameters-bytestring) | ✅ | ✅ | ✅
+| [`bytecodeFileId`](#bytecodefileid-fileid) | ✅ | ✅ | ✅
+| [`contractMemo`](#contractmemo-string) | ✅ | ✅ | ✅
+| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
+| [`gas`](#gas-uint64) | ✅ | ✅ | ✅
+| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
+| [`proxyAccountId`](#proxyaccountid-accountid) | ✅ | ✅ | ✅
+| [`initialBalance`](#initialbalance-hbar) | ✅ | ✅ | ✅
+| [`constructorParameters`](#constructorparameters-bytes) | ✅ | ✅ | ✅
 </details>
-
-> class `ContractCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 
@@ -23,7 +21,7 @@
 
 ```java
 
-var newContractId = new ContractCreateTransaction()
+var contractId = new ContractCreateTransaction()
     .setAdminKey(operatorKey)
     .setNodeAccountIds(Collections.singletonList(response.nodeId))
     .setGas(2000)
@@ -32,7 +30,7 @@ var newContractId = new ContractCreateTransaction()
     .setContractMemo("[e2e::ContractCreateTransaction]")
     .execute(client)
     .getReceipt(client)
-    .topicId;
+    .contractId;
 ```
 
 #### ** JavaScript **
@@ -51,6 +49,7 @@ const response = await new ContractCreateTransaction()
     .execute(client);
 
 const receipt = await response.getReceipt(client);
+const contractId = receipt.contractId;
 ```
 
 #### ** Go **
@@ -73,7 +72,7 @@ if err != nil {
     println(err.Error())
 }
 
-topicId := *receipt.TopicID
+contractId := *receipt.contractID
 ```
 
 <!-- tabs:end -->
@@ -86,7 +85,7 @@ topicId := *receipt.TopicID
 
 ### Properties
 
-##### `bytecodeFileID`: [`FileId`](reference/file/FileId.md)
+##### `bytecodeFileId`: [`FileId`](reference/file/FileId.md)
 
 The `FileId` of the file containing the smart contract byte code.
 A copy will be made and held by the contract instance, and have the same expiration time as the instance.
@@ -113,7 +112,7 @@ Initial number of tinybars to put into the cryptocurrency account associated wit
 
 ---
 
-##### `poxyAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `proxyAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 `AccountId` of the account to which this account is proxy staked.
 If `proxyAccountID` is null, or is an invalid account, or is an account that isn't a node, then this account is automatically proxy staked to a node chosen by the network, but without earning payments.

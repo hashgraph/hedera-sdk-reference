@@ -1,66 +1,49 @@
-# `ContractLogInfo`
+> class `ContractLogInfo`
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`contractId`](#contractid) | ✅ | ✅ | ✅
-| [`bloom`](#bloom) | ✅ | ✅ | ✅
-| [`topics`](#topics) | ✅ | ✅ | ✅
-| [`data`](#data) | ✅ | ✅ | ✅
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes`](#frombytes) | ✅ | ✅ | ✅
+| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
+| [`bloom`](#bloom-bytes) | ✅ | ✅ | ✅
+| [`topics`](#topics-bytes) | ✅ | ✅ | ✅
+| [`data`](#data-bytes) | ✅ | ✅ | ✅
+| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
+| [`fromBytes`](#frombytes-data-bytes-contractloginfo) | ✅ | ✅ | ✅
 
 </details>
 
-## Fields
+### Properties
 
-### `contractId`
+##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
-```typescript
-contractId: ContractId
-```
+---
 
-### `bloom`
+##### `bloom`: `bytes`
 
-```typescript
-bloom: bytes
-```
+---
 
-### `topics`
+##### `topics`: `bytes`
 
-```typescript
-topics: List<bytes>
-```
+---
 
-### `data`
+##### `data`: `bytes`
 
-```typescript
-data: bytes
-```
+---
 
-## Methods
+### Static Methods
 
-### `constructor()`
+##### `fromBytes` ( `data`: `bytes` ): [`ContractLogInfo`](#)
 
-```typescript
-constructor(
-    id: ContractId,
-    bloom: bytes,
-    topics: List<bytes>,
-   data: bytes)
-```
+Deserialize a [`ContractLogInfo`](#) from its protobuf representation.
 
-### `fromBytes()`
+---
 
-```typescript
-fromBytes(data: bytes): this
-```
+### Methods
 
-### `toBytes()`
+##### `toBytes` ( ): `bytes`
 
-```typescript
-toBytes(): bytes
-```
+Serialize the [`ContractLogInfo`](#) into its protobuf representation.
+
+---

@@ -1,6 +1,26 @@
-# `ContractInfo`
-
 > class `ContractInfo`
+
+<details>
+<summary><b>Table of Contents</b></summary>
+
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`fromBytes`](#frombytes-data-bytes-contractinfo) | ✅ | ✅ | ✅
+| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
+| [`contractMemo`](#contractmemo-string) | ✅ | ✅ | ✅
+| [`accountId`](#accountid-accountid) | ✅ | ✅ | ✅
+| [`contractAccountId`](#contractaccountid-string) | ✅ | ✅ | ✅
+| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
+| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
+| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
+| [`storage`](#storage-uint64) | ✅ | ✅ | ✅
+| [`balance`](#balance-hbar) | ✅ | ✅ | ✅
+| [`isDeleted`](#isdeleted-bool) | ✅ | ✅ | ✅
+| [`tokenRelantionships`](#tokenrelationships-map-lt-tokenid-tokenrelationship-gt) | ✅ | ✅ | ✅
+| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
+| [`toString`](#tostring-string) | ✅ | ✅ | ✅
+
+</details>
 
 ### Static Methods
 
@@ -14,11 +34,11 @@
 
 ---
 
-##### `toString` (): `string`
+##### `toString` (): `String`
 
 ---
 
-### Fields
+### Properties
 
 ##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
@@ -52,7 +72,7 @@ Note that if it is created with no admin keys, then there is no administrator to
 
 ---
 
-##### `expirationTime`: `Instant`
+##### `expirationTime`: `Timestamp`
 
 The current time at which this contract instance (and its account) is set to expire.
 
@@ -84,7 +104,7 @@ Whether the contract has been deleted.
 
 ---
 
-##### `tokenRelationships`: `Map<TokenId, TokenRelationship>`
+##### `tokenRelationships`: `Map` < [`TokenId`](reference/token/TokenId.md), [`TokenRelationship`](reference/token/TokenRelationship.md) >
 
 The tokens associated to the contract.
 

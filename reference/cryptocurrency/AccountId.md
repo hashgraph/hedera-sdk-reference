@@ -1,38 +1,9 @@
 # `AccountId`
 
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class AccountId {
-    constructor(num: Uint64);
-
-    constructor(shard: Uint64, realm: Uint64, num: Uint64);
-
-    fromString(str: string): AccountId;
-
-    fromBytes(data: bytes): AccountId;
-
-    fromSolidityAddress(address: string): AccountId;
-
-    /* property */ shard: Uint64;
-
-    /* property */ realm: Uint64;
-
-    /* property */ num: Uint64;
-
-    toBytes(): bytes;
-
-    toString(): string;
-}
-```
-
-</details>
+> class `AccountId`
 
 <details>
 <summary><b>Table of Contents</b></summary>
-
-
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -65,7 +36,7 @@ Construct a [`AccountId`](#) with all fields explicitly set.
 
 ### Static Methods
 
-##### `fromString` ( `str` : `string` ): [`AccountId`](#accountid)
+##### `fromString` ( `str` : `String` ): [`AccountId`](#accountid)
 
 Construct a [`AccountId`](#) from a string. The format of the string could be either just
 a number "4" or dot separated numbers "0.0.4".
@@ -78,7 +49,7 @@ Deserialize a [`AccountId`](#) from its the protobuf representation.
 
 ---
 
-##### `fromSolidityAddress` ( `str` : `string` ): [`AccountId`](#accountid)
+##### `fromSolidityAddress` ( `str` : `String` ): [`AccountId`](#accountid)
 
 Construct a [`AccountId`](#) a solidity address.
 

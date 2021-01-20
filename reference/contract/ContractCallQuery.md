@@ -1,25 +1,18 @@
-# class `ContractCallQuery`
-
-Retrieve the latest state of a contract call.
-
-
-Returns [`ContractCall`](./ContractCall.md) from [`execute`](../Query.md).
+> class `ContractCallQuery` extends [`Query`](reference/core/Query.md) < [`ContractFunctionResult`](reference/contract/ContractFunctionResult.md) >
 
 <details>
-<summary><b>Declaration</b></summary>
+<summary><b>Table of Contents</b></summary>
 
-```typescript
-class ContractCallQuery extends Query<ContractCall> {
-    constructor();
-
-    /* property */ contractId
-    /* property */ gas
-    /* property */ functionParameters
-    /* property */ maxResultSize
-}
-```
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
+| [`gas`](#gas-uint64) | ✅ | ✅ | ✅
+| [`functionParameters`](#read-only-functionparameters-bytes) | ✅ | ✅ | ✅
+| [`maxResultSize`](#write-only-maxresultsize-uint64) | ✅ | ✅ | ✅
 
 </details>
+
+Retrieve the latest state of a contract call.
 
 <!-- tabs:start -->
 
@@ -107,13 +100,16 @@ All of the gas offered will be used and charged a corresponding fee.
 
 ---
 
-##### `functionParameters`: `bytes`
+##### **Read-only** `functionParameters`: `bytes`
 
-Which function to call, and the parameters to pass to the function
+Which function to call, and the parameters to pass to the function. Use 
+[`setFunction(name)`](#setfunction-name-string-contractcallquery) and
+[`setFunction(name, params)`](#setfunction-name-string-params-contractfunctionparameters-contractcallquery)
+to set this field.
 
 ---
 
-##### **Write-only** `MaxResultSize`: `ContractCallQuery`
+##### **Write-only** `maxResultSize`: `Uint64`
 
 Maximum number of bytes that the result might include. The run will fail if it is returning more than this number of bytes.
 

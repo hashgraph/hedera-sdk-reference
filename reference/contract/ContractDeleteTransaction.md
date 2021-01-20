@@ -1,16 +1,14 @@
-# `ContractDeleteTransaction`
+> class `ContractDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`ContractId`](#contractid-contractidreferencecontractcontractidmd) | ✅ | ✅ | ✅
-| [`TransferAccountId`](#transferaccountid-accointidreferencecryptocurrencyaccountidmd) | ✅ | ✅ | ✅
-| [`TransferContractId`](#transfercontractid-contractidreferencecontractcontractidmd) | ✅ | ✅ | ✅
+| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
+| [`transferAccountId`](#transferaccountid-accountid) | ✅ | ✅ | ✅
+| [`transferContractId`](#transfercontractid-contractid) | ✅ | ✅ | ✅
 </details>
-
-> class `ContractDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 
@@ -64,18 +62,18 @@ if err != nil {
 
 ##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
-The `ContractId` of the contract to be deleted.
+The ID of the contract to be deleted.
 
 ---
 
-##### `transferAccountId`: [`AccointId`](reference/cryptocurrency/AccountId.md)
+##### `transferAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
-The `AccountId` of an account to receive any remaining `Hbar` from the deleted contract.
+The ID of an account that will receive any remaining `Hbar` from the deleted contract.
 
 ---
 
 ##### `transferContractId`: [`ContractId`](reference/contract/ContractId.md)
 
-The `ContractId` of a contract to receive any remaining `Hbar` from the deleted contract
+The ID of a contract that will receive any remaining `Hbar` from the deleted contract
 
 ---

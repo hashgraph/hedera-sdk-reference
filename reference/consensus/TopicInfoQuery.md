@@ -1,4 +1,4 @@
-# class `TopicInfoQuery`
+> class `TopicInfoQuery` extends [`Query`](reference/core/Query.md) < [`TopicInfo`](reference/consensus/TopicInfo.md) >
 
 Retrieve the latest state of a topic.
 
@@ -6,19 +6,12 @@ This method is unrestricted and allowed on any topic by any payer account.
 
 Deleted accounts will not be returned.
 
-Returns [`TopicInfo`](./TopicInfo.md) from [`execute`](../Query.md).
-
 <details>
-<summary><b>Declaration</b></summary>
+<summary><b>Table of Contents</b></summary>
 
-```typescript
-class TopicInfoQuery extends Query<TopicInfo> {
-    constructor();
-
-    getTopicId(): TopicId;
-    setTopicId(topicId: TopicId): this;
-}
-```
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`topicId`](#topicid-topicid) | ✅ | ✅ | ✅
 
 </details>
 
@@ -61,4 +54,4 @@ if err != nil {
 
 ### `topicId` : [`TopicId`](reference/consensus/TopicId.md)
 
-The Topic for which information is being requested.
+This is the topic ID for which info will be queried for.

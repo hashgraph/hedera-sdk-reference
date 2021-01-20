@@ -3,29 +3,6 @@
 > class `FileInfo`
 
 <details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-abstract class FileInfo {
-    static fromBytes(data: bytes): FileInfo;
-
-    /* property */ fileId: FileId;
-
-    /* property */ size: Uint64;
-
-    /* property */ expirationTime: Timestamp;
-
-    /* property */ isDeleted: boolean;
-
-    /* property */ keys: KeyList;
-
-    toBytes(): bytes;
-}
-```
-
-</details>
-
-<details>
 <summary><b>Table of Contents</b></summary>
 
 

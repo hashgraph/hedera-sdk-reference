@@ -1,36 +1,9 @@
 # `TokenId`
 
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class TokenId {
-    constructor(num: Uint64);
-
-    constructor(shard: Uint64, realm: Uint64, num: Uint64);
-
-    fromString(str: string): TokenId;
-
-    fromBytes(data: bytes): TokenId;
-
-    /* property */ shard: Uint64;
-
-    /* property */ realm: Uint64;
-
-    /* property */ num: Uint64;
-
-    toBytes(): bytes;
-
-    toString(): string;
-}
-```
-
-</details>
+> class `TokenId`
 
 <details>
 <summary><b>Table of Contents</b></summary>
-
-
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -62,7 +35,7 @@ Construct a [`TokenId`](#) with all fields explicitly set.
 
 ### Static Methods
 
-##### `fromString` ( `str` : `string` ): [`TokenId`](#tokenid)
+##### `fromString` ( `str` : `String` ): [`TokenId`](#tokenid)
 
 Construct a [`TokenId`](#) from a string. The format of the string could be either just
 a number "4" or dot separated numbers "0.0.4".

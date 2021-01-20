@@ -103,13 +103,13 @@ tokenID := *receipt.TokenID
 
 ### Properties
 
-##### `name`: `string`
+##### `name`: `String`
 
 The publicly visible name of the token, specified as a string of only ASCII characters
 
 ---
 
-##### `symbol`: `string`
+##### `symbol`: `String`
 
 The publicly visible token symbol. It is UTF-8 capitalized alphabetical string identifying the token
 

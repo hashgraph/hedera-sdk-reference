@@ -1,36 +1,39 @@
-# `TopicMessageChunk`
+> class `TopicMessageChunk`
 
-
+<details>
+<summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`consensusTimestamp`](#consensustimestamp) | ✅ | ✅ | ✅
-| [`contents`](#contents) | ✅ | ✅ | ✅
-| [`runningHash`](#runninghash) | ✅ | ✅ | ✅
-| [`sequenceNumber`](#sequencenumber) | ✅ | ✅ | ✅
+| [`consensusTimestamp`](#consensustimestamp-timestamp) | ✅ | ✅ | ✅
+| [`contents`](#contents-bytes) | ✅ | ✅ | ✅
+| [`runningHash`](#runninghash-bytes) | ✅ | ✅ | ✅
+| [`sequenceNumber`](#sequencenumber-uint64) | ✅ | ✅ | ✅
 
-## Fields
+</details>
 
-### `consensusTimestamp`
+### Properties
 
-```typescript
-consensusTimestamp: Timestamp
-```
+#### `consensusTimestamp`: `Timestamp`
 
-### `contents`
+The consensus timestamp of this topic message chunk.
 
-```typescript
-contents: bytes
-```
+---
 
-### `runningHash`
+#### `contents`: `bytes`
 
-```typescript
-runningHash: bytes
-```
+The contents of this topic message chunk.
 
-### `sequenceNumber`
+---
 
-```typescript
-sequenceNumber: long
-```
+#### `runningHash`: `bytes`
+
+The running hash of this topic message chunk.
+
+---
+
+#### `sequenceNumber`: `Uint64`
+
+The sequence number of this topic message chunk.
+
+---

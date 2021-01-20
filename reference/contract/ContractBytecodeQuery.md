@@ -1,22 +1,15 @@
-# class `ContractByteCodeQuery`
-
-Retrieve the latest state of a bytecode.
-
-Returns [`ContractByteCode`](./ContractByteCode.md) from [`execute`](../Query.md).
+> class `ContractByteCodeQuery` extends [`Query`](reference/core/Query.md) < `bytes` >
 
 <details>
-<summary><b>Declaration</b></summary>
+<summary><b>Table of Contents</b></summary>
 
-```typescript
-class ContractByteCodeQuery extends Query<ContractByteCode> {
-    constructor();
-
-    getContractId(): ContractId;
-    setContractId(ContractId: ContractId): this;
-}
-```
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
 
 </details>
+
+Retrieve the latest state of a bytecode.
 
 <!-- tabs:start -->
 
@@ -64,6 +57,6 @@ if err != nil {
 
 ### `contractId` : [`ContractId`](reference/contract/ContractId.md)
 
-The `ContractId` for which information is being requested.
+This is the contract ID which bytecode will be queried for.
 
 ---

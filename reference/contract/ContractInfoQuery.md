@@ -1,22 +1,15 @@
-# class `ContractInfoQuery`
-
-Retrieve the latest state of a contract.
-
-Returns [`ContractInfo`](./ContractInfo.md) from [`execute`](../Query.md).
+> class `ContractInfoQuery` extends [`Query`](reference/core/Query.md) < [`ContractInfo`](reference/contract/ContractInfo.md) >
 
 <details>
-<summary><b>Declaration</b></summary>
+<summary><b>Table of Contents</b></summary>
 
-```typescript
-class ContractInfoQuery extends Query<ContractInfo> {
-    constructor();
-
-    getContractId(): ContractId;
-    setContractId(ContractId: ContractId): this;
-}
-```
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
 
 </details>
+
+Retrieve the latest state of a contract.
 
 <!-- tabs:start -->
 
@@ -62,8 +55,8 @@ if err != nil {
 
 ## Properties
 
-### `ContractId` : [`ContractId`](reference/contract/ContractId.md)
+### `contractId` : [`ContractId`](reference/contract/ContractId.md)
 
-The contract for which information is being requested.
+This is the contractc ID for which info will be queried for.
 
 ---

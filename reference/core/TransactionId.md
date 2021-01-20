@@ -1,27 +1,4 @@
-# `TransactionId`
-
 > class `TransactionId`
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class TransactionId {
-    static generate(accountId: AccountId): TransactionId;
-
-    static fromString(text: string): TransactionId;
-
-    constructor(accountId: AccountId, validStart: Timestamp);
-
-    toString(): string;
-
-    accountId: AccountId;
-
-    validStart: Timestamp;
-}
-```
-
-</details>
 
 ### Constructor
 
@@ -35,7 +12,7 @@ class TransactionId {
 
 ---
 
-##### `fromString` ( `text`: `string` ): `TransactionId`
+##### `fromString` ( `text`: `String` ): `TransactionId`
 
 ---
 
@@ -45,7 +22,7 @@ class TransactionId {
 
 ### Methods
 
-##### `toString` (): `string`
+##### `toString` (): `String`
 
 ---
 

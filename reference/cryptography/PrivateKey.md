@@ -127,7 +127,7 @@ Parses a private key from bytes.
 
 ---
 
-##### `fromString` ( `text`: `string` ): `PrivateKey`
+##### `fromString` ( `text`: `String` ): `PrivateKey`
 
 Recovers an PrivateKey from its text-encoded representation.
 
@@ -146,7 +146,7 @@ Parse a private key from a PEM encoded string.
 
 ---
 
-##### `fromKeystore` ( `data`: `bytes`, `passphrase`: `string` ): `PrivateKey`
+##### `fromKeystore` ( `data`: `bytes`, `passphrase`: `String` ): `PrivateKey`
 
 Recovers an PrivateKey from an encrypted keystore encoded as a byte slice.
 
@@ -158,7 +158,7 @@ Recovers an ed25519 private key from a  22 word mnemonic, using legacy word list
 
 ---
 
-##### `fromMnemonic` ( `mnemonic`: `string`, `passphrase`: `string` ): `PrivateKey`
+##### `fromMnemonic` ( `mnemonic`: `String`, `passphrase`: `String` ): `PrivateKey`
 
 Recovers an ed25519 private key from a 24, 22, or 12 word mnemonic. 24 and
 12 word mnemonics use a BIP-32 word list and SLIP-10 deriviation. 22 word
@@ -202,11 +202,11 @@ Converts this key into bytes.
 
 ---
 
-##### `toString` (): `string`
+##### `toString` (): `String`
 
 ---
 
-##### `toKeystore` ( `passphrase`: `string` ): `bytes`
+##### `toKeystore` ( `passphrase`: `String` ): `bytes`
 
 ---
 

@@ -115,7 +115,7 @@ These are the new contents of the file after execution. The contents cannot
 exceed ~4096 bytes. Use [`FileAppendTransaction`](refernce/file/FileAppendTransaction.md)
 to set larger contents.
 
-**Note**. The setter `.setContents()` supports types `bytes` **and** UTF-8 `string`.
+**Note**. The setter `.setContents()` supports types `bytes` **and** UTF-8 `String`.
 **Note**. The contents will completely override the existing contents of the file.
 
 ---

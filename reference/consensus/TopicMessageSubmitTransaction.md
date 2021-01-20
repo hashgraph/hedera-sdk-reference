@@ -1,15 +1,13 @@
-# `TopicSubmitTransaction`
+> class `TopicSubmitTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`TopicId`](#topicid-topicidreferenceconsensustopicidmd) | ✅ | ✅ | ✅
-| [`Message`](#message-bytestring) | ✅ | ✅ | ✅
+| [`topicId`](#topicid-topicid) | ✅ | ✅ | ✅
+| [`message`](#message-bytes) | ✅ | ✅ | ✅
 </details>
-
-> class `TopicSubmitTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 
@@ -63,13 +61,13 @@ if err != nil {
 
 ### Properties
 
-##### `TopicId`: [`TopicId`](reference/consensus/TopicId.md)
+##### `topicId`: [`TopicId`](reference/consensus/TopicId.md)
 
 Topic to submit message to.
 
 ---
 
-##### `Message: `bytes`
+##### `message`: `bytes`
 
 Message to be submitted. Max size of the Transaction (including signatures) is 6KiB.
 

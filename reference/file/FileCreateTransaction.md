@@ -97,7 +97,7 @@ These are the contents that will be set upon file creation. The contents cannot
 exceed ~4096 bytes. Use [`FileAppendTransaction`](refernce/file/FileAppendTransaction.md)
 to set larger contents.
 
-**Note**. The setter `.setContents()` supports types `bytes` **and** UTF-8 `string`.
+**Note**. The setter `.setContents()` supports types `bytes` **and** UTF-8 `String`.
 
 ---
 

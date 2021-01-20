@@ -1,8 +1,6 @@
 # `TokenInfoQuery`
 
-> class `TokenInfoQuery`
-> extends [`Query`](reference/core/Query.md) <
-> [`TokenInfo`](reference/token/TokenInfo.md) >
+> class `TokenInfoQuery` extends [`Query`](reference/core/Query.md) < [`TokenInfo`](reference/token/TokenInfo.md) >
 
 <details>
 <summary><b>Declaration</b></summary>

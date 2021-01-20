@@ -1,19 +1,17 @@
-# `TopicUpdateTransaction`
+> class `TopicUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`TopicId`](#topicid-topicid) | ✅ | ✅ | ✅
-| [`TopicMemo`](#topicmemo-string) | ✅ | ✅ | ✅
-| [`AdminKey`](#adminkey-key) | ✅ | ✅ | ✅
-| [`SubmitKey`](#submitkey-key) | ✅ | ✅ | ✅
-| [`AutoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
-| [`AutoRenewAccountId`](#autorenewaccountid-accountid) | ✅ | ✅ | ✅
+| [`topicId`](#topicid-topicid) | ✅ | ✅ | ✅
+| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
+| [`submitKey`](#submitkey-key) | ✅ | ✅ | ✅
+| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
+| [`autoRenewAccountId`](#autorenewaccountid-accountid) | ✅ | ✅ | ✅
+| [`topicMemo`](#topicmemo-string) | ✅ | ✅ | ✅
 </details>
-
-> class `TopicUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 
@@ -60,35 +58,36 @@ if err != nil {
 
 ### Constructor
 
-##### `constructor`()
+##### `constructor` ()
 
 ---
 
 ### Methods
 
-### `clearTopicMemo()`
+##### `clearTopicMemo` ()
 
-```typescript
-clearTopicMemo(): this
-```
+Clear the memo for this topic.
 
-### `clearAdminKey()`
+---
 
-```typescript
-clearAdminKey(): this
-```
+##### `clearAdminKey` ()
 
-### `clearSubmitKey()`
+Clear the admin key.
+Note: Clearing the admin key will make the topic immutable.
 
-```typescript
-clearSubmitKey(): this
-```
+---
 
-### `clearAutoRenewAccountId()`
+##### `clearSubmitKey` ()
 
-```typescript
-clearAutoRenewAccountId(): this
-```
+Clear the submit key.
+
+---
+
+##### `clearAutoRenewAccountId` ()
+
+Clear the auto renew account ID.
+
+---
 
 ### Properties
 

@@ -1,20 +1,18 @@
-# `ContractUpdateTransaction`
+> class `ContractUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`ContractId`](#contractid-Contractid) | ✅ | ✅ | ✅
-| [`ContractMemo`](#contractmemo-string) | ✅ | ✅ | ✅
-| [`AdminKey`](#adminkey-key) | ✅ | ✅ | ✅
-| [`ExpirationTime`](#expirationtime-instant) | ✅ | ✅ | ✅
-| [`AutoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
-| [`ProxyAccountId`](#proxyaccountid-accountidreferencecryptocurrencyaccountidmd) | ✅ | ✅ | ✅
-| [`BytecodeFileId`](#bytecodefileid-fileidreferencefilefileidmd) | ✅ | ✅ | ✅
+| [`contractId`](#contractid-Contractid) | ✅ | ✅ | ✅
+| [`contractMemo`](#contractmemo-string) | ✅ | ✅ | ✅
+| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
+| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
+| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
+| [`proxyAccountId`](#proxyaccountid-accountid) | ✅ | ✅ | ✅
+| [`bytecodeFileId`](#bytecodefileid-fileid) | ✅ | ✅ | ✅
 </details>
-
-> class `ContractUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
 
@@ -70,25 +68,25 @@ if err != nil {
 
 ### Properties
 
-##### `ContractId`: [`ContractId`](reference/contract/ContractId.md)
+##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
 The id of the contract to be updated.
 
 ---
 
-##### `AdminKey`: [`Key`](reference/cryptography/Key.md)
+##### `adminKey`: [`Key`](reference/cryptography/Key.md)
 
 The new key to control updates/deletion of the contract.
 
 ---
 
-##### `ExpirationTime`: `Instant`
+##### `expirationTime`: `Timestamp`
 
 The new expiry of the contract, no earlier than the current expiry.
 
 ---
 
-##### `ProxyAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `proxyAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 ***Not yet implemented***
 <br>
@@ -96,7 +94,7 @@ The new id of the account to which the contract is proxy staked.
 
 ---
 
-##### `AutoRenewPeriod`: `Duration`
+##### `autoRenewPeriod`: `Duration`
 
 ***Not yet implemented***
 <br>
@@ -104,13 +102,13 @@ The new interval at which the contract will pay to extend its expiry.
 
 ---
 
-##### `BytecodeFileId`: [`FileId`](reference/file/FileId.md)
+##### `bytecodeFileId`: [`FileId`](reference/file/FileId.md)
 
 The new id of the file asserted to contain the bytecode of the Solidity transaction that created this contract.
 
 ---
 
-##### `ContractMemo`: `String`
+##### `contractMemo`: `String`
 
 The new contract memo, assumed to be Unicode encoded with UTF-8 (at most 100 bytes).
 

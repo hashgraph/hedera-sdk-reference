@@ -29,7 +29,7 @@ A public key on the Hedera™ network.
 
 ### Static Methods
 
-##### `fromString` ( `text`: `string` ): `PublicKey`
+##### `fromString` ( `text`: `String` ): `PublicKey`
 
 Parse a public key from a string of hexadecimal digits.
 
@@ -61,7 +61,7 @@ to the equality interface or protocol.
 
 Converts this key into bytes.
 
-##### `toString` (): `string`
+##### `toString` (): `String`
 
 Returns the public key as a string with the DER prefix
 that identifies the algorithim.

@@ -18,3 +18,4 @@ interface Key {
 - [`PublicKey`](reference/cryptography/PublicKey.md)
 - [`PrivateKey`](reference/cryptography/PrivateKey.md)
 - [`KeyList`](reference/cryptography/KeyList.md)
+- [`ContractId`](reference/contract/ContractId.md)

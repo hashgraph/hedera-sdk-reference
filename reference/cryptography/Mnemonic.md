@@ -58,7 +58,7 @@ Create a mnemonic from the given list of words.
 
 ---
 
-##### `fromString` ( `text`: `string` ): `Mnemonic`
+##### `fromString` ( `text`: `String` ): `Mnemonic`
 
 ###### Errors
 
@@ -70,11 +70,11 @@ Create a mnemonic from the given list of words.
 
 ### Methods
 
-##### `toPrivateKey` ( `passphrase`: `string` ): `PrivateKey`
+##### `toPrivateKey` ( `passphrase`: `String` ): `PrivateKey`
 
 ---
 
-##### `toString` (): `string`
+##### `toString` (): `String`
 
 ---
 

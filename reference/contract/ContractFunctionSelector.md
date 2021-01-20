@@ -1,200 +1,146 @@
-# `ContractFunctionSelector`
+> class `ContractFunctionSelector`
 
 <details>
 <summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
-| [`constructor()`](#constructor) | ✅ | ✅ | ✅
-| [`addString()`](#addstring) | ✅ | ✅ | ✅
-| [`addStringArray()`](#addstringarray) | ✅ | ✅ | ✅
-| [`addBytes()`](#addbytes) | ✅ | ✅ | ✅
-| [`addBytesArray()`](#addbytesarray) | ✅ | ✅ | ✅
-| [`addBytes32()`](#addbytes32) | ✅ | ✅ | ✅
-| [`addBytes32Array()`](#addbytes32array) | ✅ | ✅ | ✅
-| [`addBool()`](#addbool) | ✅ | ✅ | ✅
-| [`addInt8()`](#addint8) | ✅ | ✅ | ✅
-| [`addInt32()`](#addint32) | ✅ | ✅ | ✅
-| [`addInt64()`](#addint64) | ✅ | ✅ | ✅
-| [`addInt256()`](#addint256) | ✅ | ✅ | ✅
-| [`addInt8Array()`](#addint8array) | ✅ | ✅ | ✅
-| [`addInt32Array()`](#addint32array) | ✅ | ✅ | ✅
-| [`addInt64Array()`](#addint64array) | ✅ | ✅ | ✅
-| [`addInt256Array()`](#addint256array) | ✅ | ✅ | ✅
-| [`addUint8()`](#adduint8) | ✅ | ✅ | ✅
-| [`addUint32()`](#adduint32) | ✅ | ✅ | ✅
-| [`addUint64()`](#adduint64) | ✅ | ✅ | ✅
-| [`addUint256()`](#adduint256) | ✅ | ✅ | ✅
-| [`addUint8Array()`](#adduint8array) | ✅ | ✅ | ✅
-| [`addUint32Array()`](#adduint32array) | ✅ | ✅ | ✅
-| [`addUint64Array()`](#adduint64array) | ✅ | ✅ | ✅
-| [`addUint256Array()`](#adduint256array) | ✅ | ✅ | ✅
-| [`addAddress()`](#addaddress) | ✅ | ✅ | ✅
-| [`addAddressArray()`](#addaddressarray) | ✅ | ✅ | ✅
-| [`addFunction()`](#addfunction) | ✅ | ✅ | ✅
+| [`constructor`](#constructor) | ✅ | ✅ | ✅
+| [`addString`](#addstring-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addStringArray`](#addstringarray-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addBytes`](#addbytes-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addBytesArray`](#addbytesarray-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addBytes32`](#addbytes32-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addBytes32Array`](#addbytes32array-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addBool`](#addbool-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addInt8`](#addint8-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addInt32`](#addint32-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addInt64`](#addint64-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addInt256`](#addint256-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addInt8Array`](#addint8array-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addInt32Array`](#addint32array-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addInt64Array`](#addint64array-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addInt256Array`](#addint256array-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addUint8`](#adduint8-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addUint32`](#adduint32-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addUint64`](#adduint64-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addUint256`](#adduint256-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addUint8Array`](#adduint8array-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addUint32Array`](#adduint32array-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addUint64Array`](#adduint64array-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addUint256Array`](#adduint256array-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addAddress`](#addaddress-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addAddressArray`](#addaddressarray-contractfunctionselector) | ✅ | ✅ | ✅
+| [`addFunction`](#addfunction-contractfunctionselector) | ✅ | ✅ | ✅
 
 </details>
 
-## Methods
+### Contstrutors
 
-### `constructor()`
+##### `constructor` ( `functionName`: `String` )
 
-```typescript
-constructor(functionName: string)
-```
+---
 
-### `addString()`
+##### `addString` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addString(): this
-```
+---
 
-### `addStringArray()`
+##### `addStringArray` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addStringArray(): this
-```
+---
 
-### `addBytes()`
+##### `addBytes` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addBytes(): this
-```
+---
 
-### `addBytesArray()`
+##### `addBytesArray` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addBytesArray(): this
-```
+---
 
-### `addBytes32()`
+##### `addBytes32` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addBytes32(): this
-```
+---
 
-### `addBytes32Array()`
+##### `addBytes32Array` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addBytes32Array(): this
-```
+---
 
-### `addBool()`
+##### `addBool` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addBool(): this
-```
+---
 
-### `addInt8()`
+##### `addInt8` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addInt8(): this
-```
+---
 
-### `addInt32()`
+##### `addInt32` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addInt32(): this
-```
+---
 
-### `addInt64()`
+##### `addInt64` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addInt64(): this
-```
+---
 
-### `addInt256()`
+##### `addInt256` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addInt256(): this
-```
+---
 
-### `addInt8Array()`
+##### `addInt8Array` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addInt8Array(): this
-```
+---
 
-### `addInt32Array()`
+##### `addInt32Array` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addInt32Array(): this
-```
+---
 
-### `addInt64Array()`
+##### `addInt64Array` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addInt64Array(): this
-```
+---
 
-### `addInt256Array()`
+##### `addInt256Array` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addInt256Array(): this
-```
+---
 
-### `addUint8()`
+##### `addUint8` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addUint8(): this
-```
+---
 
-### `addUint32()`
+##### `addUint32` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addUint32(): this
-```
+---
 
-### `addUint64()`
+##### `addUint64` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addUint64(): this
-```
+---
 
-### `addUint256()`
+##### `addUint256` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addUint256(): this
-```
+---
 
-### `addUint8Array()`
+##### `addUint8Array` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addUint8Array(): this
-```
+---
 
-### `addUint32Array()`
+##### `addUint32Array` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addUint32Array(): this
-```
+---
 
-### `addUint64Array()`
+##### `addUint64Array` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addUint64Array(): this
-```
+---
 
-### `addUint256Array()`
+##### `addUint256Array` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addUint256Array(): this
-```
+---
 
-### `addAddress()`
+##### `addAddress` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addAddress(): this
-```
+---
 
-### `addAddressArray()`
+##### `addAddressArray` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addAddressArray(): this
-```
+---
 
-### `addFunction()`
+##### `addFunction` ( ): [`ContractFunctionSelector`](#)
 
-```typescript
-addFunction(): this
-```
+---

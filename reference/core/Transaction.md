@@ -1,49 +1,4 @@
-# `Transaction`
-
 > abstract class `Transaction`
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-abstract class Transaction {
-    static fromBytes(data: bytes): Transaction;
-
-    /* property */ nodeAccountIds: AccountId[];
-
-    /* property */ transactionValidDuration: Duration;
-
-    /* property */ transactionMemo: string;
-
-    /* property */ transactionId: TransactionId;
-
-    /* property */ maxTransactionFee: ?Hbar;
-
-    getTransactionHash(): bytes;
-
-    getTransactionHashPerNode(): Map<AccountId, bytes>;
-
-    toBytes(): bytes;
-
-    sign(key: PrivateKey): this;
-
-    signWith(key: PublicKey, transactionSigner: (bytes) => bytes): this;
-
-    signWithOperator(client: Client);
-
-    getSignatures(): Map<AccountId, Map<PublicKey, bytes>>;
-
-    addSignature(key: PublicKey, signature: bytes): this;
-
-    freeze(): this;
-
-    freezeWith(client: Client): this;
-
-    execute(client: Client): TransactionResponse;
-}
-```
-
-</details>
 
 <details>
 <summary><b>Table of Contents</b></summary>
@@ -174,7 +129,7 @@ If two transactions have the same transactionID, they won't both have an effect
 
 ---
 
-##### `transactionMemo`: `string`
+##### `transactionMemo`: `String`
 
 Any notes or descriptions that should be put into the record (max length 100).
 

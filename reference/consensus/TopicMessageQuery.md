@@ -74,6 +74,6 @@ if err != nil {
 
 ### `topicId` : [`TopicId`](reference/consensus/TopicId.md)
 
-A required topic ID to retrieve messages for.
+The ID for a topic to subscribe to.
 
 ---

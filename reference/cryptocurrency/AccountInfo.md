@@ -22,7 +22,7 @@ The `AccountID` for which this information applies
 
 ---
 
-##### `contractAccountId`: `string`
+##### `contractAccountId`: `String`
 
 The Contract `AccountID` comprising of both the contract instance and the cryptocurrency account owned by the contract instance
 

@@ -1,28 +1,15 @@
-# `FileInfoQuery`
-
 > class `FileInfoQuery` extends [`Query`](reference/core/Query.md) < [`FileInfo`](reference/file/FileInfo.md) >
 
 <details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class FileInfoQuery extends Query<FileInfo> {
-    /* property */ fileId?: FileId;
-}
-```
-
-</details>
-
-<details>
-<summary><b>Table of Info</b></summary>
-
-
+<summary><b>Table of Contents</b></summary>
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
 | [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
 
 </details>
+
+Query a file's current state.
 
 <!-- tabs:start -->
 
@@ -57,6 +44,6 @@ if err != nil {
 
 ##### `fileId`: [`FileId`](reference/file/FileId.md)
 
-This is the fileID which info queried for.
+This is the file ID for which info will be queried for.
 
 ---
