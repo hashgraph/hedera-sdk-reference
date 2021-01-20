@@ -1,5 +1,3 @@
-# `TokenDeleteTransaction`
-
 > class `TokenDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Marks a token as deleted, though it will remain in the ledger.

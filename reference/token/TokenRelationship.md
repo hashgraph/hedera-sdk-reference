@@ -1,5 +1,3 @@
-# `TokenRelationship`
-
 > class `TokenRelationship`
 
 ### Static Methods

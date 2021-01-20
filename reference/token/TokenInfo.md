@@ -1,5 +1,3 @@
-# `TokenInfo`
-
 > class `TokenInfo`
 
 ### Static Methods

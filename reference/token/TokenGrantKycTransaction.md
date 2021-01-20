@@ -1,5 +1,3 @@
-# `TokenGrantKycTransaction`
-
 > class `TokenGrantKycTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Grants KYC to the account for the given token. Must be signed by the Token's kycKey.

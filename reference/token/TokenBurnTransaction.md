@@ -1,5 +1,3 @@
-# `TokenBurnTransaction`
-
 > class `TokenBurnTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Burns tokens from the Token's treasury Account. If no Supply Key is defined, the transaction will resolve to

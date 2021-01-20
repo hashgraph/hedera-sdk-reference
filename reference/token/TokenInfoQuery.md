@@ -1,5 +1,3 @@
-# `TokenInfoQuery`
-
 > class `TokenInfoQuery` extends [`Query`](reference/core/Query.md) < [`TokenInfo`](reference/token/TokenInfo.md) >
 
 <details>

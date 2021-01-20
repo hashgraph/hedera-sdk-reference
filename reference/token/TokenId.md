@@ -1,5 +1,3 @@
-# `TokenId`
-
 > class `TokenId`
 
 <details>

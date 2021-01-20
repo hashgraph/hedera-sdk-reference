@@ -1,5 +1,3 @@
-# `TokenFreezeTransaction`
-
 > class `TokenFreezeTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Freezes transfers of the specified token for the account. Must be signed by the Token's freezeKey.

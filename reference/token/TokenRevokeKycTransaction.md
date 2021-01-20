@@ -1,5 +1,3 @@
-# `TokenRevokeKycTransaction`
-
 > class `TokenRevokeKycTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Revokes KYC to the account for the given token. Must be signed by the Token's kycKey.

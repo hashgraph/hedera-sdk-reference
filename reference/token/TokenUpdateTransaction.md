@@ -1,5 +1,3 @@
-# `TokenUpdateTransaction`
-
 > class `TokenUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Updates an already created Token.

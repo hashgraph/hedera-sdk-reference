@@ -1,5 +1,3 @@
-# `TokenAssociateTransaction`
-
 > class `TokenAssociateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Associates the provided account with the provided tokens. Must be signed by the provided Account's key.
