@@ -1,5 +1,3 @@
-# `FileId`
-
 > class `FileId`
 
 <details>

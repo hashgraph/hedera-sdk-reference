@@ -1,17 +1,7 @@
-# `Key`
-
 > interface `Key`
 
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-interface Key {
-    // no public members
-}
-```
-
-</details>
+This interface is used as a marker for types which can be
+represented as keys in the Hedera™ network.
 
 ### Implementors
 

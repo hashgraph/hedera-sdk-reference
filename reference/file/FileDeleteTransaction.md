@@ -1,19 +1,6 @@
-# `FileDeleteTransaction`
-
 > class `FileDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Delete a file that exists on the Hedera Hashgraph network.
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class FileDeleteTransaction extends Transaction {
-    /* property */ fileId?: FileId;
-}
-```
-
-</details>
 
 <details>
 <summary><b>Table of Contents</b></summary>

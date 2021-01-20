@@ -1,11 +1,7 @@
-# `FileInfo`
-
 > class `FileInfo`
 
 <details>
 <summary><b>Table of Contents</b></summary>
-
-
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |

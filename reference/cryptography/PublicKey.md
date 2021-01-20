@@ -1,41 +1,56 @@
-# `PublicKey`
-
 > class `PublicKey` implements [`Key`](reference/cryptography/Key.md)
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class PublicKey implements Key, Eq<PublicKey> {
-    static fromBytes(data: bytes): PublicKey;
-
-    static fromString(text: string): PublicKey;
-
-    verify(message: bytes, signature: bytes): bool;
-
-    verifyTransaction(transaction: Transaction<?>): bool;
-
-    equals(other: PublicKey): bool;
-
-    toBytes(): bytes;
-
-    toString(): string;
-}
-```
-
-</details>
 
 A public key on the Hedera™ network.
 
+<details>
+<summary><b>Table of Contents</b></summary>
+
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`fromString()`](#fromstring-text-string-public-key) | ✅ | ✅ | ✅
+| [`fromBytes()`](#from-bytes-data-bytes-publickey) | ✅ | ✅ | ✅
+| [`verify()`](#verify-message-bytes-signature-bytes-bool) | ✅ | ✅ | ✅
+| [`verifyTransaction()`](#verifytransaction-transaction-transaction-bool) | ✅ | ✅ | ✅
+| [`equals()`](#equals-other-publickey-bool) | ✅ | ✅ | ✅
+| [`toBytes()`](#tobytes-bytes) | ✅ | ✅ | ✅
+| [`toString()`](#tostring-string) | ✅ | ✅ | ✅
+| [`hasCode()`](#hascode-int64) | ✅ | ✅ | ✅
+</details>
+
+<!-- tabs:start -->
+
+###### ** Java **
+
+```java
+var publicKey = PublicKey.fromString("...");
+```
+
+### ** JavaScript **
+
+```javascript
+const publicKey = PublicKey.fromString("...");
+```
+
+###### ** Go **
+
+```go
+publicKey, err := hedera.PublicKeyFromString("...")
+if err != nil {
+    println(err.Error())
+}
+```
+
+<!-- tabs:end -->
+
 ### Static Methods
 
-##### `fromString` ( `text`: `String` ): `PublicKey`
+##### `fromString` ( `text`: `String` ): [`PublicKey`](#)
 
 Parse a public key from a string of hexadecimal digits.
 
 The public key may optionally be prefixed with the DER header.
 
-##### `fromBytes` ( `data`: `bytes` ): `PublicKey`
+##### `fromBytes` ( `data`: `bytes` ): [`PublicKey`](#)
 
 Parses a public key from bytes.
 
@@ -45,11 +60,11 @@ Parses a public key from bytes.
 
 Verify the signature on the message with this public key.
 
-##### `verifyTransaction` ( `transaction`: `Transaction<?>`): `bool`
+##### `verifyTransaction` ( `transaction`: [`Transaction`](reference/core/Transaction.md) ): `bool`
 
 Verify the signatures on all the messages in the Transaction.
 
-##### `equals` ( `other`: `PublicKey` ): `bool`
+##### `equals` ( `other`: [`PublicKey`](#) ): `bool`
 
 Returns `true` if this public key is the same as the
 public key at `other`.
@@ -66,12 +81,6 @@ Converts this key into bytes.
 Returns the public key as a string with the DER prefix
 that identifies the algorithim.
 
-##### `hashCode` (): `int`
+##### `hashCode` (): `Uint64`
 
 ---
-
-```js
-publicKey.toString();
-// 302a300506032b6570032100a1e0fa8780be3ef75f348cc280be11e5d2f19b72ef41ffdb745cd50d5eea9a99
-// 302a300506032b6570032100 is the DER prefix identifying this key as ED25519
-```

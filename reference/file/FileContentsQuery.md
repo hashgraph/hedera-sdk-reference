@@ -1,17 +1,4 @@
-# `FileContentsQuery`
-
 > class `FileContentsQuery` extends [`Query`](reference/core/Query.md) < `bytes` >
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class FileContentsQuery extends Query<bytes> {
-    /* property */ fileId?: FileId;
-}
-```
-
-</details>
 
 <details>
 <summary><b>Table of Contents</b></summary>

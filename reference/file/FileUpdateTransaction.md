@@ -1,28 +1,7 @@
-# `FileUpdateTransaction`
-
 > class `FileUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class FileUpdateTransaction extends Transaction {
-    /* property */ fileId?: FileId;
-
-    /* property */ keys?: Key[];
-
-    /* property */ contents?: bytes;
-
-    /* property */ expirationTime?: Timestamp;
-}
-```
-
-</details>
-
-<details>
 <summary><b>Table of Contents</b></summary>
-
-
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |
@@ -116,6 +95,7 @@ exceed ~4096 bytes. Use [`FileAppendTransaction`](refernce/file/FileAppendTransa
 to set larger contents.
 
 **Note**. The setter `.setContents()` supports types `bytes` **and** UTF-8 `String`.
+<br>
 **Note**. The contents will completely override the existing contents of the file.
 
 ---

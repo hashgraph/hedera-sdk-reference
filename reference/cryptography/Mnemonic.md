@@ -1,34 +1,23 @@
-# `Mnemonic`
-
 > class `Mnemonic`
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class Mnemonic {
-    static generate(): Mnemonic;
-
-    static generateN(numWords: Uint): Mnemonic;
-
-    static fromWords(words: string[]): Mnemonic;
-
-    static fromString(text: string): Mnemonic;
-
-    toPrivateKey(passphrase: string): PrivateKey;
-
-    toString(): string;
-
-    readonly words: string[];
-}
-```
-
-</details>
 
 Multi-word mnemonic phrases.
 
 Compatible with (both original and current) Hedera mobile wallets
 and MyHbarWallet.
+
+<details>
+<summary><b>Table of Contents</b></summary>
+
+| Item | Java | JavaScript | Go
+| - | - | - | - |
+| [`generate()`](#generate-mnemonic) | ✅ | ✅ | ✅
+| [`generateN()`](#generaten-count-uint-mnemonic) | ✅ | ✅ | ✅
+| [`fromWords()`](#fromwrods-words-string-mnemonic) | ✅ | ✅ | ✅
+| [`fromString()`](#fromstring-text-string-mnemonic) | ✅ | ✅ | ✅
+| [`toPrivateKey()`](#toprivatekey-passphrase-string-privatekey) | ✅ | ✅ | ✅
+| [`toString()`](#tostring-string) | ✅ | ✅ | ✅
+| [`words`](#words-string) | ✅ | ✅ | ✅
+</details>
 
 ### Static Methods
 
@@ -70,7 +59,7 @@ Create a mnemonic from the given list of words.
 
 ### Methods
 
-##### `toPrivateKey` ( `passphrase`: `String` ): `PrivateKey`
+##### `toPrivateKey` ( `passphrase`: `String` ): [`PrivateKey`](reference/cryptography/PrivateKey.md)
 
 ---
 
@@ -78,7 +67,7 @@ Create a mnemonic from the given list of words.
 
 ---
 
-## Fields
+### Properites
 
 ##### `words`: `string[]`
 

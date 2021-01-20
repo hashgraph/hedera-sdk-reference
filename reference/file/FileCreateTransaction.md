@@ -1,21 +1,4 @@
-# `FileCreateTransaction`
-
 > class `FileCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class FileCreateTransaction extends Transaction {
-    /* property */ keys?: Key[];
-
-    /* property */ contents?: bytes;
-
-    /* property */ expirationTime?: Timestamp;
-}
-```
-
-</details>
 
 <details>
 <summary><b>Table of Contents</b></summary>

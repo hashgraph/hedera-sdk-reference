@@ -1,41 +1,4 @@
-# `PrivateKey`
-
 > class `PrivateKey` implements [`Key`](reference/cryptography/Key.md)
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class PrivateKey implements Key {
-    static generate(): PrivateKey;
-
-    static fromBytes(data: bytes): PrivateKey;
-
-    static fromString(text: string): PrivateKey;
-
-    static fromMnemonic(mnemonic: string, passphrase: string): PrivateKey;
-
-    static fromKeystore(data: bytes, passphrase: string): PrivateKey;
-
-    static fromPem(text: string, passphrase: string): PrivateKey;
-
-    isDerivable(): bool;
-
-    derive(index: int): PrivateKey;
-
-    getPublicKey(): PublicKey;
-
-    sign(message: bytes): bytes;
-
-    toBytes(): bytes;
-
-    toString(): string;
-
-    toKeystore(passphrase: string): bytes;
-}
-```
-
-</details>
 
 <details>
 <summary><b>Table of Contents</b></summary>
@@ -51,7 +14,7 @@ class PrivateKey implements Key {
 | [`isDerivable()`](#isderivable-boolean) | ✅ | ✅ | ✅
 | [`derive()`](#derive-index-uint-privatekey) | ✅ | ✅ | ✅
 | [`publicKey`](#publickey-publickey) | ✅ | ✅ | ✅
-| [`sign()`](#sign-message-bytes--bytes) | ✅ | ✅ | ✅
+| [`sign()`](#sign-message-bytes-bytes) | ✅ | ✅ | ✅
 | [`signTransaction()`](#signtransaction-transaction-transaction-bytes) | ✅ | ✅ | ✅
 | [`toBytes()`](#tobytes-bytes) | ✅ | ✅ | ✅
 | [`toString()`](#tostring-string) | ✅ | ✅ | ✅
@@ -115,50 +78,50 @@ if err != nil {
 
 ### Static Methods
 
-##### `generate` (): `PrivateKey`
+##### `generate` (): [`PrivateKey`](#)
 
 Generates a new Ed25519 private key.
 
 ---
 
-##### `fromBytes` ( `data`: `bytes` ): `PrivateKey`
+##### `fromBytes` ( `data`: `bytes` ): [`PrivateKey`](#)
 
 Parses a private key from bytes.
 
 ---
 
-##### `fromString` ( `text`: `String` ): `PrivateKey`
+##### `fromString` ( `text`: `String` ): [`PrivateKey`](#)
 
 Recovers an PrivateKey from its text-encoded representation.
 
 ---
 
-##### `readPem` ( `pem`: `Reader` ): `PrivateKey`
+##### `readPem` ( `pem`: `Reader` ): [`PrivateKey`](#)
 
 Parse a private key from a PEM encoded reader.
 This will read the first "PRIVATE KEY" section in the stream as an Ed25519 private key.
 
 ---
 
-##### `fromPem` ( `pem`: `String` ): `PrivateKey`
+##### `fromPem` ( `pem`: `String` ): [`PrivateKey`](#)
 
 Parse a private key from a PEM encoded string.
 
 ---
 
-##### `fromKeystore` ( `data`: `bytes`, `passphrase`: `String` ): `PrivateKey`
+##### `fromKeystore` ( `data`: `bytes`, `passphrase`: `String` ): [`PrivateKey`](#)
 
 Recovers an PrivateKey from an encrypted keystore encoded as a byte slice.
 
 ---
 
-##### `fromLegacyMnemonic` ( `data`: `bytes`): `PrivateKey`
+##### `fromLegacyMnemonic` ( `data`: `bytes`): [`PrivateKey`](#)
 
 Recovers an ed25519 private key from a  22 word mnemonic, using legacy word list.
 
 ---
 
-##### `fromMnemonic` ( `mnemonic`: `String`, `passphrase`: `String` ): `PrivateKey`
+##### `fromMnemonic` ( `mnemonic`: `String`, `passphrase`: `String` ): [`PrivateKey`](#)
 
 Recovers an ed25519 private key from a 24, 22, or 12 word mnemonic. 24 and
 12 word mnemonics use a BIP-32 word list and SLIP-10 deriviation. 22 word
@@ -178,7 +141,7 @@ Check if this private key supports derivation.
 
 ---
 
-##### `derive` ( `index`: `Uint` ): `PrivateKey`
+##### `derive` ( `index`: `Uint` ): [`PrivateKey`](#)
 
 Given a wallet/account index, derive a child key compatible with the iOS and Android wallets.
 
@@ -190,7 +153,7 @@ Sign a message with this private key.
 
 ---
 
-##### `signTransaction` ( `transaction`: `Transaction<?>` ): `bytes`
+##### `signTransaction` ( `transaction`: [`Transaction`](reference/core/Transaction.md) ): `bytes`
 
 Sign a transaction with this private key.
 
@@ -212,7 +175,7 @@ Converts this key into bytes.
 
 ### Properties
 
-##### `publicKey`: `PublicKey`
+##### `publicKey`: [`PublicKey`](reference/cryptography/PublicKey.md)
 
 Derive a public key from this private key.
 

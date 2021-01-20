@@ -1,5 +1,3 @@
-# `FileAppendTransaction`
-
 > class `FileAppendTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Append contents to a new file that exists on the Hedera Hashgraph network.
@@ -13,24 +11,7 @@ has the `executeAll()` method because it is chunked; this method is not accessib
 by all `Transaction` types.
 
 <details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class FileAppendTransaction extends Transaction {
-    /* property */ fileId?: FileId;
-
-    /* property */ contents?: bytes;
-
-    executeAll(client: Client): TransactionResponse[];
-}
-```
-
-</details>
-
-<details>
 <summary><b>Table of Contents</b></summary>
-
-
 
 | Item | Java | JavaScript | Go
 | - | - | - | - |

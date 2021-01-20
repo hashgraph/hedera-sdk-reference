@@ -1,7 +1,4 @@
-# `Keystore`
-
 > class `Keystore`
-
 
 <details>
 <summary><b>Table of Contents</b></summary>
