@@ -1,5 +1,9 @@
 {
     "code-block-style": {
         "style": "fenced"
-    }
+    },
+    "no-inline-html": false,
+    "no-duplicate-header": false,
+    "header-increment": false,
+    "no-space-in-emphasis": false
 }

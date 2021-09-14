@@ -1,4 +1,4 @@
-# Hedera™ Hashgraph SDK Reference
+# Hedera™ Hashgraph SDK
 
 ![Hedera Hasgraph](https://www.hedera.com/logo-capital-hbar-wordmark.jpg)
 
@@ -11,96 +11,123 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 
 ### Core
 
-* [`Client`] – The protocol wrapper for the SDK, used by all transaction
-    and query types. A `Client` is established to one network (with one
-    or more nodes) and an optional operator account and key (to sign
-    transactions).
+* [`Client`](reference/core/Client.md)
+* [`Status`](reference/Status.md)
 
-### Transactions
+---
 
-* [`CryptoTransferTransaction`](reference/CryptoTransferTransaction.md)
+* [`Transaction`](reference/core/Transaction.md)
 
-#### Account Transactions
+---
 
-* [`AccountCreateTransaction`](reference/AccountCreateTransaction.md)
+* [`TransactionId`](reference/TransactionId.md)
+* [`TransactionReceipt`](reference/TransactionReceipt.md)
+* [`TransactionRecord`](reference/TransactionRecord.md)
+* [`TransactionResponse`](reference/TransactionResponse.md)
 
-* [`AccountUpdateTransaction`](reference/AccountUpdateTransaction.md)
+---
 
-* [`AccountDeleteTransaction`](reference/AccountDeleteTransaction.md)
-
-#### Contract Transactions
-
-* [`ContractCreateTransaction`](reference/ContractCreateTransaction.md)
-
-* [`ContractUpdateTransaction`](reference/ContractUpdateTransaction.md)
-
-* [`ContractDeleteTransaction`](reference/ContractDeleteTransaction.md)
-
-* [`ContractExecuteTransaction`](reference/ContractExecuteTransaction.md)
-
-#### File Transactions
-
-* [`FileCreateTransaction`](reference/FileCreateTransaction.md)
-
-* [`FileAppendTransaction`](reference/FileAppendTransaction.md)
-
-* [`FileUpdateTransaction`](reference/FileUpdateTransaction.md)
-
-* [`FileDeleteTransaction`](reference/FileDeleteTransaction.md)
-
-#### Topic Transactions
-
-* [`ConsensusTopicCreateTransaction`](reference/ConsensusTopicCreateTransaction.md)
-
-* [`ConsensusTopicUpdateTransaction`](reference/ConsensusTopicUpdateTransaction.md)
-
-* [`ConsensusTopicDeleteTransaction`](reference/ConsensusTopicDeleteTransaction.md)
-
-* [`ConsensusMessageSubmitTransaction`](reference/ConsensusMessageSubmitTransaction.md)
-
-#### System Transactions
-
-* [`SystemDeleteTransaction`](reference/SystemDeleteTransaction.md)
-
-* [`SystemUndeleteTransaction`](reference/SystemUndeleteTransaction.md)
-
-* [`FreezeTransaction`](reference/FreezeTransaction.md)
-
-### Queries
-
+* [`Query`](reference/core/Query.md)
 * [`TransactionReceiptQuery`](reference/TransactionReceiptQuery.md)
-
 * [`TransactionRecordQuery`](reference/TransactionRecordQuery.md)
 
-#### Account Queries
+### Errors
+
+* [`PrecheckStatus`](reference/error/PrecheckStatus.md)
+* [`ReceiptStatus`](reference/error/ReceiptStatus.md)
+* [`MaxQueryPaymentExceeded`](reference/cryptography/MaxQueryPaymentExceeded.md)
+* [`BadKey`](reference/error/BadKey.md)
+* [`BadMnemonic`](reference/error/BadMnemonic.md)
+* [`BadMnemonicReason`](reference/error/BadMnemonicReason.md)
+
+### Cryptography
+
+* [`Key`](reference/cryptography/Key.md)
+* [`KeyList`](reference/cryptography/KeyList.md)
+* [`PrivateKey`](reference/cryptography/PrivateKey.md)
+* [`PublicKey`](reference/cryptography/PublicKey.md)
+* [`Mnemonic`](reference/cryptography/Mnemonic.md)
+
+### Cryptocurrency
+
+* [`AccountId`](reference/AccountId.md)
+* [`AccountInfo`](reference/AccountInfo.md)
+
+---
+
+* [`CryptoTransferTransaction`](reference/CryptoTransferTransaction.md)
+* [`AccountCreateTransaction`](reference/AccountCreateTransaction.md)
+* [`AccountUpdateTransaction`](reference/AccountUpdateTransaction.md)
+* [`AccountDeleteTransaction`](reference/AccountDeleteTransaction.md)
+
+---
 
 * [`AccountBalanceQuery`](reference/AccountBalanceQuery.md)
-
 * [`AccountInfoQuery`](reference/AccountInfoQuery.md)
-
 * [`AccountRecordsQuery`](reference/AccountRecordsQuery.md)
-
 * [`AccountStakersQuery`](reference/AccountStakersQuery.md)
 
-#### Contract Queries
+#### Smart Contract
+
+* [`ContractId`](reference/ContractId.md)
+* [`ContractInfo`](reference/ContractInfo.md)
+
+---
+
+* [`ContractCreateTransaction`](reference/ContractCreateTransaction.md)
+* [`ContractUpdateTransaction`](reference/ContractUpdateTransaction.md)
+* [`ContractDeleteTransaction`](reference/ContractDeleteTransaction.md)
+* [`ContractExecuteTransaction`](reference/ContractExecuteTransaction.md)
+
+---
 
 * [`ContractBytecodeQuery`](reference/ContractBytecodeQuery.md)
-
 * [`ContractCallQuery`](reference/ContractCallQuery.md)
-
 * [`ContractInfoQuery`](reference/ContractInfoQuery.md)
-
 * [`ContractRecordsQuery`](reference/ContractRecordsQuery.md)
 
-#### File Queries
+#### File
+
+* [`FileId`](reference/FileId.md)
+* [`FileInfo`](reference/FileInfo.md)
+
+---
+
+* [`FileCreateTransaction`](reference/FileCreateTransaction.md)
+* [`FileAppendTransaction`](reference/FileAppendTransaction.md)
+* [`FileUpdateTransaction`](reference/FileUpdateTransaction.md)
+* [`FileDeleteTransaction`](reference/FileDeleteTransaction.md)
+
+---
 
 * [`FileContentsQuery`](reference/FileContentsQuery.md)
-
 * [`FileInfoQuery`](reference/FileInfoQuery.md)
 
-#### Topic Queries
+#### Consensus Topic
+
+* [`TopicId`](reference/TopicId.md)
+* [`TopicInfo`](reference/TopicInfo.md)
+
+---
+
+* [`TopicCreateTransaction`](reference/TopicCreateTransaction.md)
+* [`TopicUpdateTransaction`](reference/TopicUpdateTransaction.md)
+* [`TopicDeleteTransaction`](reference/TopicDeleteTransaction.md)
+* [`TopicMessageSubmitTransaction`](reference/TopicMessageSubmitTransaction.md)
+
+---
 
 * [`ConsensusTopicInfoQuery`](reference/ConsensusTopicInfoQuery.md)
+
+#### System
+
+* [`SystemDeleteTransaction`](reference/SystemDeleteTransaction.md)
+* [`SystemUndeleteTransaction`](reference/SystemUndeleteTransaction.md)
+* [`FreezeTransaction`](reference/FreezeTransaction.md)
+
+#### Network
+
+* [`NetworkVersionQuery`](reference/NetworkVersionQuery.md)
 
 ## Contributing
 
