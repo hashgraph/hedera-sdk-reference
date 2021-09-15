@@ -4,18 +4,8 @@
 > extends [`Query`](reference/core/Query.md) <
 > [`ProxyStaker[]`](reference/cryptocurrency/ProxyStaker.md) >
 
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class AccountStakersQuery extends Query<ProxyStaker[]> {
-    constructor();
-
-    /* property */ accountId: AccountId;
-}
-```
-
-</details>
+Get all the accounts that are proxy staking to this account. For each of them, give the amount
+currently staked. This is not yet implemented, but will be in a future version of the API.
 
 <!-- tabs:start -->
 

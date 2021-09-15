@@ -1,21 +1,11 @@
-# `AccountRecordsQuery`
-
 > class `AccountRecordsQuery`
 > extends [`Query`](reference/core/Query.md) <
 > [`TransactionRecord[]`](reference/core/TransactionRecord.md) >
 
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class AccountRecordsQuery extends Query<TransactionRecord[]> {
-    constructor();
-
-    /* property */ accountId: AccountId;
-}
-```
-
-</details>
+Requests records of all transactions for which the given account was the
+effective payer in the last 3 minutes of consensus time and
+<tt>ledger.keepRecordsInState=true</tt> was true during
+<tt>handleTransaction</tt>.
 
 <!-- tabs:start -->
 
@@ -62,6 +52,6 @@ if err != nil {
 
 ##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
-The `AccountId` for which the records should be retrieved.
+The account ID for which the records should be retrieved
 
 ---

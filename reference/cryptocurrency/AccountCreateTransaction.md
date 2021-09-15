@@ -146,3 +146,10 @@ will behave as if proxyAccountID was null.
 The memo associated with the account (UTF-8 encoding max 100 bytes)
 
 ---
+
+##### `maxAutomaticTokenAssociations`: `Uint32`
+
+The maximum number of tokens that an Account can be implicitly associated with. Defaults to 0
+and up to a maximum value of 1000.
+
+---
