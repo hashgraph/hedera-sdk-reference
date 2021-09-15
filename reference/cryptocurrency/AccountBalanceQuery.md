@@ -13,7 +13,7 @@ reply than CryptoGetInfo, which returns the balance plus additional information.
 #### ** Java **
 
 ```java
-var balance = new AccountBalanceQuery()
+var balances = new AccountBalanceQuery()
     .setAccountId(operatorId)
     .execute(client);
 ```
@@ -21,7 +21,7 @@ var balance = new AccountBalanceQuery()
 #### ** JavaScript **
 
 ```javascript
-const balance = await new AccountBalanceQuery()
+const balances = await new AccountBalanceQuery()
     .setAccountId("3") // balance of node 3
     .execute(client);
 ```
@@ -29,7 +29,7 @@ const balance = await new AccountBalanceQuery()
 #### ** Go **
 
 ```go
-balance, err := hedera.NewAccountBalanceQuery().
+balances, err := hedera.NewAccountBalanceQuery().
     SetAccountID(client.GetOperatorAccountID()).
     Execute(client)
 if err != nil {
