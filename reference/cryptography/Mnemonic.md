@@ -5,37 +5,51 @@ Multi-word mnemonic phrases.
 Compatible with (both original and current) Hedera mobile wallets
 and MyHbarWallet.
 
-<details>
-<summary><b>Table of Contents</b></summary>
+<!-- tabs:start -->
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`generate()`](#generate-mnemonic) | ✅ | ✅ | ✅
-| [`generateN()`](#generaten-count-uint-mnemonic) | ✅ | ✅ | ✅
-| [`fromWords()`](#fromwrods-words-string-mnemonic) | ✅ | ✅ | ✅
-| [`fromString()`](#fromstring-text-string-mnemonic) | ✅ | ✅ | ✅
-| [`toPrivateKey()`](#toprivatekey-passphrase-string-privatekey) | ✅ | ✅ | ✅
-| [`toString()`](#tostring-string) | ✅ | ✅ | ✅
-| [`words`](#words-string) | ✅ | ✅ | ✅
-</details>
+### ** Java **
 
+```java
+var mnemonic = Mnemonic.fromString(words);
+
+var privateKey = mnemonic.toPrivateKey();
+var legacyPrivateKey = mnemonic.toLegacyPrivateKey();
+```
+
+### ** JavaScript **
+
+```javascript
+const mnemonic = Mnemonic.fromString(words);
+
+const privateKey = await mnemonic.toPrivateKey();
+const legacyPrivateKey = await mnemonic.toLegacyPrivateKey();
+```
+
+### ** Go **
+
+```go
+mnemonic := MnemonicFromString(words);
+
+privateKey := mnemonic.ToPrivateKey();
+legacyPrivateKey := mnemonic.ToLegacyPrivateKey();
+```
+
+<!-- tabs:end -->
 ### Static Methods
 
-##### `generate` (): `Mnemonic`
+##### `generate12` ( ): `Mnemonic`
 
-Generate a new random 24-word mnemonic from the BIP-39 standard
-English word list.
-
----
-
-##### `generateN` ( `count`: `Uint` ): `Mnemonic`
-
-Generate a new random `count`-word mnemonic from the BIP-39 standard
-English word list.
+Returns a new random 12-word mnemonic from the BIP-39 standard English word list.
 
 ---
 
-##### `fromWords` ( `words`: `string[]` ): `Mnemonic`
+##### `generate24` ( ): `Mnemonic`
+
+Returns a new random 24-word mnemonic from the BIP-39 standard English word list.
+
+---
+
+##### `fromWords` ( `words`: `String[]` ): `Mnemonic`
 
 Create a mnemonic from the given list of words.
 
@@ -49,6 +63,8 @@ Create a mnemonic from the given list of words.
 
 ##### `fromString` ( `text`: `String` ): `Mnemonic`
 
+Deserialize a mnemonic from a string containing a list of words separated by spaces
+
 ###### Errors
 
 - [`BadMnemonic`](reference/error/BadMnemonic.md) — when the mnemonic contains
@@ -61,14 +77,20 @@ Create a mnemonic from the given list of words.
 
 ##### `toPrivateKey` ( `passphrase`: `String` ): [`PrivateKey`](reference/cryptography/PrivateKey.md)
 
+Derive a private key from the current mnemonic
+
 ---
 
-##### `toString` (): `String`
+##### `toString` ( ): `String`
+
+Serializes mnemonic into string where the words are separated by spaces
 
 ---
 
 ### Properites
 
-##### `words`: `string[]`
+##### `words`: `String[]`
+
+The list of words that define this mnemonic
 
 ---

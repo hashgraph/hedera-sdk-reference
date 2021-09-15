@@ -1,24 +1,25 @@
-# `KeyList`
-
 > class `KeyList` extends `Collection<Key>` implements [`Key`](reference/cryptography/Key.md)
 
-<details>
-<summary><b>Declaration</b></summary>
+A list of Keys with an optional threshold. If a threshold is set the keylist will be treated as
+a protobuf `ThresholdKey` type, otherwise the keylist will be treated as a `KeyList` protobuf
+type.
 
-```typescript
-class KeyList extends Collection<Key> implements Key {
-    /* property */ threshold: Uint;
-}
-```
+**KeyList**:
+A list of keys that requires all keys (M-of-M) to sign unless otherwise specified in
+documentation. A KeyList may contain repeated keys, but all repeated keys are only required to
+sign once.
 
-</details>
+**ThresholdKey**:
+A set of public keys that are used together to form a threshold signature.  If the threshold is N
+and there are M keys, then this is an N of M threshold signature. If an account is associated
+with ThresholdKeys, then a transaction to move cryptocurrency out of it must be signed by a list
+of M signatures, where at most M-N of them are blank, and the other at least N of them are valid
+signatures corresponding to at least N of the public keys listed here.
 
-A list of Keys (`Key`) with an optional threshold.
-
-This class implements the collection interface of the
+**Note**: This class implements the collection interface of the
 implementation language and thus can look very different between each SDK.
 
-A `KeyList` can be used anywhere that a `Key` is expected in the SDK. This
+**Note**: A `KeyList` can be used anywhere that a `Key` is expected in the SDK. This
 includes `setKey` in `AccountCreateTransaction` and `setSubmitKey` in
 `TopicCreateTransaction`.
 
@@ -67,18 +68,6 @@ keyList := NewKeyListFromSlice([]{
 keyList := NewKeyListWith(keyA, keyB).SetThreshold(1)
 ```
 
-### ** Python **
-
-```python
-# imperative
-key_list = KeyList(threshold=1)
-key_list.append(key_a)
-key_list.append(key_b)
-
-# from array
-key_list = KeyList([key_a, key_b], threshold=1)
-```
-
 <!-- tabs:end -->
 
 ### Constructor
@@ -97,44 +86,17 @@ Create a new, empty list of keys with the given threshold.
 
 ##### `of` (`keyArray` : `Key[]`): `KeyList`
 
+Construct a new keylist from a list of keys
+
 ---
 
 ### Methods
 
-
-##### `isEmpty` (): `bool`
-
----
-
-##### `contains` (`keys` : `KeyList`): `bool`
-
----
-
-##### `iterator` (): `Iterator<Key>`
-
----
-
-##### `add` (`key` : `Key`): `bool`
-
----
-
-##### `remove` (`keyList` : `KeyList`): `bool`
-
----
-
-##### `clear` ()
-
----
-
-##### `equals` (`keyList` : `KeyList`): `bool`
-
----
-
-##### `hashCode` (): `int`
-
 ---
 
 ##### `toString` (): `String`
+
+Stringify the keylist structure into a readable format
 
 ---
 
