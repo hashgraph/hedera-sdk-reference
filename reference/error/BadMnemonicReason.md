@@ -1,19 +1,4 @@
-# `BadMnemonicReason`
-
 > enum `BadMnemonicReason`
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-enum BadMnemonicReason {
-    BadLength,
-    UnknownWords,
-    ChecksumMismatch,
-}
-```
-
-</details>
 
 ### Variants
 

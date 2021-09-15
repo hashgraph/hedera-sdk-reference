@@ -1,23 +1,6 @@
-# `BadMnemonic`
+> class `BadKey` extends `Error`
 
-> error `BadKey`
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class BadMnemonicError extends Error {
-    readonly mnemonic: Mnemonic;
-
-    readonly reason: BadMnemonicReason;
-
-    readonly unknownWordIndicies: int[];
-}
-```
-
-</details>
-
-- Each language has differing conventions for errors:
+**Note**: Each language has differing conventions for errors:
   - Java, Dart — `BadMnemonicException`
   - Rust, JavaScript, Python — `BadMnemonicError`
   - Go — `ErrBadMnemonic`
@@ -25,7 +8,7 @@ class BadMnemonicError extends Error {
 
 ### Fields
 
-##### `mnemonic`: `Mnemonic`
+##### `mnemonic`: [`Mnemonic`](reference/cryptography/Mnemonic.md)
 
 The mnemonic that failed validation.
 

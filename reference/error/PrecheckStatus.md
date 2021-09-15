@@ -1,12 +1,19 @@
-# `PrecheckStatus`
+> class `PrecheckStatusError` extends `Error`
 
-> error `PrecheckStatusError` extends [`Status`](reference/error/Status.md)
+Signals that a transaction has failed the pre-check. Before a node submits a transaction to the rest
+of the network, it attempts some cheap assertions. This process is called the "pre-check".
 
-<details>
-<summary><b>Declaration</b></summary>
+### Fields
 
-```typescript
-class PrecheckStatusError extends StatusError {}
-```
+##### `status`: [`Status`](reference/Status.md)
 
-</details>
+The status of the failing transaction
+
+---
+
+##### `transactionId`: [`TransactionId`](reference/core/TransactionId.md)
+
+The ID of the transaction that failed. This can be `null` if a query fails pre-check without an
+associated payment transaction.
+
+---

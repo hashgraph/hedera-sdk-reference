@@ -1,21 +1,10 @@
-# `BadKey`
-
-> error `BadKey`
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class BadKeyError extends Error {}
-```
-
-</details>
+> class `BadKey` extends `Error`
 
 Signals that a private or public key could not be realized from the input.
 
-- `PrivateKey.fromString`
-- `PrivateKey.fromPem`
-- `PrivateKey.fromBytes`
-- `PrivateKey.fromKeystore`
-- `PublicKey.fromString`
-- `PublicKey.fromBytes`
+ - [`PrivateKey.fromString`](reference/cryptography/PrivateKey.md#fromstring-text-string-privatekey)
+ - [`PrivateKey.fromPem`](reference/cryptography/PrivateKey.md#frompem-pem-string-privatekey)
+ - [`PrivateKey.fromBytes`](reference/cryptography/PrivateKey.md#frombytes-data-bytes-privatekey)
+ - [`PrivateKey.fromKeystore`](reference/cryptography/PrivateKey.md#fromkeystore-data-bytes-passphrase-string-privatekey)
+ - [`PublicKey.fromString`](reference/cryptography/PublicKey.md#fromstring-text-string-publickey)
+ - [`PublicKey.fromBytes`](reference/cryptography/PublicKey.md#frombytes-data-bytes-publickey)
