@@ -1,22 +1,8 @@
-# `AccountBalanceQuery`
-
 > class `AccountBalanceQuery`
 > extends [`Query`](reference/core/Query.md) < [`Hbar`](reference/Hbar.md) >
 
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class AccountBalanceQuery extends Query<Hbar> {
-    constructor();
-
-    /* property */ accountId: AccountId;
-
-    /* property */ contractId: ContractId;
-}
-```
-
-</details>
+Get the balance of a cryptocurrency account. This returns only the balance, so it is a smaller
+reply than CryptoGetInfo, which returns the balance plus additional information.
 
 > [!TIP]
 > `AccountBalanceQuery` is a completely free query and does not even require
@@ -61,13 +47,13 @@ if err != nil {
 
 ### Properties
 
-##### `accountId`: `AccountId`
+##### `accountId`: [`AccountId`](reference/AccountId.md)
 
 The account ID for which information is requested
 
 ---
 
-##### `contractId`: `ContractId`
+##### `contractId`: [`ContractId`](reference/ContractId.md)
 
 The contract ID for which information is requested
 

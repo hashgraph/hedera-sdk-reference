@@ -1,21 +1,9 @@
-# `AccountInfoQuery`
-
 > class `AccountInfoQuery`
 > extends [`Query`](reference/core/Query.md) <
 > [`AccountInfo`](reference/cryptocurrency/AccountInfo.md) >
 
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class AccountInfoQuery extends Query<AccountInfo> {
-    constructor();
-
-    /* property */ accountId: AccountId;
-}
-```
-
-</details>
+Get all the information about an account, including the balance. This does not get the list of
+account records.
 
 <!-- tabs:start -->
 
@@ -61,6 +49,6 @@ if err != nil {
 
 ##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
-The `AccountId` for which information is requested
+The account ID for which information is requested
 
 ---

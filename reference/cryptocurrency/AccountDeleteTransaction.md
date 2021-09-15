@@ -1,6 +1,9 @@
-# `AccountDeleteTransaction`
-
 > class `AccountDeletedTransaction` extends [`Transaction`](reference/core/Transaction.md)
+
+Mark an account as deleted, moving all its current hbars to another account. It will remain in
+the ledger, marked as deleted, until it expires. Transfers into it a deleted account fail. But a
+deleted account can still have its expiration extended in the normal way.
+
 > [!WARNING]
 > When you delete an account, you need to sign it with the key set at account creation.
 

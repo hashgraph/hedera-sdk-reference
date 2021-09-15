@@ -40,7 +40,7 @@
         * [`AccountCreateTransaction`](reference/cryptocurrency/AccountCreateTransaction.md)
         * [`AccountUpdateTransaction`](reference/cryptocurrency/AccountUpdateTransaction.md)
         * [`AccountDeleteTransaction`](reference/cryptocurrency/AccountDeleteTransaction.md)
-        * [`CryptoTransferTransaction`](reference/cryptocurrency/CryptoTransferTransaction.md)
+        * [`TransferTransaction`](reference/cryptocurrency/TransferTransaction.md)
 
     </details>
 

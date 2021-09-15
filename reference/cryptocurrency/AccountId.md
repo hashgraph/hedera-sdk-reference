@@ -1,24 +1,6 @@
-# `AccountId`
-
 > class `AccountId`
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`constructor`](#constructor-num-uint64-) | ✅ | ✅ | ✅
-| [`fromString`](#fromstring-str-string-accountid) | ✅ | ✅ | ✅
-| [`fromBytes`](#frombytes-data-bytes-accountid) | ✅ | ✅ | ✅
-| [`fromSolidityAddress`](#fromsolidityaddress-str-string-accountid) | ✅ | ✅ | ✅
-| [`shard`](#shard-uint64) | ✅ | ✅ | ✅
-| [`realm`](#realm-uint64) | ✅ | ✅ | ✅
-| [`num`](#num-uint64) | ✅ | ✅ | ✅
-| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
-
-</details>
-
-An ID type that represents a account on a Hedera Hashgraph network.
+The ID for an a cryptocurrency account
 
 ### Constructors
 
@@ -38,20 +20,20 @@ Construct a [`AccountId`](#) with all fields explicitly set.
 
 ##### `fromString` ( `str` : `String` ): [`AccountId`](#accountid)
 
-Construct a [`AccountId`](#) from a string. The format of the string could be either just
+Construct an [`AccountId`](#) from a string. The format of the string could be either just
 a number "4" or dot separated numbers "0.0.4".
 
 ---
 
 ##### `fromBytes` ( `data` : `bytes` ): [`AccountId`](#accountid)
 
-Deserialize a [`AccountId`](#) from its the protobuf representation.
+Deserialize an account ID from its the protobuf representation.
 
 ---
 
 ##### `fromSolidityAddress` ( `str` : `String` ): [`AccountId`](#accountid)
 
-Construct a [`AccountId`](#) a solidity address.
+Construct an account ID from a solidity address.
 
 ---
 
@@ -59,7 +41,35 @@ Construct a [`AccountId`](#) a solidity address.
 
 ##### `toBytes` ( ): `bytes`
 
-Serialize the [`AccountId`](#) into its protobuf representation.
+Serialize this ID into its protobuf representation.
+
+---
+
+##### `validateChecksum` ( `client` : [`Client`](reference/core/Client.md) ): `void`
+
+Validate the account ID's checksum matches the client's network.
+
+Note: The client must contain a network with a known [`NetworkName`](reference/NetworkName.md)
+
+---
+
+##### `getChecksum` ( ): `String`
+
+Get the checksum for this account ID if it constructed with one.
+
+---
+
+##### `toString` ( ): `String`
+
+Stringify this ID into `{shard}.{realm}.{num}`
+
+---
+
+##### `toStringWithChecksum` ( `client` : [`Client`](reference/core/Client.md) ): `String`
+
+Stringify this ID into `{shard}.{realm}.{num}-{checksum}` using the client's network.
+
+Note: The client must contain a network with a known [`NetworkName`](reference/NetworkName.md)
 
 ---
 
@@ -67,18 +77,18 @@ Serialize the [`AccountId`](#) into its protobuf representation.
 
 ##### `shard`: `Uint64`
 
-The shard of this ID.
+The shard number (nonnegative)
 
 ---
 
 ##### `realm`: `Uint64`
 
-The realm of this ID.
+The realm number (nonnegative)
 
 ---
 
 ##### `num`: `Uint64`
 
-The num of this ID.
+A nonnegative account number unique within its realm
 
 ---
