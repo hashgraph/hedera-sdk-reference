@@ -1,46 +1,6 @@
-# `Client`
-
 > class `Client`
 
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class Client {
-    static forNetwork(network: Map<String, AccountId>): Client;
-
-    static forMainnet(): Client;
-    static forTestnet(): Client;
-    static forPreviewnet(): Client;
-
-    static fromConfig(data: string): Client;
-    static fromConfigFile(filename: string): Client;
-
-    setNetwork(network: Map<string, AccountId>): this;
-    setMirrorNetwork(mirrorNetwork: string[]): this;
-
-    /* property */ readonly operatorAccountId: ?AccountId;
-    /* property */ readonly operatorPublicKey: ?PublicKey;
-
-    setOperator(accountId: AccountId, privateKey: PrivateKey): this;
-    setOperatorWith(
-        accountId: AccountId,
-        publicKey: PublicKey,
-        transactionSigner: (message: bytes) => bytes
-    ): this;
-
-    close();
-
-    /* write-only property */ maxTransactionFee: Hbar;
-    /* write-only property */ maxQueryPayment: Hbar;
-    /* write-only property */ requestTimeout: Duration;
-}
-```
-
-</details>
-
-This class is required by many other Hedera classes.
-It serves as the base API layer that communicates with our servers.
+Managed client for use on the Hedera Hashgraph network.
 
 <!-- tabs:start -->
 
@@ -101,7 +61,7 @@ client.set_operator(operator_account_id, operator_private_key)
 
 ### Static Methods
 
-##### `forNetwork` ( `network`: `Map<string, AccountId>` ): `Client`
+##### `forNetwork` ( `network`: `Map` < `String` , [`AccountId`](reference/core/AccountId.md) > ): `Client`
 
 Construct a client for a specific network.
 
