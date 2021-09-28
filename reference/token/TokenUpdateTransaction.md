@@ -153,3 +153,10 @@ The new account which will be automatically charged to renew the token's expirat
 The new interval at which the auto-renew account will be charged to extend the token's expiry.
 
 ---
+
+##### `pauseKey`: [`Key`](reference/cryptography/Key.md)
+
+The Key which can pause and unpause the Token. If the Token does not currently
+have a pause key, transaction will resolve to TOKEN\_HAS\_NO\_PAUSE\_KEY
+
+---

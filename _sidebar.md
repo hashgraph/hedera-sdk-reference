@@ -111,6 +111,7 @@
         * [`TokenRevokeKycTransaction`](reference/token/TokenRevokeKycTransaction.md)
         * [`TokenTransfer`](reference/token/TokenTransfer.md)
         * [`TokenUnfreezeTransaction`](reference/token/TokenUnfreezeTransaction.md)
+        * [`TokenUnpauseTransaction`](reference/token/TokenUnpauseTransaction.md)
         * [`TokenUpdateTransaction`](reference/token/TokenUpdateTransaction.md)
         * [`TokenWipeTransaction`](reference/token/okenWipeTransaction.md)
 

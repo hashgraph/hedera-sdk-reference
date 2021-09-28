@@ -197,3 +197,10 @@ Note: This `AccountId` **MUST** sign the transaction if present.
 The interval at which the auto-renew account will be charged to extend the token's expiry
 
 ---
+
+##### `pauseKey`: [`Key`](reference/cryptography/Key.md)
+
+The Key which can pause and unpause the Token. If Empty the token pause status defaults to
+PauseNotApplicable, otherwise Unpaused.
+
+---
