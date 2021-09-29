@@ -8,10 +8,13 @@ Managed client for use on the Hedera Hashgraph network.
 
 ```java
 // create from..
-var client = Client.forTestnet(); // pre-defined
-var client = Client.fromConfigFile("./client-config.json");
-var client = Client.forNetwork("mainnet", new AccountId(3)); // named
-var client = Client.forName("previewnet"); // named
+var network = new HashMap<String, AccountId>();
+network.put("0.testnet.hedera.com:50211", new AccountId(3));
+
+var client = Client.forMainnet(); // pre-defined
+var client = Client.forNetwork(newtork); // custom network
+var client = Client.fromConfigFile("./client-config.json"); // configuration file
+var client = Client.forName("testnet"); // named
 
 // set operator (to use to pay transaction fees)
 client.setOperator(operatorAccountId, operatorPrivateKey);
@@ -21,11 +24,14 @@ client.setOperator(operatorAccountId, operatorPrivateKey);
 
 ```javascript
 // create from..
-const client = Client.forTestnet(); // pre-defined
+const network = {
+    "0.testnet.hedera.com:50211": "0.0.3"
+};
 
-const client = Client.forName("mainnet")
-const client = Client.forNetwork(Network.MAINNET); // constant
-const client = Client.forNetwork(Network.fromName("testnet")); // named
+var client = Client.forMainnet(); // pre-defined
+var client = Client.forNetwork(newtork); // custom network
+var client = Client.fromConfigFile("./client-config.json"); // configuration file
+var client = Client.forName("testnet"); // named
 
 // set operator (to use to pay transaction fees)
 client.setOperator(operatorAccountId, operatorPrivateKey);
@@ -35,33 +41,23 @@ client.setOperator(operatorAccountId, operatorPrivateKey);
 
 ```go
 // create from..
-client := hedera.ClientForPreviewnet() // pre-defined
-client := hedera.ClientForNetwork(hedera.NetworkMainnet) // constant
+network := make(map[string]AccountID)
+newtork["0.testnet.hedera.com:50211"] = AccountID{Account: 3}
 
-network, _ := hedera.NetworkFromName("mainnet")
-client := hedera.ClientForNetwork(network) // named
+client := ClientForMainnet(); // pre-defined
+client := ClientForNetwork(newtork); // custom network
+client, err := ClientFromConfigFile("./client-config.json"); // configuration file
+client, err := ClientForName("testnet"); // named
 
 // set operator (to use to pay transaction fees)
-client.SetOperator(operatorAccountId, operatorPrivateKey)
-```
-
-### ** Python **
-
-```python
-# create from..
-client = hedera.Client.for_testnet()  # pre-defined
-client = hedera.Client.for_network(hedera.network.MAINNET)  # constant
-client = hedera.Client.for_network(hedera.network["mainnet"])  # named
-
-# set operator (to use to pay transaction fees)
-client.set_operator(operator_account_id, operator_private_key)
+client.setOperator(operatorAccountId, operatorPrivateKey);
 ```
 
 <!-- tabs:end -->
 
 ### Static Methods
 
-##### `forNetwork` ( `network`: `Map` < `String` , [`AccountId`](reference/core/AccountId.md) > ): `Client`
+##### `forNetwork` ( `network`: `Map` < `String` , [`AccountId`](reference/cryptocurrency/AccountId.md) > ): `Client`
 
 Construct a client for a specific network.
 
@@ -92,6 +88,14 @@ Construct a Hedera client pre-configured for Testnet access.
 ##### `forPreviewnet` (): `Client`
 
 Construct a Hedera client pre-configured for Previewnet access.
+
+---
+
+##### `forName` ( `name`: `String` ): `Client`
+
+Construct a Hedera client for a given name.
+
+Valid names are "previewnet", "testnet", "mainnet"
 
 ---
 
@@ -158,14 +162,14 @@ or
 
 ---
 
-##### `setOperator` ( `accountId`: [`AccountId`](reference/AccountId.md), `privateKey`: [`PrivateKey`](reference/cryptography/PrivateKey.md) ): `this`
+##### `setOperator` ( `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md), `privateKey`: [`PrivateKey`](reference/cryptography/PrivateKey.md) ): `Client`
 
 Sets the account that will, by default, pay for transactions and queries built
 with this client.
 
 ---
 
-##### `setOperatorWith` ( `accountId`: [`AccountId`](reference/AccountId.md), `publicKey`: [`PublicKey`](reference/cryptography/PublicKey.md), `transactionSigner`: `(bytes) => bytes` ): `this`
+##### `setOperatorWith` ( `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md), `publicKey`: [`PublicKey`](reference/cryptography/PublicKey.md), `transactionSigner`: `(bytes) => bytes` ): `Client`
 
 Sets the account that will, by default, pay for transactions and queries built
 with this client.
@@ -185,21 +189,35 @@ associated resources.
 
 ---
 
-##### `ping` ()
+##### `ping` ( `nodeAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md))
+
+Ping a single node
+
+**NOTE**: This method will **not** throw if the node doesn't respond with a successful status code,
+instead the network will de-prioritize it.
 
 ---
 
-##### `forName` (`name` : `String`) : `Client`
+##### `pingAll` ()
 
----
+Ping all nodes in the current network.
 
-##### `getNetwork` () : `Map<String, AccountId>`
+**NOTE**: This method will **not** throw if a node doesn't respond with a successful status code,
+instead the network will de-prioritize it.
 
 ---
 
 ### Properties
 
-##### `maxTransactionFee`: [`Hbar`](reference/Hbar.md)
+##### `network` () : `Map` < `String` , [`AccountId`](reference/cryptocurrency/AccountId.md) >
+
+---
+
+##### `mirrorNetwork` () : `List` < `String` >
+
+---
+
+##### `defaultMaxTransactionFee`: [`Hbar`](reference/Hbar.md)
 
 **Write-only** The maximum fee to be paid for transactions executed by this client.
 
@@ -207,7 +225,7 @@ Defaults to 2 hbar.
 
 ---
 
-##### `maxQueryPayment`: [`Hbar`](reference/Hbar.md)
+##### `defaultMaxQueryPayment`: [`Hbar`](reference/Hbar.md)
 
 **Write-only** The maximum payment allowable for queries.
 
@@ -215,7 +233,7 @@ Defaults to 1 hbar.
 
 ---
 
-##### `operatorAccountId`: [`?AccountId`](reference/AccountId.md)
+##### `operatorAccountId`: [`?AccountId`](reference/cryptocurrency/AccountId.md)
 
 **Read-only**. Use `setOperator` or `setOperatorWith` to set.
 
@@ -227,7 +245,21 @@ Defaults to 1 hbar.
 
 ---
 
-##### **Write-only** `requestTimeout`: `Duration`
+##### `requestTimeout`: `Duration`
+
+---
+
+##### `transportSecurity` () : `bool`
+
+Enable or disable TLS for both networks.
+
+---
+
+##### `verifyCertificates` () : `bool`
+
+Enable or disable TLS certificate verification
+
+Only available in Java and Go SDKs 
 
 ---
 

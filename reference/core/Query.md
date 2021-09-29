@@ -1,38 +1,4 @@
-# `Query`
-
-> abstract class `Query<O>`
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-abstract class Query<O> {
-    /* property */ nodeAccountIds: AccountId[];
-
-    /* property */ maxQueryPayment: ?Hbar;
-
-    /* property */ queryPayment: ?Hbar;
-
-    execute(client: Client): O;
-
-    getCost(client: Client): Hbar;
-}
-```
-
-</details>
-
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`execute`](#execute-client-client-o) | ✅ | ✅ | ✅
-| [`getCost`](#getcost-client-client-hbar) | ✅ | ✅ | ✅
-| [`nodeAccountIds`](#nodeaccountids-accountId) | ✅ | ✅ | ✅
-| [`maxQueryPayment`](#write-only-maxquerypayment-hbar) | ✅ | ✅ | ✅
-| [`queryPayment`](#write-only-querypayment-hbar) | ✅ | ✅ | ✅
-
-</details>
+> abstract class `Query` < `O` > extends [`Executable`](reference/core/Exectuable.md) < `0` >
 
 Base class for all queries that may be submitted to Hedera.
 
