@@ -29,8 +29,6 @@ const response = await transaction.execute(client) // TransactionResponse;
 const receipt = await response.getReceipt(client) // TransactionReceipt;
 ```
 
-- `Duration` is `number` and is the number of seconds
-
 #### ** Go **
 
 ```go

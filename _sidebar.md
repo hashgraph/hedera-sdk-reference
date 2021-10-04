@@ -107,6 +107,7 @@
         * [`TokenInfo`](reference/token/TokenInfo.md)
         * [`TokenInfoQuery`](reference/token/TokenInfoQuery.md)
         * [`TokenMintTransaction`](reference/token/TokenMintTransaction.md)
+        * [`TokenPauseTransaction`](reference/token/TokenPauseTransaction.md)
         * [`TokenRelationship`](reference/token/TokenRelationship.md)
         * [`TokenRevokeKycTransaction`](reference/token/TokenRevokeKycTransaction.md)
         * [`TokenTransfer`](reference/token/TokenTransfer.md)
