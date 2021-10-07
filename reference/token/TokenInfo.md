@@ -58,11 +58,26 @@
 
 ---
 
-##### `defaultFreezeStatus`: `bool`
+##### `pauseKey`: [`Key`](reference/cryptography/Key.md)
+
+The Key which can pause and unpause the Token.
 
 ---
 
-##### `defaultKycStatus`: `bool`
+##### `defaultFreezeStatus`: `?bool`
+
+---
+
+##### `defaultKycStatus`: `?bool`
+
+---
+
+##### `defaultPauseStatus`: `?bool`
+
+Specifies whether the token is paused or not.
+ - `null`: PauseNotApplicable
+ - `false`: Unpaused
+ - `true`: Paused
 
 ---
 

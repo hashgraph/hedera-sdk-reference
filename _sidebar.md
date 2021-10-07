@@ -107,10 +107,12 @@
         * [`TokenInfo`](reference/token/TokenInfo.md)
         * [`TokenInfoQuery`](reference/token/TokenInfoQuery.md)
         * [`TokenMintTransaction`](reference/token/TokenMintTransaction.md)
+        * [`TokenPauseTransaction`](reference/token/TokenPauseTransaction.md)
         * [`TokenRelationship`](reference/token/TokenRelationship.md)
         * [`TokenRevokeKycTransaction`](reference/token/TokenRevokeKycTransaction.md)
         * [`TokenTransfer`](reference/token/TokenTransfer.md)
         * [`TokenUnfreezeTransaction`](reference/token/TokenUnfreezeTransaction.md)
+        * [`TokenUnpauseTransaction`](reference/token/TokenUnpauseTransaction.md)
         * [`TokenUpdateTransaction`](reference/token/TokenUpdateTransaction.md)
         * [`TokenWipeTransaction`](reference/token/okenWipeTransaction.md)
 
