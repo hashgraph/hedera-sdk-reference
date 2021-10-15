@@ -1,5 +1,3 @@
-# `Status`
-
 > enum `Status`
 
 ### Variants
@@ -8,624 +6,984 @@
 
 The transaction passed the precheck validations.
 
-##### INVALID_TRANSACTION
+##### INVALID\_TRANSACTION
 
 For any error not handled by specific error codes listed below.
 
-##### PAYER_ACCOUNT_NOT_FOUND
+##### PAYER\_ACCOUNT\_NOT\_FOUND
 
 Payer account does not exist.
 
-##### INVALID_NODE_ACCOUNT
+##### INVALID\_NODE\_ACCOUNT
 
-Node Account provided does not match the node account of the node the transaction was submitted to.
+Node Account provided does not match the node account of the node the transaction was submitted
+to.
 
-##### TRANSACTION_EXPIRED
+##### TRANSACTION\_EXPIRED
 
-Pre-Check error when TransactionValidStart + transactionValidDuration is less than current consensus time.
+Pre-Check error when TransactionValidStart + transactionValidDuration is less than current
+consensus time.
 
-##### INVALID_TRANSACTION_START
+##### INVALID\_TRANSACTION\_START
 
 Transaction start time is greater than current consensus time
 
-##### INVALID_TRANSACTION_DURATION
+##### INVALID\_TRANSACTION\_DURATION
 
-Valid transaction duration is a positive non zero number that does not exceed 120 seconds
+The given transactionValidDuration was either non-positive, or greater than the maximum 
+valid duration of 180 secs.
 
-##### INVALID_SIGNATURE
+##### INVALID\_SIGNATURE
 
 The transaction signature is not valid
 
-##### MEMO_TOO_LONG
+##### MEMO\_TOO\_LONG
 
 Transaction memo size exceeded 100 bytes
 
-##### INSUFFICIENT_TX_FEE
+##### INSUFFICIENT\_TX\_FEE
 
 The fee provided in the transaction is insufficient for this type of transaction
 
-##### INSUFFICIENT_PAYER_BALANCE
+##### INSUFFICIENT\_PAYER\_BALANCE
 
 The payer account has insufficient cryptocurrency to pay the transaction fee
 
-##### DUPLICATE_TRANSACTION
+##### DUPLICATE\_TRANSACTION
 
-This transaction ID is a duplicate of one that was submitted to this node or reached consensus in the last 180 seconds (receipt period)
+This transaction ID is a duplicate of one that was submitted to this node or reached consensus
+in the last 180 seconds (receipt period)
 
 ##### BUSY
 
 If API is throttled out
 
-##### NOT_SUPPORTED
+##### NOT\_SUPPORTED
 
 The API is not currently supported
 
-##### INVALID_FILE_ID
+##### INVALID\_FILE\_ID
 
 The file id is invalid or does not exist
 
-##### INVALID_ACCOUNT_ID
+##### INVALID\_ACCOUNT\_ID
 
 The account id is invalid or does not exist
 
-##### INVALID_CONTRACT_ID
+##### INVALID\_CONTRACT\_ID
 
 The contract id is invalid or does not exist
 
-##### INVALID_TRANSACTION_ID
+##### INVALID\_TRANSACTION\_ID
 
 Transaction id is not valid
 
-##### RECEIPT_NOT_FOUND
+##### RECEIPT\_NOT\_FOUND
 
 Receipt for given transaction id does not exist
 
-##### RECORD_NOT_FOUND
+##### RECORD\_NOT\_FOUND
 
 Record for given transaction id does not exist
 
-##### INVALID_SOLIDITY_ID
+##### INVALID\_SOLIDITY\_ID
 
 The solidity id is invalid or entity with this solidity id does not exist
 
 ##### UNKNOWN
 
-The responding node has submitted the transaction to the network. Its final status is still unknown.
+The responding node has submitted the transaction to the network. Its final status is still
+unknown.
 
 ##### SUCCESS
 
 The transaction succeeded
 
-##### FAIL_INVALID
+##### FAIL\_INVALID
 
 There was a system error and the transaction failed because of invalid request parameters.
 
-##### FAIL_FEE
+##### FAIL\_FEE
 
 There was a system error while performing fee calculation, reserved for future.
 
-##### FAIL_BALANCE
+##### FAIL\_BALANCE
 
 There was a system error while performing balance checks, reserved for future.
 
-##### KEY_REQUIRED
+##### KEY\_REQUIRED
 
 Key not provided in the transaction body
 
-##### BAD_ENCODING
+##### BAD\_ENCODING
 
 Unsupported algorithm/encoding used for keys in the transaction
 
-##### INSUFFICIENT_ACCOUNT_BALANCE
+##### INSUFFICIENT\_ACCOUNT\_BALANCE
 
 When the account balance is not sufficient for the transfer
 
-##### INVALID_SOLIDITY_ADDRESS
+##### INVALID\_SOLIDITY\_ADDRESS
 
 During an update transaction when the system is not able to find the Users Solidity address
 
-##### INSUFFICIENT_GAS
+##### INSUFFICIENT\_GAS
 
 Not enough gas was supplied to execute transaction
 
-##### CONTRACT_SIZE_LIMIT_EXCEEDED
+##### CONTRACT\_SIZE\_LIMIT\_EXCEEDED
 
-Contract byte code size is over the limit
+contract byte code size is over the limit
 
-##### LOCAL_CALL_MODIFICATION_EXCEPTION
+##### LOCAL\_CALL\_MODIFICATION\_EXCEPTION
 
-Local execution (query) is requested for a function which changes state
+local execution (query) is requested for a function which changes state
 
-##### CONTRACT_REVERT_EXECUTED
+##### CONTRACT\_REVERT\_EXECUTED
 
 Contract REVERT OPCODE executed
 
-##### CONTRACT_EXECUTION_EXCEPTION
+##### CONTRACT\_EXECUTION\_EXCEPTION
 
 For any contract execution related error not handled by specific error codes listed above.
 
-##### INVALID_RECEIVING_NODE_ACCOUNT
+##### INVALID\_RECEIVING\_NODE\_ACCOUNT
 
-In Query validation, account with +ve(amount) value should be Receiving node account, the receiver account should be only one account in the list
+In Query validation, account with +ve(amount) value should be Receiving node account, the
+receiver account should be only one account in the list
 
-##### MISSING_QUERY_HEADER
+##### MISSING\_QUERY\_HEADER
 
 Header is missing in Query request
 
-##### ACCOUNT_UPDATE_FAILED
+##### ACCOUNT\_UPDATE\_FAILED
 
 The update of the account failed
 
-##### INVALID_KEY_ENCODING
+##### INVALID\_KEY\_ENCODING
 
 Provided key encoding was not supported by the system
 
-##### NULL_SOLIDITY_ADDRESS
+##### NULL\_SOLIDITY\_ADDRESS
 
-Null solidity address
+null solidity address
 
-##### CONTRACT_UPDATE_FAILED
+##### CONTRACT\_UPDATE\_FAILED
 
-Update of the contract failed
+update of the contract failed
 
-##### INVALID_QUERY_HEADER
+##### INVALID\_QUERY\_HEADER
 
-The query header is invalid
+the query header is invalid
 
-##### INVALID_FEE_SUBMITTED
+##### INVALID\_FEE\_SUBMITTED
 
 Invalid fee submitted
 
-##### INVALID_PAYER_SIGNATURE
+##### INVALID\_PAYER\_SIGNATURE
 
 Payer signature is invalid
 
-##### KEY_NOT_PROVIDED
+##### KEY\_NOT\_PROVIDED
 
 The keys were not provided in the request.
 
-##### INVALID_EXPIRATION_TIME
+##### INVALID\_EXPIRATION\_TIME
 
 Expiration time provided in the transaction was invalid.
 
-##### NO_WACL_KEY
+##### NO\_WACL\_KEY
 
 WriteAccess Control Keys are not provided for the file
 
-##### FILE_CONTENT_EMPTY
+##### FILE\_CONTENT\_EMPTY
 
 The contents of file are provided as empty.
 
-##### INVALID_ACCOUNT_AMOUNTS
+##### INVALID\_ACCOUNT\_AMOUNTS
 
 The crypto transfer credit and debit do not sum equal to 0
 
-##### EMPTY_TRANSACTION_BODY
+##### EMPTY\_TRANSACTION\_BODY
 
 Transaction body provided is empty
 
-##### INVALID_TRANSACTION_BODY
+##### INVALID\_TRANSACTION\_BODY
 
 Invalid transaction body provided
 
-##### INVALID_SIGNATURE_TYPE_MISMATCHING_KEY
+##### INVALID\_SIGNATURE\_TYPE\_MISMATCHING\_KEY
 
-The type of key (base ed25519 key, KeyList, or ThresholdKey) does not match the type of signature (base ed25519 signature, SignatureList, or ThresholdKeySignature)
+the type of key (base ed25519 key, KeyList, or ThresholdKey) does not match the type of
+signature (base ed25519 signature, SignatureList, or ThresholdKeySignature)
 
-##### INVALID_SIGNATURE_COUNT_MISMATCHING_KEY
+##### INVALID\_SIGNATURE\_COUNT\_MISMATCHING\_KEY
 
-The number of key (KeyList, or ThresholdKey) does not match that of signature (SignatureList, or ThresholdKeySignature). e.g. if a keyList has 3 base keys, then the corresponding signatureList should also have 3 base signatures.
+the number of key (KeyList, or ThresholdKey) does not match that of signature (SignatureList,
+or ThresholdKeySignature). e.g. if a keyList has 3 base keys, then the corresponding
+signatureList should also have 3 base signatures.
 
-##### EMPTY_LIVE_HASH_BODY
+##### EMPTY\_LIVE\_HASH\_BODY
 
-The livehash body is empty
+the livehash body is empty
 
-##### EMPTY_LIVE_HASH
+##### EMPTY\_LIVE\_HASH
 
-The livehash data is missing
+the livehash data is missing
 
-##### EMPTY_LIVE_HASH_KEYS
+##### EMPTY\_LIVE\_HASH\_KEYS
 
-The keys for a livehash are missing
+the keys for a livehash are missing
 
-##### INVALID_LIVE_HASH_SIZE
+##### INVALID\_LIVE\_HASH\_SIZE
 
-The livehash data is not the output of a SHA-384 digest
+the livehash data is not the output of a SHA-384 digest
 
-##### EMPTY_QUERY_BODY
+##### EMPTY\_QUERY\_BODY
 
-The query body is empty
+the query body is empty
 
-##### EMPTY_LIVE_HASH_QUERY
+##### EMPTY\_LIVE\_HASH\_QUERY
 
-The crypto livehash query is empty
+the crypto livehash query is empty
 
-##### LIVE_HASH_NOT_FOUND
+##### LIVE\_HASH\_NOT\_FOUND
 
-The livehash is not present
+the livehash is not present
 
-##### ACCOUNT_ID_DOES_NOT_EXIST
+##### ACCOUNT\_ID\_DOES\_NOT\_EXIST
 
-The account id passed has not yet been created.
+the account id passed has not yet been created.
 
-##### LIVE_HASH_ALREADY_EXISTS
+##### LIVE\_HASH\_ALREADY\_EXISTS
 
-The livehash already exists for a given account
+the livehash already exists for a given account
 
-##### INVALID_FILE_WACL
+##### INVALID\_FILE\_WACL
 
 File WACL keys are invalid
 
-##### SERIALIZATION_FAILED
+##### SERIALIZATION\_FAILED
 
 Serialization failure
 
-##### TRANSACTION_OVERSIZE
+##### TRANSACTION\_OVERSIZE
 
 The size of the Transaction is greater than transactionMaxBytes
 
-##### TRANSACTION_TOO_MANY_LAYERS
+##### TRANSACTION\_TOO\_MANY\_LAYERS
 
 The Transaction has more than 50 levels
 
-##### CONTRACT_DELETED
+##### CONTRACT\_DELETED
 
 Contract is marked as deleted
 
-##### PLATFORM_NOT_ACTIVE
+##### PLATFORM\_NOT\_ACTIVE
 
-The platform node is either disconnected or lagging behind.
+the platform node is either disconnected or lagging behind.
 
-##### KEY_PREFIX_MISMATCH
+##### KEY\_PREFIX\_MISMATCH
 
-One public key matches more than one prefixes on the signature map
+one public key matches more than one prefixes on the signature map
 
-##### PLATFORM_TRANSACTION_NOT_CREATED
+##### PLATFORM\_TRANSACTION\_NOT\_CREATED
 
-Transaction not created by platform due to large backlog
+transaction not created by platform due to large backlog
 
-##### INVALID_RENEWAL_PERIOD
+##### INVALID\_RENEWAL\_PERIOD
 
-Auto renewal period is not a positive number of seconds
+auto renewal period is not a positive number of seconds
 
-##### INVALID_PAYER_ACCOUNT_ID
+##### INVALID\_PAYER\_ACCOUNT\_ID
 
-The response code when a smart contract id is passed for a crypto API request
+the response code when a smart contract id is passed for a crypto API request
 
-##### ACCOUNT_DELETED
+##### ACCOUNT\_DELETED
 
-The account has been marked as deleted
+the account has been marked as deleted
 
-##### FILE_DELETED
+##### FILE\_DELETED
 
-The file has been marked as deleted
+the file has been marked as deleted
 
-##### ACCOUNT_REPEATED_IN_ACCOUNT_AMOUNTS
+##### ACCOUNT\_REPEATED\_IN\_ACCOUNT\_AMOUNTS
 
-Same accounts repeated in the transfer account list
+same accounts repeated in the transfer account list
 
-##### SETTING_NEGATIVE_ACCOUNT_BALANCE
+##### SETTING\_NEGATIVE\_ACCOUNT\_BALANCE
 
-Attempting to set negative balance value for crypto account
+attempting to set negative balance value for crypto account
 
-##### OBTAINER_REQUIRED
+##### OBTAINER\_REQUIRED
 
-When deleting smart contract that has crypto balance either transfer account or transfer smart contract is required
+when deleting smart contract that has crypto balance either transfer account or transfer smart
+contract is required
 
-##### OBTAINER_SAME_CONTRACT_ID
+##### OBTAINER\_SAME\_CONTRACT\_ID
 
-When deleting smart contract that has crypto balance you can not use the same contract id as transferContractId as the one being deleted
+when deleting smart contract that has crypto balance you can not use the same contract id as
+transferContractId as the one being deleted
 
-##### OBTAINER_DOES_NOT_EXIST
+##### OBTAINER\_DOES\_NOT\_EXIST
 
-TransferAccountId or transferContractId specified for contract delete does not exist
+transferAccountId or transferContractId specified for contract delete does not exist
 
-##### MODIFYING_IMMUTABLE_CONTRACT
+##### MODIFYING\_IMMUTABLE\_CONTRACT
 
-Attempting to modify (update or delete a immutable smart contract, i.e. one created without a admin key)
+attempting to modify (update or delete a immutable smart contract, i.e. one created without a
+admin key)
 
-##### FILE_SYSTEM_EXCEPTION
+##### FILE\_SYSTEM\_EXCEPTION
 
 Unexpected exception thrown by file system functions
 
-##### AUTORENEW_DURATION_NOT_IN_RANGE
+##### AUTORENEW\_DURATION\_NOT\_IN\_RANGE
 
-The duration is not a subset of [MINIMUM_AUTORENEW_DURATION,MAXIMUM_AUTORENEW_DURATION]
+the duration is not a subset of [MINIMUM\_AUTORENEW\_DURATION,MAXIMUM\_AUTORENEW\_DURATION]
 
-##### ERROR_DECODING_BYTESTRING
+##### ERROR\_DECODING\_BYTESTRING
 
-Decoding the smart contract binary to a byte array failed. Check that the input is a valid hex string.
+Decoding the smart contract binary to a byte array failed. Check that the input is a valid hex
+string.
 
-##### CONTRACT_FILE_EMPTY
+##### CONTRACT\_FILE\_EMPTY
 
 File to create a smart contract was of length zero
 
-##### CONTRACT_BYTECODE_EMPTY
+##### CONTRACT\_BYTECODE\_EMPTY
 
 Bytecode for smart contract is of length zero
 
-##### INVALID_INITIAL_BALANCE
+##### INVALID\_INITIAL\_BALANCE
 
 Attempt to set negative initial balance
 
-INVALID_RECEIVE_RECORD_THRESHOLD=86 [deprecated=true]; // [Deprecated]. attempt to set negative receive record threshold
-INVALID_SEND_RECORD_THRESHOLD=87 [deprecated=true]; // [Deprecated]. attempt to set negative send record threshold
-##### ACCOUNT_IS_NOT_GENESIS_ACCOUNT
+##### INVALID\_RECEIVE\_RECORD\_THRESHOLD
 
-Special Account Operations should be performed by only Genesis account, return this code if it is not Genesis Account
+[Deprecated]. attempt to set negative receive record threshold
 
-##### PAYER_ACCOUNT_UNAUTHORIZED
+##### INVALID\_SEND\_RECORD\_THRESHOLD
+
+[Deprecated]. attempt to set negative send record threshold
+
+##### ACCOUNT\_IS\_NOT\_GENESIS\_ACCOUNT
+
+Special Account Operations should be performed by only Genesis account, return this code if it
+is not Genesis Account
+
+##### PAYER\_ACCOUNT\_UNAUTHORIZED
 
 The fee payer account doesn't have permission to submit such Transaction
 
-##### INVALID_FREEZE_TRANSACTION_BODY
+##### INVALID\_FREEZE\_TRANSACTION\_BODY
 
 FreezeTransactionBody is invalid
 
-##### FREEZE_TRANSACTION_BODY_NOT_FOUND
+##### FREEZE\_TRANSACTION\_BODY\_NOT\_FOUND
 
 FreezeTransactionBody does not exist
 
-##### TRANSFER_LIST_SIZE_LIMIT_EXCEEDED
+##### TRANSFER\_LIST\_SIZE\_LIMIT\_EXCEEDED
 
 Exceeded the number of accounts (both from and to) allowed for crypto transfer list
 
-##### RESULT_SIZE_LIMIT_EXCEEDED
+##### RESULT\_SIZE\_LIMIT\_EXCEEDED
 
 Smart contract result size greater than specified maxResultSize
 
-##### NOT_SPECIAL_ACCOUNT
+##### NOT\_SPECIAL\_ACCOUNT
 
 The payer account is not a special account(account 0.0.55)
 
-##### CONTRACT_NEGATIVE_GAS
+##### CONTRACT\_NEGATIVE\_GAS
 
 Negative gas was offered in smart contract call
 
-##### CONTRACT_NEGATIVE_VALUE
+##### CONTRACT\_NEGATIVE\_VALUE
 
 Negative value / initial balance was specified in a smart contract call / create
 
-##### INVALID_FEE_FILE
+##### INVALID\_FEE\_FILE
 
 Failed to update fee file
 
-##### INVALID_EXCHANGE_RATE_FILE
+##### INVALID\_EXCHANGE\_RATE\_FILE
 
 Failed to update exchange rate file
 
-##### INSUFFICIENT_LOCAL_CALL_GAS
+##### INSUFFICIENT\_LOCAL\_CALL\_GAS
 
 Payment tendered for contract local call cannot cover both the fee and the gas
 
-##### ENTITY_NOT_ALLOWED_TO_DELETE
+##### ENTITY\_NOT\_ALLOWED\_TO\_DELETE
 
 Entities with Entity ID below 1000 are not allowed to be deleted
 
-##### AUTHORIZATION_FAILED
+##### AUTHORIZATION\_FAILED
 
-Violating one of these rules: 1) treasury account can update all entities below 0.0.1000, 2) account 0.0.50 can update all entities from 0.0.51 - 0.0.80, 3) Network Function Master Account A/c 0.0.50 - Update all Network Function accounts & perform all the Network Functions listed below, 4) Network Function Accounts: i) A/c 0.0.55 - Update Address Book files (0.0.101/102), ii) A/c 0.0.56 - Update Fee schedule (0.0.111), iii) A/c 0.0.57 - Update Exchange Rate (0.0.112).
+Violating one of these rules: 1) treasury account can update all entities below 0.0.1000, 2)
+account 0.0.50 can update all entities from 0.0.51 - 0.0.80, 3) Network Function Master Account
+A/c 0.0.50 - Update all Network Function accounts & perform all the Network Functions listed
+below, 4) Network Function Accounts: i) A/c 0.0.55 - Update Address Book files (0.0.101/102),
+ii) A/c 0.0.56 - Update Fee schedule (0.0.111), iii) A/c 0.0.57 - Update Exchange Rate
+(0.0.112).
 
-##### FILE_UPLOADED_PROTO_INVALID
+##### FILE\_UPLOADED\_PROTO\_INVALID
 
 Fee Schedule Proto uploaded but not valid (append or update is required)
 
-##### FILE_UPLOADED_PROTO_NOT_SAVED_TO_DISK
+##### FILE\_UPLOADED\_PROTO\_NOT\_SAVED\_TO\_DISK
 
 Fee Schedule Proto uploaded but not valid (append or update is required)
 
-##### FEE_SCHEDULE_FILE_PART_UPLOADED
+##### FEE\_SCHEDULE\_FILE\_PART\_UPLOADED
 
 Fee Schedule Proto File Part uploaded
 
-##### EXCHANGE_RATE_CHANGE_LIMIT_EXCEEDED
+##### EXCHANGE\_RATE\_CHANGE\_LIMIT\_EXCEEDED
 
-The change on Exchange Rate exceeds Exchange_Rate_Allowed_Percentage
+The change on Exchange Rate exceeds Exchange\_Rate\_Allowed\_Percentage
 
-##### MAX_CONTRACT_STORAGE_EXCEEDED
+##### MAX\_CONTRACT\_STORAGE\_EXCEEDED
 
 Contract permanent storage exceeded the currently allowable limit
 
-##### TRANSFER_ACCOUNT_SAME_AS_DELETE_ACCOUNT
+##### TRANSFER\_ACCOUNT\_SAME\_AS\_DELETE\_ACCOUNT
 
 Transfer Account should not be same as Account to be deleted
 
-##### TOTAL_LEDGER_BALANCE_INVALID
-
-No Description
-
-##### EXPIRATION_REDUCTION_NOT_ALLOWED
+##### EXPIRATION\_REDUCTION\_NOT\_ALLOWED
+##### TOTAL\_LEDGER\_BALANCE\_INVALID
 
 The expiration date/time on a smart contract may not be reduced
 
-##### MAX_GAS_LIMIT_EXCEEDED
+##### MAX\_GAS\_LIMIT\_EXCEEDED
 
 Gas exceeded currently allowable gas limit per transaction
 
-##### MAX_FILE_SIZE_EXCEEDED
+##### MAX\_FILE\_SIZE\_EXCEEDED
 
 File size exceeded the currently allowable limit
 
-##### INVALID_TOPIC_ID
+##### RECEIVER\_SIG\_REQUIRED
+
+When a valid signature is not provided for operations on account with receiverSigRequired=true
+
+##### INVALID\_TOPIC\_ID
 
 The Topic ID specified is not in the system.
 
-##### INVALID_ADMIN_KEY
+##### INVALID\_ADMIN\_KEY
 
-No Description
+A provided admin key was invalid.
 
-##### INVALID_SUBMIT_KEY
+##### INVALID\_SUBMIT\_KEY
 
-No Description
+A provided submit key was invalid.
 
 ##### UNAUTHORIZED
 
 An attempted operation was not authorized (ie - a deleteTopic for a topic with no adminKey).
 
-##### INVALID_TOPIC_MESSAGE
+##### INVALID\_TOPIC\_MESSAGE
 
 A ConsensusService message is empty.
 
-##### INVALID_AUTORENEW_ACCOUNT
+##### INVALID\_AUTORENEW\_ACCOUNT
 
 The autoRenewAccount specified is not a valid, active account.
 
-##### AUTORENEW_ACCOUNT_NOT_ALLOWED
+##### AUTORENEW\_ACCOUNT\_NOT\_ALLOWED
 
 An adminKey was not specified on the topic, so there must not be an autoRenewAccount.
 
-##### TOPIC_EXPIRED
+##### TOPIC\_EXPIRED
 
-The topic has expired, was not automatically renewed, and is in a 7 day grace period before the topic will be deleted unrecoverably. This error response code will not be returned until autoRenew functionality is supported by HAPI.
+The topic has expired, was not automatically renewed, and is in a 7 day grace period before the
+topic will be deleted unrecoverably. This error response code will not be returned until
+autoRenew functionality is supported by HAPI.
 
-##### INVALID_CHUNK_NUMBER
+##### INVALID\_CHUNK\_NUMBER
 
-Chunk number must be from 1 to total (chunks) inclusive.
+chunk number must be from 1 to total (chunks) inclusive.
 
-##### INVALID_CHUNK_TRANSACTION_ID
+##### INVALID\_CHUNK\_TRANSACTION\_ID
 
-For every chunk, the payer account that is part of initialTransactionID must match the Payer Account of this transaction. The entire initialTransactionID should match the transactionID of the first chunk, but this is not checked or enforced by Hedera except when the chunk number is 1.
+For every chunk, the payer account that is part of initialTransactionID must match the Payer Account
+of this transaction. The entire initialTransactionID should match the transactionID of the first
+chunk, but this is not checked or enforced by Hedera except when the chunk number is 1.
 
-##### ACCOUNT_FROZEN_FOR_TOKEN
+##### ACCOUNT\_FROZEN\_FOR\_TOKEN
 
 Account is frozen and cannot transact with the token
 
-##### TOKENS_PER_ACCOUNT_LIMIT_EXCEEDED
+##### TOKENS\_PER\_ACCOUNT\_LIMIT\_EXCEEDED
 
-Maximum number of token relations for agiven account is exceeded
+An involved account already has more than <tt>tokens.maxPerAccount</tt> associations with
+non-deleted tokens.
 
-##### INVALID_TOKEN_ID
+##### INVALID\_TOKEN\_ID
 
 The token is invalid or does not exist
 
-##### INVALID_TOKEN_DECIMALS
+##### INVALID\_TOKEN\_DECIMALS
 
 Invalid token decimals
 
-##### INVALID_TOKEN_INITIAL_SUPPLY
+##### INVALID\_TOKEN\_INITIAL\_SUPPLY
 
 Invalid token initial supply
 
-##### INVALID_TREASURY_ACCOUNT_FOR_TOKEN
+##### INVALID\_TREASURY\_ACCOUNT\_FOR\_TOKEN
 
 Treasury Account does not exist or is deleted
 
-##### INVALID_TOKEN_SYMBOL
+##### INVALID\_TOKEN\_SYMBOL
 
 Token Symbol is not UTF-8 capitalized alphabetical string
 
-##### TOKEN_HAS_NO_FREEZE_KEY
+##### TOKEN\_HAS\_NO\_FREEZE\_KEY
 
 Freeze key is not set on token
 
-##### TRANSFERS_NOT_ZERO_SUM_FOR_TOKEN
+##### TRANSFERS\_NOT\_ZERO\_SUM\_FOR\_TOKEN
 
 Amounts in transfer list are not net zero
 
-##### MISSING_TOKEN_SYMBOL
+##### MISSING\_TOKEN\_SYMBOL
 
-Token Symbol is not provided
+A token symbol was not provided
 
-##### TOKEN_SYMBOL_TOO_LONG
+##### TOKEN\_SYMBOL\_TOO\_LONG
 
-Token Symbol is too long
+The provided token symbol was too long
 
-##### ACCOUNT_KYC_NOT_GRANTED_FOR_TOKEN
+##### ACCOUNT\_KYC\_NOT\_GRANTED\_FOR\_TOKEN
 
 KYC must be granted and account does not have KYC granted
 
-##### TOKEN_HAS_NO_KYC_KEY
+##### TOKEN\_HAS\_NO\_KYC\_KEY
 
 KYC key is not set on token
 
-##### INSUFFICIENT_TOKEN_BALANCE
+##### INSUFFICIENT\_TOKEN\_BALANCE
 
 Token balance is not sufficient for the transaction
 
-##### TOKEN_WAS_DELETED
+##### TOKEN\_WAS\_DELETED
 
 Token transactions cannot be executed on deleted token
 
-##### TOKEN_HAS_NO_SUPPLY_KEY
+##### TOKEN\_HAS\_NO\_SUPPLY\_KEY
 
 Supply key is not set on token
 
-##### TOKEN_HAS_NO_WIPE_KEY
+##### TOKEN\_HAS\_NO\_WIPE\_KEY
 
 Wipe key is not set on token
 
-##### INVALID_TOKEN_MINT_AMOUNT
+##### INVALID\_TOKEN\_MINT\_AMOUNT
 
-No Description
+The requested token mint amount would cause an invalid total supply
 
-##### INVALID_TOKEN_BURN_AMOUNT
+##### INVALID\_TOKEN\_BURN\_AMOUNT
 
-No Description
+The requested token burn amount would cause an invalid total supply
 
-##### TOKEN_NOT_ASSOCIATED_TO_ACCOUNT
+##### TOKEN\_NOT\_ASSOCIATED\_TO\_ACCOUNT
 
-No Description
+A required token-account relationship is missing
 
-##### CANNOT_WIPE_TOKEN_TREASURY_ACCOUNT
+##### CANNOT\_WIPE\_TOKEN\_TREASURY\_ACCOUNT
 
-Cannot execute wipe operation on treasury account
+The target of a wipe operation was the token treasury account
 
-##### INVALID_KYC_KEY
+##### INVALID\_KYC\_KEY
 
-No Description
+The provided KYC key was invalid.
 
-##### INVALID_WIPE_KEY
+##### INVALID\_WIPE\_KEY
 
-No Description
+The provided wipe key was invalid.
 
-##### INVALID_FREEZE_KEY
+##### INVALID\_FREEZE\_KEY
 
-No Description
+The provided freeze key was invalid.
 
-##### INVALID_SUPPLY_KEY
+##### INVALID\_SUPPLY\_KEY
 
-No Description
+The provided supply key was invalid.
 
-##### MISSING_TOKEN_NAME
+##### MISSING\_TOKEN\_NAME
 
 Token Name is not provided
 
-##### TOKEN_NAME_TOO_LONG
+##### TOKEN\_NAME\_TOO\_LONG
 
 Token Name is too long
 
-##### INVALID_WIPING_AMOUNT
+##### INVALID\_WIPING\_AMOUNT
 
 The provided wipe amount must not be negative, zero or bigger than the token holder balance
 
-##### TOKEN_IS_IMMUTABLE
+##### TOKEN\_IS\_IMMUTABLE
 
 Token does not have Admin key set, thus update/delete transactions cannot be performed
 
-##### TOKEN_ALREADY_ASSOCIATED_TO_ACCOUNT
+##### TOKEN\_ALREADY\_ASSOCIATED\_TO\_ACCOUNT
 
 An <tt>associateToken</tt> operation specified a token already associated to the account
 
-##### TRANSACTION_REQUIRES_ZERO_TOKEN_BALANCES
+##### TRANSACTION\_REQUIRES\_ZERO\_TOKEN\_BALANCES
 
 An attempted operation is invalid until all token balances for the target account are zero
 
-##### ACCOUNT_IS_TREASURY
+##### ACCOUNT\_IS\_TREASURY
 
 An attempted operation is invalid because the account is a treasury
 
-##### TOKEN_ID_REPEATED_IN_TOKEN_LIST
+##### TOKEN\_ID\_REPEATED\_IN\_TOKEN\_LIST
 
 Same TokenIDs present in the token list
 
-##### TOKEN_TRANSFER_LIST_SIZE_LIMIT_EXCEEDED
+##### TOKEN\_TRANSFER\_LIST\_SIZE\_LIMIT\_EXCEEDED
 
 Exceeded the number of token transfers (both from and to) allowed for token transfer list
 
-##### EMPTY_TOKEN_TRANSFER_BODY
+##### EMPTY\_TOKEN\_TRANSFER\_BODY
 
 TokenTransfersTransactionBody has no TokenTransferList
 
-##### EMPTY_TOKEN_TRANSFER_ACCOUNT_AMOUNTS
+##### EMPTY\_TOKEN\_TRANSFER\_ACCOUNT\_AMOUNTS
 
 TokenTransfersTransactionBody has a TokenTransferList with no AccountAmounts
+
+##### INVALID\_SCHEDULE\_ID
+
+The Scheduled entity does not exist; or has now expired, been deleted, or been executed
+
+##### SCHEDULE\_IS\_IMMUTABLE
+
+The Scheduled entity cannot be modified. Admin key not set
+
+##### INVALID\_SCHEDULE\_PAYER\_ID
+
+The provided Scheduled Payer does not exist
+
+##### INVALID\_SCHEDULE\_ACCOUNT\_ID
+
+The Schedule Create Transaction TransactionID account does not exist
+
+##### NO\_NEW\_VALID\_SIGNATURES
+
+The provided sig map did not contain any new valid signatures from required signers of the scheduled
+transaction
+
+##### UNRESOLVABLE\_REQUIRED\_SIGNERS
+
+The required signers for a scheduled transaction cannot be resolved, for example because they do not
+exist or have been deleted
+
+##### SCHEDULED\_TRANSACTION\_NOT\_IN\_WHITELIST
+
+Only whitelisted transaction types may be scheduled
+
+##### SOME\_SIGNATURES\_WERE\_INVALID
+
+At least one of the signatures in the provided sig map did not represent a valid signature for any
+required signer
+
+##### TRANSACTION\_ID\_FIELD\_NOT\_ALLOWED
+
+The scheduled field in the TransactionID may not be set to true
+
+##### IDENTICAL\_SCHEDULE\_ALREADY\_CREATED
+
+A schedule already exists with the same identifying fields of an attempted ScheduleCreate (that is,
+all fields other than scheduledPayerAccountID)
+
+##### INVALID\_ZERO\_BYTE\_IN\_STRING
+
+A string field in the transaction has a UTF-8 encoding with the prohibited zero byte
+
+##### SCHEDULE\_ALREADY\_DELETED
+
+A schedule being signed or deleted has already been deleted
+
+##### SCHEDULE\_ALREADY\_EXECUTED
+
+A schedule being signed or deleted has already been executed
+
+##### MESSAGE\_SIZE\_TOO\_LARGE
+
+ConsensusSubmitMessage request's message size is larger than allowed.
+
+##### OPERATION\_REPEATED\_IN\_BUCKET\_GROUPS
+
+An operation was assigned to more than one throttle group in a given bucket
+
+##### BUCKET\_CAPACITY\_OVERFLOW
+
+The capacity needed to satisfy all opsPerSec groups in a bucket overflowed a signed 8-byte integral
+type
+
+##### NODE\_CAPACITY\_NOT\_SUFFICIENT\_FOR\_OPERATION
+
+Given the network size in the address book, the node-level capacity for an operation would never be
+enough to accept a single request; usually means a bucket burstPeriod should be increased
+
+##### BUCKET\_HAS\_NO\_THROTTLE\_GROUPS
+
+A bucket was defined without any throttle groups
+
+##### THROTTLE\_GROUP\_HAS\_ZERO\_OPS\_PER\_SEC
+
+A throttle group was granted zero opsPerSec
+
+##### SUCCESS\_BUT\_MISSING\_EXPECTED\_OPERATION
+
+The throttle definitions file was updated, but some supported operations were not assigned a bucket
+
+##### UNPARSEABLE\_THROTTLE\_DEFINITIONS
+
+The new contents for the throttle definitions system file were not valid protobuf
+
+##### INVALID\_THROTTLE\_DEFINITIONS
+
+The new throttle definitions system file were invalid, and no more specific error could be divined
+
+##### ACCOUNT\_EXPIRED\_AND\_PENDING\_REMOVAL
+
+The transaction references an account which has passed its expiration without renewal funds
+available, and currently remains in the ledger only because of the grace period given to expired
+entities
+
+##### INVALID\_TOKEN\_MAX\_SUPPLY
+
+Invalid token max supply
+
+##### INVALID\_TOKEN\_NFT\_SERIAL\_NUMBER
+
+Invalid token nft serial number
+
+##### INVALID\_NFT\_ID
+
+Invalid nft id
+
+##### METADATA\_TOO\_LONG
+
+Nft metadata is too long
+
+##### BATCH\_SIZE\_LIMIT\_EXCEEDED
+
+Repeated operations count exceeds the limit
+
+##### INVALID\_QUERY\_RANGE
+
+The range of data to be gathered is out of the set boundaries
+
+##### FRACTION\_DIVIDES\_BY\_ZERO
+
+A custom fractional fee set a denominator of zero
+
+##### INSUFFICIENT\_PAYER\_BALANCE\_FOR\_CUSTOM\_FEE
+
+The transaction payer could not afford a custom fee
+
+##### CUSTOM\_FEES\_LIST\_TOO\_LONG
+
+More than 10 custom fees were specified
+
+##### INVALID\_CUSTOM\_FEE\_COLLECTOR
+
+Any of the feeCollector accounts for customFees is invalid
+
+##### INVALID\_TOKEN\_ID\_IN\_CUSTOM\_FEES
+
+Any of the token Ids in customFees is invalid
+
+##### TOKEN\_NOT\_ASSOCIATED\_TO\_FEE\_COLLECTOR
+
+Any of the token Ids in customFees are not associated to feeCollector
+
+##### TOKEN\_MAX\_SUPPLY\_REACHED
+
+A token cannot have more units minted due to its configured supply ceiling
+
+##### SENDER\_DOES\_NOT\_OWN\_NFT\_SERIAL\_NO
+
+The transaction attempted to move an NFT serial number from an account other than its owner
+
+##### CUSTOM\_FEE\_NOT\_FULLY\_SPECIFIED
+
+A custom fee schedule entry did not specify either a fixed or fractional fee
+
+##### CUSTOM\_FEE\_MUST\_BE\_POSITIVE
+
+Only positive fees may be assessed at this time
+
+##### TOKEN\_HAS\_NO\_FEE\_SCHEDULE\_KEY
+
+Fee schedule key is not set on token
+
+##### CUSTOM\_FEE\_OUTSIDE\_NUMERIC\_RANGE
+
+A fractional custom fee exceeded the range of a 64-bit signed integer
+
+##### ROYALTY\_FRACTION\_CANNOT\_EXCEED\_ONE
+
+A royalty cannot exceed the total fungible value exchanged for an NFT
+
+##### FRACTIONAL\_FEE\_MAX\_AMOUNT\_LESS\_THAN\_MIN\_AMOUNT
+
+Each fractional custom fee must have its maximum\_amount, if specified, at least its minimum\_amount
+
+##### CUSTOM\_SCHEDULE\_ALREADY\_HAS\_NO\_FEES
+
+A fee schedule update tried to clear the custom fees from a token whose fee schedule was already
+empty
+
+##### CUSTOM\_FEE\_DENOMINATION\_MUST\_BE\_FUNGIBLE\_COMMON
+
+Only tokens of type FUNGIBLE\_COMMON can be used to as fee schedule denominations
+
+##### CUSTOM\_FRACTIONAL\_FEE\_ONLY\_ALLOWED\_FOR\_FUNGIBLE\_COMMON
+
+Only tokens of type FUNGIBLE\_COMMON can have fractional fees
+
+##### INVALID\_CUSTOM\_FEE\_SCHEDULE\_KEY
+
+The provided custom fee schedule key was invalid
+
+##### INVALID\_TOKEN\_MINT\_METADATA
+
+The requested token mint metadata was invalid
+
+##### INVALID\_TOKEN\_BURN\_METADATA
+
+The requested token burn metadata was invalid
+
+##### CURRENT\_TREASURY\_STILL\_OWNS\_NFTS
+
+The treasury for a unique token cannot be changed until it owns no NFTs
+
+##### ACCOUNT\_STILL\_OWNS\_NFTS
+
+An account cannot be dissociated from a unique token if it owns NFTs for the token
+
+##### TREASURY\_MUST\_OWN\_BURNED\_NFT
+
+A NFT can only be burned when owned by the unique token's treasury
+
+##### ACCOUNT\_DOES\_NOT\_OWN\_WIPED\_NFT
+
+An account did not own the NFT to be wiped
+
+##### ACCOUNT\_AMOUNT\_TRANSFERS\_ONLY\_ALLOWED\_FOR\_FUNGIBLE\_COMMON
+
+An AccountAmount token transfers list referenced a token type other than FUNGIBLE\_COMMON
+
+##### MAX\_NFTS\_IN\_PRICE\_REGIME\_HAVE\_BEEN\_MINTED
+
+All the NFTs allowed in the current price regime have already been minted
+
+##### PAYER\_ACCOUNT\_DELETED
+
+The payer account has been marked as deleted
+
+##### CUSTOM\_FEE\_CHARGING\_EXCEEDED\_MAX\_RECURSION\_DEPTH
+
+The reference chain of custom fees for a transferred token exceeded the maximum length of 2
+
+##### CUSTOM\_FEE\_CHARGING\_EXCEEDED\_MAX\_ACCOUNT\_AMOUNTS
+
+More than 20 balance adjustments were to satisfy a CryptoTransfer and its implied custom fee
+payments
+
+##### INSUFFICIENT\_SENDER\_ACCOUNT\_BALANCE\_FOR\_CUSTOM\_FEE
+
+The sender account in the token transfer transaction could not afford a custom fee
+
+##### SERIAL\_NUMBER\_LIMIT\_REACHED
+
+Currently no more than 4,294,967,295 NFTs may be minted for a given unique token type
+
+##### CUSTOM\_ROYALTY\_FEE\_ONLY\_ALLOWED\_FOR\_NON\_FUNGIBLE\_UNIQUE
+
+Only tokens of type NON\_FUNGIBLE\_UNIQUE can have royalty fees
+
+##### NO\_REMAINING\_AUTOMATIC\_ASSOCIATIONS
+
+The account has reached the limit on the automatic associations count.
+
+##### EXISTING\_AUTOMATIC\_ASSOCIATIONS\_EXCEED\_GIVEN\_LIMIT
+
+Already existing automatic associations are more than the new maximum automatic associations.
+
+##### REQUESTED\_NUM\_AUTOMATIC\_ASSOCIATIONS\_EXCEEDS\_ASSOCIATION\_LIMIT
+
+Cannot set the number of automatic associations for an account more than the maximum allowed 
+token associations <tt>tokens.maxPerAccount</tt>.
+
+##### TOKEN\_IS\_PAUSED
+
+Token is paused. This Token cannot be a part of any kind of Transaction until unpaused.
+
+##### TOKEN\_HAS\_NO\_PAUSE\_KEY
+
+Pause key is not set on token
+
+##### INVALID\_PAUSE\_KEY
+
+The provided pause key was invalid
+
+##### FREEZE\_UPDATE\_FILE\_DOES\_NOT\_EXIST
+
+The update file in a freeze transaction body must exist.
+
+##### FREEZE\_UPDATE\_FILE\_HASH\_DOES\_NOT\_MATCH
+
+The hash of the update file in a freeze transaction body must match the in-memory hash.
+
+##### NO\_UPGRADE\_HAS\_BEEN\_PREPARED
+
+A FREEZE\_UPGRADE transaction was handled with no previous update prepared.
+
+##### NO\_FREEZE\_IS\_SCHEDULED
+
+A FREEZE\_ABORT transaction was handled with no scheduled freeze.
+
+##### UPDATE\_FILE\_HASH\_CHANGED\_SINCE\_PREPARE\_UPGRADE
+
+The update file hash when handling a FREEZE\_UPGRADE transaction differs from the file
+hash at the time of handling the PREPARE\_UPGRADE transaction.
+
+##### FREEZE\_START\_TIME\_MUST\_BE\_FUTURE
+
+The given freeze start time was in the (consensus) past.
+
+##### PREPARED\_UPDATE\_FILE\_IS\_IMMUTABLE
+
+The prepared update file cannot be updated or appended util either the upgrade has
+been completed, or a FREEZE\_ABORT has been handled.
+
+##### FREEZE\_ALREADY\_SCHEDULED
+
+Once a freeze is scheduled, it must be aborted before any other type of freeze can
+can be performed.
+
+##### FREEZE\_UPGRADE\_IN\_PROGRESS
+
+If an NMT upgrade has been prepared, the following operation must be a FREEZE\_UPGRADE.
+(To issue a FREEZE\_ONLY, submit a FREEZE\_ABORT first.)
+
+##### UPDATE\_FILE\_ID\_DOES\_NOT\_MATCH\_PREPARED
+
+If an NMT upgrade has been prepared, the subsequent FREEZE\_UPGRADE transaction must 
+confirm the id of the to be used in the upgrade.
+
+##### UPDATE\_FILE\_HASH\_DOES\_NOT\_MATCH\_PREPARED
+
+If an NMT upgrade has been prepared, the subsequent FREEZE\_UPGRADE transaction must 
+confirm the hash of the file to be used in the upgrade.
