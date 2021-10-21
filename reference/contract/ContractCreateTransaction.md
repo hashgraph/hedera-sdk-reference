@@ -1,20 +1,5 @@
 > class `ContractCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`bytecodeFileId`](#bytecodefileid-fileid) | ✅ | ✅ | ✅
-| [`contractMemo`](#contractmemo-string) | ✅ | ✅ | ✅
-| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
-| [`gas`](#gas-uint64) | ✅ | ✅ | ✅
-| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
-| [`proxyAccountId`](#proxyaccountid-accountid) | ✅ | ✅ | ✅
-| [`initialBalance`](#initialbalance-hbar) | ✅ | ✅ | ✅
-| [`constructorParameters`](#constructorparameters-bytes) | ✅ | ✅ | ✅
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

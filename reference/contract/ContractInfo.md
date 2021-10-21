@@ -1,30 +1,10 @@
 > class `ContractInfo`
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`fromBytes`](#frombytes-data-bytes-contractinfo) | ✅ | ✅ | ✅
-| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
-| [`contractMemo`](#contractmemo-string) | ✅ | ✅ | ✅
-| [`accountId`](#accountid-accountid) | ✅ | ✅ | ✅
-| [`contractAccountId`](#contractaccountid-string) | ✅ | ✅ | ✅
-| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
-| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
-| [`storage`](#storage-uint64) | ✅ | ✅ | ✅
-| [`balance`](#balance-hbar) | ✅ | ✅ | ✅
-| [`isDeleted`](#isdeleted-bool) | ✅ | ✅ | ✅
-| [`tokenRelantionships`](#tokenrelationships-map-lt-tokenid-tokenrelationship-gt) | ✅ | ✅ | ✅
-| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
-| [`toString`](#tostring-string) | ✅ | ✅ | ✅
-
-</details>
-
 ### Static Methods
 
 ##### `fromBytes` ( `data`: `bytes` ): `ContractInfo`
+
+Deserialize a [`ContractInfo`](#) from its the protobuf representation.
 
 ---
 
@@ -32,9 +12,7 @@
 
 ##### `toBytes` (): `bytes`
 
----
-
-##### `toString` (): `String`
+Serialize the [`ContractInfo`](#) into its protobuf representation.
 
 ---
 

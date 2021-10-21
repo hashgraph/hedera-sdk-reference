@@ -1,18 +1,5 @@
 > class `TopicMessage`
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`consensusTimestamp`](#consensustimestamp-timestamp) | ✅ | ✅ | ✅
-| [`contents`](#contents-bytes) | ✅ | ✅ | ✅
-| [`runningHash`](#runninghash-bytes) | ✅ | ✅ | ✅
-| [`sequenceNumber`](#sequencenumber-uint64) | ✅ | ✅ | ✅
-| [`chunks`](#chunks-topicmessagechunk) | ✅ | ✅ | ✅
-
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

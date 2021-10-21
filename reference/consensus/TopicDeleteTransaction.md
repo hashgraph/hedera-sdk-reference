@@ -1,13 +1,3 @@
-# `TopicDeleteTransaction`
-
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`topicId`](#topicid-topicid) | ✅ | ✅ | ✅
-</details>
-
 > class `TopicDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->

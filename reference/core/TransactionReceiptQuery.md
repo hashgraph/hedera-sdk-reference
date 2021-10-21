@@ -1,19 +1,4 @@
-# `TransactionReceiptQuery`
-
 > class `TransactionReceiptQuery` extends [`Query`](reference/core/Query.md) < [`TransactionReceipt`](reference/core/TransactionReceipt.md) >
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class TransactionReceiptQuery extends Query<TransactionReceipt> {
-    constructor();
-
-    /* property */ transactionId: TransactionId;
-}
-```
-
-</details>
 
 <!-- tabs:start -->
 

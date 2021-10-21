@@ -1,21 +1,5 @@
 > class `ContractId` implements [`Key`](reference/cryptography/Key.md)
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`constructor`](#constructor-num-uint64-) | ✅ | ✅ | ✅
-| [`fromString`](#fromstring-str-string-contractid) | ✅ | ✅ | ✅
-| [`fromBytes`](#frombytes-data-bytes-contractid) | ✅ | ✅ | ✅
-| [`fromSolidityAddress`](#fromsolidityaddress-str-string-contractid) | ✅ | ✅ | ✅
-| [`shard`](#shard-uint64) | ✅ | ✅ | ✅
-| [`realm`](#realm-uint64) | ✅ | ✅ | ✅
-| [`num`](#num-uint64) | ✅ | ✅ | ✅
-| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
-
-</details>
-
 An ID type that represents a contract on a Hedera Hashgraph network.
 
 ### Constructors

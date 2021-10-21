@@ -1,25 +1,6 @@
-# `TopicInfo`
-
 > class `TopicInfo`
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`fromBytes`](#frombytes-data-bytes-topicinfo) | ✅ | ✅ | ✅
-| [`topicId`](#topicid-topicid) | ✅ | ✅ | ✅
-| [`topicMemo`](#topicmemo-string) | ✅ | ✅ | ✅
-| [`runningHash`](#runninghash-bytes) | ✅ | ✅ | ✅
-| [`sequenceNumber`](#sequencenumber-uint64) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
-| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
-| [`submitKey`](#submitkey-key) | ✅ | ✅ | ✅
-| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
-| [`autoRenewAccountId`](#autorenewaccountid-accountid) | ✅ | ✅ | ✅
-| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
-
-</details>
+Current state of the topic
 
 ### Static Methods
 
@@ -33,7 +14,7 @@ Deserialize a [`TopicInfo`](#) from its the protobuf representation.
 
 ##### `toBytes` (): `bytes`
 
-Serialize the [`TokenInfo`](#) into its protobuf representation.
+Serialize the [`TopicInfo`](#) into its protobuf representation.
 
 ---
 

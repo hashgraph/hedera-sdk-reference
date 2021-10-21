@@ -1,20 +1,20 @@
 > class `FileInfo`
 
-<details>
-<summary><b>Table of Contents</b></summary>
+### Static Methods
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`fromBytes`](#frombytes-data-bytes-fileinfo) | ✅ | ✅ | ✅
-| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
-| [`size`](#size-uint64) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
-| [`deleted`](#isdeleted-boolean) | ✅ | ✅ | ✅
-| [`keys`](#keys-keylist) | ✅ | ✅ | ✅
-| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
+##### `fromBytes` ( `data`: `bytes` ): [`FileInfo`](#)
 
-</details>
+Deserialize a [`FileInfo`](#) from its protobuf representation.
 
+---
+
+### Methods
+
+##### `toBytes` ( ): `bytes`
+
+Serialize the [`FileInfo`](#) into its protobuf representation.
+
+---
 
 ### Properties
 
@@ -46,21 +46,5 @@ Identifies if this file has been deleted.
 ### `keys` : [`KeyList`](reference/cryptography/KeyList.md)
 
 The keys that are required to sign transactions that mutate this file.
-
----
-
-### Static Methods
-
-##### `fromBytes` ( `data`: `bytes` ): [`FileInfo`](#)
-
-Deserialize a [`FileInfo`](#) from its protobuf representation.
-
----
-
-### Methods
-
-##### `toBytes` ( ): `bytes`
-
-Serialize the [`FileInfo`](#) into its protobuf representation.
 
 ---

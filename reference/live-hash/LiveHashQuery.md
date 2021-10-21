@@ -1,28 +1,8 @@
-# class `LiveHashQuery`
+> class `LiveHashQuery` extends [`Query`](reference/core/Query.md) < [`LiveHash`](reference/contract/ContractInfo.md) >
 
-Retrieve the latest state of a topic.
-
-This method is unrestricted and allowed on any topic by any payer account.
-
-Deleted accounts will not be returned.
-
-Returns [`LiveHash`](./LiveHash.md) from [`execute`](../Query.md).
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class LiveHashQuery extends Query<LiveHash> {
-    constructor();
-
-    getAccountId(): AccountId;
-    setAccountId(accountId: AccountId): this;
-    getHashId(): bytes;
-    setAccountId(dataL bytes): this;
-}
-```
-
-</details>
+Returns the full livehash associated to an account, if it is present. Note that the only way to
+obtain a state proof exhibiting the absence of a livehash from an account is to retrieve a state
+proof of the entire account with its list of livehashes.
 
 <!-- tabs:start -->
 
@@ -69,12 +49,12 @@ if err != nil {
 
 ## Properties
 
-### `AccountId` : [`AccountId`](reference/cryptocurrency/AccountId.md)
+### `accountId` : [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 The Account for which information is being requested.
 
 ---
 
-### `Hash` : `bytes`
+### `hash` : `bytes`
 
 ---

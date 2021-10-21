@@ -1,46 +1,31 @@
-# `FileInfo`
+> class `SematicVersion`
 
+### Static Methods
 
+##### `fromBytes()`
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`major`](#major) | ✅ | ✅ | ✅
-| [`minor`](#minor) | ✅ | ✅ | ✅
-| [`patch`](#patch) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes`](#frombytes) | ✅ | ✅ | ✅
+Serialize the [`SematicVersion`](#) into its protobuf representation.
 
+---
 
-## Fields
+### Methods
 
-### `major`
+##### `toBytes()`
 
-```typescript
-major: int
-```
+Deserialize a [`Sem`](#) from its the protobuf representation.
 
-### `minor`
+---
 
-```typescript
-minor: int
-```
+### Fields
 
-### `patch`
+##### `major`: `Uint64`
 
-```typescript
-patch: int
-```
+---
 
-## Methods
+##### `minor`: `Uint64`
 
-### `fromBytes()`
+---
 
-```typescript
-fromBytes(data: bytes): this
-```
+##### `patch`: `Uint64`
 
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
+---

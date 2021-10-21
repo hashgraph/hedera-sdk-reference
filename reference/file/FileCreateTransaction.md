@@ -1,16 +1,5 @@
 > class `FileCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`keys`](#keys-key) | ✅ | ✅ | ✅
-| [`contents`](#contents-bytes) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
-
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

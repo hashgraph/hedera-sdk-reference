@@ -2,15 +2,6 @@
 
 Delete a file that exists on the Hedera Hashgraph network.
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
-
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

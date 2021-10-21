@@ -1,15 +1,5 @@
 > class `ContractDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
-| [`transferAccountId`](#transferaccountid-accountid) | ✅ | ✅ | ✅
-| [`transferContractId`](#transfercontractid-contractid) | ✅ | ✅ | ✅
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

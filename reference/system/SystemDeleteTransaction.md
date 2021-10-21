@@ -1,16 +1,11 @@
-# `SystemDeleteTransaction`
-
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`FileId`](#fileid-fileidreferencefilefileidmd) | ✅ | ✅ | ✅
-| [`ContractId`](#contractid-contractidreferencecontractcontractidmd) | ✅ | ✅ | ✅
-| [`ExpirationTime`](#expirationtime-instant) | ✅ | ✅ | ✅
-</details>
-
 > class `SystemDeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
+
+Delete a file or smart contract - can only be done with a Hedera administrative multisignature.
+When it is deleted, it immediately disappears from the system as seen by the user, but is still
+stored internally until the expiration time, at which time it is truly and permanently deleted.
+Until that time, it can be undeleted by the Hedera administrative multisignature. When a smart
+contract is deleted, the cryptocurrency account within it continues to exist, and is not affected
+by the expiration time here. 
 
 <!-- tabs:start -->
 
@@ -82,15 +77,15 @@ if err != nil {
 
 ### Properties
 
-##### `FileId`: [`FileId`](reference/file/FileId.md)
+##### `fileId`: [`FileId`](reference/file/FileId.md)
 
 ---
 
-##### `ContractId`: [`ContractId`](reference/contract/ContractId.md)
+##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
 ---
 
-##### `ExpirationTime`: `Timestamp`
+##### `expirationTime`: `Timestamp`
 
 ---
 

@@ -1,20 +1,5 @@
 > class `FileId`
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`constructor`](#constructor-num-uint64-) | ✅ | ✅ | ✅
-| [`fromString`](#fromstring-str-string-fileid) | ✅ | ✅ | ✅
-| [`fromBytes`](#frombytes-data-bytes-fileid) | ✅ | ✅ | ✅
-| [`shard`](#shard-uint64) | ✅ | ✅ | ✅
-| [`realm`](#realm-uint64) | ✅ | ✅ | ✅
-| [`num`](#num-uint64) | ✅ | ✅ | ✅
-| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
-
-</details>
-
 An ID type that represents a file on a Hedera Hashgraph network.
 
 ### Constructors

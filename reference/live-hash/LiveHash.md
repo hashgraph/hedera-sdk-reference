@@ -1,55 +1,30 @@
 # `LiveHash`
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`accountId`](#accountid) | ✅ | ✅ | ✅
-| [`hash`](#hash) | ✅ | ✅ | ✅
-| [`keys`](#keys) | ✅ | ✅ | ✅
-| [`duration`](#duration) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
-
-</details>
+The livehash, if present
 
 ## Properties
 
-### `accountId`
+### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
-```typescript
-accountId: AccountId
-```
+The account to which the livehash is attached
 
-### `hash`
+---
 
-```typescript
-hash: bytes
-```
+### `hash`: `bytes`
 
-### `keys`
+The SHA-384 hash of a credential or certificate
 
-```typescript
-keys: KeyList
-```
+---
 
-### `duration`
+### `keys` [`KeyList`](reference/cryptography/KeyList.md)
 
-```typescript
-duration: Timestamp
-```
+A list of keys (primitive or threshold), all of which must sign to attach the livehash to an
+account, and any one of which can later delete it.
 
-## Methods
+---
 
-### `fromBytes()`
+### `duration`: `Duration`
 
-```typescript
-fromBytes(data: bytes): this
-```
+The duration for which the livehash will remain valid
 
-### `toBytes()`
-
-```typescript
-toBytes(): bytes
-```
+---

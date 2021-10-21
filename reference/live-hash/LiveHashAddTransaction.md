@@ -1,16 +1,3 @@
-# `LiveHashAddTransaction`
-
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`AccountId`](#accountid-accountidreferencecryptocurrencyaccountidmd) | ✅ | ✅ | ✅
-| [`Hash`](#hash-bytes) | ✅ | ✅ | ✅
-| [`Keys`](#keys-collectionkeyreferencecryptographykeymd) | ✅ | ✅ | ✅
-| [`Duration`](#duration-duration) | ✅ | ✅ | ✅
-</details>
-
 > class `LiveHashAddTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->
@@ -60,19 +47,19 @@ if err != nil {
 
 ### Properties
 
-##### `AccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
 ---
 
-##### `Hash`: `bytes`
+##### `hash`: `bytes`
 
 ---
 
-##### `Keys`: [`Collection<Key>`](reference/cryptography/Key.md)
+##### `keys`: [`Key[]`](reference/cryptography/Key.md)
 
 ---
 
-##### `Duration`: `Duration`
+##### `duration`: `Duration`
 
 ---
 
