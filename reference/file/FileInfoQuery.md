@@ -1,14 +1,5 @@
 > class `FileInfoQuery` extends [`Query`](reference/core/Query.md) < [`FileInfo`](reference/file/FileInfo.md) >
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
-
-</details>
-
 Query a file's current state.
 
 <!-- tabs:start -->

@@ -1,17 +1,5 @@
 > class `ContractCallQuery` extends [`Query`](reference/core/Query.md) < [`ContractFunctionResult`](reference/contract/ContractFunctionResult.md) >
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
-| [`gas`](#gas-uint64) | ✅ | ✅ | ✅
-| [`functionParameters`](#read-only-functionparameters-bytes) | ✅ | ✅ | ✅
-| [`maxResultSize`](#write-only-maxresultsize-uint64) | ✅ | ✅ | ✅
-
-</details>
-
 Retrieve the latest state of a contract call.
 
 <!-- tabs:start -->

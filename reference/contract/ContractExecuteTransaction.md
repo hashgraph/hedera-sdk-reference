@@ -1,16 +1,5 @@
 > class `ContractExecuteTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
-| [`gas`](#gas-uint64) | ✅ | ✅ | ✅
-| [`payableAmount`](#payableamount-hbar) | ✅ | ✅ | ✅
-| [`functionParameters`](#read-only-functionparameters-bytes) | ✅ | ✅ | ✅
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

@@ -10,16 +10,6 @@ will increase the time needed to execute this transaction. This transaction also
 has the `executeAll()` method because it is chunked; this method is not accessible
 by all `Transaction` types.
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
-| [`contents`](#contents-bytes) | ✅ | ✅ | ✅
-
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

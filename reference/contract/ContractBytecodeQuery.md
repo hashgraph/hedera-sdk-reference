@@ -1,14 +1,5 @@
 > class `ContractByteCodeQuery` extends [`Query`](reference/core/Query.md) < `bytes` >
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
-
-</details>
-
 Retrieve the latest state of a bytecode.
 
 <!-- tabs:start -->

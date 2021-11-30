@@ -1,40 +1,5 @@
 > class `ContractFunctionSelector`
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`constructor`](#constructor) | ✅ | ✅ | ✅
-| [`addString`](#addstring-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addStringArray`](#addstringarray-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addBytes`](#addbytes-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addBytesArray`](#addbytesarray-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addBytes32`](#addbytes32-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addBytes32Array`](#addbytes32array-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addBool`](#addbool-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addInt8`](#addint8-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addInt32`](#addint32-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addInt64`](#addint64-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addInt256`](#addint256-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addInt8Array`](#addint8array-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addInt32Array`](#addint32array-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addInt64Array`](#addint64array-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addInt256Array`](#addint256array-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addUint8`](#adduint8-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addUint32`](#adduint32-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addUint64`](#adduint64-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addUint256`](#adduint256-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addUint8Array`](#adduint8array-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addUint32Array`](#adduint32array-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addUint64Array`](#adduint64array-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addUint256Array`](#adduint256array-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addAddress`](#addaddress-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addAddressArray`](#addaddressarray-contractfunctionselector) | ✅ | ✅ | ✅
-| [`addFunction`](#addfunction-contractfunctionselector) | ✅ | ✅ | ✅
-
-</details>
-
 ### Contstrutors
 
 ##### `constructor` ( `functionName`: `String` )

@@ -1,14 +1,5 @@
 > class `TopicSubmitTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`topicId`](#topicid-topicid) | ✅ | ✅ | ✅
-| [`message`](#message-bytes) | ✅ | ✅ | ✅
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

@@ -1,15 +1,7 @@
-# `SystemUndeleteTransaction`
-
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`FileId`](#fileid-fileidreferencefilefileidmd) | ✅ | ✅ | ✅
-| [`ContractId`](#contractid-contractidreferencecontractcontractidmd) | ✅ | ✅ | ✅
-</details>
-
 > class `SystemUndeleteTransaction` extends [`Transaction`](reference/core/Transaction.md)
+
+Undelete a file or smart contract that was deleted by SystemDelete; requires a Hedera
+administrative multisignature. 
 
 <!-- tabs:start -->
 
@@ -18,10 +10,12 @@
 ```java
 new SystemUndeleteTransaction()
     .setContractId(new ContractId(10))
+    .setExpirationTime(Instant.now())
     .execute(client);
 
 new SystemUndeleteTransaction()
     .setFileId(new FileId(10))
+    .setExpirationTime(Instant.now())
     .execute(client);
 ```
 
@@ -30,19 +24,21 @@ new SystemUndeleteTransaction()
 ```js
 await new SystemUndeleteTransaction()
     .setContractId(new ContractId(10))
+    .setExpirationTime(Timestamp.generate())
     .execute(client);
 
 await new SystemUndeleteTransaction()
     .setFileId(new FileId(10))
+    .setExpirationTime(Timestamp.generate())
     .execute(client);
 ```
 
 #### ** Go **
 
 ```go
-response, err = hedera.NewSystemDeleteTransaction().
+response, err = hedera.NewSystemUndeleteTransaction().
     SetFileID(FileIDFromString("0.0.3").
-    SetNodeAccountIDs([]AccountID{response.NodeID}).
+    SetExpirationTime(time.Now().Local().Add(time.Second * 5)).
     Execute(client)
 if err != nil {
     println(err.Error())
@@ -53,9 +49,9 @@ if err != nil {
     println(err.Error())
 }
 
-response, err = hedera.NewSystemDeleteTransaction().
+response, err = hedera.NewSystemUndeleteTransaction().
     SetContractID(ContractIDFromString("0.0.3").
-    SetNodeAccountIDs([]AccountID{response.NodeID}).
+    SetExpirationTime(time.Now().Local().Add(time.Second * 5)).
     Execute(client)
 if err != nil {
     println(err.Error())
@@ -77,10 +73,15 @@ if err != nil {
 
 ### Properties
 
-##### `FileId`: [`FileId`](reference/file/FileId.md)
+##### `fileId`: [`FileId`](reference/file/FileId.md)
 
 ---
 
-##### `ContractId`: [`ContractId`](reference/contract/ContractId.md)
+##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
 ---
+
+##### `expirationTime`: `Timestamp`
+
+---
+

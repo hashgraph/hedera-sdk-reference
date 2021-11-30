@@ -1,17 +1,5 @@
 > class `FileUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`fileId`](#fileid-fileid) | ✅ | ✅ | ✅
-| [`keys`](#keys-key) | ✅ | ✅ | ✅
-| [`contents`](#contents-bytes) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
-
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

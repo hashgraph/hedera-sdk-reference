@@ -4,13 +4,17 @@ Info about the account (a state proof can be generated for this)
 
 ### Static Methods
 
-##### `fromBytes` ( `data`: `bytes` ): `AccountInfo`
+##### `fromBytes` ( `data`: `bytes` ): [`AccountInfo`](#)
+
+Deserialize a [`AccountInfo`](#) from its protobuf representation.
 
 ---
 
 ### Methods
 
-##### `toBytes` (): `bytes`
+##### `toBytes` ( ): `bytes`
+
+Serialize the [`AccountInfo`](#) into its protobuf representation.
 
 ---
 

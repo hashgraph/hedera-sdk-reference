@@ -1,41 +1,31 @@
-# `NetworkVersionInfo`
+> class `NetworkVersionInfo`
 
-<details>
-<summary><b>Table of Contents</b></summary>
+### Static Methods
 
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`protobufVersion`](#protobufversion) | ✅ | ✅ | ✅
-| [`serviceVersion`](#serviceversion) | ✅ | ✅ | ✅
-| [`toBytes()`](#tobytes) | ✅ | ✅ | ✅
-| [`fromBytes()`](#frombytes) | ✅ | ✅ | ✅
+##### `fromBytes()`
 
-</details>
+Serialize the [`NetworkVersionInfo`](#) into its protobuf representation.
 
-## Fields
+---
 
-### `protobufVersion`
+### Methods
 
-```typescript
-protobufVersion: SemanticVersion
-```
+##### `toBytes()`
 
-### `serviceVersion`
+Deserialize a [`NetworkVersionInfo`](#) from its the protobuf representation.
 
-```typescript
-serviceVersion: SemanticVersion
-```
+---
 
-## Methods
+### Fields
 
-### `toBytes()`
+##### `protobufVersion`: [`SematicVersion`](reference/network/SematicVersion.md)
 
-```typescript
-toBytes(): bytes
-```
+The Hedera API (HAPI) protobuf version recognized by the responding node.
 
-### `fromBytes()`
+---
 
-```typescript
-fromBytes(data: bytes): this
-```
+##### `serviceVersion`: [`SematicVersion`](reference/network/SematicVersion.md)
+
+The version of the Hedera Services software deployed on the responding node.
+
+---

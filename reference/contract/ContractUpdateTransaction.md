@@ -1,19 +1,5 @@
 > class `ContractUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`contractId`](#contractid-Contractid) | ✅ | ✅ | ✅
-| [`contractMemo`](#contractmemo-string) | ✅ | ✅ | ✅
-| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
-| [`expirationTime`](#expirationtime-timestamp) | ✅ | ✅ | ✅
-| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
-| [`proxyAccountId`](#proxyaccountid-accountid) | ✅ | ✅ | ✅
-| [`bytecodeFileId`](#bytecodefileid-fileid) | ✅ | ✅ | ✅
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **

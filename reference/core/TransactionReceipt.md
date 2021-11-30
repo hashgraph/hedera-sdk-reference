@@ -1,8 +1,13 @@
 > class `TransactionReceipt`
 
+The summary of a transaction's result so far. If the transaction has not reached consensus, this
+result will be necessarily incomplete. 
+
 ### Static Methods
 
 ##### `fromBytes` ( `data`: `bytes` ): `TransactionReceipt`
+
+Decode a `TransactionReceipt` from an appropriate protobuf encode structure
 
 ---
 
@@ -10,9 +15,13 @@
 
 ##### `toBytes` (): `bytes`
 
+The byte representation of the encoded protobuf type
+
 ---
 
 ##### `toString` (): `String`
+
+Stringification of all the current values
 
 ---
 
@@ -20,40 +29,76 @@
 
 ##### `status`: [`Status`](reference/Status.md)
 
+Status of the submitted transaction.
+
 ---
 
 ##### `exchangeRate`: [`ExchangeRate`](reference/ExchangeRate.md)
 
----
-
-##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+Current exchange rant for Hbar to USD
 
 ---
 
-##### `fileId`: [`FileID`](reference/file/FileId.md)
+##### `accountId`: [`AccountId?`](reference/cryptocurrency/AccountId.md)
+
+An account ID
+
+**Note**: Only present if this receipt is for an `AccountCreateTransaction`
 
 ---
 
-##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
+##### `fileId`: [`FileId?`](reference/file/FileId.md)
+
+A file ID
+
+**Note**: Only present if this receipt is for an `FileCreateTransaction`
 
 ---
 
-##### `topicId`: [`TopicId`](reference/consensus/TopicId.md)
+##### `contractId`: [`ContractId?`](reference/contract/ContractId.md)
+
+A contract ID
+
+**Note**: Only present if this receipt is for an `ContractCreateTransaction`
 
 ---
 
-##### `TokenId`: [`TokenId`](reference/token/TokenId.md)
+##### `topicId`: [`TopicId?`](reference/consensus/TopicId.md)
+
+A topic ID
+
+**Note**: Only present if this receipt is for an `TopicCreateTransaction`
+
+---
+
+##### `TokenId`: [`TokenId?`](reference/token/TokenId.md)
+
+A token ID
+
+**Note**: Only present if this receipt is for an `TokenCreateTransaction`
 
 ---
 
 ##### `topicSequenceNumber`: `Uint64`
 
+The current sequence number of the topic
+
+**Note**: Only present if this receipt is for an `TopicMessageSubmitTransaction`
+
 ---
 
 ##### `topicRunningHash`: `bytes`
 
+The current running hash of the topic
+
+**Note**: Only present if this receipt is for an `TopicMessageSubmitTransaction`
+
 ---
 
 ##### `totalSypply`: `Uint64`
+
+The total supply of tokens for the current token
+
+**Note**: Only present if this receipt is for an `TopicMessageSubmitTransaction`
 
 ---

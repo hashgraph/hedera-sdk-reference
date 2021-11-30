@@ -61,7 +61,21 @@ if err != nil {
 
 ##### `generate` ( ): `PrivateKey`
 
+Deprecated - use [`PrivateKey.generateEd25519()`](#generateed25519-privatekey) instead.
+
 Generates a new Ed25519 private key.
+
+---
+
+##### `generateEd25519` ( ): `PrivateKey`
+
+Generates a new Ed25519 private key.
+
+---
+
+##### `generateEcdsa` ( ): `PrivateKey`
+
+Generates a new ECDSA private key.
 
 ---
 

@@ -1,21 +1,4 @@
-# `TopicId`
-
 > class `TopicId`
-
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`constructor`](#constructor-num-uint64-) | ✅ | ✅ | ✅
-| [`fromString`](#fromstring-str-string-topicid) | ✅ | ✅ | ✅
-| [`fromBytes`](#frombytes-data-bytes-topicid) | ✅ | ✅ | ✅
-| [`shard`](#shard-uint64) | ✅ | ✅ | ✅
-| [`realm`](#realm-uint64) | ✅ | ✅ | ✅
-| [`num`](#num-uint64) | ✅ | ✅ | ✅
-| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
-
-</details>
 
 An ID type that represents a topic on a Hedera Hashgraph network.
 

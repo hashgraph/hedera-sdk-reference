@@ -1,39 +1,5 @@
 > class `ContractFunctionParameters`
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`addString`](#addstring-param-string-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addStringArray`](#addstringarray-strings-string-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addBytes`](#addbytes-param-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addBytesArray`](#addbytesarray-param-byte-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addBytes32`](#addbytes32-param-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addBytes32Array`](#addbytes32array-param-byte-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addBool`](#addbool-bool-boolean-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addInt8`](#addint8-value-byte-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addInt32`](#addint32-value-int-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addInt64`](#addint64-value-long-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addInt256`](#addint256-value-BigInteger-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addInt8Array`](#addint8array-intArray-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addInt32Array`](#addint32array-intArray-int-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addInt64Array`](#addint64array-intArray-long-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addInt256Array`](#addint256array-intArray-BigInteger-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addUint8`](#adduint8-value-byte-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addUint32`](#adduint32-value-int-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addUint64`](#adduint64-value-long-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addUint256`](#adduint256-value-BigInteger-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addUint8Array`](#adduint8array-intArray-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addUint32Array`](#adduint32array-intArray-int-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addUint64Array`](#adduint64array-intArray-long-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addUint256Array`](#adduint256array-intArray-BigInteger-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addAddress`](#addaddress-address-string-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addAddressArray`](#addaddressarray-addresses-string-contractfunctionparameters) | ✅ | ✅ | ✅
-| [`addFunction`](#addfunction-address-string-selector-bytes-contractfunctionparameters) | ✅ | ✅ | ✅
-
-</details>
-
 ### Methods
 
 ##### `addString` ( `param`: `string` ): [`ContractFunctionParameters`](#)

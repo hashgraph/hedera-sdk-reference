@@ -1,17 +1,3 @@
-# `TopicCreateTransaction`
-
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`adminKey`](#adminkey-key) | ✅ | ✅ | ✅
-| [`submitKey`](#submitkey-key) | ✅ | ✅ | ✅
-| [`autoRenewPeriod`](#autorenewperiod-duration) | ✅ | ✅ | ✅
-| [`autoRenewAccountId`](#autorenewaccountid-accountid) | ✅ | ✅ | ✅
-| [`topicMemo`](#topicmemo-string) | ✅ | ✅ | ✅
-</details>
-
 > class `TopicCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 <!-- tabs:start -->

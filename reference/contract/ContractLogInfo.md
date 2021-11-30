@@ -1,19 +1,5 @@
 > class `ContractLogInfo`
 
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`contractId`](#contractid-contractid) | ✅ | ✅ | ✅
-| [`bloom`](#bloom-bytes) | ✅ | ✅ | ✅
-| [`topics`](#topics-bytes) | ✅ | ✅ | ✅
-| [`data`](#data-bytes) | ✅ | ✅ | ✅
-| [`toBytes`](#tobytes-bytes) | ✅ | ✅ | ✅
-| [`fromBytes`](#frombytes-data-bytes-contractloginfo) | ✅ | ✅ | ✅
-
-</details>
-
 ### Properties
 
 ##### `contractId`: [`ContractId`](reference/contract/ContractId.md)

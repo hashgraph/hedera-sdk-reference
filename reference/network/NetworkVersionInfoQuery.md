@@ -1,23 +1,6 @@
-# class `NetworkVersionInfoQuery`
-
-Retrieve the latest state of a topic.
-
-This method is unrestricted and allowed on any topic by any payer account.
-
-Deleted accounts will not be returned.
-
-Returns [`NetworkVersionInfo`](./NetworkVersionInfo.md) from [`execute`](../Query.md).
-
-<details>
-<summary><b>Declaration</b></summary>
-
-```typescript
-class NetworkVersionInfoQuery extends Query<NetworkVersionInfo> {
-    constructor();
-}
-```
-
-</details>
+> class `NetworkVersionInfoQuery`
+> extends [`Query`](reference/core/Query.md) <
+> [`NetworkVersionInfo`](reference/network/NetworkVersionInfo.md) >
 
 <!-- tabs:start -->
 

@@ -4,17 +4,6 @@ Retrieve the latest state of a topic.
 
 This method is unrestricted and allowed on any topic by any payer account.
 
-Deleted accounts will not be returned.
-
-<details>
-<summary><b>Table of Contents</b></summary>
-
-| Item | Java | JavaScript | Go
-| - | - | - | - |
-| [`topicId`](#topicid-topicid) | ✅ | ✅ | ✅
-
-</details>
-
 <!-- tabs:start -->
 
 #### ** Java **
