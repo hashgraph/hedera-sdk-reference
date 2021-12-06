@@ -63,6 +63,20 @@ if err != nil {
 
 Generates a new Ed25519 private key.
 
+Deprecated: Use `generateEd5519()` or `generateEcdsa()` instead.
+
+---
+
+##### `generateEcdsa` ( ): `PrivateKey`
+
+Generates a new ECDSA private key.
+
+---
+
+##### `generateEd25519` ( ): `PrivateKey`
+
+Generates a new Ed25519 private key.
+
 ---
 
 ##### `fromBytes` ( `data`: `bytes` ): `PrivateKey`
