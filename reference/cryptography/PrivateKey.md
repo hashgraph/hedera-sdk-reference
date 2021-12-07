@@ -63,6 +63,20 @@ if err != nil {
 
 Generates a new Ed25519 private key.
 
+Deprecated: Use `generateEd5519()` or `generateEcdsa()` instead.
+
+---
+
+##### `generateEcdsa` ( ): `PrivateKey`
+
+Generates a new ECDSA private key.
+
+---
+
+##### `generateEd25519` ( ): `PrivateKey`
+
+Generates a new Ed25519 private key.
+
 ---
 
 ##### `fromBytes` ( `data`: `bytes` ): `PrivateKey`
@@ -71,9 +85,41 @@ Parses a private key from bytes.
 
 ---
 
+##### `fromBytesDer` ( `data`: `bytes` ): `PrivateKey`
+
+Parses a private key from a DER endcoded private key.
+
+---
+
+##### `fromBytesEcdsa` ( `data`: `bytes` ): `PrivateKey`
+
+Parses a private key from raw bytes for ECDSA.
+
+---
+
+##### `fromBytesEd25519` ( `data`: `bytes` ): `PrivateKey`
+
+Parses a private key from raw bytes for Ed25519.
+
+---
+
 ##### `fromString` ( `text`: `String` ): `PrivateKey`
 
-Recovers an PrivateKey from its text-encoded representation.
+Recovers a PrivateKey from its DER encoded representation.
+
+Use `fromStringEcdsa()` or `fromStringEd25519()` to create a `PrivateKey` from bytes without a DER prefix
+
+---
+
+##### `fromStringEcdsa` ( `text`: `String` ): `PrivateKey`
+
+Recovers a ECDSA PrivateKey from its text-encoded representation.
+
+---
+
+##### `fromStringEd25519` ( `text`: `String` ): `PrivateKey`
+
+Recovers a Ed25519 PrivateKey from its text-encoded representation.
 
 ---
 
@@ -129,13 +175,37 @@ Sign a transaction with this private key.
 
 ##### `toBytes` ( ): `bytes`
 
-Converts this key into bytes.
+Outputs the private key with a DER header 
+
+---
+
+##### `toBytesDer` ( ): `bytes`
+
+Outputs the private key with a DER header 
+
+---
+
+##### `toBytesRaw` ( ): `bytes`
+
+Outputs just the private key bytes without the DER header
 
 ---
 
 ##### `toString` ( ): `String`
 
-Serialiazes the private key into it's der encoded ASN1 string representation
+Serialiazes the private key with a DER header into string representation
+
+---
+
+##### `toStringDer` ( ): `String`
+
+Serializes just the private key bytes without the DER header
+
+---
+
+##### `toStringRaw` ( ): `String`
+
+Serialiazes the private key without a DER header into string representation
 
 ---
 

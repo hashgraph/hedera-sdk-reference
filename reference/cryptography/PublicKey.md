@@ -31,15 +31,37 @@ if err != nil {
 
 ##### `fromString` ( `text`: `String` ): `PublicKey`
 
-Parse a public key from a string of hexadecimal digits.
+Parse a public key from a hex encoded public key with a DER header.
 
-The public key may optionally be prefixed with the DER header.
+---
+
+##### `fromStringEcdsa` ( `text`: `String` ): `PublicKey`
+
+Parse a ECDSA public key from a string of hexadecimal digits.
+
+---
+
+##### `fromStringEd25519` ( `text`: `String` ): `PublicKey`
+
+Parse a Ed25519 public key from a string of hexadecimal digits.
 
 ---
 
 ##### `fromBytes` ( `data`: `bytes` ): `PublicKey`
 
-Parses a public key from bytes.
+Parses a public key from bytes with a DER header.
+
+---
+
+##### `fromBytesEcdsa` ( `data`: `bytes` ): `PublicKey`
+
+Parses a ECDSA public key from bytes.
+
+---
+
+##### `fromBytesEd25519` ( `data`: `bytes` ): `PublicKey`
+
+Parses a Ed25519 public key from bytes.
 
 ---
 
@@ -59,12 +81,36 @@ Verify the signatures on all the messages in the Transaction.
 
 ##### `toBytes` (): `bytes`
 
-Converts this key into bytes.
+Outputs the public key with a DER header 
+
+---
+
+##### `toBytesDer` ( ): `bytes`
+
+Outputs the public key with a DER header 
+
+---
+
+##### `toBytesRaw` ( ): `bytes`
+
+Outputs just the public key bytes without the DER header
 
 ---
 
 ##### `toString` (): `String`
 
 Returns the public key as a string with the DER prefix that identifies the algorithim.
+
+---
+
+##### `toStringDer` ( ): `String`
+
+Serializes just the public key bytes without the DER header
+
+---
+
+##### `toStringRaw` ( ): `String`
+
+Serialiazes the public key without a DER header into string representation
 
 ---
