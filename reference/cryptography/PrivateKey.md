@@ -193,19 +193,25 @@ Outputs just the private key bytes without the DER header
 
 ##### `toString` ( ): `String`
 
-Serialiazes the private key with a DER header into string representation
+See: [`toStringDer()`](#tostringder-string)
 
 ---
 
 ##### `toStringDer` ( ): `String`
 
-Serializes just the private key bytes without the DER header
+Encodes the private key using PKCS, DER, and HEX. This results in
+a string which has the key data of the private key prefixed with
+a header.
+
+
+The header for Ed25519 is: "302e020100300506032b657004220420"
+The header for ECDSA is: "3030020100300706052b8104000a04220420"
 
 ---
 
 ##### `toStringRaw` ( ): `String`
 
-Serialiazes the private key without a DER header into string representation
+Encodes the private key data into HEX with no header.
 
 ---
 

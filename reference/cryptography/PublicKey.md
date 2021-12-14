@@ -97,23 +97,30 @@ Outputs just the public key bytes without the DER header
 
 ---
 
-##### `toString` (): `String`
+##### `toString` ( ): `String`
 
-Returns the public key as a string with the DER prefix that identifies the algorithim.
+See: [`toStringDer()`](#tostringder-string)
 
 ---
 
 ##### `toStringDer` ( ): `String`
 
-Serializes just the public key bytes without the DER header
+Encodes the public key using SPKI, DER, and HEX. This results in
+a string which has the key data of the public key prefixed with
+a header.
+
+
+The header for Ed25519 is: "302a300506032b6570032100"
+The header for ECDSA is: "302f300706052b8104000a0324000421"
 
 ---
 
 ##### `toStringRaw` ( ): `String`
 
-Serialiazes the public key without a DER header into string representation
+Encodes the private key data into HEX with no header.
 
 ---
+
 
 ##### `toAccountId` ( `shard`: `Uint64`, `realm`: `Uint64` ): `AccountId`
 
