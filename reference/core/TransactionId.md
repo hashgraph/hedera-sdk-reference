@@ -21,7 +21,7 @@ Generate a transaction ID with the given account ID and a generated timestamp
 Construct a transaction ID from string
 
 **NOTE**: The transaction ID format is
-`(?<accountId>(\d+.\d+)?\d+)\.(?<timestamp>\d+.\d+)(?<scheduled>scheduled)?`
+`(?<accountId>(\d+.\d+)?\d+)\.(?<timestamp>\d+.\d+)(?<scheduled>\?scheduled)?(?<nonce>/\d+)?`
 
 ---
 
@@ -61,5 +61,17 @@ The timestamp of this transaction
 
 Each transaction ID must have a unique timestamp. Timestamp generation in the SDK fuzzes the current
 time so collisions are less likely
+
+---
+
+##### `nonce`: `Uint64`
+
+The identifier for an internal transaction that was spawned as part of handling a user transaction.
+(These internal transactions share the transactionValidStart and accountID of the user transaction,
+so a nonce is necessary to give them a unique TransactionID.)
+
+An example is when a "parent" ContractCreate or ContractCall transaction calls one or more HTS
+precompiled contracts; each of the "child" transactions spawned for a precompile has a id with a
+different nonce.
 
 ---

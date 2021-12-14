@@ -215,6 +215,15 @@ Converts the private key into a keystore which can be saved on disk
 
 ---
 
+##### `toAccountId` ( `shard`: `Uint64`, `realm`: `Uint64` ): `AccountId`
+
+Convert this private key into an account ID with a given shard and realm.
+
+Note: The account ID created will use the `publicKey` property of this `PrivateKey`,
+not the `PrivateKey` bytes.
+
+---
+
 ### Properties
 
 ##### `publicKey`: [`PublicKey`](reference/cryptography/PublicKey.md)

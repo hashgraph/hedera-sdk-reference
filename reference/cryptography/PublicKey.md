@@ -114,3 +114,9 @@ Serializes just the public key bytes without the DER header
 Serialiazes the public key without a DER header into string representation
 
 ---
+
+##### `toAccountId` ( `shard`: `Uint64`, `realm`: `Uint64` ): `AccountId`
+
+Convert this public key into an account ID with a given shard and realm.
+
+---
