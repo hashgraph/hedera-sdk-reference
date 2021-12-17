@@ -40,6 +40,25 @@ if err != nil {
 
 ### Properties
 
-##### `transactionId`: `TransactionId`
+##### `transactionId`: [`TransactionId`](reference/core/TransactionId.md)
+
+The transaction ID to query the receipt for
+
+---
+
+##### `includeDuplicates`: `bool`
+
+Whether receipts of processing duplicate transactions should be returned along with the
+receipt of processing the first consensus transaction with the given id whose status was
+neither <tt>INVALID\_NODE\_ACCOUNT</tt> nor <tt>INVALID\_PAYER\_SIGNATURE</tt>; <b>or</b>, if no
+such receipt exists, the receipt of processing the first transaction to reach consensus with
+the given transaction id.
+
+---
+
+##### `includeChildren`: `bool`
+
+Whether the response should include the receipts of any child transactions spawned by the 
+top-level transaction with the given transactionID. 
 
 ---

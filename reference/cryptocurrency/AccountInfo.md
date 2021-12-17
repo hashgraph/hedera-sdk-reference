@@ -121,3 +121,9 @@ The number of NFTs owned by this account
 The maximum number of tokens that an Account can be implicitly associated with.
 
 ---
+
+##### `aliasKey`: `PublicKey`
+
+The alias of this account
+
+---

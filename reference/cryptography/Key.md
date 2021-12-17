@@ -34,6 +34,9 @@ KeyList -> Key.
 Each Key should not have more than 46 levels, which implies 15 levels of nested ThresholdKeys.
 Only ed25519 primitive keys are currently supported.
 
+**Note**: [`ContractId`](reference/contract/ContractId.md) can represent either a regular
+contract ID or a delegatable contract ID.
+
 ### Implementors
 
 - [`PublicKey`](reference/cryptography/PublicKey.md)

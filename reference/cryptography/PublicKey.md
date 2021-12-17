@@ -31,37 +31,57 @@ if err != nil {
 
 ##### `fromString` ( `text`: `String` ): `PublicKey`
 
-Parse a public key from a hex encoded public key with a DER header.
+Parses a HEX and DER encoded Ed25519 or ECDSA public key
+
+**Note**: The use of raw bytes for a Ed25519 public key is deprecated; use `fromStringEd25519()` instead.
+
+---
+
+##### `fromStringDer` ( `text`: `String` ): `PublicKey`
+
+Parses a HEX and DER encoded Ed25519 or ECDSA public key
+
+**Note**: Does **not** support raw bytes; the data provided must be DER encoded.
 
 ---
 
 ##### `fromStringEcdsa` ( `text`: `String` ): `PublicKey`
 
-Parse a ECDSA public key from a string of hexadecimal digits.
+Parses an ECDSA public key from either HEX and DER encoded bytes or just HEX encoded raw bytes.
 
 ---
 
 ##### `fromStringEd25519` ( `text`: `String` ): `PublicKey`
 
-Parse a Ed25519 public key from a string of hexadecimal digits.
+Parses an Ed25519 public key from either HEX and DER encoded bytes or just HEX encoded raw bytes.
 
 ---
 
 ##### `fromBytes` ( `data`: `bytes` ): `PublicKey`
 
-Parses a public key from bytes with a DER header.
+Parses a DER encoded Ed25519 or ECDSA public key
+
+**Note**: The use of raw bytes for a Ed25519 public key is deprecated; use `fromBytesEd25519()` instead.
+
+---
+
+##### `fromBytesDer` ( `data`: `bytes` ): `PublicKey`
+
+Parses a DER encoded Ed25519 or ECDSA public key
+
+**Note**: Does **not** support raw bytes; the data provided must be DER encoded.
 
 ---
 
 ##### `fromBytesEcdsa` ( `data`: `bytes` ): `PublicKey`
 
-Parses a ECDSA public key from bytes.
+Parses an ECDSA public key from either DER encoded or raw bytes.
 
 ---
 
 ##### `fromBytesEd25519` ( `data`: `bytes` ): `PublicKey`
 
-Parses a Ed25519 public key from bytes.
+Parses an Ed25519 public key from either DER encoded or raw bytes.
 
 ---
 
@@ -79,38 +99,55 @@ Verify the signatures on all the messages in the Transaction.
 
 ---
 
-##### `toBytes` (): `bytes`
+##### `toBytes` ( ): `bytes`
 
-Outputs the public key with a DER header 
+Serialize the private key into bytes.
+
+**Note**: For `Ed25519` the result of this method call is identical to `toBytesRaw()` while for `ECDSA`
+this method is identical to `toBytesDer()`.
+
+We strongly recommend using `toBytesRaw()` or `toBytesDer()` instead.
 
 ---
 
 ##### `toBytesDer` ( ): `bytes`
 
-Outputs the public key with a DER header 
+Serialize the private key into bytes using SPKI and DER encoding.
 
 ---
 
 ##### `toBytesRaw` ( ): `bytes`
 
-Outputs just the public key bytes without the DER header
+Return just the raw bytes for the given key.
 
 ---
 
-##### `toString` (): `String`
+##### `toString` ( ): `String`
 
-Returns the public key as a string with the DER prefix that identifies the algorithim.
+See: [`toStringDer()`](#tostringder-string)
 
 ---
 
 ##### `toStringDer` ( ): `String`
 
-Serializes just the public key bytes without the DER header
+Encodes [`toBytesDer()`](#tostringder-string) into HEX.
+
+**Note**: This results in a string which has the key data of the private key prefixed with a header.
+
+The header for Ed25519 is: "302a300506032b6570032100"
+
+The header for ECDSA is: "302f300706052b8104000a0324000421"
 
 ---
 
 ##### `toStringRaw` ( ): `String`
 
-Serialiazes the public key without a DER header into string representation
+Encodes [`toBytesRaw()`](#tostringder-string) into HEX.
+
+---
+
+##### `toAccountId` ( `shard`: `Uint64`, `realm`: `Uint64` ): `AccountId`
+
+Convert this public key into an account ID with a given shard and realm.
 
 ---

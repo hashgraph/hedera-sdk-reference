@@ -83,3 +83,48 @@ Any token transfers made in this transaction
 **Note**: These token transfers are different than the ones set in [`TransferTransaction`](reference/cryptocurrency/TransferTransaction.md)
 
 ---
+
+### `scheduleRef`: [`ScheduleId`](reference/schedule/ScheduleId.md)
+
+In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
+
+---
+
+### `assessedCustomFees`: `List` < [`AssessedCustomFee`](reference/token/AssessedCustomFee.md) >
+
+In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
+
+---
+
+### `automaticTokenAssociations`: `List` < [`TokenAssociation`](reference/token/TokenAssociation.md) >
+
+In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
+
+---
+
+### `parentConsensusTimestamp`: `Timestamp`
+
+In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
+
+---
+
+### `aliasKey`: [`PublicKey`](reference/cryptography/PublicKey.md)
+
+In the record of an internal CryptoCreate transaction triggered by a user transaction with a 
+(previously unused) alias, the new account's alias. 
+
+---
+
+### `duplicates`: [`TransactionRecord`](#)
+
+The records of processing all consensus transaction with the same id as the distinguished
+record above, in chronological order.
+
+---
+
+### `children`: [`TransactionRecord`](#)
+
+The records of processing all child transaction spawned by the transaction with the given 
+top-level id, in consensus order. Always empty if the top-level status is UNKNOWN.
+
+---

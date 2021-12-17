@@ -987,3 +987,22 @@ confirm the id of the to be used in the upgrade.
 
 If an NMT upgrade has been prepared, the subsequent FREEZE\_UPGRADE transaction must 
 confirm the hash of the file to be used in the upgrade.
+
+##### CONSENSUS\_GAS\_EXHAUSTED = 279;
+
+Consensus throttle did not allow execution of this transaction. System is throttled at
+consensus level.
+
+##### REVERTED\_SUCCESS = 280;
+
+A precompiled contract succeeded, but was later reverted.
+
+##### MAX\_STORAGE\_IN\_PRICE\_REGIME\_HAS\_BEEN\_USED = 281;
+
+All contract storage allocated to the current price regime has been consumed.
+
+##### INVALID\_ALIAS\_KEY = 282;
+
+An alias used in a CryptoTransfer transaction is not the serialization of a primitive Key
+message--that is, a Key with a single Ed25519 or ECDSA(secp256k1) public key and no 
+unknown protobuf fields.

@@ -81,45 +81,57 @@ Generates a new Ed25519 private key.
 
 ##### `fromBytes` ( `data`: `bytes` ): `PrivateKey`
 
-Parses a private key from bytes.
+Parses a DER encoded Ed25519 or ECDSA private key
+
+**Note**: The use of raw bytes for a Ed25519 private key is deprecated; use `fromBytesEd25519()` instead.
 
 ---
 
 ##### `fromBytesDer` ( `data`: `bytes` ): `PrivateKey`
 
-Parses a private key from a DER endcoded private key.
+Parses a DER encoded Ed25519 or ECDSA private key
+
+**Note**: Does **not** support raw bytes; the data provided must be DER encoded.
 
 ---
 
 ##### `fromBytesEcdsa` ( `data`: `bytes` ): `PrivateKey`
 
-Parses a private key from raw bytes for ECDSA.
+Parses an ECDSA private key from either DER encoded or raw bytes.
 
 ---
 
 ##### `fromBytesEd25519` ( `data`: `bytes` ): `PrivateKey`
 
-Parses a private key from raw bytes for Ed25519.
+Parses an Ed25519 private key from either DER encoded or raw bytes.
 
 ---
 
 ##### `fromString` ( `text`: `String` ): `PrivateKey`
 
-Recovers a PrivateKey from its DER encoded representation.
+Parses a HEX and DER encoded Ed25519 or ECDSA private key
 
-Use `fromStringEcdsa()` or `fromStringEd25519()` to create a `PrivateKey` from bytes without a DER prefix
+**Note**: The use of raw bytes for a Ed25519 private key is deprecated; use `fromStringEd25519()` instead.
+
+---
+
+##### `fromStringDer` ( `text`: `String` ): `PrivateKey`
+
+Parses a HEX and DER encoded Ed25519 or ECDSA private key
+
+**Note**: Does **not** support raw bytes; the data provided must be DER encoded.
 
 ---
 
 ##### `fromStringEcdsa` ( `text`: `String` ): `PrivateKey`
 
-Recovers a ECDSA PrivateKey from its text-encoded representation.
+Parses an ECDSA private key from either HEX and DER encoded bytes or just HEX encoded raw bytes.
 
 ---
 
 ##### `fromStringEd25519` ( `text`: `String` ): `PrivateKey`
 
-Recovers a Ed25519 PrivateKey from its text-encoded representation.
+Parses an Ed25519 private key from either HEX and DER encoded bytes or just HEX encoded raw bytes.
 
 ---
 
@@ -175,43 +187,63 @@ Sign a transaction with this private key.
 
 ##### `toBytes` ( ): `bytes`
 
-Outputs the private key with a DER header 
+Serialize the private key into bytes.
+
+**Note**: For `Ed25519` the result of this method call is identical to `toBytesRaw()` while for `ECDSA`
+this method is identical to `toBytesDer()`.
+
+We strongly recommend using `toBytesRaw()` or `toBytesDer()` instead.
 
 ---
 
 ##### `toBytesDer` ( ): `bytes`
 
-Outputs the private key with a DER header 
+Serialize the private key into bytes using PKCS and DER encoding.
 
 ---
 
 ##### `toBytesRaw` ( ): `bytes`
 
-Outputs just the private key bytes without the DER header
+Return just the raw bytes for the given key.
 
 ---
 
 ##### `toString` ( ): `String`
 
-Serialiazes the private key with a DER header into string representation
+See: [`toStringDer()`](#tostringder-string)
 
 ---
 
 ##### `toStringDer` ( ): `String`
 
-Serializes just the private key bytes without the DER header
+Encodes [`toBytesDer()`](#tostringder-string) into HEX.
+
+**Note**: This results in a string which has the key data of the private key prefixed with a header.
+
+The header for Ed25519 is: "302e020100300506032b657004220420"
+
+The header for ECDSA is: "3030020100300706052b8104000a04220420"
 
 ---
 
 ##### `toStringRaw` ( ): `String`
 
-Serialiazes the private key without a DER header into string representation
+Encodes [`toBytesRaw()`](#tostringder-string) into HEX.
 
 ---
 
 ##### `toKeystore` ( `passphrase`: `String` ): `bytes`
 
 Converts the private key into a keystore which can be saved on disk
+
+---
+
+##### `toAccountId` ( `shard`: `Uint64`, `realm`: `Uint64` ): `AccountId`
+
+Convert this private key into an account ID with a given shard and realm.
+
+Note: The account ID created will use the `publicKey` property of this `PrivateKey`,
+not the `PrivateKey` bytes.
 
 ---
 

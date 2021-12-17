@@ -23,13 +23,19 @@ Construct a [`ContractId`](#) with all fields explicitly set.
 Construct a [`ContractId`](#) from a string. The format of the string could be either just
 a number "4" or dot separated numbers "0.0.4".
 
+---
+
 ##### `fromBytes` ( `data` : `bytes` ): [`ContractId`](#contractid)
 
 Deserialize a [`ContractId`](#) from its the protobuf representation.
 
+---
+
 ##### `fromSolidityAddress` ( `str` : `String` ): [`ContractId`](#contractid)
 
 Construct a [`ContractId`](#) a solidity address.
+
+---
 
 ### Methods
 

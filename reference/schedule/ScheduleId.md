@@ -1,39 +1,39 @@
-> class `AccountId`
+> class `ScheduleId`
 
-The ID for an a cryptocurrency account
+The ID for an a cryptocurrency schedule
 
 ### Constructors
 
 ##### `constructor` ( `num` : `Uint64` )
 
-Construct a [`AccountId`](#) with [`shard`](#shard-uint64) and [`realm`](#realm-uint64) being zero.
+Construct a [`ScheduleId`](#) with [`shard`](#shard-uint64) and [`realm`](#realm-uint64) being zero.
 
 ---
 
 ##### `constructor` ( `shard` : `Uint64`, `realm` : `Uint64`, `num` : `Uint64` )
 
-Construct a [`AccountId`](#) with all fields explicitly set.
+Construct a [`ScheduleId`](#) with all fields explicitly set.
 
 ---
 
 ### Static Methods
 
-##### `fromString` ( `str` : `String` ): [`AccountId`](#accountid)
+##### `fromString` ( `str` : `String` ): [`ScheduleId`](#scheduleid)
 
-Construct an [`AccountId`](#) from a string. 
+Construct an [`ScheduleId`](#) from a string. 
 `str` must match `^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.((?:[0-9a-fA-F][0-9a-fA-F])+)$`
 
 ---
 
-##### `fromBytes` ( `data` : `bytes` ): [`AccountId`](#accountid)
+##### `fromBytes` ( `data` : `bytes` ): [`ScheduleId`](#scheduleid)
 
-Deserialize an account ID from its the protobuf representation.
+Deserialize an schedule ID from its the protobuf representation.
 
 ---
 
-##### `fromSolidityAddress` ( `str` : `String` ): [`AccountId`](#accountid)
+##### `fromSolidityAddress` ( `str` : `String` ): [`ScheduleId`](#scheduleid)
 
-Construct an account ID from a solidity address.
+Construct an schedule ID from a solidity address.
 
 ---
 
@@ -47,17 +47,15 @@ Serialize this ID into its protobuf representation.
 
 ##### `validateChecksum` ( `client` : [`Client`](reference/core/Client.md) ): `void`
 
-Validate the account ID's checksum matches the client's network.
+Validate the schedule ID's checksum matches the client's network.
 
 Note: The client must contain a network with a known [`NetworkName`](reference/NetworkName.md)
-
-Note: If the account ID has an `aliasKey`, `validateChecksum` will throw an error 
 
 ---
 
 ##### `getChecksum` ( ): `String`
 
-Get the checksum for this account ID if it constructed with one.
+Get the checksum for this schedule ID if it constructed with one.
 
 ---
 
@@ -72,8 +70,6 @@ Stringify this ID into `{shard}.{realm}.{num}`
 Stringify this ID into `{shard}.{realm}.{num}-{checksum}` using the client's network.
 
 Note: The client must contain a network with a known [`NetworkName`](reference/NetworkName.md)
-
-Note: If the account ID has an `aliasKey`, `toStringWithChecksum` will throw an error 
 
 ---
 
@@ -93,12 +89,6 @@ The realm number (nonnegative)
 
 ##### `num`: `Uint64`
 
-A nonnegative account number unique within its realm
-
----
-
-##### `aliasKey`: `PublicKey`
-
-An alias for the `num` of the account if the account was created from a public key directly.
+A nonnegative schedule number unique within its realm
 
 ---
