@@ -72,3 +72,23 @@ Convert this ledger ID into a `NetworkName`.
 `NetworkName` will be `OTHER`.
 
 ---
+
+### Constants
+
+##### `MAINNET`: `LedgerId`
+
+The ledger ID for mainnet
+
+---
+
+##### `TESTNET`: `LedgerId`
+
+The ledger ID for testnet
+
+---
+
+##### `PREVIEWNET`: `LedgerId`
+
+The ledger ID for previewnet
+
+---
