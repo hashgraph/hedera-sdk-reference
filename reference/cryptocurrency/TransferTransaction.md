@@ -92,6 +92,12 @@ Add a fungible token transfer with an expected decimals field
 
 ---
 
+##### `getTokenIdDecimals`: `Map` < [`TokenId`](reference/token/TokenId.md), `Uint64` >
+
+The the expected decimals per token ID
+
+---
+
 ##### `getTokenTransfers`: `Map` < [`TokenId`](reference/token/TokenId.md), `Map` < `[`AccountId`](reference/cryptocurrency/AccountId.md), `Uint64` > >
 
 The fungible token transfers
