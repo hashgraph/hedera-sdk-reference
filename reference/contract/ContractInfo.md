@@ -87,3 +87,9 @@ Whether the contract has been deleted.
 The tokens associated to the contract.
 
 ---
+
+##### `ledgerId`: [`LedgerId`](reference/LedgerId.md)
+
+The ID of the ledger which returned this response
+
+---

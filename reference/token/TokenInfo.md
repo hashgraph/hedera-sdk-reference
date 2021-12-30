@@ -197,3 +197,8 @@ The custom fees to be assessed during a CryptoTransfer that transfers units of t
 
 ---
 
+##### `ledgerId`: [`LedgerId`](reference/LedgerId.md)
+
+The ID of the ledger which returned this response
+
+---

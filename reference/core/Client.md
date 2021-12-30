@@ -263,3 +263,11 @@ Only available in Java and Go SDKs
 
 ---
 
+##### `ledgerId` () : [`LedgerId`](reference/LedgerId.md)
+
+Enable or disable TLS certificate verification
+
+Only available in Java and Go SDKs 
+
+---
+
