@@ -48,7 +48,7 @@ Return if this ledger ID represents a previewnet ledger ID.
 
 ---
 
-##### `toString` ( ): `bytes`
+##### `toString` ( ): `string`
 
 Stringify the ledger ID
 
