@@ -48,3 +48,9 @@ Identifies if this file has been deleted.
 The keys that are required to sign transactions that mutate this file.
 
 ---
+
+##### `ledgerId`: [`LedgerId`](reference/LedgerId.md)
+
+The ID of the ledger which returned this response
+
+---

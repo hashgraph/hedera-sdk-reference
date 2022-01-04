@@ -73,3 +73,9 @@ The duration since topic creation when this topic will be auto renewed and the a
 The auto renew account that will be charged when the topic is to be auto renewed.
 
 ---
+
+##### `ledgerId`: [`LedgerId`](reference/LedgerId.md)
+
+The ID of the ledger which returned this response
+
+---

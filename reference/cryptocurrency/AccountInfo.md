@@ -127,3 +127,9 @@ The maximum number of tokens that an Account can be implicitly associated with.
 The alias of this account
 
 ---
+
+##### `ledgerId`: [`LedgerId`](reference/LedgerId.md)
+
+The ID of the ledger which returned this response
+
+---
