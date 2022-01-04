@@ -271,7 +271,7 @@ Only available in Java and Go SDKs
 
 ---
 
-##### `regenerateTransactionId`: `bool`
+##### `defaultRegenerateTransactionId`: `bool`
 
 Declares if we should generate new transaction IDs when a transaction fails with
 `TRANSACTION_EXPIRED`
