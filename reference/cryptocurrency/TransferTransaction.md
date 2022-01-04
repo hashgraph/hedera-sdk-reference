@@ -94,7 +94,7 @@ Add a fungible token transfer with an expected decimals field
 
 ##### `getTokenIdDecimals`: `Map` < [`TokenId`](reference/token/TokenId.md), `Uint32` >
 
-The the expected decimals per token ID
+The expected decimals per token ID
 
 ---
 

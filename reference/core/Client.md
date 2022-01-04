@@ -259,7 +259,7 @@ Enable or disable TLS for both networks.
 
 Enable or disable TLS certificate verification
 
-Only available in Java and Go SDKs 
+Only available in Java and Go SDKs
 
 ---
 
@@ -267,7 +267,18 @@ Only available in Java and Go SDKs
 
 Enable or disable TLS certificate verification
 
-Only available in Java and Go SDKs 
+Only available in Java and Go SDKs
 
 ---
 
+##### `regenerateTransactionId`: `bool`
+
+Declares if we should generate new transaction IDs when a transaction fails with
+`TRANSACTION_EXPIRED`
+
+**NOTE**: Defaults to `true`
+
+**NOTE**: If transaction IDs are locked, this option is ignored. Transaction IDs can be
+locked if set manually or if certain methods are called.
+
+---

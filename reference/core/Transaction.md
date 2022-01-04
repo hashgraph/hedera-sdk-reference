@@ -83,7 +83,7 @@ Freeze the transaction getting it ready to be signed or executed.
 Freezing without a client requires a transaction ID and node account IDs to be manually set
 
 **NOTE**: Freezing the transaction means it cannot be modified anymore, so make sure to set all the
-fields correctly before freezing. 
+fields correctly before freezing.
 
 **NOTE**: Freezing is required for certain operations such as signing and generating hash.
 
@@ -91,7 +91,7 @@ fields correctly before freezing.
 
 ##### `freezeWith` ( `client`: [`Client`](reference/core/Client.md) ): `Transaction`
 
-Freeze the transaction with a client. 
+Freeze the transaction with a client.
 
 The client's operator will be used to generate a transaction ID, and the client's network will be
 used to generate a list of node account IDs
@@ -167,8 +167,20 @@ Any notes or descriptions that should be put into the record (max length 100).
 
 ##### `maxAttempts`: `Uint64`
 
-The number of times to retry submtting this transaction. Transactions are retried when Hedera
+The number of times to retry submitting this transaction. Transactions are retried when Hedera
 Hashgraph returns a status code that implies the transaction should be resubmitted, or when a node
-doesn't responde.
+doesn't respond.
+
+---
+
+##### `regenerateTransactionId`: `bool`
+
+Declares if we should generate new transaction IDs when a transaction fails with
+`TRANSACTION_EXPIRED`
+
+**NOTE**: Defaults to `true`
+
+**NOTE**: If transaction IDs are locked, this option is ignored. Transaction IDs can be
+locked if set manually or if certain methods are called.
 
 ---
