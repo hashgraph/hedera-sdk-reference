@@ -89,7 +89,7 @@ interface RequestSignatureV1 {
  */
 interface ResponseSignatureV1 {
     /**
-     * Each key **MUST** be an ASN.1 encoded public key
+     * Each key **MUST** be an SPKI DER encoded public key
      */
     publicKeys: Uint8Array[];
 
@@ -133,7 +133,7 @@ interface GetPublicKeyResponse = GetPublicKeyResponseV1;
 
 interface GetPublicKeyResponseV1 {
     /**
-     * Each key **MUST** be an ASN.1 encoded public key
+     * Each key **MUST** be an SPKI DER encoded public key
      */
     publicKeys: Uint8Array[];
 }

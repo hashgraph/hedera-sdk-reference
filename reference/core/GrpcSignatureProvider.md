@@ -62,7 +62,7 @@ message RequestSignatureV1 {
  */
 message ResponseSignatureV1 {
     /**
-     * Each key **MUST** be an ASN.1 encoded public key
+     * Each key **MUST** be an SPKI DER encoded public key
      */
     repeated bytes public_keys = 1;
 
@@ -108,7 +108,7 @@ message GetPublicKeyResponse {
 
 message GetPublicKeyResponseV1 {
     /**
-     * Each key **MUST** be an ASN.1 encoded public key
+     * Each key **MUST** be an SPKI DER encoded public key
      */
     repeated bytes public_keys = 1;
 }
