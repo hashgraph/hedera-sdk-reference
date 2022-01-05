@@ -112,6 +112,18 @@ Add a signature to the transaction
 
 ---
 
+##### `addSignatureProvider( `provider`: `SignatureProvider` ): `Transaction`
+
+Adds a signature provider to this transaction which will be used when signing.
+
+---
+
+##### `getSignatureProviders()`: `List` < `SignatureProvider` >
+
+Get the current signature providers of this transaction.
+
+---
+
 ### Properties
 
 ##### `nodeAccountIds`: [`AccountId[]`](reference/cryptocurrency/AccountId.md)

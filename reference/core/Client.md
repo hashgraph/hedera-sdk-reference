@@ -182,6 +182,18 @@ from an external source such as the Ledger Hardware Wallet.
 
 ---
 
+##### `addSignatureProvider( `provider`: `SignatureProvider` ): `Client`
+
+Adds a signature provider to client which will be used on all requests
+
+---
+
+##### `getSignatureProviders()`: `List` < `SignatureProvider` >
+
+Get the current signature providers of this client.
+
+---
+
 ##### `close` ()
 
 Close all open connections with the Hedera network; and, release all

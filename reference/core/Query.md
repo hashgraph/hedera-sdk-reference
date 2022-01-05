@@ -18,6 +18,18 @@ Return the cost to execute this query on the chosen Hedera network node.
 
 ---
 
+##### `addSignatureProvider( `provider`: `SignatureProvider` ): `Query`
+
+Adds a signature provider to this query which will be used when signing.
+
+---
+
+##### `getSignatureProviders()`: `List` < `SignatureProvider` >
+
+Get the current signature providers of this query.
+
+---
+
 ### Properties
 
 ##### `nodeAccountIds`: [`AccountId[]`](reference/cryptocurrency/AccountId.md)
