@@ -1,30 +1,4 @@
-> `GrpcSignatureProvider` implements `SignatureProvider`
-
-### Static Methods
-
-##### `fromUrl` ( `url`: `string` ): `GrpcSignatureProvider`
-
-Creates an `GrpcSignatureProvider` for a gRPC server.
-
----
-
-### Methods
-
-##### async `getPublicKeys` (): `List` < `PublicKey` >
-
-Lists all the public keys which will sign the requests
-
-##### async `sign` ( `messages`: `List` < `bytes` > ): `List` < `List` < `SignatureProviderSignature` > >
-
-Signs all the messages.
-
----
-
-##### `toString` (): `string`
-
-Outputs `[GrpcSignatureProvider] <url>`
-
----
+> class `GrpcSignatureProvider` extends `provider`
 
 ### Protobuf Defintions
 
@@ -98,26 +72,9 @@ message Signature {
 }
 
 /**
- * Lists all the public keys
- *
- * Strictlly declared to hopefully future proof
- */
-message GetPublicKeyResponse {
-    GetPublicKeyResponseV1 v1 = 1;
-}
-
-message GetPublicKeyResponseV1 {
-    /**
-     * Each key **MUST** be an SPKI DER encoded public key
-     */
-    repeated bytes public_keys = 1;
-}
-
-/**
  * The gRPC API for signing
  */
 service GrpcSignatureProvider {
-    rpc get_public_keys() GetPublicKeyResponse
     rpc sign(SignRequest) SignResponse
 }
 ```

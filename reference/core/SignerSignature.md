@@ -1,4 +1,4 @@
-> class `SignatureProviderSignature`
+> class `SignerSignature`
 
 ### Fields
 
