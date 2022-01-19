@@ -4,21 +4,43 @@
 
 ##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
 
+The smart contract instance whose function was called
+
 ---
 
 ##### `errorMessage`: `String`
+
+Message In case there was an error during smart contract execution
 
 ---
 
 ##### `bloom`: `bytes`
 
+Bloom filter for record
+
 ---
 
 ##### `gasUsed`: `Uint64`
 
+Units of gas used to execute contract
+
 ---
 
-##### `logs`: [`ContractLogInfo[]`](reference/contract/ContractLogInfo.md)
+##### `logs`: `List` < [`ContractLogInfo`](reference/contract/ContractLogInfo.md) >
+
+The log info for events returned by the function
+
+---
+
+##### `createdContractIds`: `List` < [`ContractId`](reference/contract/ContractId.md) >
+
+The list of smart contracts that were created by the function call
+
+---
+
+##### `stateChanges`: `List` < [`ContractStateChange`](reference/contract/ContractStateChange.md) >
+
+The list of state reads and changes caused by this function call
 
 ---
 
