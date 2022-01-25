@@ -35,12 +35,25 @@ The log info for events returned by the function
 ##### `createdContractIds`: `List` < [`ContractId`](reference/contract/ContractId.md) >
 
 The list of smart contracts that were created by the function call
+[DEPRECATED] the list of smart contracts that were created by the function call.
+
+The created ids will now _also_ be externalized through internal transaction 
+records, where each record has its alias field populated with the new contract's 
+EVM address. (This is needed for contracts created with CREATE2, since 
+there is no longer a simple relationship between the new contract's 0.0.X id 
+and its Solidity address.)
 
 ---
 
 ##### `stateChanges`: `List` < [`ContractStateChange`](reference/contract/ContractStateChange.md) >
 
 The list of state reads and changes caused by this function call
+
+---
+
+##### `evmAddress`: [`ContractId`](reference/contract/ContractId.md)
+
+The contracts evm address represented as a contract ID with `ContractId.evmAddress` set accordingly.
 
 ---
 

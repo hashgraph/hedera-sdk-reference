@@ -35,6 +35,14 @@ Deserialize a [`ContractId`](#) from its the protobuf representation.
 
 Construct a [`ContractId`](#) a solidity address.
 
+Deprecated: Use `fromEvmAddress()` instead.
+
+---
+
+##### `fromEvmAddress` ( `shard` : `Uint64`, `realm` : `Uint64`, `evmAddress` : `string` ): [`ContractId`](#contractid)
+
+Construct a [`ContractId`](#) from a shard, realm, and evm address.
+
 ---
 
 ### Methods
@@ -42,6 +50,19 @@ Construct a [`ContractId`](#) a solidity address.
 ##### `toBytes` ( ): `bytes`
 
 Serialize the [`ContractId`](#) into its protobuf representation.
+
+---
+
+##### `toString` ( ): `string`
+
+Serialize the [`ContractId`](#) into a string form which follows `{shard}.{realm}.{num}` if `evmAddress` is not present
+and `{shard}.{realm}.{evmAddress}` if `evmAddress` is present.
+
+---
+
+##### `toSolidityAddress` ( ): `string`
+
+Serialize the [`ContractId`](#) into its solidity address form.
 
 ---
 
@@ -62,5 +83,13 @@ The realm of this ID.
 ##### `num`: `Uint64`
 
 The num of this ID.
+
+---
+
+##### `evmAddress`: `bytes?`
+
+The evm address of this contract.
+
+Note: This field is only set when `fromEvmAddress()` is used. `fromSolidityAddress()` does not populate this field
 
 ---
