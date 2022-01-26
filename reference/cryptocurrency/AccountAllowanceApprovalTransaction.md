@@ -1,4 +1,4 @@
-> class `AccountApproveAllowancedTransaction` extends [`Transaction`](reference/core/Transaction.md)
+> class `AccountAllowanceApprovalTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Creates one or more hbar/token approved allowances <b>relative to the payer account of this
 transaction</b>. Each allowance grants a spender the right to transfer a pre-determined 
@@ -12,7 +12,7 @@ account will have new allowances to spend hbar or tokens from <tt>0.0.X</tt>).
 #### ** Java **
 
 ```java
-new AccountApproveAllowanceTransaction()
+new AccountAllowanceApprovalTransaction()
     .setNodeAccountIds(Collections.singletonList(response.nodeId))
     .addHbarApproval(accountId, Hbar.fromTinybars(10))
     .addTokenApproval(tokenId, accountId, 10)
@@ -25,7 +25,7 @@ new AccountApproveAllowanceTransaction()
 
 ```js
 await (
-    await new AccountApproveAllowanceTransaction()
+    await new AccountAllowanceApprovalTransaction()
         .setNodeAccountIds([response.nodeId])
         .addHbarApproval(accountId, Hbar.fromTinybars(10))
         .addTokenApproval(tokenId, accountId, 10)
@@ -41,7 +41,7 @@ await (
 ```go
 newKey := hedera.GeneratePrivateKey()
 
-resp, err := hedera.NewAccountApproveAllowanceTransaction().
+resp, err := hedera.NewAccountAllowanceApprovalTransaction().
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
     AddHbarApproval(accountID, HbarFromTinybars(10)).
     AddTokenApproval(tokenID, accountID, 10).

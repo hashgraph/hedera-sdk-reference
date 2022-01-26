@@ -1,4 +1,4 @@
-> class `AccountAdjustAllowancedTransaction` extends [`Transaction`](reference/core/Transaction.md)
+> class `AccountAllowanceAdjustdTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
  Modifies or creates the hbar/token allowance for a spender <b>relative to the payer account
  of this transaction</b>. 
@@ -14,7 +14,7 @@
 #### ** Java **
 
 ```java
-new AccountAdjustAllowanceTransaction()
+new AccountAllowanceAdjustTransaction()
     .setNodeAccountIds(Collections.singletonList(response.nodeId))
     .setSpenderAccountId(accountId)
     .setTokenId(tokenId)
@@ -27,7 +27,7 @@ new AccountAdjustAllowanceTransaction()
 
 ```js
 await (
-    await new AccountAdjustAllowanceTransaction()
+    await new AccountAllowanceAdjustTransaction()
         .setNodeAccountIds([response.nodeId])
         .setSpenderAccountId(accountId)
         .setTokenId(tokenId)
@@ -41,7 +41,7 @@ await (
 #### ** Go **
 
 ```go
-response, err := hedera.NewAccountAdjustAllowanceTransaction().
+response, err := hedera.NewAccountAllowanceAdjustTransaction().
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
     SetSpenderAccountID(accountID).
     SetTokenID(tokenID).
