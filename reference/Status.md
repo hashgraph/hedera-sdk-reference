@@ -988,21 +988,57 @@ confirm the id of the to be used in the upgrade.
 If an NMT upgrade has been prepared, the subsequent FREEZE\_UPGRADE transaction must 
 confirm the hash of the file to be used in the upgrade.
 
-##### CONSENSUS\_GAS\_EXHAUSTED = 279;
+##### CONSENSUS\_GAS\_EXHAUSTED
 
 Consensus throttle did not allow execution of this transaction. System is throttled at
 consensus level.
 
-##### REVERTED\_SUCCESS = 280;
+##### REVERTED\_SUCCESS
 
 A precompiled contract succeeded, but was later reverted.
 
-##### MAX\_STORAGE\_IN\_PRICE\_REGIME\_HAS\_BEEN\_USED = 281;
+##### MAX\_STORAGE\_IN\_PRICE\_REGIME\_HAS\_BEEN\_USED
 
 All contract storage allocated to the current price regime has been consumed.
 
-##### INVALID\_ALIAS\_KEY = 282;
+##### INVALID\_ALIAS\_KEY
 
 An alias used in a CryptoTransfer transaction is not the serialization of a primitive Key
 message--that is, a Key with a single Ed25519 or ECDSA(secp256k1) public key and no 
 unknown protobuf fields.
+
+##### SPENDER\_ACCOUNT\_SAME\_AS\_OWNER
+
+An approved allowance specifies a spender account that is the same as the hbar/token
+owner account.
+
+
+##### AMOUNT\_EXCEEDS\_TOKEN\_MAX\_SUPPLY
+
+The establishment or adjustment of an approved allowance cause the token allowance
+to exceed the token maximum supply.
+
+
+##### NEGATIVE\_ALLOWANCE\_AMOUNT
+
+The specified amount for an approved allowance cannot be negative.
+
+
+##### CANNOT\_APPROVE\_FOR\_ALL\_FUNGIBLE\_COMMON
+
+The approveForAll flag cannot be set for a fungible token.
+
+
+##### SPENDER\_DOES\_NOT\_HAVE\_ALLOWANCE
+
+The spender does not have an existing approved allowance with the hbar/token owner.
+
+
+##### AMOUNT\_EXCEEDS\_ALLOWANCE
+
+The transfer amount exceeds the current approved allowance for the spender account.
+
+
+##### MAX\_ALLOWANCES\_EXCEEDED
+
+The payer account of an approveAllowances or adjustAllowance transaction is attempting to go beyond the maximum allowed number of allowances.

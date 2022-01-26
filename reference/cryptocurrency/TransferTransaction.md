@@ -74,7 +74,7 @@ Add an Hbar transfer
 
 ---
 
-##### `getHbarTransfers`: `Map` < `[`AccountId`](reference/cryptocurrency/AccountId.md), [`Hbar`](reference/Hbar.md) >
+##### `getHbarTransfers` (): `Map` < `[`AccountId`](reference/cryptocurrency/AccountId.md), [`Hbar`](reference/Hbar.md) >
 
 The Hbar transfers
 
@@ -92,13 +92,13 @@ Add a fungible token transfer with an expected decimals field
 
 ---
 
-##### `getTokenIdDecimals`: `Map` < [`TokenId`](reference/token/TokenId.md), `Uint32` >
+##### `getTokenIdDecimals` (): `Map` < [`TokenId`](reference/token/TokenId.md), `Uint32` >
 
 The expected decimals per token ID
 
 ---
 
-##### `getTokenTransfers`: `Map` < [`TokenId`](reference/token/TokenId.md), `Map` < `[`AccountId`](reference/cryptocurrency/AccountId.md), `Uint64` > >
+##### `getTokenTransfers` (): `Map` < [`TokenId`](reference/token/TokenId.md), `Map` < `[`AccountId`](reference/cryptocurrency/AccountId.md), `Uint64` > >
 
 The fungible token transfers
 
@@ -110,7 +110,7 @@ Add a non-fungible token transfer
 
 ---
 
-##### `getTokenNftTransfers`: `Map` < [`TokenId`](reference/token/TokenId.md), `List` < `[`TokenNftTransfer`](reference/token/TokenNftTransfer.md) > >
+##### `getTokenNftTransfers` (): `Map` < [`TokenId`](reference/token/TokenId.md), `List` < `[`TokenNftTransfer`](reference/token/TokenNftTransfer.md) > >
 
 The non-fungible token transfers
 
