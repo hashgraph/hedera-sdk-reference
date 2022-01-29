@@ -16,8 +16,9 @@
 ```java
 new AccountAllowanceAdjustTransaction()
     .setNodeAccountIds(Collections.singletonList(response.nodeId))
-    .setSpenderAccountId(accountId)
-    .setTokenAmount(tokenId, 10)
+    .addHbarAllowance(accountId, Hbar.fromTinybars(10))
+    .addTokenAllowance(tokenId, accountId, 10)
+    .addAllTokenNftAllowance(tokenId, accountId)
     .execute(client)
     .getReceipt(client);
 ```
@@ -28,8 +29,9 @@ new AccountAllowanceAdjustTransaction()
 await (
     await new AccountAllowanceAdjustTransaction()
         .setNodeAccountIds([response.nodeId])
-        .setSpenderAccountId(accountId)
-        .setTokenAmount(tokenId, 10)
+        .addHbarAllowance(accountId, Hbar.fromTinybars(10))
+        .addTokenAllowance(tokenId, accountId, 10)
+        .addAllTokenNftAllowance(tokenId, accountId)
         .execute(client)
 ).getReceipt(client);
 ```
@@ -41,8 +43,9 @@ await (
 ```go
 response, err := hedera.NewAccountAllowanceAdjustTransaction().
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
-    SetSpenderAccountID(accountID).
-    SetTokenAmount(tokenID, 10).
+    AddHbarAllowance(accountId, Hbar.fromTinybars(10)).
+    AddTokenAllowance(tokenId, accountId, 10).
+    AddAllTokenNftAllowance(tokenId, accountId).
     Execute(client)
 if err != nil {
     println(err.Error())
@@ -64,56 +67,44 @@ if err != nil {
 
 ### Methods
 
-##### `setTokenAmount`: ( `tokenId: [`TokenId`](reference/token/TokenId.md), `amount`: `Uint64`) : `AccountAllowanceAdjustTransaction`
+##### `addHbarAllowance`: ( `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: [`Hbar`](reference/Hbar.md)) : `AccountAllowanceAdjustTransaction`
 
-Set the token and amount for the allowance adjustment.
-
-The token that the allowance pertains to. If this field is omitted, the adjustment
-will be made against the spender's hbar allowance with the payer account.
-
-The amount to adjust the current allowance balance by. If this value is negative
-the approved allowance will be decreased. The adjusted allowance balance cannot
-exceed the total supply of the token nor can it be negative.
-
-**NOTE**: This overwrites any previous use of `setHbarAmount()`
-
+Add a Hbar allowance
 
 ---
 
-##### `setHbarAmount`: ( `amount`: `Hbar`) : `AccountAllowanceAdjustTransaction`
+##### `getHbarAllowances`(): `List` < [`HbarAllowance`](references/cryptocurrency/HbarAllowance.md) >
 
-Set the amount in Hbars
-
-The amount to adjust the current allowance balance by. If this value is negative
-the approved allowance will be decreased. The adjusted allowance balance cannot
-exceed the total supply of the token nor can it be negative.
-
-**NOTE**: This overwrites any previous use of `setTokenAmount()`
+Get the current list of hbar allowances for this transaction.
 
 ---
 
-##### `getTokenId`: () : [`TokenId?`](reference/token/TokenId.md)
+##### `addTokenAllowance`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: `Uint64`) : `AccountAllowanceAdjustTransaction`
 
-Get the amount of tokens for this allowance adjustment
-
----
-
-##### `getTokenAmount`: () : `Uint64?`
-
-Get the amount of tokens for this allowance adjustment
+Add a fungible token allowance
 
 ---
 
-##### `getHbarAmount`: () : [`Hbar?`](reference/Hbar.md)
+##### `getTokenAllowances`: `List` < [`TokenAllowance`](reference/cryptocurrency/TokenAllowance.md)
 
-Get the amount of Hbars for this allowance adjustment
+Get the current list of hbar allowances for this transaction.
 
 ---
 
-### Properties
+##### `addTokenNftAllowance`: ( `nftId`: [`NftId`](reference/token/NftId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceAdjustTransaction`
 
-##### `spenderAccountId`: [`AccountId`](reference/cryptography/AccountId.md)
+Add a non-fungible token allowance
 
-The account ID of the spender of the hbar/token allowance.
+---
+
+##### `addAllTokenNftAllowance`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceAdjustTransaction`
+
+Add all non-fungible tokens to allowance
+
+---
+
+##### `getTokenNftAllowances`: () `List` < [`TokenNftAllowance`](reference/cryptocurrency/TokenNftAllowance.md)
+
+Get the list of all non-fungible token allowances for this transaction
 
 ---

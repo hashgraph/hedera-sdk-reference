@@ -1,4 +1,4 @@
-# `TokenApproval`
+# `TokenNftAllowance`
 
 ## Properties
 
@@ -14,11 +14,11 @@ The account ID of the spender of the hbar allowance.
 
 ---
 
-##### `amount`: `Uint64?`
+##### `serialNumbers`: `List` < `Uint64` > `?`
 
-The amount of the spender's token allowance.
+The current balance of the spender's token allowance.
 
-**NOTE**: If `null`, the spender has access to all of the account owner's NFT instances (currently
-owned and any in the future).
+**NOTE**: If `null`, the spender has access to all of the account owner's NFT instances 
+(currently owned and any in the future).
 
 ---

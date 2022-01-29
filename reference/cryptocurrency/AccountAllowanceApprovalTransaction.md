@@ -1,22 +1,22 @@
-> class `AccountAllowanceApprovalTransaction` extends [`Transaction`](reference/core/Transaction.md)
+> class `AccountAllowanceApproveTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
 Creates one or more hbar/token approved allowances <b>relative to the payer account of this
-transaction</b>. Each allowance grants a spender the right to transfer a pre-determined 
-amount of the payer's hbar/token to any other account of the spender's choice. 
+transaction</b>. Each allowance grants a spender the right to transfer a pre-determined
+amount of the payer's hbar/token to any other account of the spender's choice.
 
-(So if account <tt>0.0.X</tt> pays for this transaction, then at consensus each spender 
-account will have new allowances to spend hbar or tokens from <tt>0.0.X</tt>). 
+(So if account <tt>0.0.X</tt> pays for this transaction, then at consensus each spender
+account will have new allowances to spend hbar or tokens from <tt>0.0.X</tt>).
 
 <!-- tabs:start -->
 
 #### ** Java **
 
 ```java
-new AccountAllowanceApprovalTransaction()
+new AccountAllowanceApproveTransaction()
     .setNodeAccountIds(Collections.singletonList(response.nodeId))
-    .addHbarApproval(accountId, Hbar.fromTinybars(10))
-    .addTokenApproval(tokenId, accountId, 10)
-    .addTokenApproval(tokenId, accountId, null)
+    .addHbarApprove(accountId, Hbar.fromTinybars(10))
+    .addTokenApprove(tokenId, accountId, 10)
+    .addTokenNftApprove(tokenId, accountId, null)
     .execute(client)
     .getReceipt(client);
 ```
@@ -25,11 +25,11 @@ new AccountAllowanceApprovalTransaction()
 
 ```js
 await (
-    await new AccountAllowanceApprovalTransaction()
+    await new AccountAllowanceApproveTransaction()
         .setNodeAccountIds([response.nodeId])
-        .addHbarApproval(accountId, Hbar.fromTinybars(10))
-        .addTokenApproval(tokenId, accountId, 10)
-        .addTokenApproval(tokenId, accountId, null)
+        .addHbarApprove(accountId, Hbar.fromTinybars(10))
+        .addTokenApprove(tokenId, accountId, 10)
+        .addTokenApprove(tokenId, accountId, null)
         .execute(client)
 ).getReceipt(client);
 ```
@@ -41,11 +41,11 @@ await (
 ```go
 newKey := hedera.GeneratePrivateKey()
 
-resp, err := hedera.NewAccountAllowanceApprovalTransaction().
+resp, err := hedera.NewAccountAllowanceApproveTransaction().
     SetNodeAccountIDs([]AccountID{resp.NodeID}).
-    AddHbarApproval(accountID, HbarFromTinybars(10)).
-    AddTokenApproval(tokenID, accountID, 10).
-    AddTokenApproval(tokenID, accountID, null).
+    AddHbarApprove(accountID, HbarFromTinybars(10)).
+    AddTokenApprove(tokenID, accountID, 10).
+    AddTokenApprove(tokenID, accountID, null).
     Execute(client)
 if err != nil {
     println(err.Error())
@@ -67,26 +67,44 @@ if err != nil {
 
 ### Methods
 
-##### `addHbarApproval` ( `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md), `amount`: [`Hbar`](reference/Hbar.md) ): `AccountAccountAllowanceApprovalTransaction`
+##### `addHbarApprove`: ( `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: [`Hbar`](reference/Hbar.md)) : `AccountAllowanceApproveTransaction`
 
-Add an Hbar approval
-
----
-
-##### `getHbarApprovals` (): `List` < [`HbarApproval`](reference/cryptography/HbarApproval.md) >
-
-List of hbar allowances approved by the account owner.
+Add a Hbar allowance
 
 ---
 
-##### `addTokenApproval` ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `accountId`: `[`AccountId`](reference/cryptocurrency/AccountId.md), `amount`: `Uint64?` ): `AccountAccountAllowanceApprovalTransaction`
+##### `getHbarAllowances` (): `List` < [`HbarAllowance`](reference/cryptocurrency/HbarAllowance.md)
 
-Add a token approval
+Get the current list of hbar approves for this transaction.
 
 ---
 
-##### `getTokenApprovals` (): `List` < [`TokenApproval`](reference/cryptography/TokenApproval.md) >
+##### `addTokenApprove`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: `Uint64`) : `AccountAllowanceApproveTransaction`
 
-List of token (fungible or non-fungible) allowances approved by the account owner.
+Add a fungible token approve
+
+---
+
+##### `getTokenAllowances` (): `List` < [`TokenAllowance`](reference/cryptocurrency/TokenAllowance.md)
+
+Get the current list of hbar approves for this transaction.
+
+---
+
+##### `addTokenNftApprove`: ( `nftId`: [`NftId`](reference/token/NftId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceApproveTransaction`
+
+Add a non-fungible token approve
+
+---
+
+##### `addAllTokenNftApprove`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceApproveTransaction`
+
+Add all non-fungible tokens to approve
+
+---
+
+##### `getTokenNftAllowances`(): `List` < [`TokenNftAllowance`](reference/cryptocurrency/TokenNftAllowance.md)
+
+Get the list of all non-fungible token approves for this transaction
 
 ---

@@ -142,6 +142,12 @@ All of the hbar allowances approved by the account owner.
 
 ##### `tokenAllowances`: `List` < [`TokenAllowance`](reference/cryptocurrency/TokenAllowance.md) >
 
-All of the token (fungible and non-fungible) allowances approved by the account owner.
+All of the fungible token allowances approved by the account owner.
+
+---
+
+##### `nftAllowances`: `List` < [`TokenNftAllowance`](reference/cryptocurrency/TokenNftAllowance.md) >
+
+All of the non-fungible token allowances approved by the account owner.
 
 ---
