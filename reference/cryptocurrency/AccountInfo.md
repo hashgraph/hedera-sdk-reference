@@ -133,3 +133,21 @@ The alias of this account
 The ID of the ledger which returned this response
 
 ---
+
+##### `hbarAllowances`: `List` < [`HbarAllowance`](reference/cryptocurrency/HbarAllowance.md) >
+
+All of the hbar allowances approved by the account owner.
+
+---
+
+##### `tokenAllowances`: `List` < [`TokenAllowance`](reference/cryptocurrency/TokenAllowance.md) >
+
+All of the fungible token allowances approved by the account owner.
+
+---
+
+##### `nftAllowances`: `List` < [`TokenNftAllowance`](reference/cryptocurrency/TokenNftAllowance.md) >
+
+All of the non-fungible token allowances approved by the account owner.
+
+---
