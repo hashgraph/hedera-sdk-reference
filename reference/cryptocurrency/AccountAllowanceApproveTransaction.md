@@ -67,43 +67,43 @@ if err != nil {
 
 ### Methods
 
-##### `addHbarApprove`: ( `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: [`Hbar`](reference/Hbar.md)) : `AccountAllowanceApproveTransaction`
+##### `addHbarApproval`: ( `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: [`Hbar`](reference/Hbar.md)) : `AccountAllowanceApproveTransaction`
 
 Add a Hbar allowance
 
 ---
 
-##### `getHbarAllowances` (): `List` < [`HbarAllowance`](reference/cryptocurrency/HbarAllowance.md)
+##### `getHbarApprovals` (): `List` < [`HbarAllowance`](reference/cryptocurrency/HbarAllowance.md)
 
 Get the current list of hbar approves for this transaction.
 
 ---
 
-##### `addTokenApprove`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: `Uint64`) : `AccountAllowanceApproveTransaction`
+##### `addTokenApprovals`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: `Uint64`) : `AccountAllowanceApproveTransaction`
 
 Add a fungible token approve
 
 ---
 
-##### `getTokenAllowances` (): `List` < [`TokenAllowance`](reference/cryptocurrency/TokenAllowance.md)
+##### `getTokenApprovals` (): `List` < [`TokenAllowance`](reference/cryptocurrency/TokenAllowance.md)
 
 Get the current list of hbar approves for this transaction.
 
 ---
 
-##### `addTokenNftApprove`: ( `nftId`: [`NftId`](reference/token/NftId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceApproveTransaction`
+##### `addTokenNftApproval`: ( `nftId`: [`NftId`](reference/token/NftId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceApproveTransaction`
 
 Add a non-fungible token approve
 
 ---
 
-##### `addAllTokenNftApprove`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceApproveTransaction`
+##### `addAllTokenNftApprovals`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceApproveTransaction`
 
 Add all non-fungible tokens to approve
 
 ---
 
-##### `getTokenNftAllowances`(): `List` < [`TokenNftAllowance`](reference/cryptocurrency/TokenNftAllowance.md)
+##### `getTokenNftApprovals`(): `List` < [`TokenNftAllowance`](reference/cryptocurrency/TokenNftAllowance.md)
 
 Get the list of all non-fungible token approves for this transaction
 

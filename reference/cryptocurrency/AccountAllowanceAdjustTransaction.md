@@ -1,4 +1,4 @@
-> class `AccountAllowanceAdjustdTransaction` extends [`Transaction`](reference/core/Transaction.md)
+> class `AccountAllowanceAdjustTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
  Modifies or creates the hbar/token allowance for a spender <b>relative to the payer account
  of this transaction</b>.
@@ -14,9 +14,7 @@
 #### ** Java **
 
 ```java
-new AccountAllowanceAdjustTransaction()
-    .setNodeAccountIds(Collections.singletonList(response.nodeId))
-    .addHbarAllowance(accountId, Hbar.fromTinybars(10))
+new AccountAllowanceAdjustTransaction() .setNodeAccountIds(Collections.singletonList(response.nodeId)) .addHbarAllowance(accountId, Hbar.fromTinybars(10))
     .addTokenAllowance(tokenId, accountId, 10)
     .addAllTokenNftAllowance(tokenId, accountId)
     .execute(client)
