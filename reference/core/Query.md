@@ -42,3 +42,11 @@ If not set, the cost will be dynamically fetched from the network and used (
 respecting the `maxQueryPayment` setting).
 
 ---
+
+##### `operatorAccountId`: [`?AccountId`](reference/cryptocurrency/AccountId.md)
+
+The operator account ID to use for this query
+
+**NOTE**: If one is not set, the first operator in the `Client` will be used
+
+---

@@ -167,6 +167,8 @@ or
 Sets the account that will, by default, pay for transactions and queries built
 with this client.
 
+**NOTE**: This clears the list of operators and overwrites with a single one.
+
 ---
 
 ##### `setOperatorWith` ( `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md), `publicKey`: [`PublicKey`](reference/cryptography/PublicKey.md), `transactionSigner`: `(bytes) => bytes` ): `Client`
@@ -179,6 +181,24 @@ with the given public key.
 
 This form is made available for integrating the SDK to sign
 from an external source such as the Ledger Hardware Wallet.
+
+**NOTE**: This clears the list of operators and overwrites with a single one.
+
+---
+
+##### `addOperator` ( `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md), `privateKey`: [`PrivateKey`](reference/cryptography/PrivateKey.md) ): `Client`
+
+Add an operator to the client.
+
+**NOTE**: The `privateKey` is not stored internally, only the `privateKey.publicKey` and `privateKey.sign` are stored.
+
+---
+
+##### `addOperatorWith` ( `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md), `publicKey`: [`PublicKey`](reference/cryptography/PublicKey.md), `transactionSigner`: `(bytes) => bytes` ): `Client`
+
+Add an operator to the client.
+
+You can select which operator to use via `*[Transaction|Query].setOperatorAccountId()` otherwise only the first operator will be used.
 
 ---
 
@@ -237,11 +257,15 @@ Defaults to 1 hbar.
 
 **Read-only**. Use `setOperator` or `setOperatorWith` to set.
 
+**NOTE**: Returns the first operator set
+
 ---
 
 ##### `operatorPublicKey`: [`?PublicKey`](reference/cryptography/PublicKey.md)
 
 **Read-only**. Use `setOperator` or `setOperatorWith` to set.
+
+**NOTE**: Returns the first operator set
 
 ---
 

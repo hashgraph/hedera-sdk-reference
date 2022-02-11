@@ -184,3 +184,11 @@ Declares if we should generate new transaction IDs when a transaction fails with
 locked if set manually or if certain methods are called.
 
 ---
+
+##### `operatorAccountId`: [`?AccountId`](reference/cryptocurrency/AccountId.md)
+
+The operator account ID to use for this transaction
+
+**NOTE**: If one is not set, the first operator in the `Client` will be used
+
+---
