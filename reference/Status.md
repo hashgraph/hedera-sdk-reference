@@ -30,7 +30,7 @@ Transaction start time is greater than current consensus time
 
 ##### INVALID\_TRANSACTION\_DURATION
 
-The given transactionValidDuration was either non-positive, or greater than the maximum 
+The given transactionValidDuration was either non-positive, or greater than the maximum
 valid duration of 180 secs.
 
 ##### INVALID\_SIGNATURE
@@ -923,7 +923,7 @@ Already existing automatic associations are more than the new maximum automatic 
 
 ##### REQUESTED\_NUM\_AUTOMATIC\_ASSOCIATIONS\_EXCEEDS\_ASSOCIATION\_LIMIT
 
-Cannot set the number of automatic associations for an account more than the maximum allowed 
+Cannot set the number of automatic associations for an account more than the maximum allowed
 token associations <tt>tokens.maxPerAccount</tt>.
 
 ##### TOKEN\_IS\_PAUSED
@@ -980,12 +980,12 @@ If an NMT upgrade has been prepared, the following operation must be a FREEZE\_U
 
 ##### UPDATE\_FILE\_ID\_DOES\_NOT\_MATCH\_PREPARED
 
-If an NMT upgrade has been prepared, the subsequent FREEZE\_UPGRADE transaction must 
+If an NMT upgrade has been prepared, the subsequent FREEZE\_UPGRADE transaction must
 confirm the id of the to be used in the upgrade.
 
 ##### UPDATE\_FILE\_HASH\_DOES\_NOT\_MATCH\_PREPARED
 
-If an NMT upgrade has been prepared, the subsequent FREEZE\_UPGRADE transaction must 
+If an NMT upgrade has been prepared, the subsequent FREEZE\_UPGRADE transaction must
 confirm the hash of the file to be used in the upgrade.
 
 ##### CONSENSUS\_GAS\_EXHAUSTED
@@ -1004,7 +1004,7 @@ All contract storage allocated to the current price regime has been consumed.
 ##### INVALID\_ALIAS\_KEY
 
 An alias used in a CryptoTransfer transaction is not the serialization of a primitive Key
-message--that is, a Key with a single Ed25519 or ECDSA(secp256k1) public key and no 
+message--that is, a Key with a single Ed25519 or ECDSA(secp256k1) public key and no
 unknown protobuf fields.
 
 ##### SPENDER\_ACCOUNT\_SAME\_AS\_OWNER
@@ -1042,3 +1042,25 @@ The transfer amount exceeds the current approved allowance for the spender accou
 ##### MAX\_ALLOWANCES\_EXCEEDED
 
 The payer account of an approveAllowances or adjustAllowance transaction is attempting to go beyond the maximum allowed number of allowances.
+
+##### SPENDER\_ACCOUNT\_REPEATED\_IN\_ALLOWANCES
+
+Spender is repeated more than once in Crypto or Token or NFT allowance lists in a single
+CryptoApproveAllowance or CryptoAdjustAllowance transaction.
+
+##### REPEATED\_SERIAL\_NUMS\_IN\_NFT\_ALLOWANCES
+
+Serial numbers are repeated in nft allowance for a single spender account
+
+##### FUNGIBLE\_TOKEN\_IN\_NFT\_ALLOWANCES
+
+Fungible common token used in NFT allowances
+
+##### NFT\_IN\_FUNGIBLE\_TOKEN\_ALLOWANCES
+
+Non fungible token used in fungible token allowances
+
+##### PAYER\_AND\_OWNER\_NOT\_EQUAL
+
+An approval/adjustment transaction was submitted where the payer and owner account are
+not the same. Currently only the owner is permitted to perform these operations.
