@@ -22,7 +22,12 @@ The account ID of the spender of the hbar allowance.
 
 The current balance of the spender's token allowance.
 
-**NOTE**: If `null`, the spender has access to all of the account owner's NFT instances
-(currently owned and any in the future).
+---
+
+##### `allSerials`: `boolean?`
+
+A `true` value indicates that this allowance pertains to all serial numbers.
+
+In the context of a [`AccountAllowanceAdjustTransaction`](reference/cryptocurrency/AccountAllowanceAdjustTransaction.md), a `false` value (in contrast to `null`) indicates that allowances for all serial numbers shall be _revoked_.
 
 ---

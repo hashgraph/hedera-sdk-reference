@@ -69,6 +69,22 @@ if err != nil {
 
 Add a Hbar allowance
 
+Transaction fee payer is implicitly the allowance owner.
+
+Deprecated: use `[grant|revoke]HbarAllowance` instead.
+
+---
+
+##### `grantHbarAllowance`: ( `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: [`Hbar`](reference/Hbar.md)) : `AccountAllowanceAdjustTransaction`
+
+Increase an Hbar Allowance.
+
+---
+
+##### `revokeHbarAllowance`: ( `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: [`Hbar`](reference/Hbar.md)) : `AccountAllowanceAdjustTransaction`
+
+Decrease an Hbar Allowance.
+
 ---
 
 ##### `getHbarAllowances`(): `List` < [`HbarAllowance`](references/cryptocurrency/HbarAllowance.md) >
@@ -80,6 +96,22 @@ Get the current list of hbar allowances for this transaction.
 ##### `addTokenAllowance`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: `Uint64`) : `AccountAllowanceAdjustTransaction`
 
 Add a fungible token allowance
+
+Transaction fee payer is implicitly the allowance owner.
+
+Deprecated: use `[grant|revoke]TokenAllowance` instead.
+
+---
+
+##### `grantTokenAllowance`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: `Uint64`) : `AccountAllowanceAdjustTransaction`
+
+Increase a fungible token allowance.
+
+---
+
+##### `revokeTokenAllowance`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: `Uint64`) : `AccountAllowanceAdjustTransaction`
+
+Decrease a fungible token allowance.
 
 ---
 
@@ -93,11 +125,43 @@ Get the current list of hbar allowances for this transaction.
 
 Add a non-fungible token allowance
 
+Transaction fee payer is implicitly the allowance owner.
+
+Deprecated: use `[grant|revoke]TokenNftAllowance` instead.
+
+---
+
+##### `grantTokenNftAllowance`: ( `nftId`: [`NftId`](reference/token/NftId.md), `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceAdjustTransaction`
+
+Add serials to a non-fungible token allowance.
+
+---
+
+##### `revokeTokenNftAllowance`: ( `nftId`: [`NftId`](reference/token/NftId.md), `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceAdjustTransaction`
+
+Remove serials from a non-fungible token allowance.
+
 ---
 
 ##### `addAllTokenNftAllowance`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceAdjustTransaction`
 
 Add all non-fungible tokens to allowance
+
+Transaction fee payer is implicitly the allowance owner.
+
+Deprecated: use `[grant|revoke]TokenNftAllowanceAllSerials` instead.
+
+---
+
+##### `grantTokenNftAllowanceAllSerials`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceAdjustTransaction`
+
+Add all serials to a non-fungible token allowance.
+
+---
+
+##### `revokeTokenNftAllowanceAllSerials`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceAdjustTransaction`
+
+Remove all serials from a non-fungible token allowance.
 
 ---
 
