@@ -71,6 +71,16 @@ if err != nil {
 
 Add a Hbar allowance
 
+Transaction fee payer is implicitly the allowance owner.
+
+Deprecated: use `ApproveHbarAllowance` instead.
+
+---
+
+##### `approveHbarAllowance`: ( `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: [`Hbar`](reference/Hbar.md)) : `AccountAllowanceApproveTransaction`
+
+Approve an Hbar allowance
+
 ---
 
 ##### `getHbarApprovals` (): `List` < [`HbarAllowance`](reference/cryptocurrency/HbarAllowance.md)
@@ -82,6 +92,16 @@ Get the current list of hbar approves for this transaction.
 ##### `addTokenApprovals`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: `Uint64`) : `AccountAllowanceApproveTransaction`
 
 Add a fungible token approve
+
+Transaction fee payer is implicitly the allowance owner.
+
+Deprecated: use `approveTokenAllowance` instead.
+
+---
+
+##### `approveTokenAllowance`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `amount`: `Uint64`) : `AccountAllowanceApproveTransaction`
+
+Approve a fungible token allowance.
 
 ---
 
@@ -95,11 +115,31 @@ Get the current list of hbar approves for this transaction.
 
 Add a non-fungible token approve
 
+Transaction fee payer is implicitly the allowance owner.
+
+Deprecated: use `approveTokenNftAllowance` instead.
+
+---
+
+##### `approveTokenNftAllowance`: ( `nftId`: [`NftId`](reference/token/NftId.md), `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceApproveTransaction`
+
+Approve a non-fungible token allowance
+
 ---
 
 ##### `addAllTokenNftApprovals`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceApproveTransaction`
 
 Add all non-fungible tokens to approve
+
+Transaction fee payer is implicitly the allowance owner.
+
+Deprecated: use `approveTokenNftAllowanceAllSerials` instead.
+
+---
+
+##### `approveTokenNftAllowanceAllSerials`: ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `ownerAccountId` : [`AccountId`](reference/cryptography/AccountId.md), `spenderAccountId` : [`AccountId`](reference/cryptography/AccountId.md)) : `AccountAllowanceApproveTransaction`
+
+Approve an allowance of all serial numbers of a non-fungible token.
 
 ---
 
