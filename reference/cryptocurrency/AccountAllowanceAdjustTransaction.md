@@ -1,5 +1,8 @@
 > class `AccountAllowanceAdjustTransaction` extends [`Transaction`](reference/core/Transaction.md)
 
+<b>WARNING</b>: This class has been **deprecated** and is no longer supported by the Hedera protobufs.
+
+
  Modifies or creates the hbar/token allowance for a spender <b>relative to the payer account
  of this transaction</b>.
 
