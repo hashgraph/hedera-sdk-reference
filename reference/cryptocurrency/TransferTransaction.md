@@ -74,6 +74,12 @@ Add an Hbar transfer
 
 ---
 
+##### `addApprovedHbarTransfer` ( `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md), `amount`: [`Hbar`](reference/Hbar.md) ): `TransferTransaction`
+
+Add an approved Hbar transfer
+
+---
+
 ##### `getHbarTransfers` (): `Map` < `[`AccountId`](reference/cryptocurrency/AccountId.md), [`Hbar`](reference/Hbar.md) >
 
 The Hbar transfers
@@ -86,9 +92,21 @@ Add a fungible token transfer
 
 ---
 
+##### `addApprovedTokenTransfer` ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `accountId`: `[`AccountId`](reference/cryptocurrency/AccountId.md), `amount`: `Uint64` ) ): `TransferTransaction`
+
+Add an approved fungible token transfer
+
+---
+
 ##### `addTokenTransferWithDecimals` ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `accountId`: `[`AccountId`](reference/cryptocurrency/AccountId.md), `amount`: `Uint64`, `decimals`: `Uint32` ) ): `TransferTransaction`
 
-Add a fungible token transfer with an expected decimals field
+Add an approved fungible token transfer with an expected decimals field
+
+---
+
+##### `addApproovedTokenTransferWithDecimals` ( `tokenId`: [`TokenId`](reference/token/TokenId.md), `accountId`: `[`AccountId`](reference/cryptocurrency/AccountId.md), `amount`: `Uint64`, `decimals`: `Uint32` ) ): `TransferTransaction`
+
+Add an approved fungible token transfer with an expected decimals field
 
 ---
 
@@ -107,6 +125,12 @@ The fungible token transfers
 ##### `addNftTransfer` ( `nftId`: [`NftId`](reference/token/NftId.md), `sender`: [`AccountId`](reference/cryptocurrency/AccountId.md), `reciever`: [`AccountId`](reference/cryptocurrency/AccountId.md) ): `TransferTransaction`
 
 Add a non-fungible token transfer
+
+---
+
+##### `addApprovedNftTransfer` ( `nftId`: [`NftId`](reference/token/NftId.md), `sender`: [`AccountId`](reference/cryptocurrency/AccountId.md), `reciever`: [`AccountId`](reference/cryptocurrency/AccountId.md) ): `TransferTransaction`
+
+Add an approved non-fungible token transfer
 
 ---
 
