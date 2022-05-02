@@ -17,6 +17,18 @@ loop will cost more hbars.
 
 ---
 
+##### `getReceiptQuery` (): [`TransactionReceiptQuery`](reference/core/TransactionReceiptQuery.md)
+
+Create a transaction receipt query for this particular transaction ID and node account ID
+
+---
+
+##### `getRecordQuery` (): [`TransactionRecordQuery`](reference/core/TransactionRecordQuery.md)
+
+Create a transaction record query for this particular transaction ID and node account ID
+
+---
+
 ##### `toString` (): `String`
 
 Stringification of all the current values
