@@ -1,4 +1,4 @@
-# `EthereumTransactionDataLegacy`
+> class `EthereumTransactionDataLegacy` extends [`EthereumTransactionData`](reference/EthereumTransactionData.md)
 
 ## Fields
 
@@ -11,8 +11,6 @@
 ### `to`: bytes
 
 ### `value`: bytes
-
-### `callData`: bytes
 
 ### `v`: bytes
 

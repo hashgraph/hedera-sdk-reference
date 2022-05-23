@@ -55,7 +55,7 @@ if err != nil {
 
 ### Properties
 
-##### `ethereumData`: `bytes`
+##### `ethereumData`: `?EthereumTransactionData`
 
 The raw Ethereum transaction (RLP encoded type 0, 1, and 2).
 

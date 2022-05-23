@@ -1,4 +1,4 @@
-# `EthereumTransactionDataEip1559`
+> class `EthereumTransactionDataEip1559` extends [`EthereumTransactionData`](reference/EthereumTransactionData.md)
 
 ## Fields
 
