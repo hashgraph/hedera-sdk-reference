@@ -151,3 +151,9 @@ Encodes [`toBytesRaw()`](#tostringder-string) into HEX.
 Convert this public key into an account ID with a given shard and realm.
 
 ---
+
+##### `toEvmAddress` (): `string`
+
+Convert this public key into an account ID with a given shard and realm.
+
+---
