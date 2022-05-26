@@ -99,6 +99,8 @@ Initial number of tinybars to put into the cryptocurrency account associated wit
 
 ##### `proxyAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
+Deprecated: with no replacement
+
 `AccountId` of the account to which this account is proxy staked.
 If `proxyAccountID` is null, or is an invalid account, or is an account that isn't a node, then this account is automatically proxy staked to a node chosen by the network, but without earning payments.
 If the `proxyAccountID` account refuses to accept proxy staking , or if it is not currently running a node, then it will behave as if `proxyAccountID` was null.
@@ -120,5 +122,23 @@ Parameters to pass to the constructor.
 ##### `contractMemo`: `String`
 
 The memo that was submitted as part of the contract (max 100 bytes).
+
+---
+
+##### `stakedNodeAccountId`: `?AccountId`
+
+ID of the account to which this contract is staking.
+
+---
+
+##### `stakedNodeId`: `?Int64`
+
+ID of the node this contract is staked to.
+
+---
+
+##### `declineStakingReward`: `bool`
+
+If true, the contract declines receiving a staking reward. The default value is false.
 
 ---

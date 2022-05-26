@@ -42,6 +42,8 @@ transactions for it will fail except the transaction to extend its expiration da
 
 ##### `proxyAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
+Deprecated: with no replacement
+
 The Account ID of the account to which this is proxy staked. If proxyAccountID is null,
 or is an invalid account, or is an account that isn't a node, then this account is
 automatically proxy staked to a node chosen by the network, but without earning payments.
@@ -149,5 +151,11 @@ All of the fungible token allowances approved by the account owner.
 ##### `nftAllowances`: `List` < [`TokenNftAllowance`](reference/cryptocurrency/TokenNftAllowance.md) >
 
 All of the non-fungible token allowances approved by the account owner.
+
+---
+
+##### `stakingInfo`: [`StakingInfo`](reference/StakingInfo.md)
+
+Staking metadata for this contract.
 
 ---

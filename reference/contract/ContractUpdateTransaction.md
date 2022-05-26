@@ -74,6 +74,8 @@ The new expiry of the contract, no earlier than the current expiry.
 
 ##### `proxyAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
 
+Deprecated: with no replacement
+
 ***Not yet implemented***
 <br>
 The new id of the account to which the contract is proxy staked.
@@ -97,5 +99,23 @@ The new id of the file asserted to contain the bytecode of the Solidity transact
 ##### `contractMemo`: `String`
 
 The new contract memo, assumed to be Unicode encoded with UTF-8 (at most 100 bytes).
+
+---
+
+##### `stakedNodeAccountId`: `?AccountId`
+
+ID of the account to which this contract is staking.
+
+---
+
+##### `stakedNodeId`: `?Int64`
+
+ID of the node this contract is staked to.
+
+---
+
+##### `declineStakingReward`: `?bool`
+
+If true, the contract declines receiving a staking reward. The default value is false.
 
 ---

@@ -1064,3 +1064,15 @@ Non fungible token used in fungible token allowances
 
 An approval/adjustment transaction was submitted where the payer and owner account are
 not the same. Currently only the owner is permitted to perform these operations.
+
+##### PROXY\_ACCOUNT\_ID\_FIELD\_IS\_DEPRECATED
+
+A CryptoCreate or ContractCreate used the deprecated proxyAccountID field.
+
+##### SELF\_STAKING\_IS\_NOT\_ALLOWED
+
+An account set the staked\_account\_id to itself in CryptoUpdate or ContractUpdate transactions.
+
+##### INVALID\_STAKING\_ID
+
+The staking account id or staking node id given is invalid or does not exist.

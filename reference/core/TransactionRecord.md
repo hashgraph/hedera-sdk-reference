@@ -128,3 +128,9 @@ The records of processing all child transaction spawned by the transaction with 
 top-level id, in consensus order. Always empty if the top-level status is UNKNOWN.
 
 ---
+
+### `paidStakingRewards`: [`Trasnfer`](reference/Transfer.md)
+
+List of accounts with the corresponding staking rewards paid as a result of a transaction.
+
+---

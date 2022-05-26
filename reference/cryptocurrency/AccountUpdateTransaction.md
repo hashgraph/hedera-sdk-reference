@@ -119,6 +119,8 @@ Defaults to 90 days (or 7,776,000 seconds).
 
 ##### `proxyAccountId`: [`AccountId`](reference/AccountId.md)
 
+Deprecated: with no replacement
+
 ID of the account to which this account is proxy staked. If proxyAccountID is null, or is an
 invalid account, or is an account that isn't a node, then this account is automatically proxy
 staked to a node chosen by the network, but without earning payments. If the proxyAccountID
@@ -143,5 +145,23 @@ If set, the new memo to be associated with the account (UTF-8 encoding max 100 b
 
 The maximum number of tokens that an Account can be implicitly associated with. Up to a 1000
 including implicit and explicit associations.
+
+---
+
+##### `stakedNodeAccountId`: `?AccountId`
+
+ID of the account to which this contract is staking.
+
+---
+
+##### `stakedNodeId`: `?Int64`
+
+ID of the node this contract is staked to.
+
+---
+
+##### `declineStakingReward`: `?bool`
+
+If true, the account declines receiving a staking reward. The default value is false.
 
 ---

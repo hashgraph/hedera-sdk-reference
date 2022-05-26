@@ -93,3 +93,9 @@ The tokens associated to the contract.
 The ID of the ledger which returned this response
 
 ---
+
+##### `stakingInfo`: [`StakingInfo`](reference/StakingInfo.md)
+
+Staking metadata for this contract.
+
+---
