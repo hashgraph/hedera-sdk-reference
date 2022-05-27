@@ -129,7 +129,7 @@ top-level id, in consensus order. Always empty if the top-level status is UNKNOW
 
 ---
 
-### `paidStakingRewards`: [`Trasnfer`](reference/Transfer.md)
+### `paidStakingRewards`: [`Transfer`](reference/Transfer.md)
 
 List of accounts with the corresponding staking rewards paid as a result of a transaction.
 
