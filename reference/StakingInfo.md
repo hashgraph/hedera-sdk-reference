@@ -43,3 +43,15 @@ The amount in tinybars that will be received in the next reward situation.
 The total of balance of all accounts staked to this account or contract.
 
 ---
+
+###### `stakedAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+
+The account to which this account or contract is staking.
+
+---
+
+###### `stakedNodeId`: `Uint64`
+
+The ID of the node this account or contract is staked to.
+
+---
