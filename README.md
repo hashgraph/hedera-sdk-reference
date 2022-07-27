@@ -136,8 +136,17 @@ We welcome participation from all developers!
 To propose a change to the specifications, submit a pull request making the
 change; or, open an issue for general discussion.
 
+Please check out 
+[contributing guide](https://github.com/hashgraph/.github/blob/main/CONTRIBUTING.md)
+to see how you can get involved.
+
+## Code of Conduct
+
+This project is governed by the
+[Contributor Covenant Code of Conduct](https://github.com/hashgraph/.github/blob/main/CODE_OF_CONDUCT.md). By
+participating, you are expected to uphold this code of conduct. Please report unacceptable behavior
+to [oss@hedera.com](mailto:oss@hedera.com).
+
 ## License
 
-Licensed under Apache License,
-Version 2.0 – see [LICENSE](LICENSE) in this repo
-or [apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0)
+[Apache License 2.0](LICENSE)
