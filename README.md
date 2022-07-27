@@ -67,7 +67,7 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 * [`AccountRecordsQuery`](reference/AccountRecordsQuery.md)
 * [`AccountStakersQuery`](reference/AccountStakersQuery.md)
 
-#### Smart Contract
+### Smart Contract
 
 * [`ContractId`](reference/ContractId.md)
 * [`ContractInfo`](reference/ContractInfo.md)
@@ -86,7 +86,7 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 * [`ContractInfoQuery`](reference/ContractInfoQuery.md)
 * [`ContractRecordsQuery`](reference/ContractRecordsQuery.md)
 
-#### File
+### File
 
 * [`FileId`](reference/FileId.md)
 * [`FileInfo`](reference/FileInfo.md)
@@ -103,7 +103,7 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 * [`FileContentsQuery`](reference/FileContentsQuery.md)
 * [`FileInfoQuery`](reference/FileInfoQuery.md)
 
-#### Consensus Topic
+### Consensus Topic
 
 * [`TopicId`](reference/TopicId.md)
 * [`TopicInfo`](reference/TopicInfo.md)
@@ -119,13 +119,13 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 
 * [`ConsensusTopicInfoQuery`](reference/ConsensusTopicInfoQuery.md)
 
-#### System
+### System
 
 * [`SystemDeleteTransaction`](reference/SystemDeleteTransaction.md)
 * [`SystemUndeleteTransaction`](reference/SystemUndeleteTransaction.md)
 * [`FreezeTransaction`](reference/FreezeTransaction.md)
 
-#### Network
+### Network
 
 * [`NetworkVersionQuery`](reference/NetworkVersionQuery.md)
 
