@@ -215,7 +215,7 @@ instead the network will de-prioritize it.
 
 ---
 
-##### `updateNetworkFromAddressBook` ( `addressBook`: `AddressBook`)
+##### `setNetworkFromAddressBook` ( `addressBook`: `AddressBook`)
 
 Replaces the current network with one which is given in an `AddressBook` (which presumably was acquired via an [`AddressBookQuery`](reference/network/AddressBookQuery.md))
 
