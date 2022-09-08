@@ -77,17 +77,23 @@ Network constants are made available to use.
 
 Construct a Hedera client pre-configured for Mainnet access.
 
+Will initially be filled with a hard-coded address book for the consensus node network, but in the background the client will immediately attempt to update its consensus node network using an [`AddressBookQuery`](reference/network/AddressBookQuery.md) against the mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
+
 ---
 
 ##### `forTestnet` (): `Client`
 
 Construct a Hedera client pre-configured for Testnet access.
 
+Will initially be filled with a hard-coded address book for the consensus node network, but in the background the client will immediately attempt to update its consensus node network using an [`AddressBookQuery`](reference/network/AddressBookQuery.md) against the mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
+
 ---
 
 ##### `forPreviewnet` (): `Client`
 
 Construct a Hedera client pre-configured for Previewnet access.
+
+Will initially be filled with a hard-coded address book for the consensus node network, but in the background the client will immediately attempt to update its consensus node network using an [`AddressBookQuery`](reference/network/AddressBookQuery.md) against the mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
 
 ---
 
@@ -96,6 +102,8 @@ Construct a Hedera client pre-configured for Previewnet access.
 Construct a Hedera client for a given name.
 
 Valid names are "previewnet", "testnet", "mainnet"
+
+For a valid name, the behavior is idential to `for[Mainnet|Testnet|Previewnet]()`
 
 ---
 
@@ -207,6 +215,12 @@ instead the network will de-prioritize it.
 
 ---
 
+##### `setNetworkFromAddressBook` ( `addressBook`: `AddressBook`)
+
+Replaces the current network with one which is given in an `AddressBook` (which presumably was acquired via an [`AddressBookQuery`](reference/network/AddressBookQuery.md))
+
+---
+
 ### Properties
 
 ##### `network` () : `Map` < `String` , [`AccountId`](reference/cryptocurrency/AccountId.md) >
@@ -282,3 +296,9 @@ Declares if we should generate new transaction IDs when a transaction fails with
 locked if set manually or if certain methods are called.
 
 ---
+
+##### `networkUpdatePeriod`: `Duration?`
+
+If present, the client will periodically attempt to update its consensus node network in the background using an [`AddressBookQuery`](reference/network/AddressBookQuery.md) against its current mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
+
+Defaults to 24 hours.
