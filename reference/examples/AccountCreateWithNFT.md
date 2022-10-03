@@ -13,6 +13,7 @@ This reference example is for HIP-542.
 6. Show the new account ID owns the NFT
 
 ## Example 2:
+### Steps
 1. Create a fungible HTS token using the Hedera Token Service
 2. Create an ECDSA public key alias
 3. Transfer the fungible token to the public key alias
