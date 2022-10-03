@@ -2,7 +2,7 @@
 
 This reference example is for HIP-542.
 
-##Example 1:
+## Example 1:
 
 ### Steps
 1. Create an NFT using the Hedera Token Service
@@ -12,7 +12,7 @@ This reference example is for HIP-542.
 5. Return the new account ID in the child record
 6. Show the new account ID owns the NFT
 
-##Example 2:
+## Example 2:
 1. Create a fungible HTS token using the Hedera Token Service
 2. Create an ECDSA public key alias
 3. Transfer the fungible token to the public key alias
