@@ -1,5 +1,7 @@
 # Create an account by transferring an NFT to a public key alias
 
+This reference example is for HIP-542
+
 ## Steps
 1. Create an NFT using the Hedera Token Service
 2. Mint the NFT
