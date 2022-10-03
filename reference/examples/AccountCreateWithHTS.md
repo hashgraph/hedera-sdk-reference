@@ -1,4 +1,4 @@
-# Create an account by transferring an NFT to a public key alias
+# Create an account by transferring HTS tokens to a public key alias
 
 This reference example is for HIP-542.
 
