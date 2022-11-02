@@ -9,5 +9,5 @@ Reference: HIP-583
 - Show the newly created account does not have a pubic key associated with it by getting the account info and returning the public key field
 - Transfer tokens to the public-address for the account that was created
     - Use the newly created account as the transaction fee payer
-- Show the transfer transaction was successful and the accounts owns the token
+- Show the transfer transaction was successful and the account owns the token
 - Show the account now has a public key assigned by requesting the account info and returning the public key field
