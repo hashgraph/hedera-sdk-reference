@@ -1,6 +1,6 @@
-Lazy-create a new account using a public-address via the CryptoCreate transaction.
+Lazy-create a new account using a public-address via the `AccountCreateTransaction` transaction.
 
-Reference: HIP-583
+Reference: [HIP-583 Expand alias support in CryptoCreate & CryptoTransfer Transactions](https://hips.hedera.com/hip/hip-583)
 
 ## Example 1:
 - Create a ECSDA private key 
