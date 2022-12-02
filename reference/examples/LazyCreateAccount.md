@@ -3,16 +3,22 @@ Lazy-create a new account using a public-address via the CryptoCreate transactio
 Reference: HIP-583
 
 ## Example 1
-- Create an Ethereum account address/public-address (example: 0xb794f5ea0ba39494ce839613fffba74279579268)
-- Use the `AccountCreateTransaction` to create an account using the Ethereum account address/public address
-  - Use the `setAliasEVMAddress()` 
-  - Do not use the `setKey` field or `setAlias()` field
-- Sign with... // what key? The testnet account ID and key or the private key of the Ethereum account public-address?
+- Create a ECSDA private key 
+- Extract the ECDSA public key
+- Extract the Ethereum public address
+  - Add function in the SDK to calculate the Ethereum Address 
+  - Ethereum account address / public-address - This is the rightmost 20 bytes of the 32 byte Keccak-256 hash of the ECDSA public key of the account. This calculation is in the manner described by the Ethereum Yellow Paper.
+- Use the `AccountCreateTransaction` and populate `setEvmAddress(publicAddress)` field with the Ethereum public address
+- Sign the `AccountCreateTransaction` transaction using an existing Hedera account and key to pay for the transaction fee
+- The Hedera account that was created has a public address the user specified in the `AccountCreateTransaction`
+       - Will not have a Hedera account public key at this stage
+       - The account can only receive tokens or hbars 
+       - This is referred to as a hollow account
+       - The alias property of the account will not have the public address
+- Get the `AccountInfo` of the account and show that it is a hollow account i.e. does not have a public key
+- To enhance the hollow account to have a public key the hollow account needs to be specified as a transaction fee payer in a HAPI transaction
+- Any HAPI transaction can be used to apply the public key to the hollow account and create a complete Hedera account
+- Use a HAPI transaction and set the hollow account as the transaction fee payer
+- Sign with the ECDSA private key that corresponds to the public address on the hollow account
 - Execute the transaction
-- Show the transaction was successful by getting the transaction status from the receipt and new Hedera Account ID
-- Show the account that was created does not have an account public key defined
-- Use the public-address to transfer hbars to that address in a `TransferTransaction`
-  - Use the account that was created in the previous step as transaction fee payer for the `TransferTransaction`
-     - This will assign a public key to the account that is not present when the account is created from the transaction fee paying account
-- Show the account now has a public key assigned by requesting the AccountInfo and returning the account public key
-- Show the account has an Ethereum Account Address by requesting the AccountInfo
+- Get the `AccountInfo` and show that the account is now a complete account i.e. returns a public key of the account
