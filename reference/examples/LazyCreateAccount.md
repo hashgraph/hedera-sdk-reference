@@ -2,7 +2,7 @@ Lazy-create a new account using a public-address via the CryptoCreate transactio
 
 Reference: HIP-583
 
-## Example 1
+## Example 1:
 - Create a ECSDA private key 
 - Extract the ECDSA public key
 - Extract the Ethereum public address
