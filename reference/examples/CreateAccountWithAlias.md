@@ -17,8 +17,8 @@ Reference: [HIP-583 Expand alias support in CryptoCreate & CryptoTransfer Transa
 
 
 ## Example 2:
-- Create an EDD2519 private key
-- Get the EDD2519 public key 
+- Create an ED2519 private key
+- Get the ED2519 public key 
 - Use the `AccountCreateTransaction` and populate the `setAlias(<ECDSA_public_key)` field
 - Sign the `AccountCreateTransaction` using an existing Hedera account and key to pay for the transaction fee
 - Execute the transaction
