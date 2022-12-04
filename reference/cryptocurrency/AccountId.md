@@ -102,3 +102,9 @@ A nonnegative account number unique within its realm
 An alias for the `num` of the account if the account was created from a public key directly.
 
 ---
+
+##### `evmAddress`: `Bytes`
+
+The EOA 20-byte address to create that is derived from the keccak-256 hash of a ECDSA_SECP256K1 primitive key.
+
+---
