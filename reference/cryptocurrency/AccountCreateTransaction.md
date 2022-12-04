@@ -44,6 +44,7 @@ var key = PrivateKey.generate();
 var fileId = new AccountCreateTransaction()
     .setKey(key)
     .setInitialBalance(new Hbar(10)) // 10 hbars
+    .setEvmAddress(evmAddress) // bytes
     .execute(client) // TransactionResponse
     .getReceipt(client) // TransactionReceipt
     .accountId // Nullable<AccountId>
@@ -57,6 +58,8 @@ const key = PrivateKey.generate();
 const transaction = new AccountCreateTransaction({
     key: newKey,
     initialBalance: new Hbar(10),
+    evmAddress: evmAddress, 
+
 });
 
 const response = await accountCreateTransaction.execute(client) // TransactionResponse;
@@ -74,6 +77,7 @@ newKey := hedera.GeneratePrivateKey()
 response, err := hedera.NewAccountCreateTransaction().
     SetKey(newKey).
     SetInitialBalance(10 * hedera.Hbar) // 10 Hbars
+    SetEvmAddress(evmAddress) // bytes
     Execute(client) // TransactionResponse
 if err != nil {
     println(err.Error())
@@ -171,5 +175,9 @@ ID of the node this contract is staked to.
 ##### `declineStakingReward`: `bool`
 
 If true, the account declines receiving a staking reward. The default value is false.
+
+##### `evmAddress`: `bytes`
+
+EOA 20-byte address to create that is derived from the keccak-256 hash of a ECDSA_SECP256K1 primitive key.
 
 ---
