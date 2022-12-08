@@ -77,6 +77,14 @@ Note: If the account ID has an `aliasKey`, `toStringWithChecksum` will throw an 
 
 ---
 
+##### `toEvmAddress` ( ): `String`
+
+Returns "0x_____" string Ethereum public address.
+
+##### `fromEvmAddress` ( ): `String`
+
+Accepts "0x___" or "___" Ethereum public address. 
+
 ### Properties
 
 ##### `shard`: `Uint64`
