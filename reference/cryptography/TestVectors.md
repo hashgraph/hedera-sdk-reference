@@ -2,7 +2,7 @@
 
 ## BIP39 Mnemonics
 
-Test vectors provided by the [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) standards. Test for proper mnemonic and seed derivation from a given entropy. The passphrase to be used for all these tests to generate the mnemonic is `"TREZOR"`.
+Test vectors provided by the [BIP39](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki) standards. Test for proper mnemonic and seed derivation from a given entropy. The passphrase to be used for all these tests to generate the seed is `"TREZOR"`.
 
 #### Test 1
 * Entropy: `00000000000000000000000000000000`
