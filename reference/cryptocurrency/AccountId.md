@@ -77,6 +77,14 @@ Note: If the account ID has an `aliasKey`, `toStringWithChecksum` will throw an 
 
 ---
 
+##### `toEvmAddress` ( ): `String`
+
+Returns "0x_____" string Ethereum public address.
+
+##### `fromEvmAddress` ( ): `String`
+
+Accepts "0x___" or "___" Ethereum public address. 
+
 ### Properties
 
 ##### `shard`: `Uint64`
@@ -100,5 +108,11 @@ A nonnegative account number unique within its realm
 ##### `aliasKey`: `PublicKey`
 
 An alias for the `num` of the account if the account was created from a public key directly.
+
+---
+
+##### `evmAddress`: `Bytes`
+
+The EOA 20-byte address to create that is derived from the keccak-256 hash of a ECDSA_SECP256K1 primitive key.
 
 ---

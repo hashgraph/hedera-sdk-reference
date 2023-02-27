@@ -4,7 +4,7 @@ A public key on the Hedera™ network.
 
 <!-- tabs:start -->
 
-###### ** Java **
+### ** Java **
 
 ```java
 var publicKey = PublicKey.fromString("...");
@@ -16,7 +16,7 @@ var publicKey = PublicKey.fromString("...");
 const publicKey = PublicKey.fromString("...");
 ```
 
-###### ** Go **
+### ** Go **
 
 ```go
 publicKey, err := hedera.PublicKeyFromString("...")
@@ -154,6 +154,6 @@ Convert this public key into an account ID with a given shard and realm.
 
 ##### `toEvmAddress` (): `string`
 
-Convert this public key into an account ID with a given shard and realm.
+Convert this public key into an evm address. The EVM address is This is the rightmost 20 bytes of the 32 byte Keccak-256 hash of the ECDSA public key. 
 
 ---

@@ -134,3 +134,9 @@ top-level id, in consensus order. Always empty if the top-level status is UNKNOW
 List of accounts with the corresponding staking rewards paid as a result of a transaction.
 
 ---
+
+### `evmAddress`: `Bytes`
+
+The EOA 20-byte address to create that is derived from the keccak-256 hash of a ECDSA_SECP256K1 primitive key.
+
+---
