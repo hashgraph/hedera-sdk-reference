@@ -1,6 +1,6 @@
 > class `OperatorConfig`
 
-The operator config file specification for [`Client`](reference/core/Client.md) construction
+The operator config file specification for [`Client`](Client.md) construction
 
 ### Properties
 
@@ -10,8 +10,6 @@ The account ID of the operator
 
 ---
 
-##### `privateKey` : [`PrivateKey`](reference/cryptography/PrivateKey.md) 
+##### `privateKey` : [`PrivateKey`](../cryptography/PrivateKey.md)
 
 The private key of the operator
-
----

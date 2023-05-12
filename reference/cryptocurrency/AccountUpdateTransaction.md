@@ -1,10 +1,10 @@
-> class `AccountUpdateTransaction` extends [`Transaction`](reference/core/Transaction.md)
+> class `AccountUpdateTransaction` extends [`Transaction`](../core/Transaction.md)
 
 Change properties for the given account. Any null field is ignored (left unchanged). This
 transaction must be signed by the existing key for this account. If the transaction is changing
 the key field, then the transaction must be signed by both the old key (from before the change)
 and the new key. The old key must sign for security. The new key must sign as a safeguard to
-avoid accidentally changing to an invalid key, and then having no way to recover. 
+avoid accidentally changing to an invalid key, and then having no way to recover.
 
 <!-- tabs:start -->
 
@@ -81,29 +81,15 @@ newAccountId := *receipt.accountId;
 
 ### Properties
 
-##### `AccountId`: [`AccountId`](reference/cryptography/AccountId.md)
+##### `accountId`: [`AccountId`](AccountId.md)
 
 The account ID which is being updated in this transaction
 
 ---
 
-##### `key`: [`Key`](reference/cryptography/Key.md)
+##### `accountMemo`: `String`
 
-The new key.
-
-This is the key that must sign each transfer out of the account.
-
-If `receiverSignatureRequired` is true, then the key must also sign
-any transfer into the account.
-
----
-
-##### `receiverSignatureRequired`: `bool`
-
-If true, this account's key must sign any transaction depositing
-into this account (in addition to all withdrawals).
-
-Defaults to `false`.
+If set, the new memo to be associated with the account (UTF-8 encoding max 100 bytes)
 
 ---
 
@@ -117,7 +103,37 @@ Defaults to 90 days (or 7,776,000 seconds).
 
 ---
 
-##### `proxyAccountId`: [`AccountId`](reference/AccountId.md)
+##### `declineStakingReward`: `?bool`
+
+If true, the account declines receiving a staking reward. The default value is false.
+
+---
+
+##### `expirationTime`: `Timestamp`
+
+The new expiration time to extend to (ignored if equal to or before the current one)
+
+---
+
+##### `key`: [`Key`](../cryptography/Key.md)
+
+The new key.
+
+This is the key that must sign each transfer out of the account.
+
+If `receiverSignatureRequired` is true, then the key must also sign
+any transfer into the account.
+
+---
+
+##### `maxAutomaticTokenAssociations`: `Uint32`
+
+The maximum number of tokens that an Account can be implicitly associated with. Up to a 1000
+including implicit and explicit associations.
+
+---
+
+##### `proxyAccountId`: [`AccountId`](AccountId.md)
 
 Deprecated: with no replacement
 
@@ -129,22 +145,12 @@ will behave as if proxyAccountID was null.
 
 ---
 
-##### `expirationTime`: `Timestamp`
+##### `receiverSignatureRequired`: `bool`
 
-The new expiration time to extend to (ignored if equal to or before the current one)
+If true, this account's key must sign any transaction depositing
+into this account (in addition to all withdrawals).
 
----
-
-##### `accountMemo`: `String`
-
-If set, the new memo to be associated with the account (UTF-8 encoding max 100 bytes)
-
----
-
-##### `maxAutomaticTokenAssociations`: `Uint32`
-
-The maximum number of tokens that an Account can be implicitly associated with. Up to a 1000
-including implicit and explicit associations.
+Defaults to `false`.
 
 ---
 
@@ -157,11 +163,3 @@ ID of the account to which this contract is staking.
 ##### `stakedNodeId`: `?Int64`
 
 ID of the node this contract is staked to.
-
----
-
-##### `declineStakingReward`: `?bool`
-
-If true, the account declines receiving a staking reward. The default value is false.
-
----

@@ -5,15 +5,13 @@ of the network, it attempts some cheap assertions. This process is called the "p
 
 ### Fields
 
-##### `status`: [`Status`](reference/Status.md)
+##### `status`: [`Status`](../Status.md)
 
 The status of the failing transaction
 
 ---
 
-##### `transactionId`: [`TransactionId`](reference/core/TransactionId.md)
+##### `transactionId`: [`TransactionId`](../core/TransactionId.md)
 
 The ID of the transaction that failed. This can be `null` if a query fails pre-check without an
 associated payment transaction.
-
----

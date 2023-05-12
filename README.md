@@ -1,6 +1,6 @@
 # Hedera™ Hashgraph SDK
 
-![Hedera Hasgraph](https://www.hedera.com/logo-capital-hbar-wordmark.jpg)
+![Hedera Hashgraph](https://www.hedera.com/logo-capital-hbar-wordmark.jpg)
 
 This document is the primary reference for the Hedera™ Hashgraph SDKs.
 
@@ -20,22 +20,22 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 
 ---
 
-* [`TransactionId`](reference/TransactionId.md)
-* [`TransactionReceipt`](reference/TransactionReceipt.md)
-* [`TransactionRecord`](reference/TransactionRecord.md)
-* [`TransactionResponse`](reference/TransactionResponse.md)
+* [`TransactionId`](reference/core/TransactionId.md)
+* [`TransactionReceipt`](reference/core/TransactionReceipt.md)
+* [`TransactionRecord`](reference/core/TransactionRecord.md)
+* [`TransactionResponse`](reference/core/TransactionResponse.md)
 
 ---
 
 * [`Query`](reference/core/Query.md)
-* [`TransactionReceiptQuery`](reference/TransactionReceiptQuery.md)
-* [`TransactionRecordQuery`](reference/TransactionRecordQuery.md)
+* [`TransactionReceiptQuery`](reference/core/TransactionReceiptQuery.md)
+* [`TransactionRecordQuery`](reference/core/TransactionRecordQuery.md)
 
 ### Errors
 
 * [`PrecheckStatus`](reference/error/PrecheckStatus.md)
 * [`ReceiptStatus`](reference/error/ReceiptStatus.md)
-* [`MaxQueryPaymentExceeded`](reference/cryptography/MaxQueryPaymentExceeded.md)
+* [`MaxQueryPaymentExceeded`](reference/error/MaxQueryPaymentExceeded.md)
 * [`BadKey`](reference/error/BadKey.md)
 * [`BadMnemonic`](reference/error/BadMnemonic.md)
 * [`BadMnemonicReason`](reference/error/BadMnemonicReason.md)
@@ -50,41 +50,41 @@ semantic operation and classification of an **Official** Hedera™ Hashgraph SDK
 
 ### Cryptocurrency
 
-* [`AccountId`](reference/AccountId.md)
-* [`AccountInfo`](reference/AccountInfo.md)
+* [`AccountId`](reference/cryptocurrency/AccountId.md)
+* [`AccountInfo`](reference/cryptocurrency/AccountInfo.md)
 
 ---
 
-* [`CryptoTransferTransaction`](reference/CryptoTransferTransaction.md)
-* [`AccountCreateTransaction`](reference/AccountCreateTransaction.md)
-* [`AccountUpdateTransaction`](reference/AccountUpdateTransaction.md)
-* [`AccountDeleteTransaction`](reference/AccountDeleteTransaction.md)
+* [`CryptoTransferTransaction`](reference/cryptocurrency/CryptoTransferTransaction.md)
+* [`AccountCreateTransaction`](reference/cryptocurrency/AccountCreateTransaction.md)
+* [`AccountUpdateTransaction`](reference/cryptocurrency/AccountUpdateTransaction.md)
+* [`AccountDeleteTransaction`](reference/cryptocurrency/AccountDeleteTransaction.md)
 
 ---
 
-* [`AccountBalanceQuery`](reference/AccountBalanceQuery.md)
-* [`AccountInfoQuery`](reference/AccountInfoQuery.md)
-* [`AccountRecordsQuery`](reference/AccountRecordsQuery.md)
-* [`AccountStakersQuery`](reference/AccountStakersQuery.md)
+* [`AccountBalanceQuery`](reference/cryptocurrency/AccountBalanceQuery.md)
+* [`AccountInfoQuery`](reference/cryptocurrency/AccountInfoQuery.md)
+* [`AccountRecordsQuery`](reference/cryptocurrency/AccountRecordsQuery.md)
+* [`AccountStakersQuery`](reference/cryptocurrency/AccountStakersQuery.md)
 
 ### Smart Contract
 
-* [`ContractId`](reference/ContractId.md)
-* [`ContractInfo`](reference/ContractInfo.md)
+* [`ContractId`](reference/contract/ContractId.md)
+* [`ContractInfo`](reference/contract/ContractInfo.md)
 
 ---
 
-* [`ContractCreateTransaction`](reference/ContractCreateTransaction.md)
-* [`ContractUpdateTransaction`](reference/ContractUpdateTransaction.md)
-* [`ContractDeleteTransaction`](reference/ContractDeleteTransaction.md)
-* [`ContractExecuteTransaction`](reference/ContractExecuteTransaction.md)
+* [`ContractCreateTransaction`](reference/contract/ContractCreateTransaction.md)
+* [`ContractUpdateTransaction`](reference/contract/ContractUpdateTransaction.md)
+* [`ContractDeleteTransaction`](reference/contract/ContractDeleteTransaction.md)
+* [`ContractExecuteTransaction`](reference/contract/ContractExecuteTransaction.md)
 
 ---
 
-* [`ContractBytecodeQuery`](reference/ContractBytecodeQuery.md)
-* [`ContractCallQuery`](reference/ContractCallQuery.md)
-* [`ContractInfoQuery`](reference/ContractInfoQuery.md)
-* [`ContractRecordsQuery`](reference/ContractRecordsQuery.md)
+* [`ContractBytecodeQuery`](reference/contract/ContractBytecodeQuery.md)
+* [`ContractCallQuery`](reference/contract/ContractCallQuery.md)
+* [`ContractInfoQuery`](reference/contract/ContractInfoQuery.md)
+* [`ContractRecordsQuery`](reference/contract/ContractRecordsQuery.md)
 
 ### File
 
@@ -136,7 +136,7 @@ We welcome participation from all developers!
 To propose a change to the specifications, submit a pull request making the
 change; or, open an issue for general discussion.
 
-Please check out 
+Please check out
 [contributing guide](https://github.com/hashgraph/.github/blob/main/CONTRIBUTING.md)
 to see how you can get involved.
 

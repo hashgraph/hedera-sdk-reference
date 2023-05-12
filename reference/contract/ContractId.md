@@ -1,4 +1,4 @@
-> class `ContractId` implements [`Key`](reference/cryptography/Key.md)
+> class `ContractId` extends [`Key`](../cryptography/Key.md)
 
 An ID type that represents a contract on a Hedera Hashgraph network.
 
@@ -6,42 +6,42 @@ An ID type that represents a contract on a Hedera Hashgraph network.
 
 ##### `constructor` ( `num` : `Uint64` )
 
-Construct a [`ContractId`](#) with [`shard`](#shard-uint64) and [`realm`](#realm-uint64) being zero.
+Construct a [`ContractId`](ContractId) with [`shard`](#shard--uint64) and [`realm`](#realm--uint64) being zero.
 
 ---
 
 ##### `constructor` ( `shard` : `Uint64`, `realm` : `Uint64`, `num` : `Uint64` )
 
-Construct a [`ContractId`](#) with all fields explicitly set.
+Construct a [`ContractId`](ContractId) with all fields explicitly set.
 
 ---
 
 ### Static Methods
 
-##### `fromString` ( `str` : `String` ): [`ContractId`](#contractid)
+##### `fromBytes` ( `data` : `bytes` ): [`ContractId`](ContractId)
 
-Construct a [`ContractId`](#) from a string. The format of the string could be either just
-a number "4" or dot separated numbers "0.0.4".
-
----
-
-##### `fromBytes` ( `data` : `bytes` ): [`ContractId`](#contractid)
-
-Deserialize a [`ContractId`](#) from its the protobuf representation.
+Deserialize a [`ContractId`](ContractId) from its protobuf representation.
 
 ---
 
-##### `fromSolidityAddress` ( `str` : `String` ): [`ContractId`](#contractid)
+##### `fromEvmAddress` ( `shard` : `Uint64`, `realm` : `Uint64`, `evmAddress` : `string` ): [`ContractId`](ContractId)
 
-Construct a [`ContractId`](#) a solidity address.
+Construct a [`ContractId`](ContractId) from a shard, realm, and evm address.
+
+---
+
+##### `fromSolidityAddress` ( `str` : `String` ): [`ContractId`](ContractId)
+
+Construct a [`ContractId`](ContractId) a solidity address.
 
 Deprecated: Use `fromEvmAddress()` instead.
 
 ---
 
-##### `fromEvmAddress` ( `shard` : `Uint64`, `realm` : `Uint64`, `evmAddress` : `string` ): [`ContractId`](#contractid)
+##### `fromString` ( `str` : `String` ): [`ContractId`](ContractId)
 
-Construct a [`ContractId`](#) from a shard, realm, and evm address.
+Construct a [`ContractId`](ContractId) from a string. The format of the string could be either just
+a number "4" or dot separated numbers "0.0.4".
 
 ---
 
@@ -49,34 +49,30 @@ Construct a [`ContractId`](#) from a shard, realm, and evm address.
 
 ##### `toBytes` ( ): `bytes`
 
-Serialize the [`ContractId`](#) into its protobuf representation.
+Serialize the [`ContractId`](ContractId) into its protobuf representation.
 
 ---
 
 ##### `toString` ( ): `string`
 
-Serialize the [`ContractId`](#) into a string form which follows `{shard}.{realm}.{num}` if `evmAddress` is not present
+Serialize the [`ContractId`](ContractId) into a string form which follows `{shard}.{realm}.{num}` if `evmAddress` is not present
 and `{shard}.{realm}.{evmAddress}` if `evmAddress` is present.
 
 ---
 
 ##### `toSolidityAddress` ( ): `string`
 
-Serialize the [`ContractId`](#) into its solidity address form.
+Serialize the [`ContractId`](ContractId) into its solidity address form.
 
 ---
 
 ### Properties
 
-##### `shard`: `Uint64`
+##### `evmAddress`: `bytes?`
 
-The shard of this ID.
+The evm address of this contract.
 
----
-
-##### `realm`: `Uint64`
-
-The realm of this ID.
+Note: This field is only set when `fromEvmAddress()` is used. `fromSolidityAddress()` does not populate this field
 
 ---
 
@@ -86,10 +82,12 @@ The num of this ID.
 
 ---
 
-##### `evmAddress`: `bytes?`
+##### `realm`: `Uint64`
 
-The evm address of this contract.
-
-Note: This field is only set when `fromEvmAddress()` is used. `fromSolidityAddress()` does not populate this field
+The realm of this ID.
 
 ---
+
+##### `shard`: `Uint64`
+
+The shard of this ID.

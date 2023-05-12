@@ -1076,3 +1076,47 @@ An account set the staked\_account\_id to itself in CryptoUpdate or ContractUpda
 ##### INVALID\_STAKING\_ID
 
 The staking account id or staking node id given is invalid or does not exist.
+
+##### STAKING\_NOT\_ENABLED
+
+Native staking, while implemented, has not yet enabled by the council.
+
+##### INVALID\_PRNG\_RANGE
+
+The range provided in UtilPrng transaction is negative.
+
+##### MAX\_ENTITIES\_IN\_PRICE\_REGIME\_HAVE\_BEEN\_CREATED
+
+The maximum number of entities allowed in the current price regime have been created.
+
+##### INVALID\_FULL\_PREFIX\_SIGNATURE\_FOR\_PRECOMPILE
+
+The full prefix signature for precompile is not valid
+
+##### INSUFFICIENT\_BALANCES\_FOR\_STORAGE\_RENT
+
+The combined balances of a contract and its auto-renew account (if any) did not cover
+the rent charged for net new storage used in a transaction.
+
+##### MAX\_CHILD\_RECORDS\_EXCEEDED
+
+A contract transaction tried to use more than the allowed number of child records, via
+either system contract records or internal contract creations.
+
+##### INSUFFICIENT\_BALANCES\_FOR\_RENEWAL\_FEES
+
+The combined balances of a contract and its auto-renew account (if any) or balance of an account did not cover
+the auto-renewal fees in a transaction.
+
+##### TRANSACTION\_HAS\_UNKNOWN\_FIELDS
+
+A transaction's protobuf message includes unknown fields; could mean that a client
+expects not-yet-released functionality to be available.
+
+##### ACCOUNT\_IS\_IMMUTABLE
+
+The account cannot be modified. Account's key is not set
+
+##### ALIAS\_ALREADY\_ASSIGNED
+
+An alias that is assigned to an account or contract cannot be assigned to another account or contract.

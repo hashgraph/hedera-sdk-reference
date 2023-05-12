@@ -1,7 +1,7 @@
-> class `KeyList` extends `Collection<Key>` implements [`Key`](reference/cryptography/Key.md)
+> class `KeyList` extends `Collection<Key>` implements [`Key`](Key.md)
 
-A list of Keys with an optional threshold. If a threshold is set the keylist will be treated as
-a protobuf `ThresholdKey` type, otherwise the keylist will be treated as a `KeyList` protobuf
+A list of Keys with an optional threshold. If a threshold is set the key list will be treated as
+a protobuf `ThresholdKey` type, otherwise the key list will be treated as a `KeyList` protobuf
 type.
 
 **KeyList**:
@@ -78,15 +78,15 @@ Create a new, empty list of keys with no threshold.
 
 ### Static Methods
 
-##### `withThreshold` ( `threshold`: `Uint` ): `KeyList`
+##### `of` (`keyArray` : `Key[]`): `KeyList`
 
-Create a new, empty list of keys with the given threshold.
+Construct a new `KeyList` from a list of keys
 
 ---
 
-##### `of` (`keyArray` : `Key[]`): `KeyList`
+##### `withThreshold` ( `threshold`: `Uint` ): `KeyList`
 
-Construct a new keylist from a list of keys
+Create a new, empty list of keys with the given threshold.
 
 ---
 
@@ -96,11 +96,17 @@ Construct a new keylist from a list of keys
 
 ##### `toString` (): `String`
 
-Stringify the keylist structure into a readable format
+Stringify the `KeyList` structure into a readable format
 
 ---
 
 ### Properties
+
+### `keys`: `List` < [`Key`](Key.md) >
+
+The list of keys
+
+---
 
 ### `threshold`: `Uint`
 

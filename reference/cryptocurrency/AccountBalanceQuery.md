@@ -1,5 +1,5 @@
 > class `AccountBalanceQuery`
-> extends [`Query`](reference/core/Query.md) < [`Hbar`](reference/Hbar.md) >
+> extends [`Query`](../core/Query.md) < [`Hbar`](../Hbar.md) >
 
 Get the balance of a cryptocurrency account. This returns only the balance, so it is a smaller
 reply than CryptoGetInfo, which returns the balance plus additional information.
@@ -56,5 +56,3 @@ The account ID for which information is requested
 ##### `contractId`: [`ContractId`](reference/ContractId.md)
 
 The contract ID for which information is requested
-
----

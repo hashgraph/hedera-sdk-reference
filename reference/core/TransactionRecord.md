@@ -4,7 +4,7 @@ Response when the client sends the node TransactionGetRecordResponse
 
 ### Static Methods
 
-##### `fromBytes` ( `data`: `bytes` ): `TransactionRecord`
+##### `fromBytes` ( `data`: `byte[]` ): `TransactionRecord`
 
 Decode a `TransactionRecord` from an appropriate protobuf encode structure
 
@@ -12,7 +12,7 @@ Decode a `TransactionRecord` from an appropriate protobuf encode structure
 
 ### Methods
 
-##### `toBytes` (): `bytes`
+##### `toBytes` (): `byte[]`
 
 The byte representation of the encoded protobuf type
 
@@ -26,15 +26,29 @@ Stringification of all the current values
 
 ### Fields
 
-### `receipt`: [`TransactionReceipt`](reference/core/TransactionReceipt.md)
+### `aliasKey`: [`PublicKey`](../cryptography/PublicKey.md)
 
-Receipt for the transaction
+In the record of an internal CryptoCreate transaction triggered by a user transaction with a
+(previously unused) alias, the new account's alias.
 
 ---
 
-### `transactionHash`: `bytes`
+### `assessedCustomFees`: `List` < [`AssessedCustomFee`](../token/AssessedCustomFee.md) >
 
-Hash of the transaction
+In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
+
+---
+
+### `automaticTokenAssociations`: `List` < [`TokenAssociation`](../token/TokenAssociation.md) >
+
+In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
+
+---
+
+### `children`: [`TransactionRecord`](TransactionRecord.md)
+
+The records of processing all child transaction spawned by the transaction with the given
+top-level id, in consensus order. Always empty if the top-level status is UNKNOWN.
 
 ---
 
@@ -44,7 +58,102 @@ The timestamp the transaction came to consensus
 
 ---
 
-### `transactionId`: [`TransactionId`](reference/core/TransactionId.md)
+### `contractFunctionResult`: [`?ContractFunctionResult`](../contract/ContractFunctionResult.md)
+
+Result of a [`ContractExecuteTransaction`](../contract/ContractExecuteTransaction.md)
+
+---
+
+### `duplicates`: [`TransactionRecord`](TransactionRecord.md)
+
+The records of processing all consensus transaction with the same id as the distinguished
+record above, in chronological order.
+
+---
+
+### `ethereumHash`: `Bytes`
+
+The keccak256 hash of the ethereumData.
+
+**NOTE**: This field will only be populated for EthereumTransaction.
+
+---
+
+### `evmAddress`: `Bytes`
+
+The EOA 20-byte address to create that is derived from the keccak-256 hash of a ECDSA_SECP256K1 primitive key.
+
+---
+
+### `paidStakingRewards`: [`Transfer`](../Transfer.md)
+
+List of accounts with the corresponding staking rewards paid as a result of a transaction.
+
+---
+
+### `parentConsensusTimestamp`: `Timestamp`
+
+In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
+
+---
+
+### `prngBytes`: `Bytes`
+
+In the record of a UtilPrng transaction with no output range, a pseudorandom 384-bit string.
+
+---
+
+### `prngNumber`: `Uint32`
+
+In the record of a PRNG transaction with an output range, the output of a PRNG whose input was a 384-bit string.
+
+---
+
+### `receipt`: [`TransactionReceipt`](TransactionReceipt.md)
+
+Receipt for the transaction
+
+---
+
+### `scheduleRef`: [`ScheduleId`](../schedule/ScheduleId.md)
+
+In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
+
+---
+
+### `tokenNftTransfers`: `Map` < [`TokenId`](../token/TokenId), `List` < `TokenNftTransfer`>>
+
+All NFT Token transfers as a result of this transaction
+
+---
+
+### `tokenTransferList`: `List` < `TokenTransfer` >
+
+All fungible token transfers as a result of this transaction as a list
+
+---
+
+### `tokenTransfers`: `Map` < [`TokenId`](../token/TokenId), `Map` < [`AccountId`](../cryptocurrency/AccountId.md), `Uint64`>>
+
+Any token transfers made in this transaction
+
+**Note**: These token transfers are different from the ones set in [`TransferTransaction`](../cryptocurrency/TransferTransaction.md)
+
+---
+
+### `transactionFee`: [`Hbar`](../Hbar.md)
+
+Fee set on the transaction
+
+---
+
+### `transactionHash`: `bytes`
+
+Hash of the transaction
+
+---
+
+### `transactionId`: [`TransactionId`](TransactionId.md)
 
 Transaction ID of the transaction
 
@@ -56,87 +165,8 @@ Memo set on the transaction
 
 ---
 
-### `transactionFee`: [`Hbar`](reference/Hbar.md)
-
-Fee set on the transaction
-
----
-
-### `contractFunctionResult`: [`?ContractFunctionResult`](reference/contract/ContractFunctionResult.md)
-
-Result of a [`ContractExecuteTransaction`](reference/contract/ContractExecuteTransaction.md)
-
----
-
-### `transfers`: [`Transfer[]`](reference/Transfer.md)
+### `transfers`: [`Transfer[]`](../Transfer.md)
 
 Any transfers made in this transaction
 
 **Note**: Includes fee payments
-
----
-
-### `tokenTransfers`: `Map<TokenId, Map<AccountId, Uint64>>`
-
-Any token transfers made in this transaction
-
-**Note**: These token transfers are different than the ones set in [`TransferTransaction`](reference/cryptocurrency/TransferTransaction.md)
-
----
-
-### `scheduleRef`: [`ScheduleId`](reference/schedule/ScheduleId.md)
-
-In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
-
----
-
-### `assessedCustomFees`: `List` < [`AssessedCustomFee`](reference/token/AssessedCustomFee.md) >
-
-In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
-
----
-
-### `automaticTokenAssociations`: `List` < [`TokenAssociation`](reference/token/TokenAssociation.md) >
-
-In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
-
----
-
-### `parentConsensusTimestamp`: `Timestamp`
-
-In the record of an internal transaction, the consensus timestamp of the user transaction that spawned it.
-
----
-
-### `aliasKey`: [`PublicKey`](reference/cryptography/PublicKey.md)
-
-In the record of an internal CryptoCreate transaction triggered by a user transaction with a 
-(previously unused) alias, the new account's alias. 
-
----
-
-### `duplicates`: [`TransactionRecord`](#)
-
-The records of processing all consensus transaction with the same id as the distinguished
-record above, in chronological order.
-
----
-
-### `children`: [`TransactionRecord`](#)
-
-The records of processing all child transaction spawned by the transaction with the given 
-top-level id, in consensus order. Always empty if the top-level status is UNKNOWN.
-
----
-
-### `paidStakingRewards`: [`Transfer`](reference/Transfer.md)
-
-List of accounts with the corresponding staking rewards paid as a result of a transaction.
-
----
-
-### `evmAddress`: `Bytes`
-
-The EOA 20-byte address to create that is derived from the keccak-256 hash of a ECDSA_SECP256K1 primitive key.
-
----

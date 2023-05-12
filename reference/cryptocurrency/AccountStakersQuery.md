@@ -1,8 +1,8 @@
 # `AccountStakersQuery`
 
 > class `AccountStakersQuery`
-> extends [`Query`](reference/core/Query.md) <
-> [`ProxyStaker[]`](reference/cryptocurrency/ProxyStaker.md) >
+> extends [`Query`](../core/Query.md) <
+> [`ProxyStaker[]`](../cryptocurrency/ProxyStaker.md) >
 
 Get all the accounts that are proxy staking to this account. For each of them, give the amount
 currently staked. This is not yet implemented, but will be in a future version of the API.
@@ -49,7 +49,7 @@ if err != nil {
 
 ### Properties
 
-##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `accountId`: [`AccountId`](AccountId.md)
 
 The `AccountId` for which the records should be retrieved
 

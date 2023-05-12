@@ -1,8 +1,8 @@
 > class `AccountRecordsQuery`
-> extends [`Query`](reference/core/Query.md) <
-> [`TransactionRecord[]`](reference/core/TransactionRecord.md) >
+> extends [`Query`](../core/Query.md) <
+> [`TransactionRecord[]`](../core/TransactionRecord.md) >
 
-Requests records of all transactions for which the given account was the
+Request records of all transactions for which the given account was the
 effective payer in the last 3 minutes of consensus time and
 <tt>ledger.keepRecordsInState=true</tt> was true during
 <tt>handleTransaction</tt>.
@@ -50,8 +50,6 @@ if err != nil {
 
 ### Properties
 
-##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `accountId`: [`AccountId`](AccountId.md)
 
 The account ID for which the records should be retrieved
-
----

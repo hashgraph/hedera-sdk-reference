@@ -1,4 +1,4 @@
-> class `AccountDeletedTransaction` extends [`Transaction`](reference/core/Transaction.md)
+> class `AccountDeletedTransaction` extends [`Transaction`](../core/Transaction.md)
 
 Mark an account as deleted, moving all its current hbars to another account. It will remain in
 the ledger, marked as deleted, until it expires. Transfers into it a deleted account fail. But a
@@ -79,14 +79,11 @@ if err != nil {
 
 ### Properties
 
-##### `accountId`: [`AccountId`](reference/cryptography/AccountId.md)
+##### `accountId`: [`AccountId`](AccountId.md)
 
 The AccountId which should be deleted
 
 ---
-##### `transferAccountId`: [`AccountId`](reference/cryptography/AccountId.md)
+##### `transferAccountId`: [`AccountId`](AccountId.md)
 
 The `AccountId` which will receive all remaining hbars
-
----
-
