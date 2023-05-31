@@ -1,4 +1,6 @@
-> class `TransactionRecordQuery` extends [`Query`](reference/core/Query.md) < [`TransactionRecord`](reference/core/TransactionRecord.md) >
+> class `TransactionRecordQuery` extends [`Query`](Query.md) < [`TransactionRecord`](TransactionRecord.md) >
+
+Get the record for a transaction.
 
 <!-- tabs:start -->
 
@@ -40,9 +42,10 @@ if err != nil {
 
 ### Properties
 
-##### `transactionId`: [`TransactionId`](reference/core/TransactionId.md)
+##### `includeChildren`: `bool`
 
-The transaction ID to query the record for
+Whether the response should include the records of any child transactions spawned by the
+top-level transaction with the given transactionID.
 
 ---
 
@@ -56,9 +59,6 @@ given transaction id..
 
 ---
 
-##### `includeChildren`: `bool`
+##### `transactionId`: [`TransactionId`](TransactionId.md)
 
-Whether the response should include the records of any child transactions spawned by the 
-top-level transaction with the given transactionID. 
-
----
+The transaction ID to query the record for

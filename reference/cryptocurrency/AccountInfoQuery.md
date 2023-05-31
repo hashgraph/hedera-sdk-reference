@@ -1,6 +1,6 @@
 > class `AccountInfoQuery`
-> extends [`Query`](reference/core/Query.md) <
-> [`AccountInfo`](reference/cryptocurrency/AccountInfo.md) >
+> extends [`Query`](../core/Query.md) <
+> [`AccountInfo`](AccountInfo.md) >
 
 Get all the information about an account, including the balance. This does not get the list of
 account records.
@@ -47,8 +47,6 @@ if err != nil {
 
 ### Properties
 
-##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `accountId`: [`AccountId`](AccountId.md)
 
 The account ID for which information is requested
-
----

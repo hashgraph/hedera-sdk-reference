@@ -12,7 +12,7 @@ var network = new HashMap<String, AccountId>();
 network.put("0.testnet.hedera.com:50211", new AccountId(3));
 
 var client = Client.forMainnet(); // pre-defined
-var client = Client.forNetwork(newtork); // custom network
+var client = Client.forNetwork(network); // custom network
 var client = Client.fromConfigFile("./client-config.json"); // configuration file
 var client = Client.forName("testnet"); // named
 
@@ -28,10 +28,10 @@ const network = {
     "0.testnet.hedera.com:50211": "0.0.3"
 };
 
-var client = Client.forMainnet(); // pre-defined
-var client = Client.forNetwork(newtork); // custom network
-var client = Client.fromConfigFile("./client-config.json"); // configuration file
-var client = Client.forName("testnet"); // named
+const client = Client.forMainnet(); // pre-defined
+const client = Client.forNetwork(network); // custom network
+const client = Client.fromConfigFile("./client-config.json"); // configuration file
+const client = Client.forName("testnet"); // named
 
 // set operator (to use to pay transaction fees)
 client.setOperator(operatorAccountId, operatorPrivateKey);
@@ -42,10 +42,10 @@ client.setOperator(operatorAccountId, operatorPrivateKey);
 ```go
 // create from..
 network := make(map[string]AccountID)
-newtork["0.testnet.hedera.com:50211"] = AccountID{Account: 3}
+network["0.testnet.hedera.com:50211"] = AccountID{Account: 3}
 
 client := ClientForMainnet(); // pre-defined
-client := ClientForNetwork(newtork); // custom network
+client := ClientForNetwork(network); // custom network
 client, err := ClientFromConfigFile("./client-config.json"); // configuration file
 client, err := ClientForName("testnet"); // named
 
@@ -57,7 +57,7 @@ client.setOperator(operatorAccountId, operatorPrivateKey);
 
 ### Static Methods
 
-##### `forNetwork` ( `network`: `Map` < `String` , [`AccountId`](reference/cryptocurrency/AccountId.md) > ): `Client`
+##### `forNetwork` ( `network`: `Map` < `String` , [`AccountId`](../cryptocurrency/AccountId.md) > ): `Client`
 
 Construct a client for a specific network.
 
@@ -77,7 +77,7 @@ Network constants are made available to use.
 
 Construct a Hedera client pre-configured for Mainnet access.
 
-Will initially be filled with a hard-coded address book for the consensus node network, but in the background the client will immediately attempt to update its consensus node network using an [`AddressBookQuery`](reference/network/AddressBookQuery.md) against the mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
+Will initially be filled with a hard-coded address book for the consensus node network, but in the background the client will immediately attempt to update its consensus node network using an [`AddressBookQuery`](../network/AddressBookQuery.md) against the mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
 
 ---
 
@@ -85,7 +85,7 @@ Will initially be filled with a hard-coded address book for the consensus node n
 
 Construct a Hedera client pre-configured for Testnet access.
 
-Will initially be filled with a hard-coded address book for the consensus node network, but in the background the client will immediately attempt to update its consensus node network using an [`AddressBookQuery`](reference/network/AddressBookQuery.md) against the mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
+Will initially be filled with a hard-coded address book for the consensus node network, but in the background the client will immediately attempt to update its consensus node network using an [`AddressBookQuery`](../network/AddressBookQuery.md) against the mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
 
 ---
 
@@ -93,7 +93,7 @@ Will initially be filled with a hard-coded address book for the consensus node n
 
 Construct a Hedera client pre-configured for Previewnet access.
 
-Will initially be filled with a hard-coded address book for the consensus node network, but in the background the client will immediately attempt to update its consensus node network using an [`AddressBookQuery`](reference/network/AddressBookQuery.md) against the mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
+Will initially be filled with a hard-coded address book for the consensus node network, but in the background the client will immediately attempt to update its consensus node network using an [`AddressBookQuery`](../network/AddressBookQuery.md) against the mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
 
 ---
 
@@ -103,7 +103,7 @@ Construct a Hedera client for a given name.
 
 Valid names are "previewnet", "testnet", "mainnet"
 
-For a valid name, the behavior is idential to `for[Mainnet|Testnet|Previewnet]()`
+For a valid name, the behavior is identical to `for[Mainnet|Testnet|Previewnet]()`
 
 ---
 
@@ -119,7 +119,7 @@ ID to IP:PORT
 
 ```json
 {
-  "network": "mainnet",
+  "network": "mainnet"
 }
 ```
 
@@ -137,18 +137,18 @@ or
 {
   "operator": {
     "accountId": "0.0.21",
-    "privateKey": "302....",
+    "privateKey": "302...."
   }
 }
 ```
 
-`mirrorNetwork` can be a network name (mainnet, previewnet, etc) or a list
+`mirrorNetwork` can be a network name (mainnet, previewnet, etc.) or a list
 of addresses. `mirrorNetwork` defaults to the name of `network` _if_ that is
 a network name.
 
 ```json
 {
-  "mirrorNetwork": "mainnet",
+  "mirrorNetwork": "mainnet"
 }
 ```
 
@@ -162,33 +162,15 @@ or
 
 </details>
 
-### Methods
-
 ---
 
 ##### `fromConfigFile` ( `filename`: `String` ): `Client`
 
----
-
-##### `setOperator` ( `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md), `privateKey`: [`PrivateKey`](reference/cryptography/PrivateKey.md) ): `Client`
-
-Sets the account that will, by default, pay for transactions and queries built
-with this client.
+Configure a client from the JSON configuration file. The file must have the same structure as the JSON in [`fromConfig`](#fromconfig--data--string---client)
 
 ---
 
-##### `setOperatorWith` ( `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md), `publicKey`: [`PublicKey`](reference/cryptography/PublicKey.md), `transactionSigner`: `(bytes) => bytes` ): `Client`
-
-Sets the account that will, by default, pay for transactions and queries built
-with this client.
-
-It is expected that the signing method utilize the private key associated
-with the given public key.
-
-This form is made available for integrating the SDK to sign
-from an external source such as the Ledger Hardware Wallet.
-
----
+### Methods
 
 ##### `close` ()
 
@@ -197,7 +179,7 @@ associated resources.
 
 ---
 
-##### `ping` ( `nodeAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md))
+##### `ping` ( `nodeAccountId`: [`AccountId`](../cryptocurrency/AccountId.md))
 
 Ping a single node
 
@@ -217,88 +199,136 @@ instead the network will de-prioritize it.
 
 ##### `setNetworkFromAddressBook` ( `addressBook`: `AddressBook`)
 
-Replaces the current network with one which is given in an `AddressBook` (which presumably was acquired via an [`AddressBookQuery`](reference/network/AddressBookQuery.md))
+Replaces the current network with one which is given in an `AddressBook` (which presumably was acquired via an [`AddressBookQuery`](../network/AddressBookQuery.md))
+
+---
+
+##### `setOperator` ( `accountId`: [`AccountId`](../cryptocurrency/AccountId.md), `privateKey`: [`PrivateKey`](../cryptography/PrivateKey.md) ): `Client`
+
+Sets the account that will, by default, pay for transactions and queries built
+with this client.
+
+---
+
+##### `setOperatorWith` ( `accountId`: [`AccountId`](../cryptocurrency/AccountId.md), `publicKey`: [`PublicKey`](../cryptography/PublicKey.md), `transactionSigner`: `(bytes) => bytes` ): `Client`
+
+Sets the account that will, by default, pay for transactions and queries built
+with this client.
+
+It is expected that the signing method utilize the private key associated
+with the given public key.
+
+This form is made available for integrating the SDK to sign
+from an external source such as the Ledger Hardware Wallet.
 
 ---
 
 ### Properties
 
-##### `network` () : `Map` < `String` , [`AccountId`](reference/cryptocurrency/AccountId.md) >
+##### `autoValidateChecksums` : `bool`
+
+Is automatic entity ID checksum validation enabled.
 
 ---
 
-##### `mirrorNetwork` () : `List` < `String` >
+##### `closeTimeout` : `Duration`
+
+Maximum amount of time closing a network can take.
 
 ---
 
-##### `defaultMaxTransactionFee`: [`Hbar`](reference/Hbar.md)
+##### `defaultMaxQueryPayment` : [`Hbar`](../Hbar.md)
 
-**Write-only** The maximum fee to be paid for transactions executed by this client.
+The maximum query payment.
 
-Defaults to 2 hbar.
-
----
-
-##### `defaultMaxQueryPayment`: [`Hbar`](reference/Hbar.md)
-
-**Write-only** The maximum payment allowable for queries.
-
-Defaults to 1 hbar.
+**NOTE**: Defaults to 1 Hbar.
 
 ---
 
-##### `operatorAccountId`: [`?AccountId`](reference/cryptocurrency/AccountId.md)
+##### `defaultMaxTransactionFee` : [`Hbar`](../Hbar.md)
 
-**Read-only**. Use `setOperator` or `setOperatorWith` to set.
+The default maximum fee used for transactions.
 
 ---
 
-##### `operatorPublicKey`: [`?PublicKey`](reference/cryptography/PublicKey.md)
+##### `defaultRegenerateTransactionId` : `bool`
 
-**Read-only**. Use `setOperator` or `setOperatorWith` to set.
+Declares if we should generate new transaction IDs when a transaction fails with `TRANSACTION_EXPIRED`.
+
+**NOTE**: Defaults to `true`
+
+---
+
+##### `ledgerId` () : [`LedgerId`](../LedgerId.md)
+
+Current LedgerId of the network; corresponds to ledger ID in entity ID checksum calculations.
+
+---
+
+##### `maxAttempts` () : `Uint32`
+
+Max number of attempts a request executed with this client will do.
+
+---
+
+##### `maxBackoff` () : `Duration`
+
+The maximum amount of time to wait between retries
+
+---
+
+##### `maxNodeAttempts` () : `Uint32`
+
+Max number of times any node in the network can receive a bad gRPC status before being removed from the network.
+
+---
+
+##### `minBackoff` () : `Duration`
+
+The minimum amount of time to wait between retries
+
+---
+
+##### `mirrorNetwork` : `List` < `String` >
+
+The mirror network node list
+
+---
+
+##### `network` : `Map` < `String` , [`AccountId`](../cryptocurrency/AccountId.md) >
+
+The list of network records
+
+---
+
+##### `networkUpdatePeriod` : `Duration`
+
+If present, the client will periodically attempt to update its consensus node network in the background using
+an [`AddressBookQuery`](../network/AddressBookQuery.md) against its current mirror network.
+If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
+
+---
+
+##### `operatorAccountId`: [`AccountId?`](../cryptocurrency/AccountId.md)
+
+The ID of the operator
+
+---
+
+##### `operatorPublicKey`: [`PublicKey?`](../cryptography/PublicKey.md)
+
+The key of the operator
 
 ---
 
 ##### `requestTimeout`: `Duration`
 
----
-
-##### `transportSecurity` () : `bool`
-
-Enable or disable TLS for both networks.
+Maximum amount of time a request can run
 
 ---
 
 ##### `verifyCertificates` () : `bool`
 
-Enable or disable TLS certificate verification
+Is certificate verification enabled
 
 Only available in Java and Go SDKs
-
----
-
-##### `ledgerId` () : [`LedgerId`](reference/LedgerId.md)
-
-Enable or disable TLS certificate verification
-
-Only available in Java and Go SDKs
-
----
-
-##### `defaultRegenerateTransactionId`: `bool`
-
-Declares if we should generate new transaction IDs when a transaction fails with
-`TRANSACTION_EXPIRED`
-
-**NOTE**: Defaults to `true`
-
-**NOTE**: If transaction IDs are locked, this option is ignored. Transaction IDs can be
-locked if set manually or if certain methods are called.
-
----
-
-##### `networkUpdatePeriod`: `Duration?`
-
-If present, the client will periodically attempt to update its consensus node network in the background using an [`AddressBookQuery`](reference/network/AddressBookQuery.md) against its current mirror network.  If the query fails, the consensus node network will remain unchanged and the query failure will be logged.
-
-Defaults to 24 hours.

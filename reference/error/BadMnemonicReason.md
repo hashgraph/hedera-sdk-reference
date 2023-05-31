@@ -1,17 +1,12 @@
 > enum `BadMnemonicReason`
 
+Possible reason why a [`Mnemonic`](../cryptography/Mnemonic.md) failed validation.
+
 ### Variants
 
 ##### `BadLength`
 
 The mnemonic did not contain exactly 24 words.
-
----
-
-##### `UnknownWords`
-
-The mnemonic contained words which were not found in the BIP-39 standard
-English word list.
 
 ---
 
@@ -29,3 +24,15 @@ original order or replaced with another from the standard word list (as
 this is only returned if all the words exist in the word list).
 
 ---
+
+##### `NotLegacy`
+
+The given mnemonic doesn't contain 22 words required to be a legacy mnemonic,
+or the words are not in the legacy list.
+
+---
+
+##### `UnknownWords`
+
+The mnemonic contained words which were not found in the BIP-39 standard
+English word list.

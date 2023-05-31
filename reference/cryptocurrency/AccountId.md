@@ -1,43 +1,53 @@
 > class `AccountId`
 
-The ID for an a cryptocurrency account
+The ID for a cryptocurrency account
 
 ### Constructors
 
 ##### `constructor` ( `num` : `Uint64` )
 
-Construct a [`AccountId`](#) with [`shard`](#shard-uint64) and [`realm`](#realm-uint64) being zero.
+Construct a [`AccountId`](AccountId.md) with [`shard`](#shard--uint64) and [`realm`](#realm--uint64) being zero.
 
 ---
 
 ##### `constructor` ( `shard` : `Uint64`, `realm` : `Uint64`, `num` : `Uint64` )
 
-Construct a [`AccountId`](#) with all fields explicitly set.
+Construct a [`AccountId`](AccountId.md) with all fields explicitly set.
 
 ---
 
 ### Static Methods
 
-##### `fromString` ( `str` : `String` ): [`AccountId`](#accountid)
+##### `fromBytes` ( `data` : `bytes` ): [`AccountId`](AccountId.md)
 
-Construct an [`AccountId`](#) from a string. 
-`str` must match `^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.((?:[0-9a-fA-F][0-9a-fA-F])+)$`
-
----
-
-##### `fromBytes` ( `data` : `bytes` ): [`AccountId`](#accountid)
-
-Deserialize an account ID from its the protobuf representation.
+Deserialize an account ID from its protobuf representation.
 
 ---
 
-##### `fromSolidityAddress` ( `str` : `String` ): [`AccountId`](#accountid)
+##### `fromEvmAddress` ( `evmAddress` : [`EvmAddress`](EvmAddress.md) ): [`AccountId`](AccountId.md)
+
+Retrieve the account id from an EVM address.
+
+---
+
+##### `fromSolidityAddress` ( `str` : `String` ): [`AccountId`](AccountId.md)
 
 Construct an account ID from a solidity address.
 
 ---
 
+##### `fromString` ( `str` : `String` ): [`AccountId`](AccountId.md)
+
+Construct an [`AccountId`](AccountId.md) from a string.
+`str` must match `^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.((?:[0-9a-fA-F][0-9a-fA-F])+)$`
+
 ### Methods
+
+##### `getChecksum` ( ): `String`
+
+Get the checksum for this account ID if it constructed with one.
+
+---
 
 ##### `toBytes` ( ): `bytes`
 
@@ -45,19 +55,9 @@ Serialize this ID into its protobuf representation.
 
 ---
 
-##### `validateChecksum` ( `client` : [`Client`](reference/core/Client.md) ): `void`
+##### `toSolidityAddress` ( ): `String`
 
-Validate the account ID's checksum matches the client's network.
-
-Note: The client must contain a network with a known [`NetworkName`](reference/NetworkName.md)
-
-Note: If the account ID has an `aliasKey`, `validateChecksum` will throw an error 
-
----
-
-##### `getChecksum` ( ): `String`
-
-Get the checksum for this account ID if it constructed with one.
+Extract the solidity address.
 
 ---
 
@@ -67,43 +67,25 @@ Stringify this ID into `{shard}.{realm}.{num}`
 
 ---
 
-##### `toStringWithChecksum` ( `client` : [`Client`](reference/core/Client.md) ): `String`
+##### `toStringWithChecksum` ( `client` : [`Client`](../core/Client.md) ): `String`
 
 Stringify this ID into `{shard}.{realm}.{num}-{checksum}` using the client's network.
 
-Note: The client must contain a network with a known [`NetworkName`](reference/NetworkName.md)
+Note: The client must contain a network with a known [`NetworkName`](../NetworkName.md)
 
-Note: If the account ID has an `aliasKey`, `toStringWithChecksum` will throw an error 
+Note: If the account ID has an `aliasKey`, `toStringWithChecksum` will throw an error
 
 ---
 
-##### `toEvmAddress` ( ): `String`
+##### `validateChecksum` ( `client` : [`Client`](../core/Client.md) ): `void`
 
-Returns "0x_____" string Ethereum public address.
+Validate the account ID's checksum matches the client's network.
 
-##### `fromEvmAddress` ( ): `String`
+Note: The client must contain a network with a known [`NetworkName`](../NetworkName.md)
 
-Accepts "0x___" or "___" Ethereum public address. 
+Note: If the account ID has an `aliasKey`, `validateChecksum` will throw an error
 
 ### Properties
-
-##### `shard`: `Uint64`
-
-The shard number (nonnegative)
-
----
-
-##### `realm`: `Uint64`
-
-The realm number (nonnegative)
-
----
-
-##### `num`: `Uint64`
-
-A nonnegative account number unique within its realm
-
----
 
 ##### `aliasKey`: `PublicKey`
 
@@ -111,8 +93,24 @@ An alias for the `num` of the account if the account was created from a public k
 
 ---
 
-##### `evmAddress`: `Bytes`
+##### `evmAddress`: [`EvmAddress`](EvmAddress.md)
 
 The EOA 20-byte address to create that is derived from the keccak-256 hash of a ECDSA_SECP256K1 primitive key.
 
 ---
+
+##### `num`: `Uint64`
+
+A non-negative account number unique within its realm
+
+---
+
+##### `realm`: `Uint64`
+
+The realm number (non-negative)
+
+---
+
+##### `shard`: `Uint64`
+
+The shard number (non-negative)

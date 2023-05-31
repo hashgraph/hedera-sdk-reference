@@ -1,4 +1,4 @@
-> class `AccountCreateTransaction` extends [`Transaction`](reference/core/Transaction.md)
+> class `AccountCreateTransaction` extends [`Transaction`](../core/Transaction.md)
 
 Create a new account. After the account is created, the AccountID for it is in the receipt. It
 can also be retrieved with a GetByKey query. Threshold values can be defined, and records are
@@ -13,7 +13,7 @@ signed by it. When the account is created, the payer account is charged enough h
 new account will not expire for the next autoRenewPeriod seconds. When it reaches the expiration
 time, the new account will then be automatically charged to renew for another autoRenewPeriod
 seconds. If it does not have enough hbars to renew for that long, then the remaining hbars are
-used to extend its expiration as long as possible. If it is has a zero balance when it expires,
+used to extend its expiration as long as possible. If it has a zero balance when it expires,
 then it is deleted. This transaction must be signed by the payer account. If receiverSigRequired
 is false, then the transaction does not have to be signed by the keys in the keys field. If it is
 true, then it must be signed by them, in addition to the keys of the payer account.
@@ -41,7 +41,7 @@ multiple shards.
 ```java
 var key = PrivateKey.generate();
 
-var fileId = new AccountCreateTransaction()
+var accountId = new AccountCreateTransaction()
     .setKey(key)
     .setInitialBalance(new Hbar(10)) // 10 hbars
     .setEvmAddress(evmAddress) // bytes
@@ -58,7 +58,7 @@ const key = PrivateKey.generate();
 const transaction = new AccountCreateTransaction({
     key: newKey,
     initialBalance: new Hbar(10),
-    evmAddress: evmAddress, 
+    evmAddress: evmAddress,
 
 });
 
@@ -101,27 +101,24 @@ accountID := *receipt.AccountID
 
 ### Properties
 
-##### `key`: [`Key`](reference/cryptography/Key.md)
+##### `accountMemo`: `String`
 
-The key that must sign each transfer out of the account. If receiverSigRequired is true, then
-it must also sign any transfer into the account.
-
----
-
-##### `initialBalance`: [`Hbar`](reference/Hbar.md)
-
-The initial number of tinybars to put into the account
-
-Defaults to `0`.
+The memo associated with the account (UTF-8 encoding max 100 bytes)
 
 ---
 
-##### `receiverSignatureRequired`: `bool`
+##### `alias`: [`EvmAddress`](EvmAddress.md)
 
-If true, this account's key must sign any transaction depositing into this account (in
-addition to all withdrawals)
+The bytes to be used as the account's alias.
 
-Defaults to `false`.
+The bytes must be formatted as the calculated last 20 bytes of the
+keccak-256 of the ECDSA primitive key.
+
+All other types of keys, including but not limited to ED25519, ThresholdKey, KeyList, ContractID, and
+delegatable_contract_id, are not supported.
+
+At most only one account can ever have a given alias on the network.
+
 
 ---
 
@@ -135,7 +132,35 @@ Defaults to 90 days (or 7,776,000 seconds).
 
 ---
 
-##### `proxyAccountId`: [`AccountId`](reference/AccountId.md)
+##### `declineStakingReward`: `bool`
+
+If true, the account declines receiving a staking reward. The default value is false.
+
+---
+
+##### `initialBalance`: [`Hbar`](../Hbar.md)
+
+The initial number of tinybars to put into the account
+
+Defaults to `0`.
+
+---
+
+##### `key`: [`Key`](../cryptography/Key.md)
+
+The key that must sign each transfer out of the account. If receiverSigRequired is true, then
+it must also sign any transfer into the account.
+
+---
+
+##### `maxAutomaticTokenAssociations`: `Uint32`
+
+The maximum number of tokens that an Account can be implicitly associated with. Defaults to 0
+and up to a maximum value of 1000.
+
+---
+
+##### `proxyAccountId`: [`AccountId`](AccountId.md)
 
 Deprecated: with no replacement
 
@@ -147,16 +172,12 @@ will behave as if proxyAccountID was null.
 
 ---
 
-##### `accountMemo`: `String`
+##### `receiverSignatureRequired`: `bool`
 
-The memo associated with the account (UTF-8 encoding max 100 bytes)
+If true, this account's key must sign any transaction depositing into this account (in
+addition to all withdrawals)
 
----
-
-##### `maxAutomaticTokenAssociations`: `Uint32`
-
-The maximum number of tokens that an Account can be implicitly associated with. Defaults to 0
-and up to a maximum value of 1000.
+Defaults to `false`.
 
 ---
 
@@ -169,15 +190,3 @@ ID of the account to which this contract is staking.
 ##### `stakedNodeId`: `?Int64`
 
 ID of the node this contract is staked to.
-
----
-
-##### `declineStakingReward`: `bool`
-
-If true, the account declines receiving a staking reward. The default value is false.
-
-##### `evmAddress`: `bytes`
-
-EOA 20-byte address to create that is derived from the keccak-256 hash of a ECDSA_SECP256K1 primitive key.
-
----

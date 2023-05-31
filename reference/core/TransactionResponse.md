@@ -1,29 +1,34 @@
 > class `TransactionResponse`
 
+When the client sends the node a transaction of any kind, the node replies with this,
+which simply says that the transaction passed the pre-check (so the node will submit it to
+the network) or it failed (so it won't). To learn the consensus result, the
+client should later obtain a receipt (free), or can buy a more detailed record (not free).
+
 ### Methods
 
-##### `getReceipt` ( `client`: [`Client`](reference/core/Client.md) ): [`TransactionReceipt`](reference/core/TransactionReceipt.md)
+##### `getReceipt` ( `client`: [`Client`](Client.md) ): [`TransactionReceipt`](TransactionReceipt.md)
 
 Fetch the receipt for the current transaction ID using the same node account ID
 
 ---
 
-##### `getRecord` ( `client`: [`Client`](reference/core/Client.md) ): [`TransactionRecord`](reference/core/TransactionRecord.md)
-
-Fetch the transaction record for the current transaction ID using the same node account ID
-
-**Note**: Will fetch the receipt first, then fetch the record because fetching the record in a
-loop will cost more hbars.
-
----
-
-##### `getReceiptQuery` (): [`TransactionReceiptQuery`](reference/core/TransactionReceiptQuery.md)
+##### `getReceiptQuery` (): [`TransactionReceiptQuery`](TransactionReceiptQuery.md)
 
 Create a transaction receipt query for this particular transaction ID and node account ID
 
 ---
 
-##### `getRecordQuery` (): [`TransactionRecordQuery`](reference/core/TransactionRecordQuery.md)
+##### `getRecord` ( `client`: [`Client`](Client.md) ): [`TransactionRecord`](TransactionRecord.md)
+
+Fetch the transaction record for the current transaction ID using the same node account ID
+
+**Note**: Will fetch the receipt first, then fetch the record because fetching the record in a
+loop will cost more Hbar.
+
+---
+
+##### `getRecordQuery` (): [`TransactionRecordQuery`](TransactionRecordQuery.md)
 
 Create a transaction record query for this particular transaction ID and node account ID
 
@@ -35,10 +40,9 @@ Stringification of all the current values
 
 ---
 
-
 ### Fields
 
-##### `nodeAccountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `nodeId`: [`AccountId`](../cryptocurrency/AccountId.md)
 
 The account ID of the node which the transaction was submitted to
 
@@ -48,12 +52,10 @@ The account ID of the node which the transaction was submitted to
 
 Hash of the transaction
 
-**Note**: Should be the same as the [`TransactionRecord.transactionHash`](reference/core/TransactionRecord.md#transactionHash-bytes)
+**Note**: Should be the same as the [`TransactionRecord.transactionHash`](TransactionRecord.md#transactionhash--bytes)
 
 ---
 
-##### `transactionId`: [`TransactionId`](reference/core/TransactionId.md)
+##### `transactionId`: [`TransactionId`](TransactionId.md)
 
 Transaction ID of the transaction that was submitted
-
----

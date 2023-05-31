@@ -1,10 +1,12 @@
 > class `ContractInfo`
 
+Current information on the smart contract instance, including its balance.
+
 ### Static Methods
 
 ##### `fromBytes` ( `data`: `bytes` ): `ContractInfo`
 
-Deserialize a [`ContractInfo`](#) from its the protobuf representation.
+Deserialize a [`ContractInfo`](ContractInfo) from its protobuf representation.
 
 ---
 
@@ -12,37 +14,19 @@ Deserialize a [`ContractInfo`](#) from its the protobuf representation.
 
 ##### `toBytes` (): `bytes`
 
-Serialize the [`ContractInfo`](#) into its protobuf representation.
+Serialize the [`ContractInfo`](ContractInfo) into its protobuf representation.
 
 ---
 
 ### Properties
 
-##### `contractId`: [`ContractId`](reference/contract/ContractId.md)
-
-ID of the contract instance.
-
----
-
-##### `contractMemo`: `String`
-
-The memo associated with the contract (max 100 bytes).
-
----
-
-##### `accountId`: [`AccountId`](reference/cryptocurrency/AccountId.md)
+##### `accountId`: [`AccountId`](../cryptocurrency/AccountId.md)
 
 ID of the cryptocurrency account owned by the contract instance.
 
 ---
 
-##### `contractAccountId`: `String`
-
-ID of both the contract instance and the cryptocurrency account owned by the contract instance, in the format used by Solidity.
-
----
-
-##### `adminKey`: [`Key`](reference/cryptography/Key.md)
+##### `adminKey`: [`Key`](../cryptography/Key.md)
 
 The state of the instance and its fields can be modified arbitrarily if `adminKey` signs a transaction to modify it.
 If this is null, then such modifications are not possible, and there is no administrator that can override the normal operation of this smart contract instance.
@@ -50,9 +34,9 @@ Note that if it is created with no admin keys, then there is no administrator to
 
 ---
 
-##### `expirationTime`: `Timestamp`
+##### `autoRenewAccountId`: [`AccountId`](../cryptocurrency/AccountId)
 
-The current time at which this contract instance (and its account) is set to expire.
+ID of the account to charge for auto-renewal of this contract.
 
 ---
 
@@ -64,15 +48,33 @@ If the account is empty when it expires, then it is deleted.
 
 ---
 
-##### `storage`: `Uint64`
+##### `balance`: [`Hbar`](../Hbar.md)
 
-Number of bytes of storage being used by this instance (which affects the cost to extend the expiration time).
+The current balance, in tinybars.
 
 ---
 
-##### `balance`: [`Hbar`](reference/Hbar.md)
+##### `contractAccountId`: `String`
 
-The current balance, in tinybars.
+ID of both the contract instance and the cryptocurrency account owned by the contract instance, in the format used by Solidity.
+
+---
+
+##### `contractId`: [`ContractId`](ContractId.md)
+
+ID of the contract instance.
+
+---
+
+##### `contractMemo`: `String`
+
+The memo associated with the contract (max 100 bytes).
+
+---
+
+##### `expirationTime`: `Timestamp`
+
+The current time at which this contract instance (and its account) is set to expire.
 
 ---
 
@@ -82,20 +84,24 @@ Whether the contract has been deleted.
 
 ---
 
-##### `tokenRelationships`: `Map` < [`TokenId`](reference/token/TokenId.md), [`TokenRelationship`](reference/token/TokenRelationship.md) >
-
-The tokens associated to the contract.
-
----
-
-##### `ledgerId`: [`LedgerId`](reference/LedgerId.md)
+##### `ledgerId`: [`LedgerId`](../LedgerId.md)
 
 The ID of the ledger which returned this response
 
 ---
 
-##### `stakingInfo`: [`StakingInfo`](reference/StakingInfo.md)
+##### `stakingInfo`: [`StakingInfo`](../StakingInfo.md)
 
 Staking metadata for this contract.
 
 ---
+
+##### `storage`: `Uint64`
+
+Number of bytes of storage being used by this instance (which affects the cost to extend the expiration time).
+
+---
+
+##### `tokenRelationships`: `Map` < [`TokenId`](../token/TokenId.md), [`TokenRelationship`](../token/TokenRelationship.md) >
+
+The tokens associated to the contract.
