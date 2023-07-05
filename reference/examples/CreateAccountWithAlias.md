@@ -7,7 +7,9 @@ Reference: [HIP-583 Expand alias support in CryptoCreate & CryptoTransfer Transa
 - Get the ECDSA public key 
 - Use the `AccountCreateTransaction` and populate the `setAlias(<ECDSA_public_key)` field
 - Sign the `AccountCreateTransaction` using an existing Hedera account and key to pay for the transaction fee
+- Sign the transaction with private key that corresponds with the public key alias
 - Execute the transaction
+- Return the transaction record with the alias field populated with the ECDSA public key
 - Return the Hedera account ID from the receipt of the transaction
 - Get the `AccountInfo` using the new account ID
 - Get the `AccountInfo` using the account public key in `0.0.aliasPublicKey` format
@@ -17,11 +19,13 @@ Reference: [HIP-583 Expand alias support in CryptoCreate & CryptoTransfer Transa
 
 
 ## Example 2:
-- Create an ED2519 private key
+- Create an ED25519 private key
 - Get the ED2519 public key 
-- Use the `AccountCreateTransaction` and populate the `setAlias(<ECDSA_public_key)` field
+- The public key alias should be different then the public key on the account
+- Use the `AccountCreateTransaction` and populate the `setAlias(<ED25519_public_key)` field
 - Sign the `AccountCreateTransaction` using an existing Hedera account and key to pay for the transaction fee
 - Execute the transaction
+- Return the ED25519 public key alias from the transaction record 
 - Return the Hedera account ID from the receipt of the transaction
 - Get the `AccountInfo` using the new account ID
 - Get the `AccountInfo` using the account public key in `0.0.aliasPublicKey` format
